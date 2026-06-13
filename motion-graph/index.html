@@ -1,0 +1,783 @@
+
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>a-v-x Canvas Lab</title>
+  <style>
+    /*
+      This app is intentionally written as a single HTML file.
+      CSS, HTML, and JavaScript all live here so the file can be copied
+      directly into a browser or used offline in a classroom.
+    */
+    :root {
+      color-scheme: light;
+      --bg: #f6f7f2;
+      --panel: #ffffff;
+      --ink: #172026;
+      --muted: #65717b;
+      --line: #cfd7dc;
+      --accent: #006d77;
+      --accent-2: #e4572e;
+      --shadow: 0 12px 28px rgba(23, 32, 38, 0.12);
+      --radius: 8px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      min-height: 100%;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body {
+      /*
+        Prevent page scrolling while drawing on a canvas.
+        The graph area itself still fits in a portrait phone viewport.
+      */
+      overscroll-behavior: none;
+    }
+
+    .app {
+      width: min(100%, 620px);
+      min-height: 100dvh;
+      margin: 0 auto;
+      padding: calc(10px + env(safe-area-inset-top)) 10px calc(12px + env(safe-area-inset-bottom));
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      gap: 8px;
+    }
+
+    header {
+      display: grid;
+      gap: 8px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 18px;
+      line-height: 1.2;
+      letter-spacing: 0;
+    }
+
+    .toolbar {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr) auto;
+      gap: 6px;
+      align-items: stretch;
+    }
+
+    button {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--panel);
+      color: var(--ink);
+      min-height: 42px;
+      padding: 8px 7px;
+      font: inherit;
+      font-size: 14px;
+      font-weight: 700;
+      box-shadow: 0 1px 0 rgba(23, 32, 38, 0.04);
+      touch-action: manipulation;
+    }
+
+    button[aria-pressed="true"] {
+      border-color: var(--accent);
+      background: var(--accent);
+      color: white;
+    }
+
+    .reset {
+      min-width: 50px;
+      color: var(--accent-2);
+      border-color: rgba(228, 87, 46, 0.4);
+    }
+
+    .graphs {
+      min-height: 0;
+      display: grid;
+      grid-template-rows: repeat(3, minmax(0, 1fr));
+      gap: 8px;
+    }
+
+    .graph {
+      position: relative;
+      min-height: 124px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--panel);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    canvas {
+      display: block;
+      width: 100%;
+      height: 100%;
+      /*
+        This is the key mobile setting: pointer movement goes to the canvas
+        instead of turning into page scroll or browser gestures.
+      */
+      touch-action: none;
+    }
+
+    .badge {
+      position: absolute;
+      top: 7px;
+      left: 9px;
+      pointer-events: none;
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .badge strong {
+      color: var(--ink);
+      font-size: 14px;
+    }
+
+    .graph.editing {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 2px rgba(0, 109, 119, 0.18), var(--shadow);
+    }
+
+    .graph.scaling {
+      border-color: var(--accent-2);
+      box-shadow: 0 0 0 2px rgba(228, 87, 46, 0.18), var(--shadow);
+    }
+
+    .hint {
+      margin: 0;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.35;
+      text-align: center;
+    }
+
+    @media (max-height: 650px) {
+      .app {
+        gap: 6px;
+        padding-top: calc(7px + env(safe-area-inset-top));
+        padding-bottom: calc(8px + env(safe-area-inset-bottom));
+      }
+
+      h1 {
+        font-size: 16px;
+      }
+
+      button {
+        min-height: 38px;
+        font-size: 13px;
+      }
+
+      .graph {
+        min-height: 104px;
+      }
+
+      .hint {
+        font-size: 11px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="app">
+    <header>
+      <h1>加速度・速度・位置</h1>
+      <div class="toolbar" aria-label="編集するグラフを選択">
+        <button type="button" data-edit="a" aria-pressed="true">加速度</button>
+        <button type="button" data-edit="v" aria-pressed="false">速度</button>
+        <button type="button" data-edit="x" aria-pressed="false">位置</button>
+        <button type="button" class="reset" id="resetButton">リセット</button>
+      </div>
+    </header>
+
+    <section class="graphs" aria-label="時間変化グラフ">
+      <div class="graph editing" data-graph="a">
+        <canvas id="canvas-a" aria-label="加速度の時間変化"></canvas>
+        <div class="badge"><strong>a</strong><span>加速度</span></div>
+      </div>
+      <div class="graph" data-graph="v">
+        <canvas id="canvas-v" aria-label="速度の時間変化"></canvas>
+        <div class="badge"><strong>v</strong><span>速度</span></div>
+      </div>
+      <div class="graph" data-graph="x">
+        <canvas id="canvas-x" aria-label="位置の時間変化"></canvas>
+        <div class="badge"><strong>x</strong><span>位置</span></div>
+      </div>
+    </section>
+
+    <p class="hint">選んだグラフは線を描けます。残りのグラフは上下ドラッグで縦軸を調整できます。</p>
+  </main>
+
+  <script>
+    /*
+      Numerical model
+      ---------------
+      We keep three arrays with the same length:
+        a[i] = acceleration at time sample i
+        v[i] = velocity at time sample i
+        x[i] = position at time sample i
+
+      The horizontal axis is normalized time from 0 to 1. Because this is an
+      educational sketching tool, all vertical units are also normalized.
+      A value of +1 is near the top of a graph, -1 near the bottom.
+    */
+    const SAMPLE_COUNT = 160;
+    const DT = 1 / (SAMPLE_COUNT - 1);
+    const DEFAULT_RANGE = 1.2;
+    const MIN_AXIS_RANGE = 0.05;
+    const MAX_AXIS_RANGE = 80;
+    const SMOOTHING_RADIUS = 4;
+    const SMOOTHING_PASSES = 2;
+
+    const data = {
+      a: new Array(SAMPLE_COUNT).fill(0),
+      v: new Array(SAMPLE_COUNT).fill(0),
+      x: new Array(SAMPLE_COUNT).fill(0)
+    };
+
+    /*
+      The arrays above store the physical quantities. The yAxis object stores
+      only how each graph is displayed. This separation is important:
+      changing the vertical axis should not change the underlying motion data.
+    */
+    const yAxis = {
+      a: { range: DEFAULT_RANGE, manual: false },
+      v: { range: DEFAULT_RANGE, manual: false },
+      x: { range: DEFAULT_RANGE, manual: false }
+    };
+
+    const meta = {
+      a: { label: '加速度 a', color: '#006d77', unit: 'a' },
+      v: { label: '速度 v', color: '#3a5a40', unit: 'v' },
+      x: { label: '位置 x', color: '#e4572e', unit: 'x' }
+    };
+
+    const canvases = {
+      a: document.getElementById('canvas-a'),
+      v: document.getElementById('canvas-v'),
+      x: document.getElementById('canvas-x')
+    };
+
+    const graphEls = {
+      a: document.querySelector('[data-graph="a"]'),
+      v: document.querySelector('[data-graph="v"]'),
+      x: document.querySelector('[data-graph="x"]')
+    };
+
+    const editButtons = Array.from(document.querySelectorAll('[data-edit]'));
+    const resetButton = document.getElementById('resetButton');
+
+    let editMode = 'a';
+    let drawing = false;
+    let scalingAxis = false;
+    let lastPoint = null;
+    let axisStartY = 0;
+    let axisStartRange = DEFAULT_RANGE;
+
+    /*
+      Canvas backing-store resizing
+      -----------------------------
+      CSS controls the visible canvas size. The drawing buffer must be resized
+      to match devicePixelRatio, otherwise lines look fuzzy on phone screens.
+    */
+    function resizeCanvases() {
+      const dpr = Math.max(1, window.devicePixelRatio || 1);
+
+      for (const key of Object.keys(canvases)) {
+        const canvas = canvases[key];
+        const rect = canvas.getBoundingClientRect();
+        const width = Math.max(1, Math.round(rect.width * dpr));
+        const height = Math.max(1, Math.round(rect.height * dpr));
+
+        if (canvas.width !== width || canvas.height !== height) {
+          canvas.width = width;
+          canvas.height = height;
+        }
+      }
+
+      drawAll();
+    }
+
+    /*
+      Coordinate conversion
+      ---------------------
+      Pointer coordinates are in CSS pixels. Array indices are in samples.
+      Values use the current vertical range of the graph being edited.
+    */
+    function pointFromEvent(event, canvas, key) {
+      const rect = canvas.getBoundingClientRect();
+      const u = clamp((event.clientX - rect.left) / rect.width, 0, 1);
+      const y = clamp((event.clientY - rect.top) / rect.height, 0, 1);
+      const index = Math.round(u * (SAMPLE_COUNT - 1));
+      const range = yAxis[key].range;
+      const value = clamp((0.5 - y) * 2 * range, -range, range);
+      return { index, value };
+    }
+
+    function sampleToX(index, width) {
+      return (index / (SAMPLE_COUNT - 1)) * width;
+    }
+
+    function valueToY(value, height, range) {
+      return height * (0.5 - value / (2 * range));
+    }
+
+    function clamp(value, min, max) {
+      return Math.min(max, Math.max(min, value));
+    }
+
+    /*
+      Drawing with interpolation
+      --------------------------
+      Touch events can arrive several samples apart. Filling every sample
+      between the previous point and current point makes the sketched curve
+      continuous instead of dotted.
+    */
+    function writeSegment(seriesKey, from, to) {
+      const values = data[seriesKey];
+      const start = Math.min(from.index, to.index);
+      const end = Math.max(from.index, to.index);
+      const span = Math.max(1, end - start);
+
+      for (let i = start; i <= end; i++) {
+        const t = from.index === to.index ? 1 : Math.abs(i - from.index) / span;
+        values[i] = from.value + (to.value - from.value) * t;
+      }
+
+      recomputeFrom(seriesKey);
+      drawAll();
+    }
+
+    /*
+      Numerical integration and differentiation
+      ----------------------------------------
+      The selected graph is treated as the source of truth.
+      - If a is edited: integrate a -> v, then integrate v -> x.
+      - If v is edited: differentiate v -> a, and integrate v -> x.
+      - If x is edited: differentiate x -> v, then differentiate v -> a.
+    */
+    function recomputeFrom(source) {
+      if (source === 'a') {
+        integrate(data.a, data.v);
+        integrate(data.v, data.x);
+      } else if (source === 'v') {
+        differentiate(data.v, data.a, true);
+        integrate(data.v, data.x);
+      } else if (source === 'x') {
+        differentiate(data.x, data.v, true);
+        differentiate(data.v, data.a, true);
+      }
+
+      fitComputedAxes(source);
+    }
+
+    function integrate(input, output) {
+      output[0] = 0;
+
+      for (let i = 1; i < SAMPLE_COUNT; i++) {
+        /*
+          Trapezoidal integration averages the two neighboring samples.
+          It is still simple, but usually smoother than rectangular sums.
+        */
+        output[i] = output[i - 1] + 0.5 * (input[i - 1] + input[i]) * DT;
+      }
+      /*
+        Integration usually reduces sharpness, so the result can be left as
+        physical data. The graph range is adjusted separately for display.
+      */
+    }
+
+    function differentiate(input, output, smoothAfter) {
+      output[0] = (input[1] - input[0]) / DT;
+      output[SAMPLE_COUNT - 1] = (input[SAMPLE_COUNT - 1] - input[SAMPLE_COUNT - 2]) / DT;
+
+      for (let i = 1; i < SAMPLE_COUNT - 1; i++) {
+        /*
+          Central difference uses samples on both sides of i.
+          This is a common first numerical derivative for evenly spaced data.
+        */
+        output[i] = (input[i + 1] - input[i - 1]) / (2 * DT);
+      }
+
+      if (smoothAfter) {
+        /*
+          Differentiation emphasizes tiny hand-drawing wiggles. A small moving
+          average keeps the educational shape visible without making a sharp
+          corner explode into a saw-tooth graph.
+        */
+        smoothInPlace(output, SMOOTHING_RADIUS, SMOOTHING_PASSES);
+      }
+    }
+
+    /*
+      Moving average smoothing
+      ------------------------
+      Each output sample becomes the average of nearby samples. Repeating the
+      pass twice gives a soft, classroom-friendly curve while keeping the code
+      simple enough to inspect.
+    */
+    function smoothInPlace(values, radius, passes) {
+      const scratch = new Array(values.length).fill(0);
+
+      for (let pass = 0; pass < passes; pass++) {
+        for (let i = 0; i < values.length; i++) {
+          const start = Math.max(0, i - radius);
+          const end = Math.min(values.length - 1, i + radius);
+          let sum = 0;
+
+          for (let j = start; j <= end; j++) {
+            sum += values[j];
+          }
+
+          scratch[i] = sum / (end - start + 1);
+        }
+
+        for (let i = 0; i < values.length; i++) {
+          values[i] = scratch[i];
+        }
+      }
+    }
+
+    /*
+      Display scaling
+      ---------------
+      Computed curves are allowed to keep their numeric values. The vertical
+      axis range decides how much of those values is visible on screen.
+      When the user draws a new source graph, we auto-fit the other two graphs
+      once. After that, dragging a non-edited graph changes its range manually.
+    */
+    function fitComputedAxes(source) {
+      for (const key of Object.keys(data)) {
+        if (key !== source && !yAxis[key].manual) {
+          fitAxisToData(key);
+        }
+      }
+    }
+
+    function fitAxisToData(key) {
+      const range = maxAbs(data[key]) * 1.15;
+      yAxis[key].range = clamp(Math.max(DEFAULT_RANGE, range), MIN_AXIS_RANGE, MAX_AXIS_RANGE);
+    }
+
+    function maxAbs(values) {
+      let maxAbs = 0;
+
+      for (const value of values) {
+        maxAbs = Math.max(maxAbs, Math.abs(value));
+      }
+
+      return maxAbs;
+    }
+
+    function resetData() {
+      for (const key of Object.keys(data)) {
+        data[key].fill(0);
+        yAxis[key].range = DEFAULT_RANGE;
+        yAxis[key].manual = false;
+      }
+      drawAll();
+    }
+
+    /*
+      Rendering
+      ---------
+      Each canvas gets axes, a zero line, tick marks, labels, and one curve.
+      We draw in device pixels because the canvas was sized to devicePixelRatio.
+    */
+    function drawAll() {
+      drawGraph('a');
+      drawGraph('v');
+      drawGraph('x');
+    }
+
+    function drawGraph(key) {
+      const canvas = canvases[key];
+      const ctx = canvas.getContext('2d');
+      const width = canvas.width;
+      const height = canvas.height;
+      const dpr = Math.max(1, window.devicePixelRatio || 1);
+      const padLeft = 48 * dpr;
+      const padRight = 10 * dpr;
+      const padTop = 18 * dpr;
+      const padBottom = 23 * dpr;
+      const plotW = width - padLeft - padRight;
+      const plotH = height - padTop - padBottom;
+      const range = yAxis[key].range;
+      const zeroY = padTop + valueToY(0, plotH, range);
+      const yTicks = buildYAxisTicks(range);
+
+      ctx.clearRect(0, 0, width, height);
+
+      ctx.fillStyle = '#ffffff';
+      ctx.fillRect(0, 0, width, height);
+
+      drawGrid(ctx, padLeft, padTop, plotW, plotH, zeroY, range, yTicks, dpr);
+      drawCurve(ctx, data[key], meta[key].color, padLeft, padTop, plotW, plotH, range, dpr);
+      drawLabels(ctx, key, padLeft, padTop, plotW, plotH, zeroY, range, yTicks, dpr);
+    }
+
+    function drawGrid(ctx, left, top, width, height, zeroY, range, yTicks, dpr) {
+      ctx.save();
+      ctx.lineWidth = 1 * dpr;
+      ctx.strokeStyle = '#dfe5e8';
+      ctx.fillStyle = '#65717b';
+
+      /*
+        Vertical time ticks divide the horizontal axis into quarters.
+      */
+      for (let i = 0; i <= 4; i++) {
+        const x = left + (width * i) / 4;
+        ctx.beginPath();
+        ctx.moveTo(x, top);
+        ctx.lineTo(x, top + height);
+        ctx.stroke();
+      }
+
+      /*
+        Horizontal sub-grid lines follow the current y-axis scale.
+        The tick values are chosen as "nice" numbers such as 0.1, 0.2,
+        0.3, 0.5, 1.0, 1.5, ... rather than arbitrary decimals.
+      */
+      for (const tick of yTicks) {
+        for (const sign of [-1, 1]) {
+          const y = top + valueToY(sign * tick, height, range);
+          ctx.beginPath();
+          ctx.moveTo(left, y);
+          ctx.lineTo(left + width, y);
+          ctx.stroke();
+        }
+      }
+
+      ctx.strokeStyle = '#93a1a8';
+      ctx.lineWidth = 1.5 * dpr;
+      ctx.beginPath();
+      ctx.moveTo(left, top);
+      ctx.lineTo(left, top + height);
+      ctx.lineTo(left + width, top + height);
+      ctx.stroke();
+
+      ctx.strokeStyle = '#172026';
+      ctx.lineWidth = 1.2 * dpr;
+      ctx.setLineDash([5 * dpr, 5 * dpr]);
+      ctx.beginPath();
+      ctx.moveTo(left, zeroY);
+      ctx.lineTo(left + width, zeroY);
+      ctx.stroke();
+      ctx.restore();
+    }
+
+    function drawCurve(ctx, values, color, left, top, width, height, range, dpr) {
+      ctx.save();
+      ctx.lineWidth = 3 * dpr;
+      ctx.lineJoin = 'round';
+      ctx.lineCap = 'round';
+      ctx.strokeStyle = color;
+      ctx.beginPath();
+
+      for (let i = 0; i < values.length; i++) {
+        const x = left + sampleToX(i, width);
+        const y = top + valueToY(values[i], height, range);
+        if (i === 0) {
+          ctx.moveTo(x, y);
+        } else {
+          ctx.lineTo(x, y);
+        }
+      }
+
+      ctx.stroke();
+      ctx.restore();
+    }
+
+    function drawLabels(ctx, key, left, top, width, height, zeroY, range, yTicks, dpr) {
+      const fontSize = 11 * dpr;
+
+      ctx.save();
+      ctx.fillStyle = '#172026';
+      ctx.font = `700 ${fontSize}px system-ui, sans-serif`;
+      ctx.fillText(meta[key].label, left + 6 * dpr, top + 13 * dpr);
+
+      ctx.fillStyle = '#65717b';
+      ctx.font = `600 ${10 * dpr}px system-ui, sans-serif`;
+      ctx.textAlign = 'right';
+      ctx.textBaseline = 'middle';
+
+      for (const tick of yTicks) {
+        const label = formatAxisValue(tick);
+        const positiveY = top + valueToY(tick, height, range);
+        const negativeY = top + valueToY(-tick, height, range);
+        ctx.fillText(label, left - 5 * dpr, positiveY);
+        ctx.fillText(`-${label}`, left - 5 * dpr, negativeY);
+      }
+
+      ctx.fillText('0', left - 5 * dpr, zeroY);
+      ctx.textAlign = 'left';
+      ctx.textBaseline = 'alphabetic';
+      ctx.fillText('t', left + width - 6 * dpr, top + height + 16 * dpr);
+      ctx.restore();
+    }
+
+    function buildYAxisTicks(range) {
+      const step = chooseNiceStep(range / 3);
+      const ticks = [];
+
+      /*
+        Usually this creates three ticks per side. If the range is very close
+        to an exact tick, the outer tick is still kept so examples such as
+        0.05, 0.1, 0.15 appear naturally.
+      */
+      for (let i = 1; i <= 3; i++) {
+        const value = step * i;
+        if (value <= range * 1.001) {
+          ticks.push(value);
+        }
+      }
+
+      return ticks;
+    }
+
+    function chooseNiceStep(target) {
+      const safeTarget = Math.max(target, 0.000001);
+      const base = Math.pow(10, Math.floor(Math.log10(safeTarget)));
+      const normalized = safeTarget / base;
+      const niceMultipliers = [1, 1.5, 2, 3, 5, 10];
+      let multiplier = niceMultipliers[0];
+
+      /*
+        Pick the largest nice value that is not bigger than the target.
+        For example:
+          range 0.45 -> target 0.15 -> step 0.15
+          range 0.90 -> target 0.30 -> step 0.30
+          range 1.80 -> target 0.60 -> step 0.50
+      */
+      for (const candidate of niceMultipliers) {
+        if (candidate <= normalized + 1e-9) {
+          multiplier = candidate;
+        }
+      }
+
+      return multiplier * base;
+    }
+
+    function formatAxisValue(value) {
+      const abs = Math.abs(value);
+
+      if (abs >= 10) return value.toFixed(0);
+      if (abs >= 1) return value.toFixed(1);
+      if (abs >= 0.1) return value.toFixed(2).replace(/0$/, '');
+      return value.toFixed(3).replace(/0+$/, '').replace(/\.$/, '');
+    }
+
+    function setEditMode(nextMode) {
+      editMode = nextMode;
+
+      for (const button of editButtons) {
+        button.setAttribute('aria-pressed', String(button.dataset.edit === editMode));
+      }
+
+      for (const key of Object.keys(graphEls)) {
+        graphEls[key].classList.toggle('editing', key === editMode);
+        graphEls[key].classList.remove('scaling');
+      }
+
+      /*
+        Switching the source gives the two computed graphs a readable initial
+        scale. The user can immediately override that by dragging either one.
+      */
+      for (const key of Object.keys(yAxis)) {
+        yAxis[key].manual = false;
+      }
+      fitComputedAxes(editMode);
+      drawAll();
+    }
+
+    /*
+      Pointer events work for mouse, touch, and stylus.
+      setPointerCapture keeps receiving movement even if the finger drifts
+      slightly outside the canvas while drawing.
+    */
+    function onPointerDown(event, key) {
+      const canvas = canvases[key];
+      canvas.setPointerCapture(event.pointerId);
+
+      if (key === editMode) {
+        drawing = true;
+        scalingAxis = false;
+        lastPoint = pointFromEvent(event, canvas, key);
+        writeSegment(key, lastPoint, lastPoint);
+      } else {
+        drawing = false;
+        scalingAxis = true;
+        axisStartY = event.clientY;
+        axisStartRange = yAxis[key].range;
+        graphEls[key].classList.add('scaling');
+      }
+    }
+
+    function onPointerMove(event, key) {
+      if (drawing && key === editMode && lastPoint !== null) {
+        const current = pointFromEvent(event, canvases[key], key);
+        writeSegment(key, lastPoint, current);
+        lastPoint = current;
+        return;
+      }
+
+      if (scalingAxis && key !== editMode) {
+        /*
+          Drag up to zoom in, drag down to zoom out. The exponential factor
+          feels smooth on a phone because small finger movements make small
+          scale changes, while longer drags can still cover a wide range.
+        */
+        const deltaY = event.clientY - axisStartY;
+        const factor = Math.exp(deltaY / 110);
+        yAxis[key].range = clamp(axisStartRange * factor, MIN_AXIS_RANGE, MAX_AXIS_RANGE);
+        yAxis[key].manual = true;
+        drawAll();
+      }
+    }
+
+    function stopDrawing() {
+      drawing = false;
+      scalingAxis = false;
+      lastPoint = null;
+
+      for (const key of Object.keys(graphEls)) {
+        graphEls[key].classList.remove('scaling');
+      }
+    }
+
+    for (const key of Object.keys(canvases)) {
+      const canvas = canvases[key];
+      canvas.addEventListener('pointerdown', (event) => onPointerDown(event, key));
+      canvas.addEventListener('pointermove', (event) => onPointerMove(event, key));
+      canvas.addEventListener('pointerup', stopDrawing);
+      canvas.addEventListener('pointercancel', stopDrawing);
+      canvas.addEventListener('lostpointercapture', stopDrawing);
+    }
+
+    for (const button of editButtons) {
+      button.addEventListener('click', () => setEditMode(button.dataset.edit));
+    }
+
+    resetButton.addEventListener('click', resetData);
+    window.addEventListener('resize', resizeCanvases);
+    window.addEventListener('orientationchange', resizeCanvases);
+
+    /*
+      Resize after layout has happened, then draw the initial flat graphs.
+    */
+    requestAnimationFrame(resizeCanvases);
+  </script>
+</body>
+</html>
