@@ -217,7 +217,7 @@
       </div>
     </section>
 
-    <p class="hint">選んだグラフは線を描けます。下端の時間軸は横ドラッグで移動、上下ドラッグで拡大縮小できます。</p>
+    <p class="hint">選んだグラフは線を描けます。下端の時間軸は右ドラッグで拡大、左ドラッグで範囲を広げられます。</p>
   </main>
 
   <script>
@@ -229,18 +229,20 @@
         v[i] = velocity at time sample i
         x[i] = position at time sample i
 
-      The horizontal axis is normalized time from 0 to 1. Because this is an
+      The horizontal data range is 0 to 5 seconds. Because this is an
       educational sketching tool, all vertical units are also normalized.
       A value of +1 is near the top of a graph, -1 near the bottom.
     */
-    const SAMPLE_COUNT = 160;
-    const DT = 1 / (SAMPLE_COUNT - 1);
+    const SAMPLE_COUNT = 501;
     const DEFAULT_RANGE = 1.2;
     const MIN_AXIS_RANGE = 0.05;
     const MAX_AXIS_RANGE = 80;
     const SMOOTHING_RADIUS = 3;
     const SMOOTHING_PASSES = 2;
-    const MIN_TIME_SPAN = 0.08;
+    const DEFAULT_TIME_MAX = 1;
+    const MIN_TIME_MAX = 0.08;
+    const MAX_TIME_MAX = 5;
+    const DATA_TIME_MAX = MAX_TIME_MAX;
     const TIME_AXIS_TOUCH_HEIGHT = 30;
 
     const data = {
@@ -262,11 +264,11 @@
 
     /*
       The horizontal axis is shared by all three graphs. Changing it in any
-      canvas changes the visible time window everywhere.
+      canvas changes the maximum time everywhere. The origin stays fixed at 0.
     */
     const xAxis = {
       start: 0,
-      end: 1
+      end: DEFAULT_TIME_MAX
     };
 
     const meta = {
@@ -298,9 +300,7 @@
     let axisStartY = 0;
     let axisStartRange = DEFAULT_RANGE;
     let timeStartX = 0;
-    let timeStartY = 0;
-    let timeStartMin = 0;
-    let timeStartMax = 1;
+    let timeStartMax = DEFAULT_TIME_MAX;
 
     /*
       Canvas backing-store resizing
@@ -336,20 +336,20 @@
       const rect = canvas.getBoundingClientRect();
       const u = clamp((event.clientX - rect.left) / rect.width, 0, 1);
       const y = clamp((event.clientY - rect.top) / rect.height, 0, 1);
-      const time = xAxis.start + u * (xAxis.end - xAxis.start);
-      const index = Math.round(time * (SAMPLE_COUNT - 1));
+      const time = u * xAxis.end;
+      const index = Math.round(clamp(time / DATA_TIME_MAX, 0, 1) * (SAMPLE_COUNT - 1));
       const range = yAxis[key].range;
       const value = clamp((0.5 - y) * 2 * range, -range, range);
       return { index, value };
     }
 
     function sampleToX(index, width) {
-      const time = index / (SAMPLE_COUNT - 1);
+      const time = (index / (SAMPLE_COUNT - 1)) * DATA_TIME_MAX;
       return timeToX(time, width);
     }
 
     function timeToX(time, width) {
-      return ((time - xAxis.start) / (xAxis.end - xAxis.start)) * width;
+      return (time / xAxis.end) * width;
     }
 
     function valueToY(value, height, range) {
@@ -358,6 +358,10 @@
 
     function clamp(value, min, max) {
       return Math.min(max, Math.max(min, value));
+    }
+
+    function currentDt() {
+      return DATA_TIME_MAX / (SAMPLE_COUNT - 1);
     }
 
     /*
@@ -406,6 +410,7 @@
     }
 
     function integrate(input, output) {
+      const dt = currentDt();
       output[0] = 0;
 
       for (let i = 1; i < SAMPLE_COUNT; i++) {
@@ -413,7 +418,7 @@
           Trapezoidal integration averages the two neighboring samples.
           It is still simple, but usually smoother than rectangular sums.
         */
-        output[i] = output[i - 1] + 0.5 * (input[i - 1] + input[i]) * DT;
+        output[i] = output[i - 1] + 0.5 * (input[i - 1] + input[i]) * dt;
       }
       /*
         Integration usually reduces sharpness, so the result can be left as
@@ -422,15 +427,16 @@
     }
 
     function differentiate(input, output, smoothAfter) {
-      output[0] = (input[1] - input[0]) / DT;
-      output[SAMPLE_COUNT - 1] = (input[SAMPLE_COUNT - 1] - input[SAMPLE_COUNT - 2]) / DT;
+      const dt = currentDt();
+      output[0] = (input[1] - input[0]) / dt;
+      output[SAMPLE_COUNT - 1] = (input[SAMPLE_COUNT - 1] - input[SAMPLE_COUNT - 2]) / dt;
 
       for (let i = 1; i < SAMPLE_COUNT - 1; i++) {
         /*
           Central difference uses samples on both sides of i.
           This is a common first numerical derivative for evenly spaced data.
         */
-        output[i] = (input[i + 1] - input[i - 1]) / (2 * DT);
+        output[i] = (input[i + 1] - input[i - 1]) / (2 * dt);
       }
 
       if (smoothAfter) {
@@ -510,7 +516,7 @@
         yAxis[key].manual = false;
       }
       xAxis.start = 0;
-      xAxis.end = 1;
+      xAxis.end = DEFAULT_TIME_MAX;
       drawAll();
     }
 
@@ -611,8 +617,8 @@
       ctx.clip();
 
       for (let i = 0; i < values.length - 1; i++) {
-        const time0 = i / (SAMPLE_COUNT - 1);
-        const time1 = (i + 1) / (SAMPLE_COUNT - 1);
+        const time0 = (i / (SAMPLE_COUNT - 1)) * DATA_TIME_MAX;
+        const time1 = ((i + 1) / (SAMPLE_COUNT - 1)) * DATA_TIME_MAX;
 
         if (time1 < xAxis.start || time0 > xAxis.end) continue;
 
@@ -763,9 +769,14 @@
       const niceMultipliers = [1, 1.5, 2, 3, 5, 10];
       let multiplier = niceMultipliers[0];
 
+      if (safeTarget < 0.02) {
+        return base;
+      }
+
       /*
         Pick the largest nice value that is not bigger than the target.
         For example:
+          range 0.05 -> target 0.016 -> step 0.01
           range 0.45 -> target 0.15 -> step 0.15
           range 0.90 -> target 0.30 -> step 0.30
           range 1.80 -> target 0.60 -> step 0.50
@@ -833,8 +844,6 @@
         scalingAxis = false;
         scalingTime = true;
         timeStartX = event.clientX;
-        timeStartY = event.clientY;
-        timeStartMin = xAxis.start;
         timeStartMax = xAxis.end;
         graphEls[key].classList.add('scaling');
       } else if (key === editMode) {
@@ -863,18 +872,13 @@
 
       if (scalingTime) {
         /*
-          Horizontal drag pans the time window. Vertical drag zooms the shared
-          time axis around its current center. Because xAxis is global, all
-          three graphs always stay synchronized.
+          The time origin stays fixed at 0. Dragging right zooms in by making
+          the maximum time smaller; dragging left widens the range. Because xAxis is
+          global, all three graphs always stay synchronized.
         */
-        const rect = canvases[key].getBoundingClientRect();
-        const plotWidth = Math.max(1, rect.width - 58);
-        const startSpan = timeStartMax - timeStartMin;
-        const pan = -((event.clientX - timeStartX) / plotWidth) * startSpan;
-        const zoom = Math.exp((event.clientY - timeStartY) / 130);
-        const nextSpan = clamp(startSpan * zoom, MIN_TIME_SPAN, 1);
-        const startCenter = (timeStartMin + timeStartMax) / 2 + pan;
-        setTimeAxisFromCenter(startCenter, nextSpan);
+        const deltaX = event.clientX - timeStartX;
+        const factor = Math.exp(-deltaX / 160);
+        setTimeAxisMax(timeStartMax * factor);
         drawAll();
         return;
       }
@@ -909,28 +913,9 @@
       return event.clientY >= rect.bottom - TIME_AXIS_TOUCH_HEIGHT;
     }
 
-    function setTimeAxisFromCenter(center, span) {
-      if (span >= 1) {
-        xAxis.start = 0;
-        xAxis.end = 1;
-        return;
-      }
-
-      let start = center - span / 2;
-      let end = center + span / 2;
-
-      if (start < 0) {
-        end -= start;
-        start = 0;
-      }
-
-      if (end > 1) {
-        start -= end - 1;
-        end = 1;
-      }
-
-      xAxis.start = clamp(start, 0, 1 - span);
-      xAxis.end = clamp(end, span, 1);
+    function setTimeAxisMax(nextMax) {
+      xAxis.start = 0;
+      xAxis.end = clamp(nextMax, MIN_TIME_MAX, MAX_TIME_MAX);
     }
 
     for (const key of Object.keys(canvases)) {
