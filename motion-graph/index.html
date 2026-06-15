@@ -164,6 +164,14 @@
       text-align: center;
     }
 
+    .updated {
+      margin: -4px 0 0;
+      color: var(--muted);
+      font-size: 10px;
+      line-height: 1.2;
+      text-align: center;
+    }
+
     @media (max-height: 650px) {
       .app {
         gap: 6px;
@@ -187,6 +195,14 @@
       .hint {
         font-size: 11px;
       }
+
+    .updated {
+      margin: -4px 0 0;
+      color: var(--muted);
+      font-size: 10px;
+      line-height: 1.2;
+      text-align: center;
+    }
     }
   </style>
 </head>
@@ -218,6 +234,7 @@
     </section>
 
     <p class="hint">選んだグラフは線を描けます。下端の時間軸は右ドラッグで拡大、左ドラッグで範囲を広げられます。</p>
+    <p class="updated" id="updatedAt">更新日時: --</p>
   </main>
 
   <script>
@@ -233,7 +250,7 @@
       educational sketching tool, all vertical units are also normalized.
       A value of +1 is near the top of a graph, -1 near the bottom.
     */
-    const SAMPLE_COUNT = 501;
+    const SAMPLE_COUNT = 1001;
     const DEFAULT_RANGE = 1.2;
     const MIN_AXIS_RANGE = 0.05;
     const MAX_AXIS_RANGE = 80;
@@ -291,6 +308,7 @@
 
     const editButtons = Array.from(document.querySelectorAll('[data-edit]'));
     const resetButton = document.getElementById('resetButton');
+    const updatedAt = document.getElementById('updatedAt');
 
     let editMode = 'a';
     let drawing = false;
@@ -333,9 +351,9 @@
       Values use the current vertical range of the graph being edited.
     */
     function pointFromEvent(event, canvas, key) {
-      const rect = canvas.getBoundingClientRect();
-      const u = clamp((event.clientX - rect.left) / rect.width, 0, 1);
-      const y = clamp((event.clientY - rect.top) / rect.height, 0, 1);
+      const plot = plotRectFromCanvas(canvas);
+      const u = clamp((event.clientX - plot.left) / plot.width, 0, 1);
+      const y = clamp((event.clientY - plot.top) / plot.height, 0, 1);
       const time = u * xAxis.end;
       const index = Math.round(clamp(time / DATA_TIME_MAX, 0, 1) * (SAMPLE_COUNT - 1));
       const range = yAxis[key].range;
@@ -343,6 +361,20 @@
       return { index, value };
     }
 
+    function plotRectFromCanvas(canvas) {
+      const rect = canvas.getBoundingClientRect();
+      const padLeft = 48;
+      const padRight = 10;
+      const padTop = 18;
+      const padBottom = 30;
+
+      return {
+        left: rect.left + padLeft,
+        top: rect.top + padTop,
+        width: Math.max(1, rect.width - padLeft - padRight),
+        height: Math.max(1, rect.height - padTop - padBottom)
+      };
+    }
     function sampleToX(index, width) {
       const time = (index / (SAMPLE_COUNT - 1)) * DATA_TIME_MAX;
       return timeToX(time, width);
@@ -385,6 +417,7 @@
       recomputeFrom(seriesKey);
       drawAll();
     }
+
 
     /*
       Numerical integration and differentiation
@@ -932,12 +965,20 @@
     }
 
     resetButton.addEventListener('click', resetData);
+    function showUpdatedAt() {
+      const modified = new Date(document.lastModified);
+      const text = Number.isNaN(modified.getTime())
+        ? '更新日時: 不明'
+        : '更新日時: ' + modified.toLocaleString('ja-JP');
+      updatedAt.textContent = text;
+    }
     window.addEventListener('resize', resizeCanvases);
     window.addEventListener('orientationchange', resizeCanvases);
 
     /*
       Resize after layout has happened, then draw the initial flat graphs.
     */
+    showUpdatedAt();
     requestAnimationFrame(resizeCanvases);
   </script>
 </body>
