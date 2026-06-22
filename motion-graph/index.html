@@ -254,7 +254,7 @@
     const DEFAULT_RANGE = 1.2;
     const MIN_AXIS_RANGE = 0.05;
     const MAX_AXIS_RANGE = 80;
-    const SMOOTHING_RADIUS = 2;
+    const SMOOTHING_RADIUS = 3;
     const SMOOTHING_PASSES = 1;
     const DEFAULT_TIME_MAX = 1;
     const MIN_TIME_MAX = 0.08;
@@ -374,6 +374,14 @@
         width: Math.max(1, rect.width - padLeft - padRight),
         height: Math.max(1, rect.height - padTop - padBottom)
       };
+    }
+
+    function isInsidePlotArea(event, canvas) {
+      const plot = plotRectFromCanvas(canvas);
+      return event.clientX >= plot.left &&
+        event.clientX <= plot.left + plot.width &&
+        event.clientY >= plot.top &&
+        event.clientY <= plot.top + plot.height;
     }
     function sampleToX(index, width) {
       const time = (index / (SAMPLE_COUNT - 1)) * DATA_TIME_MAX;
@@ -870,9 +878,9 @@
     */
     function onPointerDown(event, key) {
       const canvas = canvases[key];
-      canvas.setPointerCapture(event.pointerId);
 
       if (isTimeAxisGesture(event, canvas)) {
+        canvas.setPointerCapture(event.pointerId);
         drawing = false;
         scalingAxis = false;
         scalingTime = true;
@@ -880,12 +888,15 @@
         timeStartMax = xAxis.end;
         graphEls[key].classList.add('scaling');
       } else if (key === editMode) {
+        if (!isInsidePlotArea(event, canvas)) return;
+        canvas.setPointerCapture(event.pointerId);
         drawing = true;
         scalingAxis = false;
         scalingTime = false;
         lastPoint = pointFromEvent(event, canvas, key);
         writeSegment(key, lastPoint, lastPoint);
       } else {
+        canvas.setPointerCapture(event.pointerId);
         drawing = false;
         scalingAxis = true;
         scalingTime = false;
@@ -894,9 +905,9 @@
         graphEls[key].classList.add('scaling');
       }
     }
-
     function onPointerMove(event, key) {
       if (drawing && key === editMode && lastPoint !== null) {
+        if (!isInsidePlotArea(event, canvases[key])) return;
         const current = pointFromEvent(event, canvases[key], key);
         writeSegment(key, lastPoint, current);
         lastPoint = current;
