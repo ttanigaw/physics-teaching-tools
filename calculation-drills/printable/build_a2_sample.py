@@ -85,7 +85,7 @@ def fit(c, x, y, value, max_w, size=13, min_size=8, color=INK):
     tx(c,x,y,value,size,color)
 
 
-def header(c, title, subtitle, page_no, student=False):
+def header(c, title, subtitle, page_no, total=None, student=False):
     c.setFillColor(ACCENT)
     c.rect(0,PAGE_H-9,PAGE_W,9,stroke=0,fill=1)
     tx(c,MARGIN,PAGE_H-48,title,18,INK)
@@ -96,8 +96,8 @@ def header(c, title, subtitle, page_no, student=False):
         c.line(PAGE_W-170,PAGE_H-48,PAGE_W-MARGIN,PAGE_H-48)
     c.setLineWidth(.6);c.setStrokeColor(BORDER)
     c.line(MARGIN,PAGE_H-94,PAGE_W-MARGIN,PAGE_H-94)
-    tx(c,MARGIN,28,"A2 / 試作版 v0.3　・　2026-11-21",8,MUTED)
-    tx(c,PAGE_W-MARGIN-80,28,f"{page_no} ページ",8,MUTED)
+    tx(c,MARGIN,28,"A2 / 試作版 v0.4　・　2026-11-21",8,MUTED)
+    tx(c,PAGE_W-MARGIN-95,28,f"{page_no}/{total} ページ" if total else f"{page_no} ページ",8,MUTED)
 
 
 def draw_problem(c, p, label, x, top, w, h, mode):
@@ -126,7 +126,7 @@ def student_pdf(plan, lookup, dest):
     c.setTitle("A2 計算ドリル　学生用・試作")
     y0=PAGE_H-124
     for page,section in enumerate(plan["sections"],1):
-        header(c,"計算ドリル　試作",section["student_title"],page,student=True)
+        header(c,"計算ドリル　試作",section["student_title"],page,len(plan["sections"]),student=True)
         notes={
           "foundation":"次の計算をしてください。",
           "discovery":"次の計算をしてください。途中式は自由に書いてかまいません。",
@@ -134,7 +134,7 @@ def student_pdf(plan, lookup, dest):
           "decomposition":"次の計算をしてください。",
           "selfcheck":"まず答えを書き、答えを見る前に見直して、必要なら書き直しましょう。",
         }
-        tx(c,MARGIN,y0,notes[section["key"]],10,INK)
+        fit(c,MARGIN,y0,section.get("student_prompt",notes.get(section["key"],"次の計算をしてください。")),PAPER_W,10,9)
         items=[lookup[x] for x in section["ids"]]
         top=y0-25
         mode=section["layout"]
@@ -167,7 +167,7 @@ def answer_pdf(plan, lookup, dest):
     pnum=0
     for s in plan["sections"]:
         pnum+=1
-        header(c,"解答・解説　試作",s["student_title"]+" / 問題番号は学生用PDFと対応",pnum)
+        header(c,"解答・解説　試作",s["student_title"]+" / 問題番号は学生用PDFと対応",pnum,len(plan["sections"]))
         top=PAGE_H-129
         n=len(s["ids"])
         h=min(94 if n<=8 else 54,(top-61)/n)
@@ -187,41 +187,44 @@ def answer_pdf(plan, lookup, dest):
 
 
 def teacher_pdf(plan, lookup, dest):
+    """Two pages: teacher guidance and all print-set descriptions."""
     c=Canvas(str(dest),pagesize=A4,pageCompression=1)
-    c.setTitle("A2 計算ドリル　教員用メモ・試作")
-    header(c,"教員向けメモ　試作","A2 / ねらい・扱い方・設計上の制約",1)
-    y=PAGE_H-130
-    lines=[
-      "この資料は初期試作です。学習効果・適正問題数は未検証です。",
-      "目的 G1: 自分で工夫を発見　G2: 計算手順を選択　G3: 正答を見る前に自己点検",
-      "初回の基礎問題でつまずく場合、難しい配置や分解へ進む前に補充を検討します。",
-      "発見型（2ページ）では、最初から「25×4を先に」等と教えないでください。",
-      "支援の例：①順番は固定か？ ②先に計算しやすい数は？ ③例題の2通りを比較。",
-      "L1の発見に至らなくても失敗扱いしません。必要なら適切な時点で示します。",
-      "位置 P12 は左からでもよい場合があり、必ず並べ替える練習とはしません。",
-      "分解 D1/D2/DB は基本の積 F とは独立の習熟要素として観察します。",
-      "最後の自己点検では「最初の答え」と「見直し後」を正答提示前に記録します。",
-      "正しい別解を認め、最終解答のみから実際の計算経路を断定しません。",
+    c.setTitle("A2 計算ドリル　教員用メモ・試作 v0.4")
+    header(c,"教員向けメモ　試作","授業時の使い方と注意点",1,2)
+    y=PAGE_H-132
+    guides=[
+        "対象は主に15〜16歳。九九は既習とし、単独の九九問題は収録しません。",
+        "G1：工夫を自発的に発見　 G2：計算方法を選択　 G3：答えを見る前に自己点検",
+        "各ページは独立した小セットです。全110問を必ず実施する必要はありません。",
+        "2ページ目は2因子・分解ありの専用プリントです。順序変更とは区別します。",
+        "3ページ目（発見型）では先に「25×4を探そう」などと示さないでください。",
+        "必要なら段階的支援：順序は固定か？ → 組にすると楽な数はないか？",
+        "5～8ページ目：F2C/F3Cの小数の組と位置・向きを段階的に変えます。",
+        "9ページ目：小数の組と因子数を混ぜ、ヒントなしで見抜けるか確認します。",
+        "10ページ目：分解・複数の組・対照問題。工夫の強制を避けてください。",
+        "11ページ目：初回答案と見直し後を、正答を見せる前に記録させます。",
+        "正答だけでは解法を断定できません。学生の有効な別解も認めます。",
+        "試作教材です。計算負担の差・難度の教育的検証はこれから行います。",
     ]
-    for item in lines:
-        fit(c,MARGIN,y,item,PAPER_W,10,8)
-        y-=35
-    y-=12
-    tx(c,MARGIN,y,"今回の試作セットの内訳",12,ACCENT);y-=28
-    for s in plan["sections"]:
-        p0=lookup[s["ids"][0]]
-        tx(c,MARGIN+6,y,f"{s['student_title']}：{len(s['ids'])} 問",10,INK)
-        y-=29
-    y-=10
-    tx(c,MARGIN,y,"問題バンクとPDFの関係",12,ACCENT);y-=30
-    for line in [
-       f"・A2の問題バンクから、このPDFでは{sum(len(s['ids']) for s in plan['sections'])}問を抽出。九九だけの単独計算は除外。",
-       "・配布する問題数は学習者の前提技能と授業時間に応じて変更できます。",
-       "・IDは生徒用に表示せず、教員と将来のCBDでの診断に利用します。",
-       "・公開リポジトリに個別の生徒の答案・履歴を保存しません。",
-    ]:
-        fit(c,MARGIN,y,line,PAPER_W,9,8);y-=24
-    c.showPage();c.save()
+    for line in guides:
+        fit(c,MARGIN,y,line,PAPER_W,10,8)
+        y-=42
+    c.showPage()
+    header(c,"教員向けメモ　試作","全11セットの出題内訳・観察対象",2,2)
+    y=PAGE_H-130
+    for i,s in enumerate(plan["sections"],1):
+        tx(c,MARGIN,y,f"{i:02d}.　{s['student_title']}　（{len(s['ids'])}問）",10,INK)
+        fit(c,MARGIN+19,y-20,s.get("teacher_goal",""),PAPER_W-24,8.5,7.5,MUTED)
+        y-=52
+    y-=4
+    n=sum(len(s["ids"]) for s in plan["sections"])
+    tx(c,MARGIN,y,f"計 {n} 問 ／ 問題バンク{len(lookup)}問から選択",11,ACCENT)
+    y-=32
+    fit(c,MARGIN,y,"学生用にはF/P/Dコードと模範解法を表示していません。",PAPER_W,9,8)
+    y-=24
+    fit(c,MARGIN,y,"公開GitHubに学生の答案・個別学習記録を保存しないでください。",PAPER_W,9,8)
+    c.showPage()
+    c.save()
 
 
 def run():
@@ -244,7 +247,7 @@ def run():
     args.out.mkdir(parents=True,exist_ok=True)
     files=[args.out/"a2_sample_student.pdf",args.out/"a2_sample_answers.pdf",args.out/"a2_sample_teacher.pdf"]
     student_pdf(plan,lookup,files[0]); answer_pdf(plan,lookup,files[1]);teacher_pdf(plan,lookup,files[2])
-    print(f"Validated {len(bank['problems'])} bank entries; rendered {len(selection)} selected questions")
+    print(f"Validated {len(bank['problems'])} bank entries; rendered {len(selection)} selected questions in {len(plan['sections'])} sets")
     for f in files:print(f, f.stat().st_size)
 
 if __name__=="__main__":run()
