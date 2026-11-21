@@ -90,7 +90,7 @@ def header(c, title, subtitle, page_no, student=False):
         c.line(PAGE_W-170,PAGE_H-48,PAGE_W-MARGIN,PAGE_H-48)
     c.setLineWidth(.6);c.setStrokeColor(BORDER)
     c.line(MARGIN,PAGE_H-94,PAGE_W-MARGIN,PAGE_H-94)
-    tx(c,MARGIN,28,"A2 / 試作版 v0.1　・　2026-11-21",8,MUTED)
+    tx(c,MARGIN,28,"A2 / 試作版 v0.2　・　2026-11-21",8,MUTED)
     tx(c,PAGE_W-MARGIN-80,28,f"{page_no} ページ",8,MUTED)
 
 
@@ -207,7 +207,7 @@ def teacher_pdf(plan, lookup, dest):
     y-=10
     tx(c,MARGIN,y,"問題バンクとPDFの関係",12,ACCENT);y-=30
     for line in [
-       "・A2の全問題バンクから、このPDFでは44問を抽出しています。",
+       f"・A2の問題バンクから、このPDFでは{sum(len(s['ids']) for s in plan['sections'])}問を抽出。九九だけの単独計算は除外。",
        "・配布する問題数は学習者の前提技能と授業時間に応じて変更できます。",
        "・IDは生徒用に表示せず、教員と将来のCBDでの診断に利用します。",
        "・公開リポジトリに個別の生徒の答案・履歴を保存しません。",
