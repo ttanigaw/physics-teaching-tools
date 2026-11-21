@@ -2,7 +2,7 @@
   "schema_version": "a2-bank-0.1",
   "updated": "2026-11-21",
   "status": "draft",
-  "description": "A2初期問題バンク。主対象15〜16歳。独立した九九（1〜9の整数同士の1回の積）は既習として除外。既存28候補とF/P/D診断別の問題を含み、PDFは一部を選択。",
+  "description": "A2問題バンク。主対象15〜16歳。九九の単独問題を除外。F2C/F3CのN3・N4へ各36問ずつ追加し、数の組と位置・向きの認識を重点的に練習する。D0を中心に診断軸を分離。PDFは一部を選択。",
   "problems": [
     {
       "id": "A2-F2A-N3P13-D0-01",
@@ -3843,11 +3843,4259 @@
         "N4P24",
         "DB"
       ]
+    },
+    {
+      "id": "A2-F2C-N3P12-D0-01",
+      "factors": [
+        2.5,
+        4,
+        11
+      ],
+      "focus": [
+        [
+          2.5,
+          4
+        ]
+      ],
+      "answer": 110,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する3因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2C",
+        "N3P12",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2C-N3P12-D0-02",
+      "factors": [
+        0.25,
+        4,
+        13
+      ],
+      "focus": [
+        [
+          0.25,
+          4
+        ]
+      ],
+      "answer": 13,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する3因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2C",
+        "N3P12",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2C-N3P12-D0-03",
+      "factors": [
+        0.025,
+        4,
+        17
+      ],
+      "focus": [
+        [
+          0.025,
+          4
+        ]
+      ],
+      "answer": 1.7,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する3因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2C",
+        "N3P12",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2C-N3P12-D0-04",
+      "factors": [
+        25,
+        0.4,
+        19
+      ],
+      "focus": [
+        [
+          25,
+          0.4
+        ]
+      ],
+      "answer": 190,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する3因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2C",
+        "N3P12",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2C-N3P12-D0-05",
+      "factors": [
+        25,
+        0.04,
+        23
+      ],
+      "focus": [
+        [
+          25,
+          0.04
+        ]
+      ],
+      "answer": 23,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する3因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2C",
+        "N3P12",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2C-N3P12-D0-06",
+      "factors": [
+        2.5,
+        0.4,
+        29
+      ],
+      "focus": [
+        [
+          2.5,
+          0.4
+        ]
+      ],
+      "answer": 29,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する3因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2C",
+        "N3P12",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2C-N3P21-D0-01",
+      "factors": [
+        4,
+        2.5,
+        31
+      ],
+      "focus": [
+        [
+          2.5,
+          4
+        ]
+      ],
+      "answer": 310,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する3因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2C",
+        "N3P21",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2C-N3P21-D0-02",
+      "factors": [
+        4,
+        0.25,
+        37
+      ],
+      "focus": [
+        [
+          0.25,
+          4
+        ]
+      ],
+      "answer": 37,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する3因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2C",
+        "N3P21",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2C-N3P21-D0-03",
+      "factors": [
+        4,
+        0.025,
+        41
+      ],
+      "focus": [
+        [
+          0.025,
+          4
+        ]
+      ],
+      "answer": 4.1,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する3因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2C",
+        "N3P21",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2C-N3P21-D0-04",
+      "factors": [
+        0.4,
+        25,
+        43
+      ],
+      "focus": [
+        [
+          25,
+          0.4
+        ]
+      ],
+      "answer": 430,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する3因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2C",
+        "N3P21",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2C-N3P21-D0-05",
+      "factors": [
+        0.04,
+        25,
+        47
+      ],
+      "focus": [
+        [
+          25,
+          0.04
+        ]
+      ],
+      "answer": 47,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する3因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2C",
+        "N3P21",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2C-N3P21-D0-06",
+      "factors": [
+        0.4,
+        2.5,
+        53
+      ],
+      "focus": [
+        [
+          2.5,
+          0.4
+        ]
+      ],
+      "answer": 53,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する3因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2C",
+        "N3P21",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2C-N3P13-D0-01",
+      "factors": [
+        2.5,
+        59,
+        4
+      ],
+      "focus": [
+        [
+          2.5,
+          4
+        ]
+      ],
+      "answer": 590,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する3因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2C",
+        "N3P13",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2C-N3P13-D0-02",
+      "factors": [
+        0.25,
+        61,
+        4
+      ],
+      "focus": [
+        [
+          0.25,
+          4
+        ]
+      ],
+      "answer": 61,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する3因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2C",
+        "N3P13",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2C-N3P13-D0-03",
+      "factors": [
+        0.025,
+        67,
+        4
+      ],
+      "focus": [
+        [
+          0.025,
+          4
+        ]
+      ],
+      "answer": 6.7,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する3因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2C",
+        "N3P13",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2C-N3P13-D0-04",
+      "factors": [
+        25,
+        71,
+        0.4
+      ],
+      "focus": [
+        [
+          25,
+          0.4
+        ]
+      ],
+      "answer": 710,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する3因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2C",
+        "N3P13",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2C-N3P13-D0-05",
+      "factors": [
+        25,
+        73,
+        0.04
+      ],
+      "focus": [
+        [
+          25,
+          0.04
+        ]
+      ],
+      "answer": 73,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する3因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2C",
+        "N3P13",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2C-N3P13-D0-06",
+      "factors": [
+        2.5,
+        79,
+        0.4
+      ],
+      "focus": [
+        [
+          2.5,
+          0.4
+        ]
+      ],
+      "answer": 79,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する3因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2C",
+        "N3P13",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2C-N3P31-D0-01",
+      "factors": [
+        4,
+        83,
+        2.5
+      ],
+      "focus": [
+        [
+          2.5,
+          4
+        ]
+      ],
+      "answer": 830,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する3因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2C",
+        "N3P31",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2C-N3P31-D0-02",
+      "factors": [
+        4,
+        89,
+        0.25
+      ],
+      "focus": [
+        [
+          0.25,
+          4
+        ]
+      ],
+      "answer": 89,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する3因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2C",
+        "N3P31",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2C-N3P31-D0-03",
+      "factors": [
+        4,
+        97,
+        0.025
+      ],
+      "focus": [
+        [
+          0.025,
+          4
+        ]
+      ],
+      "answer": 9.7,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する3因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2C",
+        "N3P31",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2C-N3P31-D0-04",
+      "factors": [
+        0.4,
+        101,
+        25
+      ],
+      "focus": [
+        [
+          25,
+          0.4
+        ]
+      ],
+      "answer": 1010,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する3因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2C",
+        "N3P31",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2C-N3P31-D0-05",
+      "factors": [
+        0.04,
+        103,
+        25
+      ],
+      "focus": [
+        [
+          25,
+          0.04
+        ]
+      ],
+      "answer": 103,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する3因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2C",
+        "N3P31",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2C-N3P31-D0-06",
+      "factors": [
+        0.4,
+        107,
+        2.5
+      ],
+      "focus": [
+        [
+          2.5,
+          0.4
+        ]
+      ],
+      "answer": 107,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する3因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2C",
+        "N3P31",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2C-N3P23-D0-01",
+      "factors": [
+        109,
+        2.5,
+        4
+      ],
+      "focus": [
+        [
+          2.5,
+          4
+        ]
+      ],
+      "answer": 1090,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する3因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2C",
+        "N3P23",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2C-N3P23-D0-02",
+      "factors": [
+        113,
+        0.25,
+        4
+      ],
+      "focus": [
+        [
+          0.25,
+          4
+        ]
+      ],
+      "answer": 113,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する3因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2C",
+        "N3P23",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2C-N3P23-D0-03",
+      "factors": [
+        127,
+        0.025,
+        4
+      ],
+      "focus": [
+        [
+          0.025,
+          4
+        ]
+      ],
+      "answer": 12.7,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する3因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2C",
+        "N3P23",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2C-N3P23-D0-04",
+      "factors": [
+        131,
+        25,
+        0.4
+      ],
+      "focus": [
+        [
+          25,
+          0.4
+        ]
+      ],
+      "answer": 1310,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する3因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2C",
+        "N3P23",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2C-N3P23-D0-05",
+      "factors": [
+        137,
+        25,
+        0.04
+      ],
+      "focus": [
+        [
+          25,
+          0.04
+        ]
+      ],
+      "answer": 137,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する3因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2C",
+        "N3P23",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2C-N3P23-D0-06",
+      "factors": [
+        139,
+        2.5,
+        0.4
+      ],
+      "focus": [
+        [
+          2.5,
+          0.4
+        ]
+      ],
+      "answer": 139,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する3因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2C",
+        "N3P23",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2C-N3P32-D0-01",
+      "factors": [
+        149,
+        4,
+        2.5
+      ],
+      "focus": [
+        [
+          2.5,
+          4
+        ]
+      ],
+      "answer": 1490,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する3因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2C",
+        "N3P32",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2C-N3P32-D0-02",
+      "factors": [
+        151,
+        4,
+        0.25
+      ],
+      "focus": [
+        [
+          0.25,
+          4
+        ]
+      ],
+      "answer": 151,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する3因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2C",
+        "N3P32",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2C-N3P32-D0-03",
+      "factors": [
+        157,
+        4,
+        0.025
+      ],
+      "focus": [
+        [
+          0.025,
+          4
+        ]
+      ],
+      "answer": 15.7,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する3因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2C",
+        "N3P32",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2C-N3P32-D0-04",
+      "factors": [
+        163,
+        0.4,
+        25
+      ],
+      "focus": [
+        [
+          25,
+          0.4
+        ]
+      ],
+      "answer": 1630,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する3因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2C",
+        "N3P32",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2C-N3P32-D0-05",
+      "factors": [
+        167,
+        0.04,
+        25
+      ],
+      "focus": [
+        [
+          25,
+          0.04
+        ]
+      ],
+      "answer": 167,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する3因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2C",
+        "N3P32",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2C-N3P32-D0-06",
+      "factors": [
+        173,
+        0.4,
+        2.5
+      ],
+      "focus": [
+        [
+          2.5,
+          0.4
+        ]
+      ],
+      "answer": 173,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する3因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2C",
+        "N3P32",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2C-N4P12-D0-01",
+      "factors": [
+        2.5,
+        4,
+        17,
+        3
+      ],
+      "focus": [
+        [
+          2.5,
+          4
+        ]
+      ],
+      "answer": 510,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する4因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2C",
+        "N4P12",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2C-N4P12-D0-02",
+      "factors": [
+        0.25,
+        4,
+        17,
+        7
+      ],
+      "focus": [
+        [
+          0.25,
+          4
+        ]
+      ],
+      "answer": 119,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する4因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2C",
+        "N4P12",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2C-N4P12-D0-03",
+      "factors": [
+        0.025,
+        4,
+        17,
+        9
+      ],
+      "focus": [
+        [
+          0.025,
+          4
+        ]
+      ],
+      "answer": 15.3,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する4因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2C",
+        "N4P12",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2C-N4P21-D0-01",
+      "factors": [
+        0.4,
+        25,
+        19,
+        3
+      ],
+      "focus": [
+        [
+          25,
+          0.4
+        ]
+      ],
+      "answer": 570,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する4因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2C",
+        "N4P21",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2C-N4P21-D0-02",
+      "factors": [
+        0.04,
+        25,
+        19,
+        7
+      ],
+      "focus": [
+        [
+          25,
+          0.04
+        ]
+      ],
+      "answer": 133,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する4因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2C",
+        "N4P21",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2C-N4P21-D0-03",
+      "factors": [
+        0.4,
+        2.5,
+        19,
+        9
+      ],
+      "focus": [
+        [
+          2.5,
+          0.4
+        ]
+      ],
+      "answer": 171,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する4因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2C",
+        "N4P21",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2C-N4P13-D0-01",
+      "factors": [
+        2.5,
+        23,
+        4,
+        3
+      ],
+      "focus": [
+        [
+          2.5,
+          4
+        ]
+      ],
+      "answer": 690,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する4因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2C",
+        "N4P13",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2C-N4P13-D0-02",
+      "factors": [
+        0.25,
+        23,
+        4,
+        7
+      ],
+      "focus": [
+        [
+          0.25,
+          4
+        ]
+      ],
+      "answer": 161,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する4因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2C",
+        "N4P13",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2C-N4P13-D0-03",
+      "factors": [
+        0.025,
+        23,
+        4,
+        9
+      ],
+      "focus": [
+        [
+          0.025,
+          4
+        ]
+      ],
+      "answer": 20.7,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する4因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2C",
+        "N4P13",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2C-N4P31-D0-01",
+      "factors": [
+        0.4,
+        29,
+        25,
+        3
+      ],
+      "focus": [
+        [
+          25,
+          0.4
+        ]
+      ],
+      "answer": 870,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する4因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2C",
+        "N4P31",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2C-N4P31-D0-02",
+      "factors": [
+        0.04,
+        29,
+        25,
+        7
+      ],
+      "focus": [
+        [
+          25,
+          0.04
+        ]
+      ],
+      "answer": 203,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する4因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2C",
+        "N4P31",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2C-N4P31-D0-03",
+      "factors": [
+        0.4,
+        29,
+        2.5,
+        9
+      ],
+      "focus": [
+        [
+          2.5,
+          0.4
+        ]
+      ],
+      "answer": 261,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する4因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2C",
+        "N4P31",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2C-N4P14-D0-01",
+      "factors": [
+        2.5,
+        31,
+        3,
+        4
+      ],
+      "focus": [
+        [
+          2.5,
+          4
+        ]
+      ],
+      "answer": 930,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する4因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2C",
+        "N4P14",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2C-N4P14-D0-02",
+      "factors": [
+        0.25,
+        31,
+        7,
+        4
+      ],
+      "focus": [
+        [
+          0.25,
+          4
+        ]
+      ],
+      "answer": 217,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する4因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2C",
+        "N4P14",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2C-N4P14-D0-03",
+      "factors": [
+        0.025,
+        31,
+        9,
+        4
+      ],
+      "focus": [
+        [
+          0.025,
+          4
+        ]
+      ],
+      "answer": 27.9,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する4因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2C",
+        "N4P14",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2C-N4P41-D0-01",
+      "factors": [
+        0.4,
+        37,
+        3,
+        25
+      ],
+      "focus": [
+        [
+          25,
+          0.4
+        ]
+      ],
+      "answer": 1110,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する4因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2C",
+        "N4P41",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2C-N4P41-D0-02",
+      "factors": [
+        0.04,
+        37,
+        7,
+        25
+      ],
+      "focus": [
+        [
+          25,
+          0.04
+        ]
+      ],
+      "answer": 259,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する4因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2C",
+        "N4P41",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2C-N4P41-D0-03",
+      "factors": [
+        0.4,
+        37,
+        9,
+        2.5
+      ],
+      "focus": [
+        [
+          2.5,
+          0.4
+        ]
+      ],
+      "answer": 333,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する4因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2C",
+        "N4P41",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2C-N4P23-D0-01",
+      "factors": [
+        41,
+        2.5,
+        4,
+        3
+      ],
+      "focus": [
+        [
+          2.5,
+          4
+        ]
+      ],
+      "answer": 1230,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する4因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2C",
+        "N4P23",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2C-N4P23-D0-02",
+      "factors": [
+        41,
+        0.25,
+        4,
+        7
+      ],
+      "focus": [
+        [
+          0.25,
+          4
+        ]
+      ],
+      "answer": 287,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する4因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2C",
+        "N4P23",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2C-N4P23-D0-03",
+      "factors": [
+        41,
+        0.025,
+        4,
+        9
+      ],
+      "focus": [
+        [
+          0.025,
+          4
+        ]
+      ],
+      "answer": 36.9,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する4因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2C",
+        "N4P23",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2C-N4P32-D0-01",
+      "factors": [
+        43,
+        0.4,
+        25,
+        3
+      ],
+      "focus": [
+        [
+          25,
+          0.4
+        ]
+      ],
+      "answer": 1290,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する4因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2C",
+        "N4P32",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2C-N4P32-D0-02",
+      "factors": [
+        43,
+        0.04,
+        25,
+        7
+      ],
+      "focus": [
+        [
+          25,
+          0.04
+        ]
+      ],
+      "answer": 301,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する4因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2C",
+        "N4P32",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2C-N4P32-D0-03",
+      "factors": [
+        43,
+        0.4,
+        2.5,
+        9
+      ],
+      "focus": [
+        [
+          2.5,
+          0.4
+        ]
+      ],
+      "answer": 387,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する4因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2C",
+        "N4P32",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2C-N4P24-D0-01",
+      "factors": [
+        47,
+        2.5,
+        3,
+        4
+      ],
+      "focus": [
+        [
+          2.5,
+          4
+        ]
+      ],
+      "answer": 1410,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する4因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2C",
+        "N4P24",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2C-N4P24-D0-02",
+      "factors": [
+        47,
+        0.25,
+        7,
+        4
+      ],
+      "focus": [
+        [
+          0.25,
+          4
+        ]
+      ],
+      "answer": 329,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する4因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2C",
+        "N4P24",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2C-N4P24-D0-03",
+      "factors": [
+        47,
+        0.025,
+        9,
+        4
+      ],
+      "focus": [
+        [
+          0.025,
+          4
+        ]
+      ],
+      "answer": 42.3,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する4因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2C",
+        "N4P24",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2C-N4P42-D0-01",
+      "factors": [
+        53,
+        0.4,
+        3,
+        25
+      ],
+      "focus": [
+        [
+          25,
+          0.4
+        ]
+      ],
+      "answer": 1590,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する4因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2C",
+        "N4P42",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2C-N4P42-D0-02",
+      "factors": [
+        53,
+        0.04,
+        7,
+        25
+      ],
+      "focus": [
+        [
+          25,
+          0.04
+        ]
+      ],
+      "answer": 371,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する4因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2C",
+        "N4P42",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2C-N4P42-D0-03",
+      "factors": [
+        53,
+        0.4,
+        9,
+        2.5
+      ],
+      "focus": [
+        [
+          2.5,
+          0.4
+        ]
+      ],
+      "answer": 477,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する4因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2C",
+        "N4P42",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2C-N4P34-D0-01",
+      "factors": [
+        59,
+        3,
+        2.5,
+        4
+      ],
+      "focus": [
+        [
+          2.5,
+          4
+        ]
+      ],
+      "answer": 1770,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する4因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2C",
+        "N4P34",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2C-N4P34-D0-02",
+      "factors": [
+        59,
+        7,
+        0.25,
+        4
+      ],
+      "focus": [
+        [
+          0.25,
+          4
+        ]
+      ],
+      "answer": 413,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する4因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2C",
+        "N4P34",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2C-N4P34-D0-03",
+      "factors": [
+        59,
+        9,
+        0.025,
+        4
+      ],
+      "focus": [
+        [
+          0.025,
+          4
+        ]
+      ],
+      "answer": 53.1,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する4因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2C",
+        "N4P34",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2C-N4P43-D0-01",
+      "factors": [
+        61,
+        3,
+        0.4,
+        25
+      ],
+      "focus": [
+        [
+          25,
+          0.4
+        ]
+      ],
+      "answer": 1830,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する4因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2C",
+        "N4P43",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2C-N4P43-D0-02",
+      "factors": [
+        61,
+        7,
+        0.04,
+        25
+      ],
+      "focus": [
+        [
+          25,
+          0.04
+        ]
+      ],
+      "answer": 427,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する4因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2C",
+        "N4P43",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2C-N4P43-D0-03",
+      "factors": [
+        61,
+        9,
+        0.4,
+        2.5
+      ],
+      "focus": [
+        [
+          2.5,
+          0.4
+        ]
+      ],
+      "answer": 549,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する4因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2C",
+        "N4P43",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3C-N3P12-D0-01",
+      "factors": [
+        12.5,
+        8,
+        11
+      ],
+      "focus": [
+        [
+          12.5,
+          8
+        ]
+      ],
+      "answer": 1100,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する3因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3C",
+        "N3P12",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3C-N3P12-D0-02",
+      "factors": [
+        1.25,
+        8,
+        13
+      ],
+      "focus": [
+        [
+          1.25,
+          8
+        ]
+      ],
+      "answer": 130,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する3因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3C",
+        "N3P12",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3C-N3P12-D0-03",
+      "factors": [
+        0.125,
+        8,
+        17
+      ],
+      "focus": [
+        [
+          0.125,
+          8
+        ]
+      ],
+      "answer": 17,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する3因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3C",
+        "N3P12",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3C-N3P12-D0-04",
+      "factors": [
+        125,
+        0.8,
+        19
+      ],
+      "focus": [
+        [
+          125,
+          0.8
+        ]
+      ],
+      "answer": 1900,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する3因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3C",
+        "N3P12",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3C-N3P12-D0-05",
+      "factors": [
+        125,
+        0.08,
+        23
+      ],
+      "focus": [
+        [
+          125,
+          0.08
+        ]
+      ],
+      "answer": 230,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する3因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3C",
+        "N3P12",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3C-N3P12-D0-06",
+      "factors": [
+        12.5,
+        0.8,
+        29
+      ],
+      "focus": [
+        [
+          12.5,
+          0.8
+        ]
+      ],
+      "answer": 290,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する3因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3C",
+        "N3P12",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3C-N3P21-D0-01",
+      "factors": [
+        8,
+        12.5,
+        31
+      ],
+      "focus": [
+        [
+          12.5,
+          8
+        ]
+      ],
+      "answer": 3100,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する3因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3C",
+        "N3P21",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3C-N3P21-D0-02",
+      "factors": [
+        8,
+        1.25,
+        37
+      ],
+      "focus": [
+        [
+          1.25,
+          8
+        ]
+      ],
+      "answer": 370,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する3因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3C",
+        "N3P21",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3C-N3P21-D0-03",
+      "factors": [
+        8,
+        0.125,
+        41
+      ],
+      "focus": [
+        [
+          0.125,
+          8
+        ]
+      ],
+      "answer": 41,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する3因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3C",
+        "N3P21",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3C-N3P21-D0-04",
+      "factors": [
+        0.8,
+        125,
+        43
+      ],
+      "focus": [
+        [
+          125,
+          0.8
+        ]
+      ],
+      "answer": 4300,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する3因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3C",
+        "N3P21",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3C-N3P21-D0-05",
+      "factors": [
+        0.08,
+        125,
+        47
+      ],
+      "focus": [
+        [
+          125,
+          0.08
+        ]
+      ],
+      "answer": 470,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する3因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3C",
+        "N3P21",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3C-N3P21-D0-06",
+      "factors": [
+        0.8,
+        12.5,
+        53
+      ],
+      "focus": [
+        [
+          12.5,
+          0.8
+        ]
+      ],
+      "answer": 530,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する3因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3C",
+        "N3P21",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3C-N3P13-D0-01",
+      "factors": [
+        12.5,
+        59,
+        8
+      ],
+      "focus": [
+        [
+          12.5,
+          8
+        ]
+      ],
+      "answer": 5900,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する3因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3C",
+        "N3P13",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3C-N3P13-D0-02",
+      "factors": [
+        1.25,
+        61,
+        8
+      ],
+      "focus": [
+        [
+          1.25,
+          8
+        ]
+      ],
+      "answer": 610,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する3因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3C",
+        "N3P13",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3C-N3P13-D0-03",
+      "factors": [
+        0.125,
+        67,
+        8
+      ],
+      "focus": [
+        [
+          0.125,
+          8
+        ]
+      ],
+      "answer": 67,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する3因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3C",
+        "N3P13",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3C-N3P13-D0-04",
+      "factors": [
+        125,
+        71,
+        0.8
+      ],
+      "focus": [
+        [
+          125,
+          0.8
+        ]
+      ],
+      "answer": 7100,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する3因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3C",
+        "N3P13",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3C-N3P13-D0-05",
+      "factors": [
+        125,
+        73,
+        0.08
+      ],
+      "focus": [
+        [
+          125,
+          0.08
+        ]
+      ],
+      "answer": 730,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する3因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3C",
+        "N3P13",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3C-N3P13-D0-06",
+      "factors": [
+        12.5,
+        79,
+        0.8
+      ],
+      "focus": [
+        [
+          12.5,
+          0.8
+        ]
+      ],
+      "answer": 790,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する3因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3C",
+        "N3P13",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3C-N3P31-D0-01",
+      "factors": [
+        8,
+        83,
+        12.5
+      ],
+      "focus": [
+        [
+          12.5,
+          8
+        ]
+      ],
+      "answer": 8300,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する3因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3C",
+        "N3P31",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3C-N3P31-D0-02",
+      "factors": [
+        8,
+        89,
+        1.25
+      ],
+      "focus": [
+        [
+          1.25,
+          8
+        ]
+      ],
+      "answer": 890,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する3因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3C",
+        "N3P31",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3C-N3P31-D0-03",
+      "factors": [
+        8,
+        97,
+        0.125
+      ],
+      "focus": [
+        [
+          0.125,
+          8
+        ]
+      ],
+      "answer": 97,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する3因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3C",
+        "N3P31",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3C-N3P31-D0-04",
+      "factors": [
+        0.8,
+        101,
+        125
+      ],
+      "focus": [
+        [
+          125,
+          0.8
+        ]
+      ],
+      "answer": 10100,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する3因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3C",
+        "N3P31",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3C-N3P31-D0-05",
+      "factors": [
+        0.08,
+        103,
+        125
+      ],
+      "focus": [
+        [
+          125,
+          0.08
+        ]
+      ],
+      "answer": 1030,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する3因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3C",
+        "N3P31",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3C-N3P31-D0-06",
+      "factors": [
+        0.8,
+        107,
+        12.5
+      ],
+      "focus": [
+        [
+          12.5,
+          0.8
+        ]
+      ],
+      "answer": 1070,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する3因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3C",
+        "N3P31",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3C-N3P23-D0-01",
+      "factors": [
+        109,
+        12.5,
+        8
+      ],
+      "focus": [
+        [
+          12.5,
+          8
+        ]
+      ],
+      "answer": 10900,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する3因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3C",
+        "N3P23",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3C-N3P23-D0-02",
+      "factors": [
+        113,
+        1.25,
+        8
+      ],
+      "focus": [
+        [
+          1.25,
+          8
+        ]
+      ],
+      "answer": 1130,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する3因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3C",
+        "N3P23",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3C-N3P23-D0-03",
+      "factors": [
+        127,
+        0.125,
+        8
+      ],
+      "focus": [
+        [
+          0.125,
+          8
+        ]
+      ],
+      "answer": 127,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する3因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3C",
+        "N3P23",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3C-N3P23-D0-04",
+      "factors": [
+        131,
+        125,
+        0.8
+      ],
+      "focus": [
+        [
+          125,
+          0.8
+        ]
+      ],
+      "answer": 13100,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する3因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3C",
+        "N3P23",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3C-N3P23-D0-05",
+      "factors": [
+        137,
+        125,
+        0.08
+      ],
+      "focus": [
+        [
+          125,
+          0.08
+        ]
+      ],
+      "answer": 1370,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する3因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3C",
+        "N3P23",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3C-N3P23-D0-06",
+      "factors": [
+        139,
+        12.5,
+        0.8
+      ],
+      "focus": [
+        [
+          12.5,
+          0.8
+        ]
+      ],
+      "answer": 1390,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する3因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3C",
+        "N3P23",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3C-N3P32-D0-01",
+      "factors": [
+        149,
+        8,
+        12.5
+      ],
+      "focus": [
+        [
+          12.5,
+          8
+        ]
+      ],
+      "answer": 14900,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する3因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3C",
+        "N3P32",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3C-N3P32-D0-02",
+      "factors": [
+        151,
+        8,
+        1.25
+      ],
+      "focus": [
+        [
+          1.25,
+          8
+        ]
+      ],
+      "answer": 1510,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する3因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3C",
+        "N3P32",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3C-N3P32-D0-03",
+      "factors": [
+        157,
+        8,
+        0.125
+      ],
+      "focus": [
+        [
+          0.125,
+          8
+        ]
+      ],
+      "answer": 157,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する3因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3C",
+        "N3P32",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3C-N3P32-D0-04",
+      "factors": [
+        163,
+        0.8,
+        125
+      ],
+      "focus": [
+        [
+          125,
+          0.8
+        ]
+      ],
+      "answer": 16300,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する3因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3C",
+        "N3P32",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3C-N3P32-D0-05",
+      "factors": [
+        167,
+        0.08,
+        125
+      ],
+      "focus": [
+        [
+          125,
+          0.08
+        ]
+      ],
+      "answer": 1670,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する3因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3C",
+        "N3P32",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3C-N3P32-D0-06",
+      "factors": [
+        173,
+        0.8,
+        12.5
+      ],
+      "focus": [
+        [
+          12.5,
+          0.8
+        ]
+      ],
+      "answer": 1730,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する3因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3C",
+        "N3P32",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3C-N4P12-D0-01",
+      "factors": [
+        12.5,
+        8,
+        17,
+        3
+      ],
+      "focus": [
+        [
+          12.5,
+          8
+        ]
+      ],
+      "answer": 5100,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する4因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3C",
+        "N4P12",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3C-N4P12-D0-02",
+      "factors": [
+        1.25,
+        8,
+        17,
+        7
+      ],
+      "focus": [
+        [
+          1.25,
+          8
+        ]
+      ],
+      "answer": 1190,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する4因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3C",
+        "N4P12",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3C-N4P12-D0-03",
+      "factors": [
+        0.125,
+        8,
+        17,
+        9
+      ],
+      "focus": [
+        [
+          0.125,
+          8
+        ]
+      ],
+      "answer": 153,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する4因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3C",
+        "N4P12",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3C-N4P21-D0-01",
+      "factors": [
+        0.8,
+        125,
+        19,
+        3
+      ],
+      "focus": [
+        [
+          125,
+          0.8
+        ]
+      ],
+      "answer": 5700,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する4因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3C",
+        "N4P21",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3C-N4P21-D0-02",
+      "factors": [
+        0.08,
+        125,
+        19,
+        7
+      ],
+      "focus": [
+        [
+          125,
+          0.08
+        ]
+      ],
+      "answer": 1330,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する4因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3C",
+        "N4P21",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3C-N4P21-D0-03",
+      "factors": [
+        0.8,
+        12.5,
+        19,
+        9
+      ],
+      "focus": [
+        [
+          12.5,
+          0.8
+        ]
+      ],
+      "answer": 1710,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する4因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3C",
+        "N4P21",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3C-N4P13-D0-01",
+      "factors": [
+        12.5,
+        23,
+        8,
+        3
+      ],
+      "focus": [
+        [
+          12.5,
+          8
+        ]
+      ],
+      "answer": 6900,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する4因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3C",
+        "N4P13",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3C-N4P13-D0-02",
+      "factors": [
+        1.25,
+        23,
+        8,
+        7
+      ],
+      "focus": [
+        [
+          1.25,
+          8
+        ]
+      ],
+      "answer": 1610,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する4因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3C",
+        "N4P13",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3C-N4P13-D0-03",
+      "factors": [
+        0.125,
+        23,
+        8,
+        9
+      ],
+      "focus": [
+        [
+          0.125,
+          8
+        ]
+      ],
+      "answer": 207,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する4因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3C",
+        "N4P13",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3C-N4P31-D0-01",
+      "factors": [
+        0.8,
+        29,
+        125,
+        3
+      ],
+      "focus": [
+        [
+          125,
+          0.8
+        ]
+      ],
+      "answer": 8700,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する4因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3C",
+        "N4P31",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3C-N4P31-D0-02",
+      "factors": [
+        0.08,
+        29,
+        125,
+        7
+      ],
+      "focus": [
+        [
+          125,
+          0.08
+        ]
+      ],
+      "answer": 2030,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する4因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3C",
+        "N4P31",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3C-N4P31-D0-03",
+      "factors": [
+        0.8,
+        29,
+        12.5,
+        9
+      ],
+      "focus": [
+        [
+          12.5,
+          0.8
+        ]
+      ],
+      "answer": 2610,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する4因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3C",
+        "N4P31",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3C-N4P14-D0-01",
+      "factors": [
+        12.5,
+        31,
+        3,
+        8
+      ],
+      "focus": [
+        [
+          12.5,
+          8
+        ]
+      ],
+      "answer": 9300,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する4因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3C",
+        "N4P14",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3C-N4P14-D0-02",
+      "factors": [
+        1.25,
+        31,
+        7,
+        8
+      ],
+      "focus": [
+        [
+          1.25,
+          8
+        ]
+      ],
+      "answer": 2170,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する4因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3C",
+        "N4P14",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3C-N4P14-D0-03",
+      "factors": [
+        0.125,
+        31,
+        9,
+        8
+      ],
+      "focus": [
+        [
+          0.125,
+          8
+        ]
+      ],
+      "answer": 279,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する4因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3C",
+        "N4P14",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3C-N4P41-D0-01",
+      "factors": [
+        0.8,
+        37,
+        3,
+        125
+      ],
+      "focus": [
+        [
+          125,
+          0.8
+        ]
+      ],
+      "answer": 11100,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する4因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3C",
+        "N4P41",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3C-N4P41-D0-02",
+      "factors": [
+        0.08,
+        37,
+        7,
+        125
+      ],
+      "focus": [
+        [
+          125,
+          0.08
+        ]
+      ],
+      "answer": 2590,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する4因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3C",
+        "N4P41",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3C-N4P41-D0-03",
+      "factors": [
+        0.8,
+        37,
+        9,
+        12.5
+      ],
+      "focus": [
+        [
+          12.5,
+          0.8
+        ]
+      ],
+      "answer": 3330,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する4因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3C",
+        "N4P41",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3C-N4P23-D0-01",
+      "factors": [
+        41,
+        12.5,
+        8,
+        3
+      ],
+      "focus": [
+        [
+          12.5,
+          8
+        ]
+      ],
+      "answer": 12300,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する4因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3C",
+        "N4P23",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3C-N4P23-D0-02",
+      "factors": [
+        41,
+        1.25,
+        8,
+        7
+      ],
+      "focus": [
+        [
+          1.25,
+          8
+        ]
+      ],
+      "answer": 2870,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する4因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3C",
+        "N4P23",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3C-N4P23-D0-03",
+      "factors": [
+        41,
+        0.125,
+        8,
+        9
+      ],
+      "focus": [
+        [
+          0.125,
+          8
+        ]
+      ],
+      "answer": 369,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する4因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3C",
+        "N4P23",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3C-N4P32-D0-01",
+      "factors": [
+        43,
+        0.8,
+        125,
+        3
+      ],
+      "focus": [
+        [
+          125,
+          0.8
+        ]
+      ],
+      "answer": 12900,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する4因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3C",
+        "N4P32",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3C-N4P32-D0-02",
+      "factors": [
+        43,
+        0.08,
+        125,
+        7
+      ],
+      "focus": [
+        [
+          125,
+          0.08
+        ]
+      ],
+      "answer": 3010,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する4因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3C",
+        "N4P32",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3C-N4P32-D0-03",
+      "factors": [
+        43,
+        0.8,
+        12.5,
+        9
+      ],
+      "focus": [
+        [
+          12.5,
+          0.8
+        ]
+      ],
+      "answer": 3870,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する4因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3C",
+        "N4P32",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3C-N4P24-D0-01",
+      "factors": [
+        47,
+        12.5,
+        3,
+        8
+      ],
+      "focus": [
+        [
+          12.5,
+          8
+        ]
+      ],
+      "answer": 14100,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する4因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3C",
+        "N4P24",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3C-N4P24-D0-02",
+      "factors": [
+        47,
+        1.25,
+        7,
+        8
+      ],
+      "focus": [
+        [
+          1.25,
+          8
+        ]
+      ],
+      "answer": 3290,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する4因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3C",
+        "N4P24",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3C-N4P24-D0-03",
+      "factors": [
+        47,
+        0.125,
+        9,
+        8
+      ],
+      "focus": [
+        [
+          0.125,
+          8
+        ]
+      ],
+      "answer": 423,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する4因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3C",
+        "N4P24",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3C-N4P42-D0-01",
+      "factors": [
+        53,
+        0.8,
+        3,
+        125
+      ],
+      "focus": [
+        [
+          125,
+          0.8
+        ]
+      ],
+      "answer": 15900,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する4因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3C",
+        "N4P42",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3C-N4P42-D0-02",
+      "factors": [
+        53,
+        0.08,
+        7,
+        125
+      ],
+      "focus": [
+        [
+          125,
+          0.08
+        ]
+      ],
+      "answer": 3710,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する4因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3C",
+        "N4P42",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3C-N4P42-D0-03",
+      "factors": [
+        53,
+        0.8,
+        9,
+        12.5
+      ],
+      "focus": [
+        [
+          12.5,
+          0.8
+        ]
+      ],
+      "answer": 4770,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する4因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3C",
+        "N4P42",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3C-N4P34-D0-01",
+      "factors": [
+        59,
+        3,
+        12.5,
+        8
+      ],
+      "focus": [
+        [
+          12.5,
+          8
+        ]
+      ],
+      "answer": 17700,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する4因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3C",
+        "N4P34",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3C-N4P34-D0-02",
+      "factors": [
+        59,
+        7,
+        1.25,
+        8
+      ],
+      "focus": [
+        [
+          1.25,
+          8
+        ]
+      ],
+      "answer": 4130,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する4因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3C",
+        "N4P34",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3C-N4P34-D0-03",
+      "factors": [
+        59,
+        9,
+        0.125,
+        8
+      ],
+      "focus": [
+        [
+          0.125,
+          8
+        ]
+      ],
+      "answer": 531,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する4因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3C",
+        "N4P34",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3C-N4P43-D0-01",
+      "factors": [
+        61,
+        3,
+        0.8,
+        125
+      ],
+      "focus": [
+        [
+          125,
+          0.8
+        ]
+      ],
+      "answer": 18300,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する4因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3C",
+        "N4P43",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3C-N4P43-D0-02",
+      "factors": [
+        61,
+        7,
+        0.08,
+        125
+      ],
+      "focus": [
+        [
+          125,
+          0.08
+        ]
+      ],
+      "answer": 4270,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する4因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3C",
+        "N4P43",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3C-N4P43-D0-03",
+      "factors": [
+        61,
+        9,
+        0.8,
+        12.5
+      ],
+      "focus": [
+        [
+          12.5,
+          0.8
+        ]
+      ],
+      "answer": 5490,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4",
+        "M6"
+      ],
+      "description": "小数の有利な組を発見する4因子・位置と向きの転移",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3C",
+        "N4P43",
+        "D0"
+      ]
     }
   ],
   "validation": {
-    "count": 138,
-    "unique_ids": 138,
-    "unique_formulas": 138
+    "count": 282,
+    "unique_ids": 282,
+    "unique_formulas": 282
   }
 }
