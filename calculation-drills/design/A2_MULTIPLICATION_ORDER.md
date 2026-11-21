@@ -4,6 +4,8 @@
 
 上位方針：[CONCEPT](CONCEPT.md)／[DESIGN](DESIGN.md)／[ASSESSMENT](ASSESSMENT.md)／[SKILLS](SKILLS.md)
 
+登録済みの全問題は **[A2問題バンク全問題一覧（仮ID・数式・正答）](../problems/A2_ALL_PROBLEMS.md)** を参照。問題データの正本は [a2_bank.json](../problems/a2_bank.json)。
+
 ## 1. 学習目標と到達行動
 
 - **G1：発見・探索**。数の並びを眺め、自然な左から順の計算に固執せず、先に掛けるとよい2数を見つける。
