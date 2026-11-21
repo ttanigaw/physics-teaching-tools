@@ -2,7 +2,7 @@
   "schema_version": "a2-bank-0.1",
   "updated": "2026-11-21",
   "status": "draft",
-  "description": "A2問題バンク。主対象15〜16歳。九九の単独問題を除外。F2C/F3CのN3・N4へ各36問ずつ追加し、数の組と位置・向きの認識を重点的に練習する。D0を中心に診断軸を分離。PDFは一部を選択。",
+  "description": "A2問題バンク（287問）。15〜16歳を主対象に九九単独は除外。F2C/F3CのN3/N4を144問増補し、2因子の分解練習の数値違いを5問追加。",
   "problems": [
     {
       "id": "A2-F2A-N3P13-D0-01",
@@ -8091,11 +8091,146 @@
         "N4P43",
         "D0"
       ]
+    },
+    {
+      "id": "A2-F2A-N2P12-D1-02",
+      "factors": [
+        125,
+        4
+      ],
+      "focus": [
+        [
+          25,
+          4
+        ]
+      ],
+      "answer": 500,
+      "phase": "decomposition",
+      "checks": [
+        "M1",
+        "M6"
+      ],
+      "description": "F2A・第1因子の分解：125=25×5",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2A",
+        "N2P12",
+        "D1"
+      ]
+    },
+    {
+      "id": "A2-F2A-N2P12-D2-02",
+      "factors": [
+        25,
+        16
+      ],
+      "focus": [
+        [
+          25,
+          4
+        ]
+      ],
+      "answer": 400,
+      "phase": "decomposition",
+      "checks": [
+        "M1",
+        "M6"
+      ],
+      "description": "F2A・第2因子の分解：16=4×4",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2A",
+        "N2P12",
+        "D2"
+      ]
+    },
+    {
+      "id": "A2-F2A-N2P21-D2-02",
+      "factors": [
+        28,
+        25
+      ],
+      "focus": [
+        [
+          25,
+          4
+        ]
+      ],
+      "answer": 700,
+      "phase": "decomposition",
+      "checks": [
+        "M1",
+        "M6"
+      ],
+      "description": "F2A・逆向き、第2因子の分解：28=4×7",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2A",
+        "N2P21",
+        "D2"
+      ]
+    },
+    {
+      "id": "A2-F3A-N2P21-D2-01",
+      "factors": [
+        16,
+        125
+      ],
+      "focus": [
+        [
+          125,
+          8
+        ]
+      ],
+      "answer": 2000,
+      "phase": "decomposition",
+      "checks": [
+        "M1",
+        "M6"
+      ],
+      "description": "F3A・逆向き、第2因子の分解：16=8×2",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3A",
+        "N2P21",
+        "D2"
+      ]
+    },
+    {
+      "id": "A2-F3A-N2P12-D2-02",
+      "factors": [
+        125,
+        32
+      ],
+      "focus": [
+        [
+          125,
+          8
+        ]
+      ],
+      "answer": 4000,
+      "phase": "decomposition",
+      "checks": [
+        "M1",
+        "M6"
+      ],
+      "description": "F3A・第2因子の分解：32=8×4",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3A",
+        "N2P12",
+        "D2"
+      ]
     }
   ],
   "validation": {
-    "count": 282,
-    "unique_ids": 282,
-    "unique_formulas": 282
+    "count": 287,
+    "unique_ids": 287,
+    "unique_formulas": 287
   }
 }
