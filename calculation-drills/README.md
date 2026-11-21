@@ -35,7 +35,9 @@
 - [教育理念・到達目標](design/CONCEPT.md)
 - [計算技能の分類](design/SKILLS.md)
 - [問題の設計原則](design/DESIGN.md)
-- [A2：乗算順序の詳細設計（初稿）](design/A2_MULTIPLICATION_ORDER.md)
+- [A2：乗算順序の詳細設計](design/A2_MULTIPLICATION_ORDER.md)
+- [A2問題バンク（初稿141問）](problems/README.md)
+- [A2試作プリントと生成方法](printable/README.md)
 - [自己点検と評価](design/ASSESSMENT.md)
 - [開発計画](design/ROADMAP.md)
 
@@ -43,7 +45,7 @@ Codex等による制作時のルールは [AGENTS.md](AGENTS.md) を参照して
 
 ## 開発・公開状況
 
-現在は設計文書の初期段階です。**学生用の完成教材・PDF・CBTはまだありません**。公開可能な教材ができた段階で、利用者向けのリンクと使い方をここに追加します。
+現在は**A2の初期問題バンク141問と、そのうち44問を選んだ試作PDF（学生用・解答解説・教員向け）**を作成済みです。問題バンクは[problems/a2_bank.json](problems/a2_bank.json)、再現可能な組版のソースは[printable/build_a2_sample.py](printable/build_a2_sample.py)です。**学習効果や適切な難易度は未検証で、完成教材として正式公開したものではありません**。CBT/CBDは未実装です。
 
 ## リポジトリ内での位置づけ
 
