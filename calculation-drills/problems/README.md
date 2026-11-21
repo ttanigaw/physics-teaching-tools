@@ -1,7 +1,9 @@
 # A2 初期問題バンク
 
-- データ：[a2_bank.json](a2_bank.json)
+- データ（正本）：[a2_bank.json](a2_bank.json)
+- **全138問の一覧（仮ID・数式・正答・出題区分・着目する組）：[A2_ALL_PROBLEMS.md](A2_ALL_PROBLEMS.md)**
 - 生成・分類検証：[../tools/make_a2_bank.mjs](../tools/make_a2_bank.mjs)
+- 一覧Markdown生成：[../tools/make_a2_problem_list.mjs](../tools/make_a2_problem_list.mjs)
 - 試作プリントの選択：[../printable/a2_sample_plan.json](../printable/a2_sample_plan.json)
 
 ## 状態
@@ -37,5 +39,7 @@ node tools/make_a2_bank.mjs
 ```
 
 リポジトリの`calculation-drills/`をカレントディレクトリとして実行する。更新時には既存のIDを再採番しないこと、配布済みの問題との対応が維持されることを確認する。
+
+問題バンクの変更後は `node tools/make_a2_problem_list.mjs` で **[全問題一覧](A2_ALL_PROBLEMS.md)** も再生成し、JSONと一覧の一致を確認する。
 
 将来的には、よくある誤答、ヒント段階、指導上の注意、難易度実測結果などのメタデータを充実させる。学生ごとの学習ログはここには保存しない。
