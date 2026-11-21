@@ -145,7 +145,7 @@ export function buildBank() {
   ];
   for(const [f,np,d,n,pair]of decomps)auto(f,np,d,n,[pair],"decomposition",["M1","M6"],"基本の組を取り出すための分解");
   const distribution={};for(const p of problems){const a=p.id.split("-");const key=a[1]+"/"+a[2].slice(0,2)+"/"+a[3];distribution[key]=(distribution[key]||0)+1;}
-  return {schema_version:"a2-bank-0.1",updated:"2026-11-21",status:"draft",description:"A2初期問題バンク。28件の設計書既存候補を保持し、F/P/Dの診断別に増補。PDFはこのうち一部を選ぶ。",problems,validation:{count:problems.length,unique_ids:ids.size,unique_formulas:exprs.size}};
+  return {schema_version:"a2-bank-0.1",updated:"2026-11-21",status:"draft",description:"A2初期問題バンク。主対象15〜16歳。独立した九九（1〜9の整数同士の1回の積）は既習として除外。既存28候補とF/P/D診断別の問題を含み、PDFは一部を選択。",problems,validation:{count:problems.length,unique_ids:ids.size,unique_formulas:exprs.size}};
 }
 const bank=buildBank();
 if(process.argv[1] && import.meta.url.endsWith(process.argv[1].replaceAll("\\","/"))){
