@@ -1,0 +1,3932 @@
+{
+  "schema_version": "a2-bank-0.1",
+  "updated": "2026-11-21",
+  "status": "draft",
+  "description": "A2初期問題バンク。28件の設計書既存候補を保持し、F/P/Dの診断別に増補。PDFはこのうち一部を選ぶ。",
+  "problems": [
+    {
+      "id": "A2-F2A-N3P13-D0-01",
+      "factors": [
+        25,
+        37,
+        4
+      ],
+      "focus": [
+        [
+          25,
+          4
+        ]
+      ],
+      "answer": 3700,
+      "phase": "discovery",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "設計書の既存候補",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2A",
+        "N3P13",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3A-N3P13-D0-01",
+      "factors": [
+        125,
+        43,
+        8
+      ],
+      "focus": [
+        [
+          125,
+          8
+        ]
+      ],
+      "answer": 43000,
+      "phase": "discovery",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "設計書の既存候補",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3A",
+        "N3P13",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F1B-N3P13-D0-01",
+      "factors": [
+        20,
+        67,
+        5
+      ],
+      "focus": [
+        [
+          20,
+          5
+        ]
+      ],
+      "answer": 6700,
+      "phase": "discovery",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "設計書の既存候補",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F1B",
+        "N3P13",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2A-N3P31-D0-01",
+      "factors": [
+        4,
+        53,
+        25
+      ],
+      "focus": [
+        [
+          25,
+          4
+        ]
+      ],
+      "answer": 5300,
+      "phase": "discovery",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "設計書の既存候補",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2A",
+        "N3P31",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F1B-N3P31-D0-01",
+      "factors": [
+        50,
+        19,
+        2
+      ],
+      "focus": [
+        [
+          2,
+          50
+        ]
+      ],
+      "answer": 1900,
+      "phase": "discovery",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "設計書の既存候補",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F1B",
+        "N3P31",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2A-N3P23-D0-01",
+      "factors": [
+        41,
+        25,
+        4
+      ],
+      "focus": [
+        [
+          25,
+          4
+        ]
+      ],
+      "answer": 4100,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "設計書の既存候補",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2A",
+        "N3P23",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3A-N3P23-D0-01",
+      "factors": [
+        53,
+        125,
+        8
+      ],
+      "focus": [
+        [
+          125,
+          8
+        ]
+      ],
+      "answer": 53000,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "設計書の既存候補",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3A",
+        "N3P23",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F1B-N3P23-D0-01",
+      "factors": [
+        73,
+        20,
+        5
+      ],
+      "focus": [
+        [
+          20,
+          5
+        ]
+      ],
+      "answer": 7300,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "設計書の既存候補",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F1B",
+        "N3P23",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2A-N3P32-D0-01",
+      "factors": [
+        67,
+        4,
+        25
+      ],
+      "focus": [
+        [
+          25,
+          4
+        ]
+      ],
+      "answer": 6700,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "設計書の既存候補",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2A",
+        "N3P32",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2A-N3P12-D0-01",
+      "factors": [
+        25,
+        4,
+        61
+      ],
+      "focus": [
+        [
+          25,
+          4
+        ]
+      ],
+      "answer": 6100,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "設計書の既存候補",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2A",
+        "N3P12",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3A-N3P21-D0-01",
+      "factors": [
+        8,
+        125,
+        29
+      ],
+      "focus": [
+        [
+          125,
+          8
+        ]
+      ],
+      "answer": 29000,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "設計書の既存候補",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3A",
+        "N3P21",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F1B-N3P12-D0-01",
+      "factors": [
+        20,
+        5,
+        47
+      ],
+      "focus": [
+        [
+          20,
+          5
+        ]
+      ],
+      "answer": 4700,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "設計書の既存候補",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F1B",
+        "N3P12",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2A-N4P12-D0-01",
+      "factors": [
+        25,
+        4,
+        17,
+        13
+      ],
+      "focus": [
+        [
+          25,
+          4
+        ]
+      ],
+      "answer": 22100,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "設計書の既存候補",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2A",
+        "N4P12",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3A-N4P13-D0-01",
+      "factors": [
+        125,
+        17,
+        8,
+        3
+      ],
+      "focus": [
+        [
+          125,
+          8
+        ]
+      ],
+      "answer": 51000,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "設計書の既存候補",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3A",
+        "N4P13",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F1B-N4P14-D0-01",
+      "factors": [
+        20,
+        17,
+        3,
+        5
+      ],
+      "focus": [
+        [
+          20,
+          5
+        ]
+      ],
+      "answer": 5100,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "設計書の既存候補",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F1B",
+        "N4P14",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2A-N4P23-D0-01",
+      "factors": [
+        19,
+        25,
+        4,
+        7
+      ],
+      "focus": [
+        [
+          25,
+          4
+        ]
+      ],
+      "answer": 13300,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "設計書の既存候補",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2A",
+        "N4P23",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F1B-N4P24-D0-01",
+      "factors": [
+        23,
+        20,
+        7,
+        5
+      ],
+      "focus": [
+        [
+          20,
+          5
+        ]
+      ],
+      "answer": 16100,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "設計書の既存候補",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F1B",
+        "N4P24",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3A-N4P34-D0-01",
+      "factors": [
+        29,
+        3,
+        125,
+        8
+      ],
+      "focus": [
+        [
+          125,
+          8
+        ]
+      ],
+      "answer": 87000,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "設計書の既存候補",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3A",
+        "N4P34",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F1B-N4P21-D0-01",
+      "factors": [
+        50,
+        2,
+        23,
+        7
+      ],
+      "focus": [
+        [
+          2,
+          50
+        ]
+      ],
+      "answer": 16100,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "設計書の既存候補",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F1B",
+        "N4P21",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2A-N4P13-D0-01",
+      "factors": [
+        25,
+        19,
+        4,
+        11
+      ],
+      "focus": [
+        [
+          25,
+          4
+        ]
+      ],
+      "answer": 20900,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "設計書の既存候補",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2A",
+        "N4P13",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3A-N4P14-D0-01",
+      "factors": [
+        125,
+        13,
+        7,
+        8
+      ],
+      "focus": [
+        [
+          125,
+          8
+        ]
+      ],
+      "answer": 91000,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "設計書の既存候補",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3A",
+        "N4P14",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F1B-N4P23-D0-01",
+      "factors": [
+        31,
+        20,
+        5,
+        7
+      ],
+      "focus": [
+        [
+          20,
+          5
+        ]
+      ],
+      "answer": 21700,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "設計書の既存候補",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F1B",
+        "N4P23",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2A-N4P24-D0-01",
+      "factors": [
+        17,
+        25,
+        9,
+        4
+      ],
+      "focus": [
+        [
+          25,
+          4
+        ]
+      ],
+      "answer": 15300,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "設計書の既存候補",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2A",
+        "N4P24",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3A-N4P34-D0-02",
+      "factors": [
+        23,
+        9,
+        125,
+        8
+      ],
+      "focus": [
+        [
+          125,
+          8
+        ]
+      ],
+      "answer": 207000,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "設計書の既存候補",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3A",
+        "N4P34",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2A_F3A-N4P13_P42-D0_D0-01",
+      "factors": [
+        25,
+        8,
+        4,
+        125
+      ],
+      "focus": [
+        [
+          25,
+          4
+        ],
+        [
+          125,
+          8
+        ]
+      ],
+      "answer": 100000,
+      "phase": "choice",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "設計書の既存候補",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2A_F3A",
+        "N4P13_P42",
+        "D0_D0"
+      ]
+    },
+    {
+      "id": "A2-F1B_F2A-N4P13_P24-D0_D0-01",
+      "factors": [
+        20,
+        25,
+        5,
+        4
+      ],
+      "focus": [
+        [
+          20,
+          5
+        ],
+        [
+          25,
+          4
+        ]
+      ],
+      "answer": 10000,
+      "phase": "choice",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "設計書の既存候補",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F1B_F2A",
+        "N4P13_P24",
+        "D0_D0"
+      ]
+    },
+    {
+      "id": "A2-F00-N3P00-D0-01",
+      "factors": [
+        13,
+        17,
+        19
+      ],
+      "focus": [
+        []
+      ],
+      "answer": 4199,
+      "phase": "choice",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "設計書の既存候補",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F00",
+        "N3P00",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F00-N4P00-D0-01",
+      "factors": [
+        11,
+        17,
+        23,
+        3
+      ],
+      "focus": [
+        []
+      ],
+      "answer": 12903,
+      "phase": "choice",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "設計書の既存候補",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F00",
+        "N4P00",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F1A-N2P12-D0-01",
+      "factors": [
+        2,
+        5
+      ],
+      "focus": [
+        [
+          2,
+          5
+        ]
+      ],
+      "answer": 10,
+      "phase": "foundation",
+      "checks": [
+        "M4"
+      ],
+      "description": "2数の積と倍率を確認",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F1A",
+        "N2P12",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F1A-N2P21-D0-01",
+      "factors": [
+        5,
+        2
+      ],
+      "focus": [
+        [
+          2,
+          5
+        ]
+      ],
+      "answer": 10,
+      "phase": "foundation",
+      "checks": [
+        "M4"
+      ],
+      "description": "逆の順でも計算",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F1A",
+        "N2P21",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F1B-N2P12-D0-01",
+      "factors": [
+        20,
+        5
+      ],
+      "focus": [
+        [
+          20,
+          5
+        ]
+      ],
+      "answer": 100,
+      "phase": "foundation",
+      "checks": [
+        "M4"
+      ],
+      "description": "2数の積と倍率を確認",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F1B",
+        "N2P12",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F1B-N2P21-D0-01",
+      "factors": [
+        5,
+        20
+      ],
+      "focus": [
+        [
+          20,
+          5
+        ]
+      ],
+      "answer": 100,
+      "phase": "foundation",
+      "checks": [
+        "M4"
+      ],
+      "description": "逆の順でも計算",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F1B",
+        "N2P21",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F1B-N2P12-D0-02",
+      "factors": [
+        2,
+        50
+      ],
+      "focus": [
+        [
+          2,
+          50
+        ]
+      ],
+      "answer": 100,
+      "phase": "foundation",
+      "checks": [
+        "M4"
+      ],
+      "description": "2数の積と倍率を確認",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F1B",
+        "N2P12",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F1B-N2P21-D0-02",
+      "factors": [
+        50,
+        2
+      ],
+      "focus": [
+        [
+          2,
+          50
+        ]
+      ],
+      "answer": 100,
+      "phase": "foundation",
+      "checks": [
+        "M4"
+      ],
+      "description": "逆の順でも計算",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F1B",
+        "N2P21",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F1B-N2P12-D0-03",
+      "factors": [
+        200,
+        5
+      ],
+      "focus": [
+        [
+          200,
+          5
+        ]
+      ],
+      "answer": 1000,
+      "phase": "foundation",
+      "checks": [
+        "M4"
+      ],
+      "description": "2数の積と倍率を確認",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F1B",
+        "N2P12",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F1B-N2P21-D0-03",
+      "factors": [
+        5,
+        200
+      ],
+      "focus": [
+        [
+          200,
+          5
+        ]
+      ],
+      "answer": 1000,
+      "phase": "foundation",
+      "checks": [
+        "M4"
+      ],
+      "description": "逆の順でも計算",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F1B",
+        "N2P21",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F1C-N2P12-D0-01",
+      "factors": [
+        0.2,
+        5
+      ],
+      "focus": [
+        [
+          0.2,
+          5
+        ]
+      ],
+      "answer": 1,
+      "phase": "foundation",
+      "checks": [
+        "M4"
+      ],
+      "description": "2数の積と倍率を確認",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F1C",
+        "N2P12",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F1C-N2P21-D0-01",
+      "factors": [
+        5,
+        0.2
+      ],
+      "focus": [
+        [
+          0.2,
+          5
+        ]
+      ],
+      "answer": 1,
+      "phase": "foundation",
+      "checks": [
+        "M4"
+      ],
+      "description": "逆の順でも計算",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F1C",
+        "N2P21",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F1C-N2P12-D0-02",
+      "factors": [
+        2,
+        0.5
+      ],
+      "focus": [
+        [
+          2,
+          0.5
+        ]
+      ],
+      "answer": 1,
+      "phase": "foundation",
+      "checks": [
+        "M4"
+      ],
+      "description": "2数の積と倍率を確認",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F1C",
+        "N2P12",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F1C-N2P21-D0-02",
+      "factors": [
+        0.5,
+        2
+      ],
+      "focus": [
+        [
+          2,
+          0.5
+        ]
+      ],
+      "answer": 1,
+      "phase": "foundation",
+      "checks": [
+        "M4"
+      ],
+      "description": "逆の順でも計算",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F1C",
+        "N2P21",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2A-N2P12-D0-01",
+      "factors": [
+        25,
+        4
+      ],
+      "focus": [
+        [
+          25,
+          4
+        ]
+      ],
+      "answer": 100,
+      "phase": "foundation",
+      "checks": [
+        "M4"
+      ],
+      "description": "2数の積と倍率を確認",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2A",
+        "N2P12",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2A-N2P21-D0-01",
+      "factors": [
+        4,
+        25
+      ],
+      "focus": [
+        [
+          25,
+          4
+        ]
+      ],
+      "answer": 100,
+      "phase": "foundation",
+      "checks": [
+        "M4"
+      ],
+      "description": "逆の順でも計算",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2A",
+        "N2P21",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2B-N2P12-D0-01",
+      "factors": [
+        250,
+        4
+      ],
+      "focus": [
+        [
+          250,
+          4
+        ]
+      ],
+      "answer": 1000,
+      "phase": "foundation",
+      "checks": [
+        "M4"
+      ],
+      "description": "2数の積と倍率を確認",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2B",
+        "N2P12",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2B-N2P21-D0-01",
+      "factors": [
+        4,
+        250
+      ],
+      "focus": [
+        [
+          250,
+          4
+        ]
+      ],
+      "answer": 1000,
+      "phase": "foundation",
+      "checks": [
+        "M4"
+      ],
+      "description": "逆の順でも計算",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2B",
+        "N2P21",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2B-N2P12-D0-02",
+      "factors": [
+        25,
+        40
+      ],
+      "focus": [
+        [
+          25,
+          40
+        ]
+      ],
+      "answer": 1000,
+      "phase": "foundation",
+      "checks": [
+        "M4"
+      ],
+      "description": "2数の積と倍率を確認",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2B",
+        "N2P12",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2B-N2P21-D0-02",
+      "factors": [
+        40,
+        25
+      ],
+      "focus": [
+        [
+          25,
+          40
+        ]
+      ],
+      "answer": 1000,
+      "phase": "foundation",
+      "checks": [
+        "M4"
+      ],
+      "description": "逆の順でも計算",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2B",
+        "N2P21",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2C-N2P12-D0-01",
+      "factors": [
+        2.5,
+        4
+      ],
+      "focus": [
+        [
+          2.5,
+          4
+        ]
+      ],
+      "answer": 10,
+      "phase": "foundation",
+      "checks": [
+        "M4"
+      ],
+      "description": "2数の積と倍率を確認",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2C",
+        "N2P12",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2C-N2P21-D0-01",
+      "factors": [
+        4,
+        2.5
+      ],
+      "focus": [
+        [
+          2.5,
+          4
+        ]
+      ],
+      "answer": 10,
+      "phase": "foundation",
+      "checks": [
+        "M4"
+      ],
+      "description": "逆の順でも計算",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2C",
+        "N2P21",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2C-N2P12-D0-02",
+      "factors": [
+        0.25,
+        4
+      ],
+      "focus": [
+        [
+          0.25,
+          4
+        ]
+      ],
+      "answer": 1,
+      "phase": "foundation",
+      "checks": [
+        "M4"
+      ],
+      "description": "2数の積と倍率を確認",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2C",
+        "N2P12",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2C-N2P21-D0-02",
+      "factors": [
+        4,
+        0.25
+      ],
+      "focus": [
+        [
+          0.25,
+          4
+        ]
+      ],
+      "answer": 1,
+      "phase": "foundation",
+      "checks": [
+        "M4"
+      ],
+      "description": "逆の順でも計算",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2C",
+        "N2P21",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2C-N2P12-D0-03",
+      "factors": [
+        25,
+        0.4
+      ],
+      "focus": [
+        [
+          25,
+          0.4
+        ]
+      ],
+      "answer": 10,
+      "phase": "foundation",
+      "checks": [
+        "M4"
+      ],
+      "description": "2数の積と倍率を確認",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2C",
+        "N2P12",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2C-N2P21-D0-03",
+      "factors": [
+        0.4,
+        25
+      ],
+      "focus": [
+        [
+          25,
+          0.4
+        ]
+      ],
+      "answer": 10,
+      "phase": "foundation",
+      "checks": [
+        "M4"
+      ],
+      "description": "逆の順でも計算",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2C",
+        "N2P21",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3A-N2P12-D0-01",
+      "factors": [
+        125,
+        8
+      ],
+      "focus": [
+        [
+          125,
+          8
+        ]
+      ],
+      "answer": 1000,
+      "phase": "foundation",
+      "checks": [
+        "M4"
+      ],
+      "description": "2数の積と倍率を確認",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3A",
+        "N2P12",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3A-N2P21-D0-01",
+      "factors": [
+        8,
+        125
+      ],
+      "focus": [
+        [
+          125,
+          8
+        ]
+      ],
+      "answer": 1000,
+      "phase": "foundation",
+      "checks": [
+        "M4"
+      ],
+      "description": "逆の順でも計算",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3A",
+        "N2P21",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3B-N2P12-D0-01",
+      "factors": [
+        1250,
+        8
+      ],
+      "focus": [
+        [
+          1250,
+          8
+        ]
+      ],
+      "answer": 10000,
+      "phase": "foundation",
+      "checks": [
+        "M4"
+      ],
+      "description": "2数の積と倍率を確認",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3B",
+        "N2P12",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3B-N2P21-D0-01",
+      "factors": [
+        8,
+        1250
+      ],
+      "focus": [
+        [
+          1250,
+          8
+        ]
+      ],
+      "answer": 10000,
+      "phase": "foundation",
+      "checks": [
+        "M4"
+      ],
+      "description": "逆の順でも計算",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3B",
+        "N2P21",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3B-N2P12-D0-02",
+      "factors": [
+        125,
+        80
+      ],
+      "focus": [
+        [
+          125,
+          80
+        ]
+      ],
+      "answer": 10000,
+      "phase": "foundation",
+      "checks": [
+        "M4"
+      ],
+      "description": "2数の積と倍率を確認",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3B",
+        "N2P12",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3B-N2P21-D0-02",
+      "factors": [
+        80,
+        125
+      ],
+      "focus": [
+        [
+          125,
+          80
+        ]
+      ],
+      "answer": 10000,
+      "phase": "foundation",
+      "checks": [
+        "M4"
+      ],
+      "description": "逆の順でも計算",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3B",
+        "N2P21",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3C-N2P12-D0-01",
+      "factors": [
+        12.5,
+        8
+      ],
+      "focus": [
+        [
+          12.5,
+          8
+        ]
+      ],
+      "answer": 100,
+      "phase": "foundation",
+      "checks": [
+        "M4"
+      ],
+      "description": "2数の積と倍率を確認",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3C",
+        "N2P12",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3C-N2P21-D0-01",
+      "factors": [
+        8,
+        12.5
+      ],
+      "focus": [
+        [
+          12.5,
+          8
+        ]
+      ],
+      "answer": 100,
+      "phase": "foundation",
+      "checks": [
+        "M4"
+      ],
+      "description": "逆の順でも計算",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3C",
+        "N2P21",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3C-N2P12-D0-02",
+      "factors": [
+        1.25,
+        8
+      ],
+      "focus": [
+        [
+          1.25,
+          8
+        ]
+      ],
+      "answer": 10,
+      "phase": "foundation",
+      "checks": [
+        "M4"
+      ],
+      "description": "2数の積と倍率を確認",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3C",
+        "N2P12",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3C-N2P21-D0-02",
+      "factors": [
+        8,
+        1.25
+      ],
+      "focus": [
+        [
+          1.25,
+          8
+        ]
+      ],
+      "answer": 10,
+      "phase": "foundation",
+      "checks": [
+        "M4"
+      ],
+      "description": "逆の順でも計算",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3C",
+        "N2P21",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3C-N2P12-D0-03",
+      "factors": [
+        125,
+        0.8
+      ],
+      "focus": [
+        [
+          125,
+          0.8
+        ]
+      ],
+      "answer": 100,
+      "phase": "foundation",
+      "checks": [
+        "M4"
+      ],
+      "description": "2数の積と倍率を確認",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3C",
+        "N2P12",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3C-N2P21-D0-03",
+      "factors": [
+        0.8,
+        125
+      ],
+      "focus": [
+        [
+          125,
+          0.8
+        ]
+      ],
+      "answer": 100,
+      "phase": "foundation",
+      "checks": [
+        "M4"
+      ],
+      "description": "逆の順でも計算",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3C",
+        "N2P21",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F1A-N3P12-D0-01",
+      "factors": [
+        2,
+        5,
+        83
+      ],
+      "focus": [
+        [
+          2,
+          5
+        ]
+      ],
+      "answer": 830,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "3因子・位置と向きの確認",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F1A",
+        "N3P12",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F1A-N3P21-D0-01",
+      "factors": [
+        5,
+        2,
+        87
+      ],
+      "focus": [
+        [
+          2,
+          5
+        ]
+      ],
+      "answer": 870,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "3因子・位置と向きの確認",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F1A",
+        "N3P21",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F1A-N3P13-D0-01",
+      "factors": [
+        2,
+        91,
+        5
+      ],
+      "focus": [
+        [
+          2,
+          5
+        ]
+      ],
+      "answer": 910,
+      "phase": "discovery",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "3因子・位置と向きの確認",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F1A",
+        "N3P13",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F1A-N3P31-D0-01",
+      "factors": [
+        5,
+        95,
+        2
+      ],
+      "focus": [
+        [
+          2,
+          5
+        ]
+      ],
+      "answer": 950,
+      "phase": "discovery",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "3因子・位置と向きの確認",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F1A",
+        "N3P31",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F1A-N3P23-D0-01",
+      "factors": [
+        99,
+        2,
+        5
+      ],
+      "focus": [
+        [
+          2,
+          5
+        ]
+      ],
+      "answer": 990,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "3因子・位置と向きの確認",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F1A",
+        "N3P23",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F1A-N3P32-D0-01",
+      "factors": [
+        103,
+        5,
+        2
+      ],
+      "focus": [
+        [
+          2,
+          5
+        ]
+      ],
+      "answer": 1030,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "3因子・位置と向きの確認",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F1A",
+        "N3P32",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F1B-N3P12-D0-02",
+      "factors": [
+        20,
+        5,
+        91
+      ],
+      "focus": [
+        [
+          20,
+          5
+        ]
+      ],
+      "answer": 9100,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "3因子・位置と向きの確認",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F1B",
+        "N3P12",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F1B-N3P21-D0-01",
+      "factors": [
+        5,
+        20,
+        95
+      ],
+      "focus": [
+        [
+          20,
+          5
+        ]
+      ],
+      "answer": 9500,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "3因子・位置と向きの確認",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F1B",
+        "N3P21",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F1B-N3P13-D0-02",
+      "factors": [
+        20,
+        99,
+        5
+      ],
+      "focus": [
+        [
+          20,
+          5
+        ]
+      ],
+      "answer": 9900,
+      "phase": "discovery",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "3因子・位置と向きの確認",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F1B",
+        "N3P13",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F1B-N3P31-D0-02",
+      "factors": [
+        5,
+        103,
+        20
+      ],
+      "focus": [
+        [
+          20,
+          5
+        ]
+      ],
+      "answer": 10300,
+      "phase": "discovery",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "3因子・位置と向きの確認",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F1B",
+        "N3P31",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F1B-N3P23-D0-02",
+      "factors": [
+        107,
+        20,
+        5
+      ],
+      "focus": [
+        [
+          20,
+          5
+        ]
+      ],
+      "answer": 10700,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "3因子・位置と向きの確認",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F1B",
+        "N3P23",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F1B-N3P32-D0-01",
+      "factors": [
+        111,
+        5,
+        20
+      ],
+      "focus": [
+        [
+          20,
+          5
+        ]
+      ],
+      "answer": 11100,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "3因子・位置と向きの確認",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F1B",
+        "N3P32",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2A-N3P12-D0-02",
+      "factors": [
+        25,
+        4,
+        99
+      ],
+      "focus": [
+        [
+          25,
+          4
+        ]
+      ],
+      "answer": 9900,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "3因子・位置と向きの確認",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2A",
+        "N3P12",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2A-N3P21-D0-01",
+      "factors": [
+        4,
+        25,
+        103
+      ],
+      "focus": [
+        [
+          25,
+          4
+        ]
+      ],
+      "answer": 10300,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "3因子・位置と向きの確認",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2A",
+        "N3P21",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2A-N3P13-D0-02",
+      "factors": [
+        25,
+        107,
+        4
+      ],
+      "focus": [
+        [
+          25,
+          4
+        ]
+      ],
+      "answer": 10700,
+      "phase": "discovery",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "3因子・位置と向きの確認",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2A",
+        "N3P13",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2A-N3P31-D0-02",
+      "factors": [
+        4,
+        111,
+        25
+      ],
+      "focus": [
+        [
+          25,
+          4
+        ]
+      ],
+      "answer": 11100,
+      "phase": "discovery",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "3因子・位置と向きの確認",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2A",
+        "N3P31",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2A-N3P23-D0-02",
+      "factors": [
+        115,
+        25,
+        4
+      ],
+      "focus": [
+        [
+          25,
+          4
+        ]
+      ],
+      "answer": 11500,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "3因子・位置と向きの確認",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2A",
+        "N3P23",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2A-N3P32-D0-02",
+      "factors": [
+        119,
+        4,
+        25
+      ],
+      "focus": [
+        [
+          25,
+          4
+        ]
+      ],
+      "answer": 11900,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "3因子・位置と向きの確認",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2A",
+        "N3P32",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3A-N3P12-D0-01",
+      "factors": [
+        125,
+        8,
+        107
+      ],
+      "focus": [
+        [
+          125,
+          8
+        ]
+      ],
+      "answer": 107000,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "3因子・位置と向きの確認",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3A",
+        "N3P12",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3A-N3P21-D0-02",
+      "factors": [
+        8,
+        125,
+        111
+      ],
+      "focus": [
+        [
+          125,
+          8
+        ]
+      ],
+      "answer": 111000,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "3因子・位置と向きの確認",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3A",
+        "N3P21",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3A-N3P13-D0-02",
+      "factors": [
+        125,
+        115,
+        8
+      ],
+      "focus": [
+        [
+          125,
+          8
+        ]
+      ],
+      "answer": 115000,
+      "phase": "discovery",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "3因子・位置と向きの確認",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3A",
+        "N3P13",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3A-N3P31-D0-01",
+      "factors": [
+        8,
+        119,
+        125
+      ],
+      "focus": [
+        [
+          125,
+          8
+        ]
+      ],
+      "answer": 119000,
+      "phase": "discovery",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "3因子・位置と向きの確認",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3A",
+        "N3P31",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3A-N3P23-D0-02",
+      "factors": [
+        123,
+        125,
+        8
+      ],
+      "focus": [
+        [
+          125,
+          8
+        ]
+      ],
+      "answer": 123000,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "3因子・位置と向きの確認",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3A",
+        "N3P23",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3A-N3P32-D0-01",
+      "factors": [
+        127,
+        8,
+        125
+      ],
+      "focus": [
+        [
+          125,
+          8
+        ]
+      ],
+      "answer": 127000,
+      "phase": "transfer3",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "3因子・位置と向きの確認",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3A",
+        "N3P32",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F1B-N4P12-D0-01",
+      "factors": [
+        20,
+        5,
+        11,
+        17
+      ],
+      "focus": [
+        [
+          20,
+          5
+        ]
+      ],
+      "answer": 18700,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "4因子・位置と向きの確認",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F1B",
+        "N4P12",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F1B-N4P21-D0-02",
+      "factors": [
+        5,
+        20,
+        13,
+        19
+      ],
+      "focus": [
+        [
+          20,
+          5
+        ]
+      ],
+      "answer": 24700,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "4因子・位置と向きの確認",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F1B",
+        "N4P21",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F1B-N4P13-D0-01",
+      "factors": [
+        20,
+        15,
+        5,
+        21
+      ],
+      "focus": [
+        [
+          20,
+          5
+        ]
+      ],
+      "answer": 31500,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "4因子・位置と向きの確認",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F1B",
+        "N4P13",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F1B-N4P31-D0-01",
+      "factors": [
+        5,
+        17,
+        20,
+        23
+      ],
+      "focus": [
+        [
+          20,
+          5
+        ]
+      ],
+      "answer": 39100,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "4因子・位置と向きの確認",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F1B",
+        "N4P31",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F1B-N4P14-D0-02",
+      "factors": [
+        20,
+        19,
+        25,
+        5
+      ],
+      "focus": [
+        [
+          20,
+          5
+        ]
+      ],
+      "answer": 47500,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "4因子・位置と向きの確認",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F1B",
+        "N4P14",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F1B-N4P41-D0-01",
+      "factors": [
+        5,
+        21,
+        27,
+        20
+      ],
+      "focus": [
+        [
+          20,
+          5
+        ]
+      ],
+      "answer": 56700,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "4因子・位置と向きの確認",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F1B",
+        "N4P41",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F1B-N4P23-D0-02",
+      "factors": [
+        23,
+        20,
+        5,
+        29
+      ],
+      "focus": [
+        [
+          20,
+          5
+        ]
+      ],
+      "answer": 66700,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "4因子・位置と向きの確認",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F1B",
+        "N4P23",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F1B-N4P32-D0-01",
+      "factors": [
+        25,
+        5,
+        20,
+        31
+      ],
+      "focus": [
+        [
+          20,
+          5
+        ]
+      ],
+      "answer": 77500,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "4因子・位置と向きの確認",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F1B",
+        "N4P32",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F1B-N4P24-D0-02",
+      "factors": [
+        27,
+        20,
+        33,
+        5
+      ],
+      "focus": [
+        [
+          20,
+          5
+        ]
+      ],
+      "answer": 89100,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "4因子・位置と向きの確認",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F1B",
+        "N4P24",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F1B-N4P42-D0-01",
+      "factors": [
+        29,
+        5,
+        35,
+        20
+      ],
+      "focus": [
+        [
+          20,
+          5
+        ]
+      ],
+      "answer": 101500,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "4因子・位置と向きの確認",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F1B",
+        "N4P42",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F1B-N4P34-D0-01",
+      "factors": [
+        31,
+        37,
+        20,
+        5
+      ],
+      "focus": [
+        [
+          20,
+          5
+        ]
+      ],
+      "answer": 114700,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "4因子・位置と向きの確認",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F1B",
+        "N4P34",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F1B-N4P43-D0-01",
+      "factors": [
+        33,
+        39,
+        5,
+        20
+      ],
+      "focus": [
+        [
+          20,
+          5
+        ]
+      ],
+      "answer": 128700,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "4因子・位置と向きの確認",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F1B",
+        "N4P43",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2A-N4P12-D0-02",
+      "factors": [
+        25,
+        4,
+        15,
+        21
+      ],
+      "focus": [
+        [
+          25,
+          4
+        ]
+      ],
+      "answer": 31500,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "4因子・位置と向きの確認",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2A",
+        "N4P12",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2A-N4P21-D0-01",
+      "factors": [
+        4,
+        25,
+        17,
+        23
+      ],
+      "focus": [
+        [
+          25,
+          4
+        ]
+      ],
+      "answer": 39100,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "4因子・位置と向きの確認",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2A",
+        "N4P21",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2A-N4P13-D0-02",
+      "factors": [
+        25,
+        19,
+        4,
+        25
+      ],
+      "focus": [
+        [
+          25,
+          4
+        ]
+      ],
+      "answer": 47500,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "4因子・位置と向きの確認",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2A",
+        "N4P13",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2A-N4P31-D0-01",
+      "factors": [
+        4,
+        21,
+        25,
+        27
+      ],
+      "focus": [
+        [
+          25,
+          4
+        ]
+      ],
+      "answer": 56700,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "4因子・位置と向きの確認",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2A",
+        "N4P31",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2A-N4P14-D0-01",
+      "factors": [
+        25,
+        23,
+        29,
+        4
+      ],
+      "focus": [
+        [
+          25,
+          4
+        ]
+      ],
+      "answer": 66700,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "4因子・位置と向きの確認",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2A",
+        "N4P14",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2A-N4P41-D0-01",
+      "factors": [
+        4,
+        25,
+        31,
+        25
+      ],
+      "focus": [
+        [
+          25,
+          4
+        ]
+      ],
+      "answer": 77500,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "4因子・位置と向きの確認",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2A",
+        "N4P41",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2A-N4P23-D0-02",
+      "factors": [
+        27,
+        25,
+        4,
+        33
+      ],
+      "focus": [
+        [
+          25,
+          4
+        ]
+      ],
+      "answer": 89100,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "4因子・位置と向きの確認",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2A",
+        "N4P23",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2A-N4P32-D0-01",
+      "factors": [
+        29,
+        4,
+        25,
+        35
+      ],
+      "focus": [
+        [
+          25,
+          4
+        ]
+      ],
+      "answer": 101500,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "4因子・位置と向きの確認",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2A",
+        "N4P32",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2A-N4P24-D0-02",
+      "factors": [
+        31,
+        25,
+        37,
+        4
+      ],
+      "focus": [
+        [
+          25,
+          4
+        ]
+      ],
+      "answer": 114700,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "4因子・位置と向きの確認",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2A",
+        "N4P24",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2A-N4P42-D0-01",
+      "factors": [
+        33,
+        4,
+        39,
+        25
+      ],
+      "focus": [
+        [
+          25,
+          4
+        ]
+      ],
+      "answer": 128700,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "4因子・位置と向きの確認",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2A",
+        "N4P42",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2A-N4P34-D0-01",
+      "factors": [
+        35,
+        41,
+        25,
+        4
+      ],
+      "focus": [
+        [
+          25,
+          4
+        ]
+      ],
+      "answer": 143500,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "4因子・位置と向きの確認",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2A",
+        "N4P34",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F2A-N4P43-D0-01",
+      "factors": [
+        37,
+        43,
+        4,
+        25
+      ],
+      "focus": [
+        [
+          25,
+          4
+        ]
+      ],
+      "answer": 159100,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "4因子・位置と向きの確認",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2A",
+        "N4P43",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3A-N4P12-D0-01",
+      "factors": [
+        125,
+        8,
+        19,
+        25
+      ],
+      "focus": [
+        [
+          125,
+          8
+        ]
+      ],
+      "answer": 475000,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "4因子・位置と向きの確認",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3A",
+        "N4P12",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3A-N4P21-D0-01",
+      "factors": [
+        8,
+        125,
+        21,
+        27
+      ],
+      "focus": [
+        [
+          125,
+          8
+        ]
+      ],
+      "answer": 567000,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "4因子・位置と向きの確認",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3A",
+        "N4P21",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3A-N4P13-D0-02",
+      "factors": [
+        125,
+        23,
+        8,
+        29
+      ],
+      "focus": [
+        [
+          125,
+          8
+        ]
+      ],
+      "answer": 667000,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "4因子・位置と向きの確認",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3A",
+        "N4P13",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3A-N4P31-D0-01",
+      "factors": [
+        8,
+        25,
+        125,
+        31
+      ],
+      "focus": [
+        [
+          125,
+          8
+        ]
+      ],
+      "answer": 775000,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "4因子・位置と向きの確認",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3A",
+        "N4P31",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3A-N4P14-D0-02",
+      "factors": [
+        125,
+        27,
+        33,
+        8
+      ],
+      "focus": [
+        [
+          125,
+          8
+        ]
+      ],
+      "answer": 891000,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "4因子・位置と向きの確認",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3A",
+        "N4P14",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3A-N4P41-D0-01",
+      "factors": [
+        8,
+        29,
+        35,
+        125
+      ],
+      "focus": [
+        [
+          125,
+          8
+        ]
+      ],
+      "answer": 1015000,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "4因子・位置と向きの確認",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3A",
+        "N4P41",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3A-N4P23-D0-01",
+      "factors": [
+        31,
+        125,
+        8,
+        37
+      ],
+      "focus": [
+        [
+          125,
+          8
+        ]
+      ],
+      "answer": 1147000,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "4因子・位置と向きの確認",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3A",
+        "N4P23",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3A-N4P32-D0-01",
+      "factors": [
+        33,
+        8,
+        125,
+        39
+      ],
+      "focus": [
+        [
+          125,
+          8
+        ]
+      ],
+      "answer": 1287000,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "4因子・位置と向きの確認",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3A",
+        "N4P32",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3A-N4P24-D0-01",
+      "factors": [
+        35,
+        125,
+        41,
+        8
+      ],
+      "focus": [
+        [
+          125,
+          8
+        ]
+      ],
+      "answer": 1435000,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "4因子・位置と向きの確認",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3A",
+        "N4P24",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3A-N4P42-D0-01",
+      "factors": [
+        37,
+        8,
+        43,
+        125
+      ],
+      "focus": [
+        [
+          125,
+          8
+        ]
+      ],
+      "answer": 1591000,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "4因子・位置と向きの確認",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3A",
+        "N4P42",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3A-N4P34-D0-03",
+      "factors": [
+        39,
+        45,
+        125,
+        8
+      ],
+      "focus": [
+        [
+          125,
+          8
+        ]
+      ],
+      "answer": 1755000,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "4因子・位置と向きの確認",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3A",
+        "N4P34",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F3A-N4P43-D0-01",
+      "factors": [
+        41,
+        47,
+        8,
+        125
+      ],
+      "focus": [
+        [
+          125,
+          8
+        ]
+      ],
+      "answer": 1927000,
+      "phase": "transfer4",
+      "checks": [
+        "M1",
+        "M4"
+      ],
+      "description": "4因子・位置と向きの確認",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3A",
+        "N4P43",
+        "D0"
+      ]
+    },
+    {
+      "id": "A2-F1A-N2P12-D1-01",
+      "factors": [
+        6,
+        5
+      ],
+      "focus": [
+        [
+          2,
+          5
+        ]
+      ],
+      "answer": 30,
+      "phase": "decomposition",
+      "checks": [
+        "M1",
+        "M6"
+      ],
+      "description": "基本の組を取り出すための分解",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F1A",
+        "N2P12",
+        "D1"
+      ]
+    },
+    {
+      "id": "A2-F1A-N2P12-D2-01",
+      "factors": [
+        2,
+        15
+      ],
+      "focus": [
+        [
+          2,
+          5
+        ]
+      ],
+      "answer": 30,
+      "phase": "decomposition",
+      "checks": [
+        "M1",
+        "M6"
+      ],
+      "description": "基本の組を取り出すための分解",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F1A",
+        "N2P12",
+        "D2"
+      ]
+    },
+    {
+      "id": "A2-F1A-N2P12-DB-01",
+      "factors": [
+        6,
+        15
+      ],
+      "focus": [
+        [
+          2,
+          5
+        ]
+      ],
+      "answer": 90,
+      "phase": "decomposition",
+      "checks": [
+        "M1",
+        "M6"
+      ],
+      "description": "基本の組を取り出すための分解",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F1A",
+        "N2P12",
+        "DB"
+      ]
+    },
+    {
+      "id": "A2-F2A-N2P12-D1-01",
+      "factors": [
+        75,
+        4
+      ],
+      "focus": [
+        [
+          25,
+          4
+        ]
+      ],
+      "answer": 300,
+      "phase": "decomposition",
+      "checks": [
+        "M1",
+        "M6"
+      ],
+      "description": "基本の組を取り出すための分解",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2A",
+        "N2P12",
+        "D1"
+      ]
+    },
+    {
+      "id": "A2-F2A-N2P12-D2-01",
+      "factors": [
+        25,
+        12
+      ],
+      "focus": [
+        [
+          25,
+          4
+        ]
+      ],
+      "answer": 300,
+      "phase": "decomposition",
+      "checks": [
+        "M1",
+        "M6"
+      ],
+      "description": "基本の組を取り出すための分解",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2A",
+        "N2P12",
+        "D2"
+      ]
+    },
+    {
+      "id": "A2-F2A-N2P12-DB-01",
+      "factors": [
+        75,
+        12
+      ],
+      "focus": [
+        [
+          25,
+          4
+        ]
+      ],
+      "answer": 900,
+      "phase": "decomposition",
+      "checks": [
+        "M1",
+        "M6"
+      ],
+      "description": "基本の組を取り出すための分解",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2A",
+        "N2P12",
+        "DB"
+      ]
+    },
+    {
+      "id": "A2-F2A-N2P21-D1-01",
+      "factors": [
+        4,
+        75
+      ],
+      "focus": [
+        [
+          25,
+          4
+        ]
+      ],
+      "answer": 300,
+      "phase": "decomposition",
+      "checks": [
+        "M1",
+        "M6"
+      ],
+      "description": "基本の組を取り出すための分解",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2A",
+        "N2P21",
+        "D1"
+      ]
+    },
+    {
+      "id": "A2-F2A-N2P21-D2-01",
+      "factors": [
+        12,
+        25
+      ],
+      "focus": [
+        [
+          25,
+          4
+        ]
+      ],
+      "answer": 300,
+      "phase": "decomposition",
+      "checks": [
+        "M1",
+        "M6"
+      ],
+      "description": "基本の組を取り出すための分解",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2A",
+        "N2P21",
+        "D2"
+      ]
+    },
+    {
+      "id": "A2-F3A-N2P12-D1-01",
+      "factors": [
+        375,
+        8
+      ],
+      "focus": [
+        [
+          125,
+          8
+        ]
+      ],
+      "answer": 3000,
+      "phase": "decomposition",
+      "checks": [
+        "M1",
+        "M6"
+      ],
+      "description": "基本の組を取り出すための分解",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3A",
+        "N2P12",
+        "D1"
+      ]
+    },
+    {
+      "id": "A2-F3A-N2P12-D2-01",
+      "factors": [
+        125,
+        24
+      ],
+      "focus": [
+        [
+          125,
+          8
+        ]
+      ],
+      "answer": 3000,
+      "phase": "decomposition",
+      "checks": [
+        "M1",
+        "M6"
+      ],
+      "description": "基本の組を取り出すための分解",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3A",
+        "N2P12",
+        "D2"
+      ]
+    },
+    {
+      "id": "A2-F3A-N2P12-DB-01",
+      "factors": [
+        375,
+        24
+      ],
+      "focus": [
+        [
+          125,
+          8
+        ]
+      ],
+      "answer": 9000,
+      "phase": "decomposition",
+      "checks": [
+        "M1",
+        "M6"
+      ],
+      "description": "基本の組を取り出すための分解",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3A",
+        "N2P12",
+        "DB"
+      ]
+    },
+    {
+      "id": "A2-F1B-N3P13-D1-01",
+      "factors": [
+        40,
+        37,
+        5
+      ],
+      "focus": [
+        [
+          20,
+          5
+        ]
+      ],
+      "answer": 7400,
+      "phase": "decomposition",
+      "checks": [
+        "M1",
+        "M6"
+      ],
+      "description": "基本の組を取り出すための分解",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F1B",
+        "N3P13",
+        "D1"
+      ]
+    },
+    {
+      "id": "A2-F1B-N3P13-D2-01",
+      "factors": [
+        20,
+        53,
+        15
+      ],
+      "focus": [
+        [
+          20,
+          5
+        ]
+      ],
+      "answer": 15900,
+      "phase": "decomposition",
+      "checks": [
+        "M1",
+        "M6"
+      ],
+      "description": "基本の組を取り出すための分解",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F1B",
+        "N3P13",
+        "D2"
+      ]
+    },
+    {
+      "id": "A2-F2A-N3P32-D2-01",
+      "factors": [
+        17,
+        8,
+        25
+      ],
+      "focus": [
+        [
+          25,
+          4
+        ]
+      ],
+      "answer": 3400,
+      "phase": "decomposition",
+      "checks": [
+        "M1",
+        "M6"
+      ],
+      "description": "基本の組を取り出すための分解",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2A",
+        "N3P32",
+        "D2"
+      ]
+    },
+    {
+      "id": "A2-F2A-N3P13-D2-01",
+      "factors": [
+        25,
+        17,
+        12
+      ],
+      "focus": [
+        [
+          25,
+          4
+        ]
+      ],
+      "answer": 5100,
+      "phase": "decomposition",
+      "checks": [
+        "M1",
+        "M6"
+      ],
+      "description": "基本の組を取り出すための分解",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F2A",
+        "N3P13",
+        "D2"
+      ]
+    },
+    {
+      "id": "A2-F1A-N3P13-DB-01",
+      "factors": [
+        6,
+        31,
+        15
+      ],
+      "focus": [
+        [
+          2,
+          5
+        ]
+      ],
+      "answer": 2790,
+      "phase": "decomposition",
+      "checks": [
+        "M1",
+        "M6"
+      ],
+      "description": "基本の組を取り出すための分解",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F1A",
+        "N3P13",
+        "DB"
+      ]
+    },
+    {
+      "id": "A2-F3C-N4P24-DB-01",
+      "factors": [
+        37,
+        25,
+        19,
+        24
+      ],
+      "focus": [
+        [
+          12.5,
+          8
+        ]
+      ],
+      "answer": 421800,
+      "phase": "decomposition",
+      "checks": [
+        "M1",
+        "M6"
+      ],
+      "description": "基本の組を取り出すための分解",
+      "skill": "A2",
+      "status": "draft",
+      "diagnostic_axes": [
+        "F3C",
+        "N4P24",
+        "DB"
+      ]
+    }
+  ],
+  "validation": {
+    "count": 141,
+    "unique_ids": 141,
+    "unique_formulas": 141
+  }
+}
