@@ -1,18 +1,16 @@
 {
-  "schema_version": "a2-sample-plan-0.1",
+  "schema_version": "a2-sample-plan-0.2",
   "updated": "2026-11-21",
   "status": "trial",
   "audience": "小学校高学年から高専初年次を想定。実施前に授業者が選択・分割できる。",
-  "notes": "5つの小セットを1ページずつ試作する。学生用には技能名・P/F/Dコード・発見ヒントを出さない。",
+  "notes": "15〜16歳を主対象に、九九そのものの単独出題を除外する。5つの短いセットを1ページずつ試作。学生用には技能名・P/F/Dコード・発見ヒントを出さない。",
   "sections": [
     {
       "key": "foundation",
       "student_title": "1　計算",
-      "teacher_goal": "2数の基本組（F1A→F1B→F2A→F3A）を確認。先に工夫を指示しない。",
+      "teacher_goal": "九九は習得済みとして除外。F1B→F2A→F3A（両向き）で、10のべき乗を含む数の組を確認。",
       "layout": "two-column",
       "ids": [
-        "A2-F1A-N2P12-D0-01",
-        "A2-F1A-N2P21-D0-01",
         "A2-F1B-N2P12-D0-01",
         "A2-F1B-N2P21-D0-01",
         "A2-F1B-N2P12-D0-02",
@@ -64,10 +62,10 @@
     {
       "key": "decomposition",
       "student_title": "4　計算",
-      "teacher_goal": "Dの独立性。F1A/F2A/F3Aを固定してD1/D2/DBを混ぜる。",
+      "teacher_goal": "Dの独立性。九九の単独問題は除外。F1A/F2A/F3Aを固定してD1/D2/DBを混ぜる。",
       "layout": "two-column",
       "ids": [
-        "A2-F1A-N2P12-D1-01",
+        "A2-F2A-N2P12-D1-01",
         "A2-F1A-N2P12-D2-01",
         "A2-F2A-N2P12-D2-01",
         "A2-F2A-N3P32-D2-01",
