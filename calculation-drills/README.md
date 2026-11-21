@@ -40,7 +40,8 @@
 - [計算技能の分類](design/SKILLS.md)
 - [問題の設計原則](design/DESIGN.md)
 - [A2：乗算順序の詳細設計](design/A2_MULTIPLICATION_ORDER.md)
-- [A2問題バンク（初稿141問）](problems/README.md)
+- [A2問題バンク（初稿138問）](problems/README.md)
+- **[A2問題バンク全138問一覧（仮ID・数式・正答）](problems/A2_ALL_PROBLEMS.md)**
 - [A2試作プリントと生成方法](printable/README.md)
 - [自己点検と評価](design/ASSESSMENT.md)
 - [開発計画](design/ROADMAP.md)
