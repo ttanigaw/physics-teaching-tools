@@ -40,8 +40,8 @@
 - [計算技能の分類](design/SKILLS.md)
 - [問題の設計原則](design/DESIGN.md)
 - [A2：乗算順序の詳細設計](design/A2_MULTIPLICATION_ORDER.md)
-- [A2問題バンク（初稿138問）](problems/README.md)
-- **[A2問題バンク全138問一覧（仮ID・数式・正答）](problems/A2_ALL_PROBLEMS.md)**
+- [A2問題バンク（現在282問）](problems/README.md)
+- **[A2問題バンク全282問一覧（仮ID・数式・正答）](problems/A2_ALL_PROBLEMS.md)**
 - [A2試作プリントと生成方法](printable/README.md)
 - [自己点検と評価](design/ASSESSMENT.md)
 - [開発計画](design/ROADMAP.md)
@@ -50,7 +50,7 @@ Codex等による制作時のルールは [AGENTS.md](AGENTS.md) を参照して
 
 ## 開発・公開状況
 
-現在は**A2の初期問題バンク138問と、そのうち42問を選んだ試作PDF（学生用・解答解説・教員向け）**を作成済みです。問題バンクは[problems/a2_bank.json](problems/a2_bank.json)、再現可能な組版のソースは[printable/build_a2_sample.py](printable/build_a2_sample.py)です。**学習効果や適切な難易度は未検証で、完成教材として正式公開したものではありません**。CBT/CBDは未実装です。
+現在は**A2の問題バンク282問と、以前の問題群から42問を選んだ試作PDF（学生用・解答解説・教員向け）**を作成済みです。F2C・F3Cの3因子・4因子問題を144問追加しましたが、**試作PDFの問題構成はまだ更新していません**。問題バンクは[problems/a2_bank.json](problems/a2_bank.json)、再現可能な組版のソースは[printable/build_a2_sample.py](printable/build_a2_sample.py)です。**学習効果や適切な難易度は未検証で、完成教材として正式公開したものではありません**。CBT/CBDは未実装です。
 
 ## リポジトリ内での位置づけ
 
