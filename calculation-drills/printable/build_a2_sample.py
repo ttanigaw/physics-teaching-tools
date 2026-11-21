@@ -60,6 +60,12 @@ def comment(problem):
             ratio = n / pair[1]
             decomposition.append(f"{fmt(n)}={fmt(pair[1])}×{fmt(ratio)}")
     pair_parts = [f"{fmt(a)}×{fmt(b)}={fmt(a*b)}" for a,b in focus if len([a,b]) == 2]
+    # A two-factor multiplication has no choice about which pair to calculate
+    # first. Suppress redundant explanation unless decomposition is used.
+    if len(problem["factors"]) == 2:
+        if not decomposition:
+            return ""
+        return "分解: " + "、".join(decomposition) + "。 " + "、".join(pair_parts)
     head = "先に " + "、".join(pair_parts)
     if decomposition:
         return "分解: " + "、".join(decomposition) + "。 " + head
@@ -90,7 +96,7 @@ def header(c, title, subtitle, page_no, student=False):
         c.line(PAGE_W-170,PAGE_H-48,PAGE_W-MARGIN,PAGE_H-48)
     c.setLineWidth(.6);c.setStrokeColor(BORDER)
     c.line(MARGIN,PAGE_H-94,PAGE_W-MARGIN,PAGE_H-94)
-    tx(c,MARGIN,28,"A2 / 試作版 v0.2　・　2026-11-21",8,MUTED)
+    tx(c,MARGIN,28,"A2 / 試作版 v0.3　・　2026-11-21",8,MUTED)
     tx(c,PAGE_W-MARGIN-80,28,f"{page_no} ページ",8,MUTED)
 
 
@@ -173,7 +179,9 @@ def answer_pdf(plan, lookup, dest):
             tx(c,MARGIN,y-4,f"{i+1:02d}.",10,MUTED)
             fit(c,MARGIN+35,y-4,expr(p),205,12,8)
             fit(c,MARGIN+290,y-4,"＝ "+fmt(p["answer"]),PAPER_W-296,12,9,ACCENT)
-            fit(c,MARGIN+35,y-25,comment(p),PAPER_W-45,9,7,MUTED)
+            explanation = comment(p)
+            if explanation:
+                fit(c,MARGIN+35,y-25,explanation,PAPER_W-45,9,7,MUTED)
         c.showPage()
     c.save()
 
