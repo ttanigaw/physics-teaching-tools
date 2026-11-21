@@ -144,6 +144,43 @@ export function buildBank() {
 ["F3C","N4P24","DB",[37,25,19,24],[12.5,8]]
   ];
   for(const [f,np,d,n,pair]of decomps)auto(f,np,d,n,[pair],"decomposition",["M1","M6"],"基本の組を取り出すための分解");
+  function addDecimalTransfer(auto) {
+    // D0: isolate the recognition of decimal-friendly pairs before decomposition.
+    // All 6 directed positions for 3 factors and 12 for 4 factors are exercised.
+    const variants={
+      F2C:[[2.5,4],[0.25,4],[0.025,4],[25,0.4],[25,0.04],[2.5,0.4]],
+      F3C:[[12.5,8],[1.25,8],[0.125,8],[125,0.8],[125,0.08],[12.5,0.8]]
+    };
+    const positions3=["P12","P21","P13","P31","P23","P32"];
+    const positions4=["P12","P21","P13","P31","P14","P41","P23","P32","P24","P42","P34","P43"];
+    const fillers3=[11,13,17,19,23,29,31,37,41,43,47,53,59,61,67,71,73,79,83,89,97,101,103,107,109,113,127,131,137,139,149,151,157,163,167,173];
+    const fillers4=[17,19,23,29,31,37,41,43,47,53,59,61];
+    const small4=[3,7,9];
+    for(const [family,forms] of Object.entries(variants)){
+      // N3: 6 ordered placements × 6 decimal pairs = 36 examples per family.
+      for(let pi=0;pi<positions3.length;pi++){
+        for(let vi=0;vi<forms.length;vi++){
+          const p=positions3[pi],pair=forms[vi],factors=[null,null,null];
+          factors[Number(p[1])-1]=pair[0];factors[Number(p[2])-1]=pair[1];
+          for(let k=0;k<3;k++)if(factors[k]===null)factors[k]=fillers3[pi*forms.length+vi];
+          auto(family,"N3"+p,"D0",factors,[pair],"transfer3",["M1","M4","M6"],"小数の有利な組を発見する3因子・位置と向きの転移");
+        }
+      }
+      // N4: 12 ordered placements × 3 decimal pairs = 36 examples per family.
+      // Alternate the three-pair subsets to include all six types across positions.
+      for(let pi=0;pi<positions4.length;pi++){
+        for(let vi=0;vi<3;vi++){
+          const p=positions4[pi],pair=forms[(pi%2)*3+vi],factors=[null,null,null,null];
+          factors[Number(p[1])-1]=pair[0];factors[Number(p[2])-1]=pair[1];
+          const fillers=[fillers4[pi],small4[vi]];
+          let fi=0;
+          for(let k=0;k<4;k++)if(factors[k]===null)factors[k]=fillers[fi++];
+          auto(family,"N4"+p,"D0",factors,[pair],"transfer4",["M1","M4","M6"],"小数の有利な組を発見する4因子・位置と向きの転移");
+        }
+      }
+    }
+  }
+  addDecimalTransfer(auto);
   const distribution={};for(const p of problems){const a=p.id.split("-");const key=a[1]+"/"+a[2].slice(0,2)+"/"+a[3];distribution[key]=(distribution[key]||0)+1;}
   return {schema_version:"a2-bank-0.1",updated:"2026-11-21",status:"draft",description:"A2初期問題バンク。主対象15〜16歳。独立した九九（1〜9の整数同士の1回の積）は既習として除外。既存28候補とF/P/D診断別の問題を含み、PDFは一部を選択。",problems,validation:{count:problems.length,unique_ids:ids.size,unique_formulas:exprs.size}};
 }
