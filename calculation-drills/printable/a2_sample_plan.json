@@ -1,0 +1,93 @@
+{
+  "schema_version": "a2-sample-plan-0.1",
+  "updated": "2026-11-21",
+  "status": "trial",
+  "audience": "小学校高学年から高専初年次を想定。実施前に授業者が選択・分割できる。",
+  "notes": "5つの小セットを1ページずつ試作する。学生用には技能名・P/F/Dコード・発見ヒントを出さない。",
+  "sections": [
+    {
+      "key": "foundation",
+      "student_title": "1　計算",
+      "teacher_goal": "2数の基本組（F1A→F1B→F2A→F3A）を確認。先に工夫を指示しない。",
+      "layout": "two-column",
+      "ids": [
+        "A2-F1A-N2P12-D0-01",
+        "A2-F1A-N2P21-D0-01",
+        "A2-F1B-N2P12-D0-01",
+        "A2-F1B-N2P21-D0-01",
+        "A2-F1B-N2P12-D0-02",
+        "A2-F1B-N2P21-D0-02",
+        "A2-F1B-N2P12-D0-03",
+        "A2-F1B-N2P21-D0-03",
+        "A2-F2A-N2P12-D0-01",
+        "A2-F2A-N2P21-D0-01",
+        "A2-F3A-N2P12-D0-01",
+        "A2-F3A-N2P21-D0-01"
+      ]
+    },
+    {
+      "key": "discovery",
+      "student_title": "2　計算",
+      "teacher_goal": "F1A/F1BからF2A/F3Aへ。P13固定から逆向きへ。工夫を名指ししない。",
+      "layout": "one-column",
+      "ids": [
+        "A2-F1A-N3P13-D0-01",
+        "A2-F1B-N3P13-D0-01",
+        "A2-F1B-N3P13-D0-02",
+        "A2-F2A-N3P13-D0-01",
+        "A2-F2A-N3P13-D0-02",
+        "A2-F3A-N3P13-D0-01",
+        "A2-F2A-N3P31-D0-01",
+        "A2-F3A-N3P13-D0-02"
+      ]
+    },
+    {
+      "key": "transfer",
+      "student_title": "3　計算",
+      "teacher_goal": "3因子の残りの位置・向きと4因子の位置を混合。手順の転移と選択を観察。",
+      "layout": "two-column",
+      "ids": [
+        "A2-F1A-N3P23-D0-01",
+        "A2-F2A-N3P32-D0-01",
+        "A2-F1B-N3P31-D0-01",
+        "A2-F2A-N3P12-D0-01",
+        "A2-F3A-N3P21-D0-01",
+        "A2-F1B-N3P23-D0-01",
+        "A2-F1B-N4P14-D0-01",
+        "A2-F2A-N4P12-D0-01",
+        "A2-F3A-N4P13-D0-01",
+        "A2-F2A-N4P23-D0-01",
+        "A2-F1B-N4P24-D0-01",
+        "A2-F3A-N4P34-D0-01"
+      ]
+    },
+    {
+      "key": "decomposition",
+      "student_title": "4　計算",
+      "teacher_goal": "Dの独立性。F1A/F2A/F3Aを固定してD1/D2/DBを混ぜる。",
+      "layout": "two-column",
+      "ids": [
+        "A2-F1A-N2P12-D1-01",
+        "A2-F1A-N2P12-D2-01",
+        "A2-F2A-N2P12-D2-01",
+        "A2-F2A-N3P32-D2-01",
+        "A2-F3A-N2P12-D2-01",
+        "A2-F2A-N2P12-DB-01",
+        "A2-F2A_F3A-N4P13_P42-D0_D0-01",
+        "A2-F00-N3P00-D0-01"
+      ]
+    },
+    {
+      "key": "selfcheck",
+      "student_title": "5　計算と見直し",
+      "teacher_goal": "初回答案と解答前の再点検・修正を区別し、M1/M4/M6を観察。",
+      "layout": "selfcheck",
+      "ids": [
+        "A2-F2A-N3P23-D0-02",
+        "A2-F1B-N3P23-D0-02",
+        "A2-F2A-N4P31-D0-01",
+        "A2-F3A-N4P43-D0-01"
+      ]
+    }
+  ]
+}
