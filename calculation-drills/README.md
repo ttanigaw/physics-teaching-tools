@@ -35,6 +35,7 @@
 - [教育理念・到達目標](design/CONCEPT.md)
 - [計算技能の分類](design/SKILLS.md)
 - [問題の設計原則](design/DESIGN.md)
+- [A2：乗算順序の詳細設計（初稿）](design/A2_MULTIPLICATION_ORDER.md)
 - [自己点検と評価](design/ASSESSMENT.md)
 - [開発計画](design/ROADMAP.md)
 
