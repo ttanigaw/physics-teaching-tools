@@ -181,6 +181,12 @@ export function buildBank() {
     }
   }
   addDecimalTransfer(auto);
+  // Additional N2 decomposition variants: reduce repeated answers in the trial sheet.
+  auto("F2A","N2P12","D1",[125,4],[[25,4]],"decomposition",["M1","M6"],"F2A・第1因子の分解：125=25×5");
+  auto("F2A","N2P12","D2",[25,16],[[25,4]],"decomposition",["M1","M6"],"F2A・第2因子の分解：16=4×4");
+  auto("F2A","N2P21","D2",[28,25],[[25,4]],"decomposition",["M1","M6"],"F2A・逆向き、第2因子の分解：28=4×7");
+  auto("F3A","N2P21","D2",[16,125],[[125,8]],"decomposition",["M1","M6"],"F3A・逆向き、第2因子の分解：16=8×2");
+  auto("F3A","N2P12","D2",[125,32],[[125,8]],"decomposition",["M1","M6"],"F3A・第2因子の分解：32=8×4");
   const distribution={};for(const p of problems){const a=p.id.split("-");const key=a[1]+"/"+a[2].slice(0,2)+"/"+a[3];distribution[key]=(distribution[key]||0)+1;}
   return {schema_version:"a2-bank-0.1",updated:"2026-11-21",status:"draft",description:"A2初期問題バンク。主対象15〜16歳。独立した九九（1〜9の整数同士の1回の積）は既習として除外。既存28候補とF/P/D診断別の問題を含み、PDFは一部を選択。",problems,validation:{count:problems.length,unique_ids:ids.size,unique_formulas:exprs.size}};
 }
