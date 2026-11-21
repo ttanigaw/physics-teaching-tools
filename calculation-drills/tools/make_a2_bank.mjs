@@ -32,6 +32,11 @@ export function buildBank() {
     if(new Set(used).size!==used.length)throw Error("overlapping designated pairs: "+item.id);
   }
   function add(id,nums,focus,phase,checks,description){
+    // Main audience is 15–16: isolated 1..9 × 1..9 is assumed mastered.
+    // Products involving the multiplication table may still appear inside
+    // multi-factor calculations, where the target is recognizing a shortcut.
+    if(nums.length===2 && nums.every(v=>Number.isInteger(v) && v>=1 && v<=9))
+      throw new Error("Do not include isolated multiplication-table problems: "+id);
     const item={id,factors:nums,focus,answer:round(nums.reduce((a,b)=>a*b,1)),phase,checks,description,skill:"A2",status:"draft",diagnostic_axes:[]};
     item.diagnostic_axes=id.slice(3).split("-").slice(0,3);
     validate(item);
@@ -88,6 +93,7 @@ export function buildBank() {
   };
   for(const [f,sets] of Object.entries(variants)){
     for(const pair of sets){
+      if(pair.every(v=>Number.isInteger(v) && v>=1 && v<=9)) continue;
       auto(f,"N2P12","D0",pair,[pair],"foundation",["M4"],"2数の積と倍率を確認");
       auto(f,"N2P21","D0",[pair[1],pair[0]],[pair],"foundation",["M4"],"逆の順でも計算");
     }
@@ -119,7 +125,7 @@ export function buildBank() {
   }
   // Decomposition is orthogonal to the F family; include first/second/both and reversed P.
   const decomps=[
-["F1A","N2P12","D1",[6,5],[2,5]],
+// 6×5 is excluded: a standalone multiplication-table exercise.
 ["F1A","N2P12","D2",[2,15],[2,5]],
 ["F1A","N2P12","DB",[6,15],[2,5]],
 ["F2A","N2P12","D1",[75,4],[25,4]],
