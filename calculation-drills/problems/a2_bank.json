@@ -2,7 +2,7 @@
   "schema_version": "a2-bank-0.1",
   "updated": "2026-11-21",
   "status": "draft",
-  "description": "A2初期問題バンク。28件の設計書既存候補を保持し、F/P/Dの診断別に増補。PDFはこのうち一部を選ぶ。",
+  "description": "A2初期問題バンク。主対象15〜16歳。独立した九九（1〜9の整数同士の1回の積）は既習として除外。既存28候補とF/P/D診断別の問題を含み、PDFは一部を選択。",
   "problems": [
     {
       "id": "A2-F2A-N3P13-D0-01",
@@ -802,58 +802,6 @@
       "diagnostic_axes": [
         "F00",
         "N4P00",
-        "D0"
-      ]
-    },
-    {
-      "id": "A2-F1A-N2P12-D0-01",
-      "factors": [
-        2,
-        5
-      ],
-      "focus": [
-        [
-          2,
-          5
-        ]
-      ],
-      "answer": 10,
-      "phase": "foundation",
-      "checks": [
-        "M4"
-      ],
-      "description": "2数の積と倍率を確認",
-      "skill": "A2",
-      "status": "draft",
-      "diagnostic_axes": [
-        "F1A",
-        "N2P12",
-        "D0"
-      ]
-    },
-    {
-      "id": "A2-F1A-N2P21-D0-01",
-      "factors": [
-        5,
-        2
-      ],
-      "focus": [
-        [
-          2,
-          5
-        ]
-      ],
-      "answer": 10,
-      "phase": "foundation",
-      "checks": [
-        "M4"
-      ],
-      "description": "逆の順でも計算",
-      "skill": "A2",
-      "status": "draft",
-      "diagnostic_axes": [
-        "F1A",
-        "N2P21",
         "D0"
       ]
     },
@@ -3458,33 +3406,6 @@
       ]
     },
     {
-      "id": "A2-F1A-N2P12-D1-01",
-      "factors": [
-        6,
-        5
-      ],
-      "focus": [
-        [
-          2,
-          5
-        ]
-      ],
-      "answer": 30,
-      "phase": "decomposition",
-      "checks": [
-        "M1",
-        "M6"
-      ],
-      "description": "基本の組を取り出すための分解",
-      "skill": "A2",
-      "status": "draft",
-      "diagnostic_axes": [
-        "F1A",
-        "N2P12",
-        "D1"
-      ]
-    },
-    {
       "id": "A2-F1A-N2P12-D2-01",
       "factors": [
         2,
@@ -3925,8 +3846,8 @@
     }
   ],
   "validation": {
-    "count": 141,
-    "unique_ids": 141,
-    "unique_formulas": 141
+    "count": 138,
+    "unique_ids": 138,
+    "unique_formulas": 138
   }
 }
