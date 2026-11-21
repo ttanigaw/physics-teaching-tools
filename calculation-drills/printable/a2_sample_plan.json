@@ -1,9 +1,9 @@
 {
-  "schema_version": "a2-sample-plan-0.2",
+  "schema_version": "a2-sample-plan-0.4",
   "updated": "2026-11-21",
   "status": "trial",
-  "audience": "小学校高学年から高専初年次を想定。実施前に授業者が選択・分割できる。",
-  "notes": "15〜16歳を主対象に、九九そのものの単独出題を除外する。5つの短いセットを1ページずつ試作。学生用には技能名・P/F/Dコード・発見ヒントを出さない。",
+  "audience": "15〜16歳（九九習得済み）を主対象。目的別の短いプリントを独立して配付できる。",
+  "notes": "11セット・計110問。2ページ目に2因子の分解ありを独立配置、F2C/F3Cの3因子・4因子と総合練習を追加。学生用にはF/P/Dコードや解法名を示さない。",
   "sections": [
     {
       "key": "foundation",
@@ -21,11 +21,29 @@
         "A2-F2A-N2P21-D0-01",
         "A2-F3A-N2P12-D0-01",
         "A2-F3A-N2P21-D0-01"
+      ],
+      "student_prompt": "次の計算をしてください。"
+    },
+    {
+      "key": "twofactor_decomposition",
+      "student_title": "2　計算",
+      "teacher_goal": "2因子で分解する力のみを重点練習。25×12→25×(4×3)のように考える。答え解説には分解のみ記載し、順序変更を語らない。",
+      "layout": "two-column",
+      "student_prompt": "次の計算をしてください。",
+      "ids": [
+        "A2-F2A-N2P12-D2-01",
+        "A2-F2A-N2P21-D2-01",
+        "A2-F2A-N2P12-D1-01",
+        "A2-F2A-N2P21-D1-01",
+        "A2-F3A-N2P12-D2-01",
+        "A2-F3A-N2P12-D1-01",
+        "A2-F2A-N2P12-DB-01",
+        "A2-F3A-N2P12-DB-01"
       ]
     },
     {
       "key": "discovery",
-      "student_title": "2　計算",
+      "student_title": "3　計算",
       "teacher_goal": "F1A/F1BからF2A/F3Aへ。P13固定から逆向きへ。工夫を名指ししない。",
       "layout": "one-column",
       "ids": [
@@ -37,11 +55,12 @@
         "A2-F3A-N3P13-D0-01",
         "A2-F2A-N3P31-D0-01",
         "A2-F3A-N3P13-D0-02"
-      ]
+      ],
+      "student_prompt": "次の計算をしてください。途中式は自由に書いてかまいません。"
     },
     {
       "key": "transfer",
-      "student_title": "3　計算",
+      "student_title": "4　計算",
       "teacher_goal": "3因子の残りの位置・向きと4因子の位置を混合。手順の転移と選択を観察。",
       "layout": "two-column",
       "ids": [
@@ -57,27 +76,134 @@
         "A2-F2A-N4P23-D0-01",
         "A2-F1B-N4P24-D0-01",
         "A2-F3A-N4P34-D0-01"
+      ],
+      "student_prompt": "次の計算をしてください。"
+    },
+    {
+      "key": "decimal_f2_n3",
+      "student_title": "5　計算",
+      "teacher_goal": "F2C・N3、6位置×2題。最初は離れた2数の組を認識し、その後に向きと小数桁を混ぜる。",
+      "layout": "two-column",
+      "student_prompt": "次の計算をしてください。",
+      "ids": [
+        "A2-F2C-N3P13-D0-01",
+        "A2-F2C-N3P13-D0-02",
+        "A2-F2C-N3P31-D0-01",
+        "A2-F2C-N3P31-D0-02",
+        "A2-F2C-N3P23-D0-03",
+        "A2-F2C-N3P23-D0-04",
+        "A2-F2C-N3P32-D0-05",
+        "A2-F2C-N3P32-D0-06",
+        "A2-F2C-N3P12-D0-03",
+        "A2-F2C-N3P12-D0-05",
+        "A2-F2C-N3P21-D0-04",
+        "A2-F2C-N3P21-D0-06"
+      ]
+    },
+    {
+      "key": "decimal_f2_n4",
+      "student_title": "6　計算",
+      "teacher_goal": "F2C・N4、12位置を各1題。倍率と数値の混合により位置依存を減らす。",
+      "layout": "two-column",
+      "student_prompt": "次の計算をしてください。",
+      "ids": [
+        "A2-F2C-N4P13-D0-01",
+        "A2-F2C-N4P31-D0-02",
+        "A2-F2C-N4P14-D0-03",
+        "A2-F2C-N4P41-D0-01",
+        "A2-F2C-N4P23-D0-02",
+        "A2-F2C-N4P32-D0-03",
+        "A2-F2C-N4P24-D0-01",
+        "A2-F2C-N4P42-D0-02",
+        "A2-F2C-N4P34-D0-03",
+        "A2-F2C-N4P43-D0-01",
+        "A2-F2C-N4P12-D0-02",
+        "A2-F2C-N4P21-D0-03"
+      ]
+    },
+    {
+      "key": "decimal_f3_n3",
+      "student_title": "7　計算",
+      "teacher_goal": "F3C・N3、6位置×2題。12.5×8、1.25×8、125×0.08等の小数を扱う。",
+      "layout": "two-column",
+      "student_prompt": "次の計算をしてください。",
+      "ids": [
+        "A2-F3C-N3P13-D0-01",
+        "A2-F3C-N3P13-D0-02",
+        "A2-F3C-N3P31-D0-01",
+        "A2-F3C-N3P31-D0-02",
+        "A2-F3C-N3P23-D0-03",
+        "A2-F3C-N3P23-D0-04",
+        "A2-F3C-N3P32-D0-05",
+        "A2-F3C-N3P32-D0-06",
+        "A2-F3C-N3P12-D0-03",
+        "A2-F3C-N3P12-D0-05",
+        "A2-F3C-N3P21-D0-04",
+        "A2-F3C-N3P21-D0-06"
+      ]
+    },
+    {
+      "key": "decimal_f3_n4",
+      "student_title": "8　計算",
+      "teacher_goal": "F3C・N4、12位置を各1題。位置・順序・小数倍率を混在。",
+      "layout": "two-column",
+      "student_prompt": "次の計算をしてください。",
+      "ids": [
+        "A2-F3C-N4P13-D0-01",
+        "A2-F3C-N4P31-D0-02",
+        "A2-F3C-N4P14-D0-03",
+        "A2-F3C-N4P41-D0-01",
+        "A2-F3C-N4P23-D0-02",
+        "A2-F3C-N4P32-D0-03",
+        "A2-F3C-N4P24-D0-01",
+        "A2-F3C-N4P42-D0-02",
+        "A2-F3C-N4P34-D0-03",
+        "A2-F3C-N4P43-D0-01",
+        "A2-F3C-N4P12-D0-02",
+        "A2-F3C-N4P21-D0-03"
+      ]
+    },
+    {
+      "key": "decimal_mixed",
+      "student_title": "9　計算",
+      "teacher_goal": "F2C／F3Cと3／4因子を混合。先に計算しやすい組を自発的に見つけるか確認。",
+      "layout": "two-column",
+      "student_prompt": "次の計算をしてください。",
+      "ids": [
+        "A2-F2C-N3P13-D0-03",
+        "A2-F3C-N3P31-D0-04",
+        "A2-F2C-N4P24-D0-02",
+        "A2-F3C-N4P42-D0-01",
+        "A2-F2C-N3P32-D0-02",
+        "A2-F3C-N4P34-D0-02",
+        "A2-F3C-N3P23-D0-06",
+        "A2-F2C-N4P41-D0-03",
+        "A2-F3C-N3P12-D0-04",
+        "A2-F2C-N4P32-D0-02",
+        "A2-F2C-N3P21-D0-01",
+        "A2-F3C-N4P14-D0-02"
       ]
     },
     {
       "key": "decomposition",
-      "student_title": "4　計算",
-      "teacher_goal": "Dの独立性。九九の単独問題は除外。F1A/F2A/F3Aを固定してD1/D2/DBを混ぜる。",
+      "student_title": "10　計算",
+      "teacher_goal": "3因子の分解、複数の有利な組、特別な組がない対照を混在。2因子・分解ありは2ページ目に独立配置。",
       "layout": "two-column",
+      "student_prompt": "次の計算をしてください。",
       "ids": [
-        "A2-F2A-N2P12-D1-01",
-        "A2-F1A-N2P12-D2-01",
-        "A2-F2A-N2P12-D2-01",
+        "A2-F1B-N3P13-D1-01",
+        "A2-F1B-N3P13-D2-01",
         "A2-F2A-N3P32-D2-01",
-        "A2-F3A-N2P12-D2-01",
-        "A2-F2A-N2P12-DB-01",
+        "A2-F2A-N3P13-D2-01",
         "A2-F2A_F3A-N4P13_P42-D0_D0-01",
-        "A2-F00-N3P00-D0-01"
+        "A2-F1B_F2A-N4P13_P24-D0_D0-01",
+        "A2-F00-N3P00-D0-01",
+        "A2-F00-N4P00-D0-01"
       ]
     },
     {
       "key": "selfcheck",
-      "student_title": "5　計算と見直し",
+      "student_title": "11　計算と見直し",
       "teacher_goal": "初回答案と解答前の再点検・修正を区別し、M1/M4/M6を観察。",
       "layout": "selfcheck",
       "ids": [
@@ -85,7 +211,8 @@
         "A2-F1B-N3P23-D0-02",
         "A2-F2A-N4P31-D0-01",
         "A2-F3A-N4P43-D0-01"
-      ]
+      ],
+      "student_prompt": "まず答えを書き、答えを見る前に見直して、必要なら書き直しましょう。"
     }
   ]
 }
