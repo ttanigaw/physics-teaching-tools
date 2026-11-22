@@ -1,0 +1,161 @@
+{
+  "schema_version": "a4-sample-plan-0.1",
+  "updated": "2026-11-22",
+  "status": "draft",
+  "notes": "学生用9ページ×8問＝72問。正答と指導メモは別PDF。分類は学生に明かさない。",
+  "sections": [
+    {
+      "key": "discovery",
+      "title": "計算 1",
+      "prompt": "次の計算をしてください。",
+      "teacher_goal": "発見：2項・同じ位置を起点に乗算2回→1回",
+      "ids": [
+        "A4-N2T12-P11-L22-R0K0-H0S0-01",
+        "A4-N2T12-P11-L32-R0K0-H0S0-01",
+        "A4-N2T12-P11-L33-R0K0-H0S0-01",
+        "A4-N2T12-P11-L33-R0K0-H0S0-02",
+        "A4-N2T12-P11-L43-R0K0-H0S0-01",
+        "A4-N2T12-P11-L44-R0K0-H0S0-01",
+        "A4-N2T12-P11-L44-R0K0-H0S0-02",
+        "A4-N2T12-P11-L52-R0K0-H0S0-01"
+      ],
+      "layout": "standard"
+    },
+    {
+      "key": "placements",
+      "title": "計算 2",
+      "prompt": "次の計算をしてください。",
+      "teacher_goal": "配置の混合：P11/P22/P12/P21、3桁を中心に",
+      "ids": [
+        "A4-N2T12-P12-L22-R0K0-H0S0-01",
+        "A4-N2T12-P12-L33-R0K0-H0S0-01",
+        "A4-N2T12-P12-L33-R0K0-H0S0-02",
+        "A4-N2T12-P21-L32-R0K0-H0S0-01",
+        "A4-N2T12-P21-L33-R0K0-H0S0-01",
+        "A4-N2T12-P22-L22-R0K0-H0S0-01",
+        "A4-N2T12-P22-L32-R0K0-H0S0-01",
+        "A4-N2T12-P22-L33-R0K0-H0S0-02"
+      ],
+      "layout": "standard"
+    },
+    {
+      "key": "large",
+      "title": "計算 3",
+      "prompt": "次の計算をしてください。",
+      "teacher_goal": "L44/L43、R0、面倒な乗算の軽減",
+      "ids": [
+        "A4-N2T12-P12-L43-R0K0-H0S0-01",
+        "A4-N2T12-P12-L44-R0K0-H0S0-01",
+        "A4-N2T12-P12-L44-R0K0-H0S0-02",
+        "A4-N2T12-P21-L43-R0K0-H0S0-01",
+        "A4-N2T12-P21-L44-R0K0-H0S0-02",
+        "A4-N2T12-P22-L43-R0K0-H0S0-01",
+        "A4-N2T12-P22-L44-R0K0-H0S0-01",
+        "A4-N2T12-P22-L44-R0K0-H0S0-02"
+      ],
+      "layout": "standard"
+    },
+    {
+      "key": "reward",
+      "title": "計算 4",
+      "prompt": "次の計算をしてください。",
+      "teacher_goal": "R1/R2のボーナス。R0が基本であることを忘れない",
+      "ids": [
+        "A4-N2T12-P11-L32-R1K0-H0S0-01",
+        "A4-N2T12-P11-L44-R1K0-H0S0-01",
+        "A4-N2T12-P12-L32-R1K0-H0S0-01",
+        "A4-N2T12-P12-L44-R1K0-H0S0-01",
+        "A4-N2T12-P21-L32-R1K0-H0S0-01",
+        "A4-N2T12-P21-L44-R1K0-H0S0-01",
+        "A4-N2T12-P22-L32-R1K0-H0S0-01",
+        "A4-N2T12-P22-L44-R1K0-H0S0-01"
+      ],
+      "layout": "standard"
+    },
+    {
+      "key": "bonus",
+      "title": "計算 5",
+      "prompt": "次の計算をしてください。",
+      "teacher_goal": "20×50/25×40/125×80のA4+A2複合",
+      "ids": [
+        "A4-N2T12-P11-L22-R1K1-H0S0-02",
+        "A4-N2T12-P11-L32-R1K1-H0S0-01",
+        "A4-N2T12-P12-L22-R1K1-H0S0-02",
+        "A4-N2T12-P12-L32-R1K1-H0S0-01",
+        "A4-N2T12-P21-L22-R1K1-H0S0-02",
+        "A4-N2T12-P21-L32-R1K1-H0S0-01",
+        "A4-N2T12-P22-L22-R1K1-H0S0-02",
+        "A4-N2T12-P22-L32-R1K1-H0S0-01"
+      ],
+      "layout": "standard"
+    },
+    {
+      "key": "partial3",
+      "title": "計算 6",
+      "prompt": "次の計算をしてください。",
+      "teacher_goal": "3項のうち2項に共通因子、L33、T12/T13/T23",
+      "ids": [
+        "A4-N3T12-P11-L33-R0K0-H0S0-02",
+        "A4-N3T12-P21-L33-R0K0-H0S0-01",
+        "A4-N3T12-P22-L33-R0K0-H0S0-02",
+        "A4-N3T13-P12-L33-R0K0-H0S0-01",
+        "A4-N3T13-P21-L33-R0K0-H0S0-02",
+        "A4-N3T23-P11-L33-R0K0-H0S0-01",
+        "A4-N3T23-P12-L33-R0K0-H0S0-02",
+        "A4-N3T23-P22-L33-R0K0-H0S0-01"
+      ],
+      "layout": "standard"
+    },
+    {
+      "key": "partial3hard",
+      "title": "計算 7",
+      "prompt": "次の計算をしてください。",
+      "teacher_goal": "3項のうち2項、L44、3回→2回",
+      "ids": [
+        "A4-N3T12-P11-L44-R0K0-H0S0-02",
+        "A4-N3T12-P21-L44-R0K0-H0S0-01",
+        "A4-N3T12-P22-L44-R0K0-H0S0-02",
+        "A4-N3T13-P12-L44-R0K0-H0S0-01",
+        "A4-N3T13-P21-L44-R0K0-H0S0-02",
+        "A4-N3T23-P11-L44-R0K0-H0S0-01",
+        "A4-N3T23-P12-L44-R0K0-H0S0-02",
+        "A4-N3T23-P22-L44-R0K0-H0S0-01"
+      ],
+      "layout": "standard"
+    },
+    {
+      "key": "all3",
+      "title": "計算 8",
+      "prompt": "次の計算をしてください。",
+      "teacher_goal": "3項全部に共通因子、3回→1回",
+      "ids": [
+        "A4-N3T123-P111-L33-R0K0-H0S0-02",
+        "A4-N3T123-P112-L33-R0K0-H0S0-02",
+        "A4-N3T123-P121-L33-R0K0-H0S0-02",
+        "A4-N3T123-P122-L33-R0K0-H0S0-02",
+        "A4-N3T123-P211-L33-R0K0-H0S0-02",
+        "A4-N3T123-P212-L33-R0K0-H0S0-02",
+        "A4-N3T123-P221-L33-R0K0-H0S0-02",
+        "A4-N3T123-P222-L33-R0K0-H0S0-02"
+      ],
+      "layout": "standard"
+    },
+    {
+      "key": "selfcheck",
+      "title": "計算 9 と見直し",
+      "prompt": "まず答えを書き、正答を見る前に自分で見直してください。",
+      "teacher_goal": "3項T2/T3の混合・初回答案と見直し後",
+      "ids": [
+        "A4-N3T123-P111-L44-R2K0-H0S0-01",
+        "A4-N3T123-P121-L44-R2K0-H0S0-01",
+        "A4-N3T123-P211-L44-R2K0-H0S0-01",
+        "A4-N3T123-P221-L44-R2K0-H0S0-01",
+        "A4-N3T12-P12-L33-R1K0-H0S0-01",
+        "A4-N3T13-P11-L33-R1K0-H0S0-01",
+        "A4-N3T13-P22-L33-R1K0-H0S0-01",
+        "A4-N3T23-P21-L33-R1K0-H0S0-01"
+      ],
+      "layout": "selfcheck"
+    }
+  ]
+}
