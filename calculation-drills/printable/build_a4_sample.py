@@ -30,16 +30,19 @@ def load(path):
             pages[int(n)]={"title":title,"prompt":prompt,"goal":goal,"items":[]}
             continue
         fields=raw.split("\t")
-        if len(fields)!=6:raise ValueError("Bad row: "+raw)
-        pg,pid,term_data,ans,a,target=fields
+        if len(fields)!=7:raise ValueError("Bad v2 row: "+raw)
+        pg,pid,term_data,ans,a,target,sign_data=fields
         terms=[tuple(map(int,x.split(","))) for x in term_data.split(";")]
         target=[int(x) for x in target.split(",")]
+        signs=[int(v) for v in sign_data.split(",")]
         ans,a=int(ans),int(a)
-        if ans!=sum(x*y for x,y in terms):raise ValueError("Bad answer: "+pid)
+        if len(signs)!=len(terms) or signs[0]!=1 or any(s not in (1,-1) for s in signs):
+            raise ValueError("Bad signs: "+pid)
+        if ans!=sum(s*x*y for s,(x,y) in zip(signs,terms)):raise ValueError("Bad answer: "+pid)
         if any(a not in terms[i-1] for i in target):raise ValueError("Bad common factor: "+pid)
-        pages[int(pg)]["items"].append({"id":pid,"terms":terms,"answer":ans,"a":a,"target":target})
+        pages[int(pg)]["items"].append({"id":pid,"terms":terms,"signs":signs,"answer":ans,"a":a,"target":target})
     ordered=[pages[i] for i in sorted(pages)]
-    if len(ordered)!=9 or any(len(s["items"])!=8 for s in ordered):raise ValueError("Need 9×8")
+    if len(ordered)!=10 or any(len(s["items"])!=8 for s in ordered):raise ValueError("Need 10×8")
     ids=[p["id"] for s in ordered for p in s["items"]]
     if len(set(ids))!=len(ids):raise ValueError("Repeated ID")
     return ordered
@@ -58,28 +61,37 @@ def head(c,label,sub,page,total,student=False):
         t(c,W-199,H-46,"氏名：",10,SUB)
         c.setStrokeColor(BORDER);c.line(W-153,H-49,W-M,H-49)
     c.setStrokeColor(BORDER);c.line(M,H-88,W-M,H-88)
-    t(c,M,25,"A4 計算ドリル / 試作 v0.1",8,SUB)
+    t(c,M,25,"A4 計算ドリル / 試作 v0.2",8,SUB)
     t(c,W-M-81,25,f"{page}/{total} ページ",8,SUB)
 
 def formula(p):
-    return " + ".join(f"{a} × {b}" for a,b in p["terms"])
+    return "".join(("" if i==0 else (" − " if p["signs"][i]<0 else " + "))+f"{x} × {y}" for i,(x,y) in enumerate(p["terms"]))
 
 def grouped(p):
-    a=p["a"];target=p["target"];rest=[]
-    for i in target:
+    a=p["a"]
+    target=p["target"]
+    tokens=[]
+    for j,i in enumerate(target):
         x,y=p["terms"][i-1]
-        rest.append(y if x==a else x)
-    first=f'{a} × ('+" + ".join(map(str,rest))+')'
-    other=[" × ".join(map(str,term)) for i,term in enumerate(p["terms"],1) if i not in target]
-    return " + ".join([first]+other)
+        v=y if x==a else x
+        sg=p["signs"][i-1]
+        tokens.append(("" if j==0 else (" − " if sg<0 else " + "))+str(v))
+    result=f"{a} × ("+"".join(tokens)+")"
+    for i,term in enumerate(p["terms"],1):
+        if i not in target:
+            result+=(" − " if p["signs"][i-1]<0 else " + ")+f"{term[0]} × {term[1]}"
+    return result
 
 def answer_detail(p):
-    a=p["a"];target=p["target"]
-    r=sum(y if x==a else x for i,(x,y) in enumerate(p["terms"],1) if i in target)
-    other=[x*y for i,(x,y) in enumerate(p["terms"],1) if i not in target]
-    if other:
-        return "= "+ " + ".join([f"{a*r:,}"]+[f"{v:,}" for v in other])+f" = {p['answer']:,}"
-    return f"= {p['answer']:,}"
+    a=p["a"]
+    rest=p["target"]
+    remainder=sum(p["signs"][i-1]*(p["terms"][i-1][1] if p["terms"][i-1][0]==a else p["terms"][i-1][0]) for i in rest)
+    others=[p["signs"][i-1]*x*y for i,(x,y) in enumerate(p["terms"],1) if i not in rest]
+    part=f"= {a:,} × {remainder:,}"
+    for v in others:
+        part+=(" − " if v<0 else " + ")+f"{abs(v):,}"
+    return part+f" = {p['answer']:,}"
+
 
 def student(pages,out):
     c=Canvas(str(out),pagesize=A4,pageCompression=1);c.setTitle("A4 計算ドリル 学生用")
@@ -92,7 +104,7 @@ def student(pages,out):
             c.roundRect(M,y-78.7+5,W-2*M,73.7,4,stroke=1,fill=0)
             t(c,M+12,y-23,f"{i+1:02}.",9.5,SUB)
             fit(c,M+45,y-25,formula(p),W-2*M-59,13.3,9.2)
-            if page==9:
+            if "見直し" in section["title"]:
                 t(c,M+15,y-49,"最初：",8.5,SUB);c.line(M+60,y-50,M+227,y-50)
                 t(c,M+248,y-49,"見直し後：",8.5,SUB);c.line(M+325,y-50,W-M-13,y-50)
             else:
@@ -127,11 +139,12 @@ def teacher(pages,out):
         "4ページ：R1/R2。5ページ：20×50、25×40、125×80とA2との複合。",
         "6～7ページ：3項中2項に共通因子。乗算3回→2回。",
         "8ページ：3項すべてに共通因子。乗算3回→1回を発見する。",
-        "9ページ：3項中2項／全部の混合と、正答を見る前の自己点検。",
+        "9ページ：3項すべてをくくり、差で3桁が1桁・2桁になる発見。",
+        "10ページ：3項中2項／全部の混合、減算の確認と自己点検。",
         "学生用では分類コードと解法の種明かしを出さない。",
         "必要なら段階的ヒント。別の効率的解法を認める。",
-        "全72問が必修ではない。目的に合うページを選んで配布。",
-        "問題バンク220問のうち一部を使った未検証の試作教材。",
+        "全80問が必修ではない。目的に合うページを選んで配布。",
+        "問題バンク252問のうち一部を使った未検証の試作教材。",
     ]
     y=H-125
     for note in notes:fit(c,M,y,"・"+note,W-2*M,9.5,8);y-=39
@@ -140,8 +153,8 @@ def teacher(pages,out):
     for i,section in enumerate(pages,1):
         t(c,M,y,f'{i}. {section["title"]}（8問）',11)
         fit(c,M+17,y-23,section["goal"],W-2*M-20,9.2,8,SUB)
-        y-=72
-    fit(c,M,y-12,"計72問。数学的な正答・出題配置は確認済み。学習効果は未検証。",W-2*M,9,8,ACCENT)
+        y-=61
+    fit(c,M,y-8,"計80問。数式と分類は検証済み。学習効果は未検証。",W-2*M,9,8,ACCENT)
     c.showPage();c.save()
 
 def main():
