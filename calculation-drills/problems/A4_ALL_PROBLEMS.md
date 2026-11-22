@@ -4,7 +4,7 @@
 
 仮IDは項数N・共通項T・項内位置P・桁数L・和の種類R・複合K・可視性H・符号S・末尾2桁の数値違いを示す。
 
-A4詳細設計：../design/A4_COMMON_FACTOR.md
+[A4詳細設計](../design/A4_COMMON_FACTOR.md)
 
 ## 2項・くくりの発見（32問）
 
