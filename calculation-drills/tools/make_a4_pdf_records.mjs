@@ -1,10 +1,13 @@
 import {readFileSync,writeFileSync} from "node:fs";
 function exportRecords(bank,plan){
- const byId=new Map(bank.problems.map(p=>[p.id,p])),rows=["# A4_SAMPLE_RECORDS_V1"];
+ const byId=new Map(bank.problems.map(p=>[p.id,p])),rows=["# A4_SAMPLE_RECORDS_V1"],keys=new Set();
  for(let i=0;i<plan.sections.length;i++){
   const s=plan.sections[i],page=i+1;
   rows.push(["#PAGE",page,s.title,s.prompt,s.teacher_goal].join("\t"));
   for(const id of s.ids){const x=byId.get(id);if(!x)throw Error(id);
+   const canonical=x.terms.map(t=>t.slice().sort((a,b)=>a-b).join("×")).sort().join("+");
+   if(keys.has(canonical))throw Error("Duplicate arithmetic structure in print plan: "+id);
+   keys.add(canonical);
    rows.push([page,id,x.terms.map(t=>t.join(",")).join(";"),x.answer,x.common_factor,x.common_terms.join(",")].join("\t"));
   }
  }
