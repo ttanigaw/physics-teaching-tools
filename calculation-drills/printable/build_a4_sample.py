@@ -42,7 +42,7 @@ def load(path):
         if any(a not in terms[i-1] for i in target):raise ValueError("Bad common factor: "+pid)
         pages[int(pg)]["items"].append({"id":pid,"terms":terms,"signs":signs,"answer":ans,"a":a,"target":target})
     ordered=[pages[i] for i in sorted(pages)]
-    if len(ordered)!=10 or any(len(s["items"])!=8 for s in ordered):raise ValueError("Need 10×8")
+    if len(ordered)!=11 or any(len(s["items"])!=8 for s in ordered):raise ValueError("Need 11×8")
     ids=[p["id"] for s in ordered for p in s["items"]]
     if len(set(ids))!=len(ids):raise ValueError("Repeated ID")
     return ordered
@@ -61,7 +61,7 @@ def head(c,label,sub,page,total,student=False):
         t(c,W-199,H-46,"氏名：",10,SUB)
         c.setStrokeColor(BORDER);c.line(W-153,H-49,W-M,H-49)
     c.setStrokeColor(BORDER);c.line(M,H-88,W-M,H-88)
-    t(c,M,25,"A4 計算ドリル / 試作 v0.2",8,SUB)
+    t(c,M,25,"A4 計算ドリル / 試作 v0.3",8,SUB)
     t(c,W-M-81,25,f"{page}/{total} ページ",8,SUB)
 
 def formula(p):
@@ -135,16 +135,17 @@ def teacher(pages,out):
         "くくった後に和が特別な数にならなくても掛け算の回数を減らせる。",
         "R0を中心に、R1/R2は追加のうれしさを体験するボーナス。",
         "L33/L44は桁数をそろえ、数字を探して共通因子を発見する練習。",
-        "1～3ページ：2項の工夫。最初は解法を教えず発見の余地を残す。",
-        "4ページ：R1/R2。5ページ：20×50、25×40、125×80とA2との複合。",
-        "6～7ページ：3項中2項に共通因子。乗算3回→2回。",
-        "8ページ：3項すべてに共通因子。乗算3回→1回を発見する。",
-        "9ページ：3項すべてをくくり、差で3桁が1桁・2桁になる発見。",
-        "10ページ：3項中2項／全部の混合、減算の確認と自己点検。",
+        "1～3ページ：2項の加算。初めから解法を明かさず発見の余地を残す。",
+        "4ページ：2項でも減算をくくる。差が小さくなる場合の利益を体験。",
+        "5ページ：R1/R2。6ページ：20×50、25×40、125×80との複合。",
+        "7～8ページ：3項中2項に共通因子。乗算3回→2回。",
+        "9ページ：3項すべてに共通因子。乗算3回→1回を発見する。",
+        "10ページ：3項すべてをくくり、差で3桁が1桁・2桁になる発見。",
+        "11ページ：2項・3項、加算・減算の混合と自己点検。",
         "学生用では分類コードと解法の種明かしを出さない。",
         "必要なら段階的ヒント。別の効率的解法を認める。",
-        "全80問が必修ではない。目的に合うページを選んで配布。",
-        "問題バンク252問のうち一部を使った未検証の試作教材。",
+        "全88問が必修ではない。目的に合うページを選んで配布。",
+        "問題バンク292問のうち一部を使った未検証の試作教材。",
     ]
     y=H-125
     for note in notes:fit(c,M,y,"・"+note,W-2*M,9.5,8);y-=39
@@ -153,8 +154,8 @@ def teacher(pages,out):
     for i,section in enumerate(pages,1):
         t(c,M,y,f'{i}. {section["title"]}（8問）',11)
         fit(c,M+17,y-23,section["goal"],W-2*M-20,9.2,8,SUB)
-        y-=61
-    fit(c,M,y-8,"計80問。数式と分類は検証済み。学習効果は未検証。",W-2*M,9,8,ACCENT)
+        y-=52
+    fit(c,M,y-8,"計88問。数式と分類は検証済み。学習効果は未検証。",W-2*M,9,8,ACCENT)
     c.showPage();c.save()
 
 def main():
