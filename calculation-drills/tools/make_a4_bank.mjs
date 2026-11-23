@@ -269,6 +269,140 @@ function applyA4Corrections(bank){
  bank.validation={count:bank.problems.length,unique_ids:idx.size,unique_expressions:canonical.size};
  return bank;
 }
-const bank=applyA4Corrections(diversifyA4(makeBank()));
+function finishA4(bank){
+  // S1 = subtraction of final term (N2 and N3); S2 = subtraction of the middle term (N3).
+  // Addition-only groupings must not grow one digit unless the units digit is zero.
+  const dg=n=>String(Math.abs(n)).length;
+  const kind=n=>n>=10&&Number.isInteger(Math.log10(n))?"R2":n%10===0?"R1":"R0";
+  const canon=p=>p.terms.map((t,i)=>p.signs[i]+":"+t.slice().sort((a,b)=>a-b).join("×")).sort().join("+");
+  const pairKey=b=>b.slice().sort((a,b)=>a-b).join(",");
+  const hash=s=>{let v=2166136261>>>0;for(const c of s)v=Math.imul(v^c.charCodeAt(0),16777619)>>>0;return v;};
+  const rng=id=>{let seed=hash(id);return(lo,hi)=>{seed=(Math.imul(seed,1664525)+1013904223)>>>0;return lo+Math.floor((seed/4294967296)*(hi-lo+1));};};
+  const needFix=p=>p.S==="S0"&&p.shared_count>=2&&+p.L[2]>=2&&p.remainder_sum>=10**(+p.L[2])&&p.remainder_sum%10!==0;
+  const changing=bank.problems.filter(needFix);
+  const seenPairs=new Set(bank.problems.filter(p=>!needFix(p)).map(p=>pairKey(p.solution.grouped_terms)));
+  const seenA=new Set(bank.problems.filter(p=>p.K==="K0").map(p=>p.common_factor));
+  const usedExpr=new Set(bank.problems.filter(p=>!needFix(p)).map(canon));
+  function rewrite(p,b){
+    const a=p.common_factor,terms=p.terms.map(t=>t.slice());
+    for(let i=0;i<p.common_terms.length;i++){
+      const ti=p.common_terms[i]-1,side=p.shared_positions[i]-1;
+      terms[ti]=side===0?[a,b[i]]:[b[i],a];
+    }
+    const sum=b.reduce((x,y,i)=>x+p.signs[p.common_terms[i]-1]*y,0);
+    const otherProducts=terms.map((t,i)=>p.common_terms.includes(i+1)?null:p.signs[i]*t[0]*t[1]).filter(x=>x!==null);
+    const directly=terms.reduce((x,t,i)=>x+p.signs[i]*t[0]*t[1],0);
+    if(kind(sum)!==p.R||directly!==a*sum+otherProducts.reduce((x,y)=>x+y,0)||terms.flat().some(v=>v<=0))throw Error("Invalid normalization "+p.id);
+    Object.assign(p,{terms,answer:directly,remainder_sum:sum,solution:{grouped_terms:b,other_products:otherProducts,grouped_product:a*sum},remainder_digits:dg(sum),numeric_revision:"v0.3"});
+  }
+  for(const p of changing){
+    const d=+p.L[2],n=p.shared_count,low=10**(d-1),high=10**d-1,r=rng(p.id);
+    let chosen;
+    for(let tries=0;tries<50000;tries++){
+      const target=r(n*low,10**d-1);
+      if(kind(target)!=="R0")continue;
+      const b=[],sum=()=>b.reduce((x,y)=>x+y,0);
+      for(let j=0;j<n;j++){
+        const remain=n-j-1;
+        const min=Math.max(low,target-sum()-remain*high);
+        const max=Math.min(high,target-sum()-remain*low);
+        if(min>max)break;
+        b.push(r(min,max));
+      }
+      if(b.length!==n||sum()!==target||b.some(v=>v===p.common_factor)||new Set(b).size!==n)continue;
+      if(p.phase==="recognition"&&p.shared_positions.join("")==="11"&&b.some(v=>v>1&&(v&(v-1))===0))continue;
+      if(seenPairs.has(pairKey(b)))continue;
+      const clone={...p,terms:p.terms.map(t=>t.slice())};
+      for(let j=0;j<n;j++){
+        const ti=p.common_terms[j]-1;
+        clone.terms[ti]=p.shared_positions[j]===1?[p.common_factor,b[j]]:[b[j],p.common_factor];
+      }
+      if(usedExpr.has(canon(clone)))continue;
+      chosen=b;break;
+    }
+    if(!chosen)throw Error("Unable to keep R0 and constrain sum on "+p.id);
+    seenPairs.add(pairKey(chosen));
+    rewrite(p,chosen);
+    usedExpr.add(canon(p));
+  }
+  let added=0;
+  const positions=["11","22","12","21"];
+  const digitClasses=["L22","L32","L33","L43","L44"];
+  for(const L of digitClasses)for(let pi=0;pi<positions.length;pi++)for(let v=0;v<2;v++){
+    const P=positions[pi],R=v===0?"R0":pi%2===0?"R1":"R2",id=`A4-N2T12-P${P}-${L}-${R}K0-H0S1-01`;
+    const rnd=rng(id),ad=+L[1],bd=+L[2],alo=10**(ad-1),ahi=10**ad-1,blo=10**(bd-1),bhi=10**bd-1;
+    let a=null;
+    for(let i=0;i<30000;i++){
+      const v=rnd(alo,ahi);
+      if(v%10===0||v===20||v===25||v===125||seenA.has(v)||(v>1&&(v&(v-1))===0))continue;
+      a=v;seenA.add(v);break;
+    }
+    if(a===null)throw Error("No fresh common factor for "+id);
+    let chosen=null;
+    for(let i=0;i<20000;i++){
+      let delta;
+      if(R==="R2")delta=10**(bd-1);
+      else if(R==="R1"){
+        const from=bd===2?20:bd===3?120:1200;
+        const to=bd===2?70:bd===3?490:4900;
+        delta=10*rnd(from/10,to/10);
+      }else{
+        const from=pi%2===0?(bd===2?7:bd===3?17:75):(bd===2?21:bd===3?119:1109);
+        const to=pi%2===0?(bd===2?39:bd===3?93:390):(bd===2?69:bd===3?386:3890);
+        delta=rnd(from,to);
+        if(delta%10===0)continue;
+      }
+      if(delta<=0||delta>=bhi-blo||kind(delta)!==R)continue;
+      const first=rnd(blo+delta,bhi),second=first-delta,b=[first,second];
+      if(b.some(z=>z===a||z>1&&(z&(z-1))===0)||seenPairs.has(pairKey(b)))continue;
+      const terms=P.split("").map((s,j)=>+s===1?[a,b[j]]:[b[j],a]);
+      const item={
+        id,terms,signs:[1,-1],answer:a*delta,common_factor:a,common_terms:[1,2],
+        shared_positions:P.split("").map(Number),term_count:2,shared_count:2,
+        L,R,K:"K0",H:"H0",S:"S1",remainder_sum:delta,
+        naive_multiplications:2,grouped_multiplications:1,phase:"subtraction2",
+        discovery_difficulty:"unmeasured",checking:["estimate","alternative_grouping","sign"],
+        solution:{grouped_terms:b,other_products:[],grouped_product:a*delta},
+        remainder_digits:dg(delta),cancellation_from_digits:bd,
+        description:"2項の減算でも共通因子をくくり、掛け算2回を1回に減らす。残りの差の桁縮約も扱う。",
+        status:"draft",numeric_revision:"v0.3"
+      };
+      if(usedExpr.has(canon(item)))continue;
+      chosen=item;seenPairs.add(pairKey(b));usedExpr.add(canon(item));break;
+    }
+    if(!chosen)throw Error("Cannot generate N2 subtraction "+id);
+    bank.problems.push(chosen);added++;
+  }
+  // Verification includes every sign and every grouping, not only new entries.
+  const IDs=new Set(),expressions=new Set(),sumOffenders=[];
+  for(const p of bank.problems){
+    if(IDs.has(p.id)||expressions.has(canon(p)))throw Error("Duplicate problem "+p.id);
+    IDs.add(p.id);expressions.add(canon(p));
+    if(p.terms.flat().some(v=>!Number.isInteger(v)||v<=0))throw Error("Invalid factors "+p.id);
+    if(p.S==="S0"&&!p.signs.every(s=>s===1))throw Error("S0 signs "+p.id);
+    if(p.S==="S1"&&(p.signs.slice(0,-1).some(s=>s!==1)||p.signs.at(-1)!==-1))throw Error("S1 last negative "+p.id);
+    if(p.S==="S2"&&(p.term_count!==3||p.signs.join(",")!=="1,-1,1"))throw Error("S2 middle negative "+p.id);
+    if(p.shared_count!==p.common_terms.length||p.common_terms.length!==p.shared_positions.length)throw Error("bad T/P "+p.id);
+    const bs=p.common_terms.map((pos,i)=>{
+      if(p.terms[pos-1][p.shared_positions[i]-1]!==p.common_factor)throw Error("T/P disagreement "+p.id);
+      return p.terms[pos-1][2-p.shared_positions[i]];
+    });
+    if(dg(p.common_factor)!==+p.L[1]||bs.some(b=>dg(b)!==+p.L[2]))throw Error("L mismatch "+p.id);
+    const sum=bs.reduce((x,y,i)=>x+y*p.signs[p.common_terms[i]-1],0);
+    if(sum!==p.remainder_sum||kind(sum)!==p.R)throw Error("R mismatch "+p.id);
+    const direct=p.terms.reduce((x,t,i)=>x+p.signs[i]*t[0]*t[1],0);
+    const grouped=p.common_factor*sum+p.terms.reduce((x,t,i)=>x+(p.common_terms.includes(i+1)?0:p.signs[i]*t[0]*t[1]),0);
+    if(direct!==p.answer||direct!==grouped)throw Error("answer mismatch "+p.id);
+    if(p.S==="S0"&&+p.L[2]>=2&&p.shared_count>=2&&sum>=10**(+p.L[2])&&sum%10!==0)sumOffenders.push(p.id);
+  }
+  if(sumOffenders.length)throw Error("Overflow not rounded: "+sumOffenders.join(","));
+  if(added!==40)throw Error("expected 40 new N2 questions");
+  bank.schema_version="a4-bank-0.3";
+  bank.updated="2026-11-23";
+  bank.description="A4: N2の減算S1を40問追加。S1は末項を引く（N2/N3共通）、S2は3項の第2項を引く。加算で残る因子の和が元の桁を超える場合は1の位を0にする。";
+  bank.validation={count:bank.problems.length,unique_ids:IDs.size,unique_expressions:expressions.size};
+  return bank;
+}
+const bank=finishA4(applyA4Corrections(diversifyA4(makeBank())));
 writeFileSync("problems/a4_bank.json",JSON.stringify(bank,null,2)+"\n","utf8");
 console.log("A4",bank.problems.length);
