@@ -403,6 +403,75 @@ function finishA4(bank){
   bank.validation={count:bank.problems.length,unique_ids:IDs.size,unique_expressions:expressions.size};
   return bank;
 }
-const bank=finishA4(applyA4Corrections(diversifyA4(makeBank())));
+function extendA4H1(bank){
+ const P2=["11","22","12","21"],P3=["111","112","121","122","211","212","221","222"];
+ const candidates=Array.from({length:39},(_,i)=>11+i).filter(a=>a%5!==0&&![16,32].includes(a));
+ const counts=new Map(),seen=new Set(),seenBases=new Set();
+ const key=p=>p.terms.map((t,i)=>p.signs[i]+":"+t.slice().sort((a,b)=>a-b).join("×")).sort().join("+");
+ for(const p of bank.problems){seen.add(key(p));if(p.L==="L22"&&p.solution?.grouped_terms)seenBases.add(p.solution.grouped_terms.slice().sort((a,b)=>a-b).join(","));}
+ const hash=s=>{let h=2166136261>>>0;for(const c of s)h=Math.imul(h^c.charCodeAt(0),16777619)>>>0;return h;};
+ const generator=s=>{let z=hash(s);return(lo,hi)=>{z=(Math.imul(z,1664525)+1013904223)>>>0;return lo+Math.floor(z/4294967296*(hi-lo+1));};};
+ const type=n=>n>=10&&Number.isInteger(Math.log10(n))?"R2":n%10===0?"R1":"R0";
+ const gcd=(a,b)=>{while(b){const r=a%b;a=b;b=r;}return a;};
+ function add(N,T,P,ordinal,S,R){
+  const H="H1"+"ABC"[ordinal],id=`A4-N${N}T${T}-P${P}-L22-${R}K0-${H}${S}-01`;
+  const which=T.split("").map(v=>+v-1),sg=S==="S0"?Array(N).fill(1):S==="S1"?Array(N).fill(1).map((x,i)=>i===N-1?-1:1):[1,-1,1],rand=generator(id);
+  let found=null;
+  const sorted=candidates.slice().sort((a,b)=>(counts.get(a)||0)-(counts.get(b)||0)||(hash(id+"/"+a)%197)-(hash(id+"/"+b)%197));
+  for(const a of sorted){
+   for(let j=0;j<65000;j++){
+    const raw=which.map((v,i)=>rand(11,i===ordinal?49:99)),mult=which.map((v,i)=>i===ordinal?2:1);
+    if(raw.some(x=>x%10===0))continue;
+    const eff=raw.map((x,i)=>x*mult[i]);
+    const rem=eff.reduce((s,x,i)=>s+x*sg[which[i]],0);
+    if(rem<=0||type(rem)!==R||R==="R0"&&rem>=100||R==="R1"&&rem>=200)continue;
+    if(R==="R0"&&eff.reduce((s,x)=>gcd(s,x),0)!==1)continue;
+    if(raw.some(x=>x===a||x===2*a)||eff.some(x=>x===a||x===2*a||x<10||x>99)||new Set(raw).size!==raw.length)continue;
+    const terms=Array(N);
+    for(let i=0;i<which.length;i++){
+     const x=a*mult[i],y=raw[i];
+     terms[which[i]]=P[i]==="1"?[x,y]:[y,x];
+    }
+    if(N>which.length){
+      const forbid=new Set([a,2*a,...raw,...eff]);let noise;
+      for(let k=0;k<120;k++){
+       const x=rand(11,99),y=rand(11,99);
+       if(x!==y&&[x,y].every(n=>n%10!==0&&!forbid.has(n)&&n%a!==0)){noise=[x,y];break;}
+      }
+      if(!noise)continue;
+      for(let i=0;i<N;i++)if(!terms[i])terms[i]=noise;
+    }
+    if(terms.some(t=>t.some(v=>v<10||v>99)))throw Error("H1 digits "+id);
+    const proof=terms.map((t,i)=>sg[i]+":"+t.slice().sort((a,b)=>a-b).join("×")).sort().join("+"),rawkey=raw.slice().sort((a,b)=>a-b).join(",");
+    if(seen.has(proof)||seenBases.has(rawkey))continue;
+    const others=terms.map((t,i)=>which.includes(i)?null:sg[i]*t[0]*t[1]).filter(v=>v!==null),direct=terms.reduce((s,t,i)=>s+sg[i]*t[0]*t[1],0);
+    if(direct<=0||direct!==a*rem+others.reduce((s,v)=>s+v,0))throw Error("H1 answer "+id);
+    const p={id,terms,signs:sg,answer:direct,common_factor:a,common_terms:which.map(v=>v+1),shared_positions:P.split("").map(Number),term_count:N,shared_count:which.length,L:"L22",R,K:"K0",H,S,remainder_sum:rem,
+     hidden_ratio:2,doubled_target_index:ordinal+1,doubled_term_index:which[ordinal]+1,visible_shared_factors:mult.map(v=>a*v),
+     naive_multiplications:N,grouped_multiplications:N-which.length+2,large_multiplications_before:N,large_multiplications_after:N-which.length+1,small_doublings_after:1,
+     phase:N===2?"hidden2":which.length===2?"hidden3_partial":"hidden3_all",discovery_difficulty:"unmeasured",checking:["estimate","alternative_grouping"],
+     solution:{grouped_terms:eff,raw_grouped_terms:raw,factor_multipliers:mult,other_products:others,grouped_product:a*rem},
+     remainder_digits:String(rem).length,cancellation_from_digits:sg.includes(-1)?2:null,
+     description:"2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",status:"draft",numeric_revision:"v0.4"};
+    found={p,proof,rawkey};break;
+   }
+   if(found)break;
+  }
+  if(!found)throw Error("Cannot generate "+id);
+  bank.problems.push(found.p);seen.add(found.proof);seenBases.add(found.rawkey);
+  counts.set(found.p.common_factor,(counts.get(found.p.common_factor)||0)+1);
+ }
+ for(const P of P2)for(const d of [0,1])for(const S of ["S0","S1"])for(let v=0;v<2;v++)add(2,"12",P,d,S,v===0?"R0":S==="S0"&&P==="11"?"R2":"R1");
+ for(const T of ["12","13","23"])for(const P of P2)for(const d of [0,1])add(3,T,P,d,"S0",P==="22"?"R1":"R0");
+ for(const P of P3)for(const d of [0,1,2])add(3,"123",P,d,"S0",d===2?"R1":"R0");
+ for(const P of P3)for(const S of ["S1","S2"])add(3,"123",P,(P3.indexOf(P)+(S==="S2"?1:0))%3,S,P3.indexOf(P)%4===0?"R1":"R0");
+ const ids=new Set(bank.problems.map(p=>p.id));
+ if(ids.size!==bank.problems.length||seen.size!==bank.problems.length||bank.problems.filter(p=>p.H.startsWith("H1")).length!==96)throw Error("Bank verification failed");
+ bank.schema_version="a4-bank-0.4";bank.updated="2026-11-23";
+ bank.description="L22で共通因子の見かけの違いが2倍になるH1A/B/Cを96問追加。N2、N3の2項共通と3項共通。H0データと試作プリントは維持。";
+ bank.validation={count:bank.problems.length,unique_ids:ids.size,unique_expressions:seen.size};
+ return bank;
+}
+const bank=extendA4H1(finishA4(applyA4Corrections(diversifyA4(makeBank()))));
 writeFileSync("problems/a4_bank.json",JSON.stringify(bank,null,2)+"\n","utf8");
 console.log("A4",bank.problems.length);
