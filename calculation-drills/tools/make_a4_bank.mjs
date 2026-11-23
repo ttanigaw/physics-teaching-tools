@@ -109,6 +109,166 @@ function diversifyA4(bank){
  bank.validation={count:bank.problems.length,unique_ids:ids.size,unique_expressions:exprs.size};
  return bank;
 }
-const bank=diversifyA4(makeBank());
+function applyA4Corrections(bank){
+ const patch={
+  "A4-N2T12-P11-L22-R0K0-H0S0-01": {
+    "a": 59,
+    "b": [
+      71,
+      46
+    ]
+  },
+  "A4-N2T12-P11-L32-R0K0-H0S0-01": {
+    "a": 163,
+    "b": [
+      47,
+      29
+    ]
+  },
+  "A4-N2T12-P11-L22-R1K0-H0S0-01": {
+    "b": [
+      23,
+      37
+    ]
+  },
+  "A4-N2T12-P22-L22-R1K0-H0S0-01": {
+    "b": [
+      11,
+      59
+    ]
+  },
+  "A4-N2T12-P12-L22-R1K0-H0S0-01": {
+    "b": [
+      33,
+      27
+    ]
+  },
+  "A4-N2T12-P11-L33-R1K0-H0S0-02": {
+    "b": [
+      438,
+      152
+    ]
+  },
+  "A4-N2T12-P11-L43-R1K0-H0S0-01": {
+    "b": [
+      131,
+      349
+    ]
+  },
+  "A4-N2T12-P22-L44-R1K0-H0S0-01": {
+    "b": [
+      1016,
+      3534
+    ]
+  },
+  "A4-N3T123-P111-L33-R1K0-H0S0-01": {
+    "b": [
+      126,
+      598,
+      156
+    ]
+  },
+  "A4-N3T123-P111-L33-R2K0-H0S0-01": {
+    "b": [
+      179,
+      158,
+      663
+    ]
+  },
+  "A4-N3T123-P121-L33-R2K0-H0S0-01": {
+    "b": [
+      546,
+      296,
+      158
+    ]
+  },
+  "A4-N3T123-P121-L44-R2K0-H0S0-01": {
+    "b": [
+      5616,
+      1050,
+      3334
+    ]
+  },
+  "A4-N3T123-P122-L33-R2K0-H0S0-01": {
+    "b": [
+      589,
+      299,
+      112
+    ]
+  },
+  "A4-N3T123-P122-L44-R2K0-H0S0-01": {
+    "b": [
+      4715,
+      4044,
+      1241
+    ]
+  },
+  "A4-N3T123-P211-L44-R2K0-H0S0-01": {
+    "b": [
+      4162,
+      1091,
+      4747
+    ]
+  },
+  "A4-N3T123-P221-L33-R2K0-H0S0-01": {
+    "b": [
+      789,
+      106,
+      105
+    ]
+  },
+  "A4-N3T123-P221-L44-R2K0-H0S0-01": {
+    "b": [
+      7503,
+      1061,
+      1436
+    ]
+  },
+  "A4-N3T123-P222-L33-R2K0-H0S0-01": {
+    "b": [
+      402,
+      161,
+      437
+    ]
+  },
+  "A4-N3T123-P222-L44-R2K0-H0S0-01": {
+    "b": [
+      6692,
+      1918,
+      1390
+    ]
+  }
+};
+ const index=new Map(bank.problems.map(p=>[p.id,p]));
+ const cat=s=>s>=10&&Number.isInteger(Math.log10(s))?"R2":s%10===0?"R1":"R0";
+ const digit=n=>String(Math.abs(n)).length;
+ for(const [id,fix]of Object.entries(patch)){
+  const p=index.get(id);if(!p)throw Error("Missing corrected ID "+id);
+  const a=fix.a??p.common_factor,b=fix.b;
+  if(b.length!==p.common_terms.length)throw Error("Wrong residual count "+id);
+  const terms=p.terms.map(t=>t.slice());
+  for(let i=0;i<p.common_terms.length;i++){
+   const pos=p.common_terms[i]-1,col=p.shared_positions[i]-1;
+   terms[pos]=col===0?[a,b[i]]:[b[i],a];
+  }
+  const sum=b.reduce((u,v)=>u+v,0);
+  if(cat(sum)!==p.R||digit(a)!==+p.L[1]||b.some(v=>v<=0||digit(v)!==+p.L[2]))throw Error("Classification mismatch "+id);
+  const others=terms.map((t,i)=>p.common_terms.includes(i+1)?null:t[0]*t[1]).filter(v=>v!==null);
+  const answer=terms.reduce((u,t)=>u+t[0]*t[1],0);
+  if(answer!==a*sum+others.reduce((u,v)=>u+v,0))throw Error("Wrong answer "+id);
+  Object.assign(p,{terms,common_factor:a,remainder_sum:sum,answer,solution:{grouped_terms:b,other_products:others,grouped_product:a*sum},remainder_digits:digit(sum),numeric_revision:"v0.2.2"});
+ }
+ if(bank.problems.some(p=>p.S==="S0"&&p.terms.flat().some(v=>v<=0)))throw Error("Negative factor in addition-only exercise");
+ const idx=new Set(bank.problems.map(p=>p.id));
+ const canonical=new Set(bank.problems.map(p=>p.terms.map((t,i)=>p.signs[i]+":"+t.slice().sort((a,b)=>a-b).join("×")).sort().join("+")));
+ if(idx.size!==bank.problems.length||canonical.size!==bank.problems.length)throw Error("Duplicated structure after corrections");
+ const elementary=bank.problems.filter(p=>p.phase==="recognition"&&p.shared_positions.join("")==="11");
+ if(elementary.some(p=>p.terms.flat().some(v=>v>1&&(v&(v-1))===0)))throw Error("Accidental power of two in introductory aligned problems");
+ bank.schema_version="a4-bank-0.2.2";
+ bank.description="A4問題バンク252問。通常問題を多様化、K1は意図して反復。初歩の無関係な2のべき乗を回避し、S0の負数因子を修正。減算S1/S2は32問。";
+ bank.validation={count:bank.problems.length,unique_ids:idx.size,unique_expressions:canonical.size};
+ return bank;
+}
+const bank=applyA4Corrections(diversifyA4(makeBank()));
 writeFileSync("problems/a4_bank.json",JSON.stringify(bank,null,2)+"\n","utf8");
 console.log("A4",bank.problems.length);
