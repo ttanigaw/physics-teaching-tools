@@ -1,22 +1,22 @@
 {
-  "schema_version": "a4-bank-0.2.2",
-  "updated": "2026-11-22",
+  "schema_version": "a4-bank-0.3",
+  "updated": "2026-11-23",
   "status": "draft",
-  "description": "A4問題バンク252問。通常問題を多様化、K1は意図して反復。初歩の無関係な2のべき乗を回避し、S0の負数因子を修正。減算S1/S2は32問。",
+  "description": "A4: N2の減算S1を40問追加。S1は末項を引く（N2/N3共通）、S2は3項の第2項を引く。加算で残る因子の和が元の桁を超える場合は1の位を0にする。",
   "problems": [
     {
       "id": "A4-N2T12-P11-L22-R0K0-H0S0-01",
       "terms": [
         [
           59,
-          71
+          41
         ],
         [
           59,
-          46
+          25
         ]
       ],
-      "answer": 6903,
+      "answer": 3894,
       "common_factor": 59,
       "common_terms": [
         1,
@@ -33,41 +33,41 @@
       "K": "K0",
       "H": "H0",
       "S": "S0",
-      "remainder_sum": 117,
+      "remainder_sum": 66,
       "naive_multiplications": 2,
       "grouped_multiplications": 1,
       "phase": "recognition",
       "discovery_difficulty": "unmeasured",
       "solution": {
         "grouped_terms": [
-          71,
-          46
+          41,
+          25
         ],
         "other_products": [],
-        "grouped_product": 6903
+        "grouped_product": 3894
       },
       "status": "draft",
       "signs": [
         1,
         1
       ],
-      "remainder_digits": 3,
+      "remainder_digits": 2,
       "cancellation_from_digits": null,
-      "numeric_revision": "v0.2.2"
+      "numeric_revision": "v0.3"
     },
     {
       "id": "A4-N2T12-P22-L22-R0K0-H0S0-01",
       "terms": [
         [
-          52,
+          20,
           73
         ],
         [
-          50,
+          34,
           73
         ]
       ],
-      "answer": 7446,
+      "answer": 3942,
       "common_factor": 73,
       "common_terms": [
         1,
@@ -84,27 +84,27 @@
       "K": "K0",
       "H": "H0",
       "S": "S0",
-      "remainder_sum": 102,
+      "remainder_sum": 54,
       "naive_multiplications": 2,
       "grouped_multiplications": 1,
       "phase": "recognition",
       "discovery_difficulty": "unmeasured",
       "solution": {
         "grouped_terms": [
-          52,
-          50
+          20,
+          34
         ],
         "other_products": [],
-        "grouped_product": 7446
+        "grouped_product": 3942
       },
       "status": "draft",
       "signs": [
         1,
         1
       ],
-      "remainder_digits": 3,
+      "remainder_digits": 2,
       "cancellation_from_digits": null,
-      "numeric_revision": "v0.2"
+      "numeric_revision": "v0.3"
     },
     {
       "id": "A4-N2T12-P12-L22-R0K0-H0S0-01",
@@ -161,15 +161,15 @@
       "id": "A4-N2T12-P21-L22-R0K0-H0S0-01",
       "terms": [
         [
-          87,
+          65,
           81
         ],
         [
           81,
-          91
+          18
         ]
       ],
-      "answer": 14418,
+      "answer": 6723,
       "common_factor": 81,
       "common_terms": [
         1,
@@ -186,27 +186,27 @@
       "K": "K0",
       "H": "H0",
       "S": "S0",
-      "remainder_sum": 178,
+      "remainder_sum": 83,
       "naive_multiplications": 2,
       "grouped_multiplications": 1,
       "phase": "recognition",
       "discovery_difficulty": "unmeasured",
       "solution": {
         "grouped_terms": [
-          87,
-          91
+          65,
+          18
         ],
         "other_products": [],
-        "grouped_product": 14418
+        "grouped_product": 6723
       },
       "status": "draft",
       "signs": [
         1,
         1
       ],
-      "remainder_digits": 3,
+      "remainder_digits": 2,
       "cancellation_from_digits": null,
-      "numeric_revision": "v0.2"
+      "numeric_revision": "v0.3"
     },
     {
       "id": "A4-N2T12-P11-L22-R1K0-H0S0-01",
@@ -1029,14 +1029,14 @@
       "terms": [
         [
           232,
-          653
+          136
         ],
         [
           232,
-          699
+          656
         ]
       ],
-      "answer": 313664,
+      "answer": 183744,
       "common_factor": 232,
       "common_terms": [
         1,
@@ -1053,41 +1053,41 @@
       "K": "K0",
       "H": "H0",
       "S": "S0",
-      "remainder_sum": 1352,
+      "remainder_sum": 792,
       "naive_multiplications": 2,
       "grouped_multiplications": 1,
       "phase": "recognition",
       "discovery_difficulty": "unmeasured",
       "solution": {
         "grouped_terms": [
-          653,
-          699
+          136,
+          656
         ],
         "other_products": [],
-        "grouped_product": 313664
+        "grouped_product": 183744
       },
       "status": "draft",
       "signs": [
         1,
         1
       ],
-      "remainder_digits": 4,
+      "remainder_digits": 3,
       "cancellation_from_digits": null,
-      "numeric_revision": "v0.2"
+      "numeric_revision": "v0.3"
     },
     {
       "id": "A4-N2T12-P11-L33-R0K0-H0S0-02",
       "terms": [
         [
           294,
-          705
+          303
         ],
         [
           294,
-          790
+          186
         ]
       ],
-      "answer": 439530,
+      "answer": 143766,
       "common_factor": 294,
       "common_terms": [
         1,
@@ -1104,41 +1104,41 @@
       "K": "K0",
       "H": "H0",
       "S": "S0",
-      "remainder_sum": 1495,
+      "remainder_sum": 489,
       "naive_multiplications": 2,
       "grouped_multiplications": 1,
       "phase": "recognition",
       "discovery_difficulty": "unmeasured",
       "solution": {
         "grouped_terms": [
-          705,
-          790
+          303,
+          186
         ],
         "other_products": [],
-        "grouped_product": 439530
+        "grouped_product": 143766
       },
       "status": "draft",
       "signs": [
         1,
         1
       ],
-      "remainder_digits": 4,
+      "remainder_digits": 3,
       "cancellation_from_digits": null,
-      "numeric_revision": "v0.2"
+      "numeric_revision": "v0.3"
     },
     {
       "id": "A4-N2T12-P22-L33-R0K0-H0S0-01",
       "terms": [
         [
-          922,
+          267,
           769
         ],
         [
-          713,
+          390,
           769
         ]
       ],
-      "answer": 1257315,
+      "answer": 505233,
       "common_factor": 769,
       "common_terms": [
         1,
@@ -1155,27 +1155,27 @@
       "K": "K0",
       "H": "H0",
       "S": "S0",
-      "remainder_sum": 1635,
+      "remainder_sum": 657,
       "naive_multiplications": 2,
       "grouped_multiplications": 1,
       "phase": "recognition",
       "discovery_difficulty": "unmeasured",
       "solution": {
         "grouped_terms": [
-          922,
-          713
+          267,
+          390
         ],
         "other_products": [],
-        "grouped_product": 1257315
+        "grouped_product": 505233
       },
       "status": "draft",
       "signs": [
         1,
         1
       ],
-      "remainder_digits": 4,
+      "remainder_digits": 3,
       "cancellation_from_digits": null,
-      "numeric_revision": "v0.2"
+      "numeric_revision": "v0.3"
     },
     {
       "id": "A4-N2T12-P22-L33-R0K0-H0S0-02",
@@ -1233,14 +1233,14 @@
       "terms": [
         [
           651,
-          695
+          164
         ],
         [
-          528,
+          610,
           651
         ]
       ],
-      "answer": 796173,
+      "answer": 503874,
       "common_factor": 651,
       "common_terms": [
         1,
@@ -1257,41 +1257,41 @@
       "K": "K0",
       "H": "H0",
       "S": "S0",
-      "remainder_sum": 1223,
+      "remainder_sum": 774,
       "naive_multiplications": 2,
       "grouped_multiplications": 1,
       "phase": "recognition",
       "discovery_difficulty": "unmeasured",
       "solution": {
         "grouped_terms": [
-          695,
-          528
+          164,
+          610
         ],
         "other_products": [],
-        "grouped_product": 796173
+        "grouped_product": 503874
       },
       "status": "draft",
       "signs": [
         1,
         1
       ],
-      "remainder_digits": 4,
+      "remainder_digits": 3,
       "cancellation_from_digits": null,
-      "numeric_revision": "v0.2"
+      "numeric_revision": "v0.3"
     },
     {
       "id": "A4-N2T12-P12-L33-R0K0-H0S0-02",
       "terms": [
         [
           472,
-          594
+          526
         ],
         [
-          820,
+          130,
           472
         ]
       ],
-      "answer": 667408,
+      "answer": 309632,
       "common_factor": 472,
       "common_terms": [
         1,
@@ -1308,41 +1308,41 @@
       "K": "K0",
       "H": "H0",
       "S": "S0",
-      "remainder_sum": 1414,
+      "remainder_sum": 656,
       "naive_multiplications": 2,
       "grouped_multiplications": 1,
       "phase": "recognition",
       "discovery_difficulty": "unmeasured",
       "solution": {
         "grouped_terms": [
-          594,
-          820
+          526,
+          130
         ],
         "other_products": [],
-        "grouped_product": 667408
+        "grouped_product": 309632
       },
       "status": "draft",
       "signs": [
         1,
         1
       ],
-      "remainder_digits": 4,
+      "remainder_digits": 3,
       "cancellation_from_digits": null,
-      "numeric_revision": "v0.2"
+      "numeric_revision": "v0.3"
     },
     {
       "id": "A4-N2T12-P21-L33-R0K0-H0S0-01",
       "terms": [
         [
-          748,
+          412,
           593
         ],
         [
           593,
-          703
+          205
         ]
       ],
-      "answer": 860443,
+      "answer": 365881,
       "common_factor": 593,
       "common_terms": [
         1,
@@ -1359,27 +1359,27 @@
       "K": "K0",
       "H": "H0",
       "S": "S0",
-      "remainder_sum": 1451,
+      "remainder_sum": 617,
       "naive_multiplications": 2,
       "grouped_multiplications": 1,
       "phase": "recognition",
       "discovery_difficulty": "unmeasured",
       "solution": {
         "grouped_terms": [
-          748,
-          703
+          412,
+          205
         ],
         "other_products": [],
-        "grouped_product": 860443
+        "grouped_product": 365881
       },
       "status": "draft",
       "signs": [
         1,
         1
       ],
-      "remainder_digits": 4,
+      "remainder_digits": 3,
       "cancellation_from_digits": null,
-      "numeric_revision": "v0.2"
+      "numeric_revision": "v0.3"
     },
     {
       "id": "A4-N2T12-P21-L33-R0K0-H0S0-02",
@@ -2253,14 +2253,14 @@
       "terms": [
         [
           8758,
-          124
+          242
         ],
         [
           8758,
-          975
+          190
         ]
       ],
-      "answer": 9625042,
+      "answer": 3783456,
       "common_factor": 8758,
       "common_terms": [
         1,
@@ -2277,41 +2277,41 @@
       "K": "K0",
       "H": "H0",
       "S": "S0",
-      "remainder_sum": 1099,
+      "remainder_sum": 432,
       "naive_multiplications": 2,
       "grouped_multiplications": 1,
       "phase": "recognition",
       "discovery_difficulty": "unmeasured",
       "solution": {
         "grouped_terms": [
-          124,
-          975
+          242,
+          190
         ],
         "other_products": [],
-        "grouped_product": 9625042
+        "grouped_product": 3783456
       },
       "status": "draft",
       "signs": [
         1,
         1
       ],
-      "remainder_digits": 4,
+      "remainder_digits": 3,
       "cancellation_from_digits": null,
-      "numeric_revision": "v0.2"
+      "numeric_revision": "v0.3"
     },
     {
       "id": "A4-N2T12-P22-L43-R0K0-H0S0-01",
       "terms": [
         [
-          634,
+          164,
           3292
         ],
         [
-          631,
+          502,
           3292
         ]
       ],
-      "answer": 4164380,
+      "answer": 2192472,
       "common_factor": 3292,
       "common_terms": [
         1,
@@ -2328,41 +2328,41 @@
       "K": "K0",
       "H": "H0",
       "S": "S0",
-      "remainder_sum": 1265,
+      "remainder_sum": 666,
       "naive_multiplications": 2,
       "grouped_multiplications": 1,
       "phase": "recognition",
       "discovery_difficulty": "unmeasured",
       "solution": {
         "grouped_terms": [
-          634,
-          631
+          164,
+          502
         ],
         "other_products": [],
-        "grouped_product": 4164380
+        "grouped_product": 2192472
       },
       "status": "draft",
       "signs": [
         1,
         1
       ],
-      "remainder_digits": 4,
+      "remainder_digits": 3,
       "cancellation_from_digits": null,
-      "numeric_revision": "v0.2"
+      "numeric_revision": "v0.3"
     },
     {
       "id": "A4-N2T12-P12-L43-R0K0-H0S0-01",
       "terms": [
         [
           2116,
-          116
+          232
         ],
         [
-          993,
+          112,
           2116
         ]
       ],
-      "answer": 2346644,
+      "answer": 727904,
       "common_factor": 2116,
       "common_terms": [
         1,
@@ -2379,27 +2379,27 @@
       "K": "K0",
       "H": "H0",
       "S": "S0",
-      "remainder_sum": 1109,
+      "remainder_sum": 344,
       "naive_multiplications": 2,
       "grouped_multiplications": 1,
       "phase": "recognition",
       "discovery_difficulty": "unmeasured",
       "solution": {
         "grouped_terms": [
-          116,
-          993
+          232,
+          112
         ],
         "other_products": [],
-        "grouped_product": 2346644
+        "grouped_product": 727904
       },
       "status": "draft",
       "signs": [
         1,
         1
       ],
-      "remainder_digits": 4,
+      "remainder_digits": 3,
       "cancellation_from_digits": null,
-      "numeric_revision": "v0.2"
+      "numeric_revision": "v0.3"
     },
     {
       "id": "A4-N2T12-P21-L43-R0K0-H0S0-01",
@@ -2661,14 +2661,14 @@
       "terms": [
         [
           3137,
-          8700
+          4518
         ],
         [
           3137,
-          9233
+          1483
         ]
       ],
-      "answer": 56255821,
+      "answer": 18825137,
       "common_factor": 3137,
       "common_terms": [
         1,
@@ -2685,27 +2685,27 @@
       "K": "K0",
       "H": "H0",
       "S": "S0",
-      "remainder_sum": 17933,
+      "remainder_sum": 6001,
       "naive_multiplications": 2,
       "grouped_multiplications": 1,
       "phase": "recognition",
       "discovery_difficulty": "unmeasured",
       "solution": {
         "grouped_terms": [
-          8700,
-          9233
+          4518,
+          1483
         ],
         "other_products": [],
-        "grouped_product": 56255821
+        "grouped_product": 18825137
       },
       "status": "draft",
       "signs": [
         1,
         1
       ],
-      "remainder_digits": 5,
+      "remainder_digits": 4,
       "cancellation_from_digits": null,
-      "numeric_revision": "v0.2"
+      "numeric_revision": "v0.3"
     },
     {
       "id": "A4-N2T12-P11-L44-R0K0-H0S0-02",
@@ -2916,14 +2916,14 @@
       "terms": [
         [
           1023,
-          7637
+          6896
         ],
         [
-          2571,
+          1757,
           1023
         ]
       ],
-      "answer": 10442784,
+      "answer": 8852019,
       "common_factor": 1023,
       "common_terms": [
         1,
@@ -2940,41 +2940,41 @@
       "K": "K0",
       "H": "H0",
       "S": "S0",
-      "remainder_sum": 10208,
+      "remainder_sum": 8653,
       "naive_multiplications": 2,
       "grouped_multiplications": 1,
       "phase": "recognition",
       "discovery_difficulty": "unmeasured",
       "solution": {
         "grouped_terms": [
-          7637,
-          2571
+          6896,
+          1757
         ],
         "other_products": [],
-        "grouped_product": 10442784
+        "grouped_product": 8852019
       },
       "status": "draft",
       "signs": [
         1,
         1
       ],
-      "remainder_digits": 5,
+      "remainder_digits": 4,
       "cancellation_from_digits": null,
-      "numeric_revision": "v0.2"
+      "numeric_revision": "v0.3"
     },
     {
       "id": "A4-N2T12-P21-L44-R0K0-H0S0-01",
       "terms": [
         [
-          7653,
+          3355,
           7327
         ],
         [
           7327,
-          8974
+          1596
         ]
       ],
-      "answer": 121826029,
+      "answer": 36275977,
       "common_factor": 7327,
       "common_terms": [
         1,
@@ -2991,41 +2991,41 @@
       "K": "K0",
       "H": "H0",
       "S": "S0",
-      "remainder_sum": 16627,
+      "remainder_sum": 4951,
       "naive_multiplications": 2,
       "grouped_multiplications": 1,
       "phase": "recognition",
       "discovery_difficulty": "unmeasured",
       "solution": {
         "grouped_terms": [
-          7653,
-          8974
+          3355,
+          1596
         ],
         "other_products": [],
-        "grouped_product": 121826029
+        "grouped_product": 36275977
       },
       "status": "draft",
       "signs": [
         1,
         1
       ],
-      "remainder_digits": 5,
+      "remainder_digits": 4,
       "cancellation_from_digits": null,
-      "numeric_revision": "v0.2"
+      "numeric_revision": "v0.3"
     },
     {
       "id": "A4-N2T12-P21-L44-R0K0-H0S0-02",
       "terms": [
         [
-          8312,
+          1053,
           8685
         ],
         [
           8685,
-          5216
+          5553
         ]
       ],
-      "answer": 117490680,
+      "answer": 57373110,
       "common_factor": 8685,
       "common_terms": [
         1,
@@ -3042,27 +3042,27 @@
       "K": "K0",
       "H": "H0",
       "S": "S0",
-      "remainder_sum": 13528,
+      "remainder_sum": 6606,
       "naive_multiplications": 2,
       "grouped_multiplications": 1,
       "phase": "recognition",
       "discovery_difficulty": "unmeasured",
       "solution": {
         "grouped_terms": [
-          8312,
-          5216
+          1053,
+          5553
         ],
         "other_products": [],
-        "grouped_product": 117490680
+        "grouped_product": 57373110
       },
       "status": "draft",
       "signs": [
         1,
         1
       ],
-      "remainder_digits": 5,
+      "remainder_digits": 4,
       "cancellation_from_digits": null,
-      "numeric_revision": "v0.2"
+      "numeric_revision": "v0.3"
     },
     {
       "id": "A4-N2T12-P11-L44-R1K0-H0S0-01",
@@ -4037,15 +4037,15 @@
       "id": "A4-N2T12-P21-L52-R0K0-H0S0-01",
       "terms": [
         [
-          80,
+          61,
           94347
         ],
         [
           94347,
-          35
+          10
         ]
       ],
-      "answer": 10849905,
+      "answer": 6698637,
       "common_factor": 94347,
       "common_terms": [
         1,
@@ -4062,27 +4062,27 @@
       "K": "K0",
       "H": "H0",
       "S": "S0",
-      "remainder_sum": 115,
+      "remainder_sum": 71,
       "naive_multiplications": 2,
       "grouped_multiplications": 1,
       "phase": "recognition",
       "discovery_difficulty": "unmeasured",
       "solution": {
         "grouped_terms": [
-          80,
-          35
+          61,
+          10
         ],
         "other_products": [],
-        "grouped_product": 10849905
+        "grouped_product": 6698637
       },
       "status": "draft",
       "signs": [
         1,
         1
       ],
-      "remainder_digits": 3,
+      "remainder_digits": 2,
       "cancellation_from_digits": null,
-      "numeric_revision": "v0.2"
+      "numeric_revision": "v0.3"
     },
     {
       "id": "A4-N2T12-P11-L22-R1K1-H0S0-01",
@@ -5313,18 +5313,18 @@
       "terms": [
         [
           319,
-          429
+          562
         ],
         [
           319,
-          726
+          267
         ],
         [
           915,
           469
         ]
       ],
-      "answer": 797580,
+      "answer": 693586,
       "common_factor": 319,
       "common_terms": [
         1,
@@ -5341,20 +5341,20 @@
       "K": "K0",
       "H": "H0",
       "S": "S0",
-      "remainder_sum": 1155,
+      "remainder_sum": 829,
       "naive_multiplications": 3,
       "grouped_multiplications": 2,
       "phase": "partial3",
       "discovery_difficulty": "unmeasured",
       "solution": {
         "grouped_terms": [
-          429,
-          726
+          562,
+          267
         ],
         "other_products": [
           429135
         ],
-        "grouped_product": 368445
+        "grouped_product": 264451
       },
       "status": "draft",
       "signs": [
@@ -5362,9 +5362,9 @@
         1,
         1
       ],
-      "remainder_digits": 4,
+      "remainder_digits": 3,
       "cancellation_from_digits": null,
-      "numeric_revision": "v0.2"
+      "numeric_revision": "v0.3"
     },
     {
       "id": "A4-N3T12-P11-L33-R0K0-H0S0-02",
@@ -5545,18 +5545,18 @@
       "terms": [
         [
           3492,
-          1983
+          6822
         ],
         [
           3492,
-          9766
+          1501
         ],
         [
           6051,
           2724
         ]
       ],
-      "answer": 57510432,
+      "answer": 45546840,
       "common_factor": 3492,
       "common_terms": [
         1,
@@ -5573,20 +5573,20 @@
       "K": "K0",
       "H": "H0",
       "S": "S0",
-      "remainder_sum": 11749,
+      "remainder_sum": 8323,
       "naive_multiplications": 3,
       "grouped_multiplications": 2,
       "phase": "partial3",
       "discovery_difficulty": "unmeasured",
       "solution": {
         "grouped_terms": [
-          1983,
-          9766
+          6822,
+          1501
         ],
         "other_products": [
           16482924
         ],
-        "grouped_product": 41027508
+        "grouped_product": 29063916
       },
       "status": "draft",
       "signs": [
@@ -5594,9 +5594,9 @@
         1,
         1
       ],
-      "remainder_digits": 5,
+      "remainder_digits": 4,
       "cancellation_from_digits": null,
-      "numeric_revision": "v0.2"
+      "numeric_revision": "v0.3"
     },
     {
       "id": "A4-N3T12-P22-L33-R0K0-H0S0-01",
@@ -5660,11 +5660,11 @@
       "id": "A4-N3T12-P22-L33-R0K0-H0S0-02",
       "terms": [
         [
-          890,
+          473,
           793
         ],
         [
-          654,
+          338,
           793
         ],
         [
@@ -5672,7 +5672,7 @@
           883
         ]
       ],
-      "answer": 1634987,
+      "answer": 1053718,
       "common_factor": 793,
       "common_terms": [
         1,
@@ -5689,20 +5689,20 @@
       "K": "K0",
       "H": "H0",
       "S": "S0",
-      "remainder_sum": 1544,
+      "remainder_sum": 811,
       "naive_multiplications": 3,
       "grouped_multiplications": 2,
       "phase": "partial3",
       "discovery_difficulty": "unmeasured",
       "solution": {
         "grouped_terms": [
-          890,
-          654
+          473,
+          338
         ],
         "other_products": [
           410595
         ],
-        "grouped_product": 1224392
+        "grouped_product": 643123
       },
       "status": "draft",
       "signs": [
@@ -5710,9 +5710,9 @@
         1,
         1
       ],
-      "remainder_digits": 4,
+      "remainder_digits": 3,
       "cancellation_from_digits": null,
-      "numeric_revision": "v0.2"
+      "numeric_revision": "v0.3"
     },
     {
       "id": "A4-N3T12-P22-L33-R1K0-H0S0-01",
@@ -5893,10 +5893,10 @@
       "terms": [
         [
           732,
-          992
+          238
         ],
         [
-          306,
+          626,
           732
         ],
         [
@@ -5904,7 +5904,7 @@
           975
         ]
       ],
-      "answer": 1298211,
+      "answer": 980523,
       "common_factor": 732,
       "common_terms": [
         1,
@@ -5921,20 +5921,20 @@
       "K": "K0",
       "H": "H0",
       "S": "S0",
-      "remainder_sum": 1298,
+      "remainder_sum": 864,
       "naive_multiplications": 3,
       "grouped_multiplications": 2,
       "phase": "partial3",
       "discovery_difficulty": "unmeasured",
       "solution": {
         "grouped_terms": [
-          992,
-          306
+          238,
+          626
         ],
         "other_products": [
           348075
         ],
-        "grouped_product": 950136
+        "grouped_product": 632448
       },
       "status": "draft",
       "signs": [
@@ -5942,19 +5942,19 @@
         1,
         1
       ],
-      "remainder_digits": 4,
+      "remainder_digits": 3,
       "cancellation_from_digits": null,
-      "numeric_revision": "v0.2"
+      "numeric_revision": "v0.3"
     },
     {
       "id": "A4-N3T12-P12-L33-R0K0-H0S0-02",
       "terms": [
         [
           792,
-          348
+          503
         ],
         [
-          959,
+          376,
           792
         ],
         [
@@ -5962,7 +5962,7 @@
           898
         ]
       ],
-      "answer": 1846038,
+      "answer": 1507062,
       "common_factor": 792,
       "common_terms": [
         1,
@@ -5979,20 +5979,20 @@
       "K": "K0",
       "H": "H0",
       "S": "S0",
-      "remainder_sum": 1307,
+      "remainder_sum": 879,
       "naive_multiplications": 3,
       "grouped_multiplications": 2,
       "phase": "partial3",
       "discovery_difficulty": "unmeasured",
       "solution": {
         "grouped_terms": [
-          348,
-          959
+          503,
+          376
         ],
         "other_products": [
           810894
         ],
-        "grouped_product": 1035144
+        "grouped_product": 696168
       },
       "status": "draft",
       "signs": [
@@ -6000,9 +6000,9 @@
         1,
         1
       ],
-      "remainder_digits": 4,
+      "remainder_digits": 3,
       "cancellation_from_digits": null,
-      "numeric_revision": "v0.2"
+      "numeric_revision": "v0.3"
     },
     {
       "id": "A4-N3T12-P12-L33-R1K0-H0S0-01",
@@ -6067,10 +6067,10 @@
       "terms": [
         [
           5326,
-          9012
+          1198
         ],
         [
-          4403,
+          1009,
           5326
         ],
         [
@@ -6078,7 +6078,7 @@
           3718
         ]
       ],
-      "answer": 81847536,
+      "answer": 22153728,
       "common_factor": 5326,
       "common_terms": [
         1,
@@ -6095,20 +6095,20 @@
       "K": "K0",
       "H": "H0",
       "S": "S0",
-      "remainder_sum": 13415,
+      "remainder_sum": 2207,
       "naive_multiplications": 3,
       "grouped_multiplications": 2,
       "phase": "partial3",
       "discovery_difficulty": "unmeasured",
       "solution": {
         "grouped_terms": [
-          9012,
-          4403
+          1198,
+          1009
         ],
         "other_products": [
           10399246
         ],
-        "grouped_product": 71448290
+        "grouped_product": 11754482
       },
       "status": "draft",
       "signs": [
@@ -6116,9 +6116,9 @@
         1,
         1
       ],
-      "remainder_digits": 5,
+      "remainder_digits": 4,
       "cancellation_from_digits": null,
-      "numeric_revision": "v0.2"
+      "numeric_revision": "v0.3"
     },
     {
       "id": "A4-N3T12-P12-L44-R0K0-H0S0-02",
@@ -6414,19 +6414,19 @@
       "id": "A4-N3T12-P21-L44-R0K0-H0S0-02",
       "terms": [
         [
-          5425,
+          1459,
           4163
         ],
         [
           4163,
-          6974
+          3723
         ],
         [
           3326,
           8658
         ]
       ],
-      "answer": 80413545,
+      "answer": 50369174,
       "common_factor": 4163,
       "common_terms": [
         1,
@@ -6443,20 +6443,20 @@
       "K": "K0",
       "H": "H0",
       "S": "S0",
-      "remainder_sum": 12399,
+      "remainder_sum": 5182,
       "naive_multiplications": 3,
       "grouped_multiplications": 2,
       "phase": "partial3",
       "discovery_difficulty": "unmeasured",
       "solution": {
         "grouped_terms": [
-          5425,
-          6974
+          1459,
+          3723
         ],
         "other_products": [
           28796508
         ],
-        "grouped_product": 51617037
+        "grouped_product": 21572666
       },
       "status": "draft",
       "signs": [
@@ -6464,16 +6464,16 @@
         1,
         1
       ],
-      "remainder_digits": 5,
+      "remainder_digits": 4,
       "cancellation_from_digits": null,
-      "numeric_revision": "v0.2"
+      "numeric_revision": "v0.3"
     },
     {
       "id": "A4-N3T13-P11-L33-R0K0-H0S0-01",
       "terms": [
         [
           821,
-          668
+          345
         ],
         [
           865,
@@ -6481,10 +6481,10 @@
         ],
         [
           821,
-          896
+          162
         ]
       ],
-      "answer": 1627449,
+      "answer": 759652,
       "common_factor": 821,
       "common_terms": [
         1,
@@ -6501,20 +6501,20 @@
       "K": "K0",
       "H": "H0",
       "S": "S0",
-      "remainder_sum": 1564,
+      "remainder_sum": 507,
       "naive_multiplications": 3,
       "grouped_multiplications": 2,
       "phase": "partial3",
       "discovery_difficulty": "unmeasured",
       "solution": {
         "grouped_terms": [
-          668,
-          896
+          345,
+          162
         ],
         "other_products": [
           343405
         ],
-        "grouped_product": 1284044
+        "grouped_product": 416247
       },
       "status": "draft",
       "signs": [
@@ -6522,9 +6522,9 @@
         1,
         1
       ],
-      "remainder_digits": 4,
+      "remainder_digits": 3,
       "cancellation_from_digits": null,
-      "numeric_revision": "v0.2"
+      "numeric_revision": "v0.3"
     },
     {
       "id": "A4-N3T13-P11-L33-R0K0-H0S0-02",
@@ -6994,7 +6994,7 @@
       "id": "A4-N3T13-P22-L44-R0K0-H0S0-02",
       "terms": [
         [
-          6519,
+          1074,
           5086
         ],
         [
@@ -7002,11 +7002,11 @@
           7003
         ],
         [
-          9287,
+          1025,
           5086
         ]
       ],
-      "answer": 125621693,
+      "answer": 55907891,
       "common_factor": 5086,
       "common_terms": [
         1,
@@ -7023,20 +7023,20 @@
       "K": "K0",
       "H": "H0",
       "S": "S0",
-      "remainder_sum": 15806,
+      "remainder_sum": 2099,
       "naive_multiplications": 3,
       "grouped_multiplications": 2,
       "phase": "partial3",
       "discovery_difficulty": "unmeasured",
       "solution": {
         "grouped_terms": [
-          6519,
-          9287
+          1074,
+          1025
         ],
         "other_products": [
           45232377
         ],
-        "grouped_product": 80389316
+        "grouped_product": 10675514
       },
       "status": "draft",
       "signs": [
@@ -7044,27 +7044,27 @@
         1,
         1
       ],
-      "remainder_digits": 5,
+      "remainder_digits": 4,
       "cancellation_from_digits": null,
-      "numeric_revision": "v0.2"
+      "numeric_revision": "v0.3"
     },
     {
       "id": "A4-N3T13-P12-L33-R0K0-H0S0-01",
       "terms": [
         [
           702,
-          743
+          339
         ],
         [
           415,
           751
         ],
         [
-          412,
+          162,
           702
         ]
       ],
-      "answer": 1122475,
+      "answer": 663367,
       "common_factor": 702,
       "common_terms": [
         1,
@@ -7081,20 +7081,20 @@
       "K": "K0",
       "H": "H0",
       "S": "S0",
-      "remainder_sum": 1155,
+      "remainder_sum": 501,
       "naive_multiplications": 3,
       "grouped_multiplications": 2,
       "phase": "partial3",
       "discovery_difficulty": "unmeasured",
       "solution": {
         "grouped_terms": [
-          743,
-          412
+          339,
+          162
         ],
         "other_products": [
           311665
         ],
-        "grouped_product": 810810
+        "grouped_product": 351702
       },
       "status": "draft",
       "signs": [
@@ -7102,27 +7102,27 @@
         1,
         1
       ],
-      "remainder_digits": 4,
+      "remainder_digits": 3,
       "cancellation_from_digits": null,
-      "numeric_revision": "v0.2"
+      "numeric_revision": "v0.3"
     },
     {
       "id": "A4-N3T13-P12-L33-R0K0-H0S0-02",
       "terms": [
         [
           497,
-          780
+          192
         ],
         [
           867,
           499
         ],
         [
-          311,
+          612,
           497
         ]
       ],
-      "answer": 974860,
+      "answer": 832221,
       "common_factor": 497,
       "common_terms": [
         1,
@@ -7139,20 +7139,20 @@
       "K": "K0",
       "H": "H0",
       "S": "S0",
-      "remainder_sum": 1091,
+      "remainder_sum": 804,
       "naive_multiplications": 3,
       "grouped_multiplications": 2,
       "phase": "partial3",
       "discovery_difficulty": "unmeasured",
       "solution": {
         "grouped_terms": [
-          780,
-          311
+          192,
+          612
         ],
         "other_products": [
           432633
         ],
-        "grouped_product": 542227
+        "grouped_product": 399588
       },
       "status": "draft",
       "signs": [
@@ -7160,9 +7160,9 @@
         1,
         1
       ],
-      "remainder_digits": 4,
+      "remainder_digits": 3,
       "cancellation_from_digits": null,
-      "numeric_revision": "v0.2"
+      "numeric_revision": "v0.3"
     },
     {
       "id": "A4-N3T13-P12-L33-R1K0-H0S0-01",
@@ -7227,18 +7227,18 @@
       "terms": [
         [
           2111,
-          7283
+          1305
         ],
         [
           2698,
           3241
         ],
         [
-          9844,
+          1129,
           2111
         ]
       ],
-      "answer": 44899315,
+      "answer": 13882392,
       "common_factor": 2111,
       "common_terms": [
         1,
@@ -7255,20 +7255,20 @@
       "K": "K0",
       "H": "H0",
       "S": "S0",
-      "remainder_sum": 17127,
+      "remainder_sum": 2434,
       "naive_multiplications": 3,
       "grouped_multiplications": 2,
       "phase": "partial3",
       "discovery_difficulty": "unmeasured",
       "solution": {
         "grouped_terms": [
-          7283,
-          9844
+          1305,
+          1129
         ],
         "other_products": [
           8744218
         ],
-        "grouped_product": 36155097
+        "grouped_product": 5138174
       },
       "status": "draft",
       "signs": [
@@ -7276,9 +7276,9 @@
         1,
         1
       ],
-      "remainder_digits": 5,
+      "remainder_digits": 4,
       "cancellation_from_digits": null,
-      "numeric_revision": "v0.2"
+      "numeric_revision": "v0.3"
     },
     {
       "id": "A4-N3T13-P12-L44-R0K0-H0S0-02",
@@ -7400,7 +7400,7 @@
       "id": "A4-N3T13-P21-L33-R0K0-H0S0-02",
       "terms": [
         [
-          142,
+          414,
           994
         ],
         [
@@ -7409,10 +7409,10 @@
         ],
         [
           994,
-          976
+          500
         ]
       ],
-      "answer": 1267530,
+      "answer": 1064754,
       "common_factor": 994,
       "common_terms": [
         1,
@@ -7429,20 +7429,20 @@
       "K": "K0",
       "H": "H0",
       "S": "S0",
-      "remainder_sum": 1118,
+      "remainder_sum": 914,
       "naive_multiplications": 3,
       "grouped_multiplications": 2,
       "phase": "partial3",
       "discovery_difficulty": "unmeasured",
       "solution": {
         "grouped_terms": [
-          142,
-          976
+          414,
+          500
         ],
         "other_products": [
           156238
         ],
-        "grouped_product": 1111292
+        "grouped_product": 908516
       },
       "status": "draft",
       "signs": [
@@ -7450,9 +7450,9 @@
         1,
         1
       ],
-      "remainder_digits": 4,
+      "remainder_digits": 3,
       "cancellation_from_digits": null,
-      "numeric_revision": "v0.2"
+      "numeric_revision": "v0.3"
     },
     {
       "id": "A4-N3T13-P21-L33-R1K0-H0S0-01",
@@ -7516,7 +7516,7 @@
       "id": "A4-N3T13-P21-L44-R0K0-H0S0-01",
       "terms": [
         [
-          9504,
+          1457,
           5897
         ],
         [
@@ -7525,10 +7525,10 @@
         ],
         [
           5897,
-          1921
+          5260
         ]
       ],
-      "answer": 73710560,
+      "answer": 45947484,
       "common_factor": 5897,
       "common_terms": [
         1,
@@ -7545,20 +7545,20 @@
       "K": "K0",
       "H": "H0",
       "S": "S0",
-      "remainder_sum": 11425,
+      "remainder_sum": 6717,
       "naive_multiplications": 3,
       "grouped_multiplications": 2,
       "phase": "partial3",
       "discovery_difficulty": "unmeasured",
       "solution": {
         "grouped_terms": [
-          9504,
-          1921
+          1457,
+          5260
         ],
         "other_products": [
           6337335
         ],
-        "grouped_product": 67373225
+        "grouped_product": 39610149
       },
       "status": "draft",
       "signs": [
@@ -7566,15 +7566,15 @@
         1,
         1
       ],
-      "remainder_digits": 5,
+      "remainder_digits": 4,
       "cancellation_from_digits": null,
-      "numeric_revision": "v0.2"
+      "numeric_revision": "v0.3"
     },
     {
       "id": "A4-N3T13-P21-L44-R0K0-H0S0-02",
       "terms": [
         [
-          5430,
+          3429,
           3221
         ],
         [
@@ -7583,10 +7583,10 @@
         ],
         [
           3221,
-          7836
+          2216
         ]
       ],
-      "answer": 104753034,
+      "answer": 80205793,
       "common_factor": 3221,
       "common_terms": [
         1,
@@ -7603,20 +7603,20 @@
       "K": "K0",
       "H": "H0",
       "S": "S0",
-      "remainder_sum": 13266,
+      "remainder_sum": 5645,
       "naive_multiplications": 3,
       "grouped_multiplications": 2,
       "phase": "partial3",
       "discovery_difficulty": "unmeasured",
       "solution": {
         "grouped_terms": [
-          5430,
-          7836
+          3429,
+          2216
         ],
         "other_products": [
           62023248
         ],
-        "grouped_product": 42729786
+        "grouped_product": 18182545
       },
       "status": "draft",
       "signs": [
@@ -7624,9 +7624,9 @@
         1,
         1
       ],
-      "remainder_digits": 5,
+      "remainder_digits": 4,
       "cancellation_from_digits": null,
-      "numeric_revision": "v0.2"
+      "numeric_revision": "v0.3"
     },
     {
       "id": "A4-N3T23-P11-L33-R0K0-H0S0-01",
@@ -7811,14 +7811,14 @@
         ],
         [
           4095,
-          3058
+          1119
         ],
         [
           4095,
-          9906
+          2735
         ]
       ],
-      "answer": 95981315,
+      "answer": 58675865,
       "common_factor": 4095,
       "common_terms": [
         2,
@@ -7835,20 +7835,20 @@
       "K": "K0",
       "H": "H0",
       "S": "S0",
-      "remainder_sum": 12964,
+      "remainder_sum": 3854,
       "naive_multiplications": 3,
       "grouped_multiplications": 2,
       "phase": "partial3",
       "discovery_difficulty": "unmeasured",
       "solution": {
         "grouped_terms": [
-          3058,
-          9906
+          1119,
+          2735
         ],
         "other_products": [
           42893735
         ],
-        "grouped_product": 53087580
+        "grouped_product": 15782130
       },
       "status": "draft",
       "signs": [
@@ -7856,9 +7856,9 @@
         1,
         1
       ],
-      "remainder_digits": 5,
+      "remainder_digits": 4,
       "cancellation_from_digits": null,
-      "numeric_revision": "v0.2"
+      "numeric_revision": "v0.3"
     },
     {
       "id": "A4-N3T23-P11-L44-R0K0-H0S0-02",
@@ -7869,14 +7869,14 @@
         ],
         [
           3754,
-          8498
+          1315
         ],
         [
           3754,
-          1936
+          1218
         ]
       ],
-      "answer": 58345597,
+      "answer": 28685243,
       "common_factor": 3754,
       "common_terms": [
         2,
@@ -7893,20 +7893,20 @@
       "K": "K0",
       "H": "H0",
       "S": "S0",
-      "remainder_sum": 10434,
+      "remainder_sum": 2533,
       "naive_multiplications": 3,
       "grouped_multiplications": 2,
       "phase": "partial3",
       "discovery_difficulty": "unmeasured",
       "solution": {
         "grouped_terms": [
-          8498,
-          1936
+          1315,
+          1218
         ],
         "other_products": [
           19176361
         ],
-        "grouped_product": 39169236
+        "grouped_product": 9508882
       },
       "status": "draft",
       "signs": [
@@ -7914,9 +7914,9 @@
         1,
         1
       ],
-      "remainder_digits": 5,
+      "remainder_digits": 4,
       "cancellation_from_digits": null,
-      "numeric_revision": "v0.2"
+      "numeric_revision": "v0.3"
     },
     {
       "id": "A4-N3T23-P22-L33-R0K0-H0S0-01",
@@ -7926,15 +7926,15 @@
           232
         ],
         [
-          255,
+          330,
           554
         ],
         [
-          831,
+          548,
           554
         ]
       ],
-      "answer": 632500,
+      "answer": 517268,
       "common_factor": 554,
       "common_terms": [
         2,
@@ -7951,20 +7951,20 @@
       "K": "K0",
       "H": "H0",
       "S": "S0",
-      "remainder_sum": 1086,
+      "remainder_sum": 878,
       "naive_multiplications": 3,
       "grouped_multiplications": 2,
       "phase": "partial3",
       "discovery_difficulty": "unmeasured",
       "solution": {
         "grouped_terms": [
-          255,
-          831
+          330,
+          548
         ],
         "other_products": [
           30856
         ],
-        "grouped_product": 601644
+        "grouped_product": 486412
       },
       "status": "draft",
       "signs": [
@@ -7972,9 +7972,9 @@
         1,
         1
       ],
-      "remainder_digits": 4,
+      "remainder_digits": 3,
       "cancellation_from_digits": null,
-      "numeric_revision": "v0.2"
+      "numeric_revision": "v0.3"
     },
     {
       "id": "A4-N3T23-P22-L33-R0K0-H0S0-02",
@@ -7984,15 +7984,15 @@
           721
         ],
         [
-          793,
+          227,
           575
         ],
         [
-          574,
+          154,
           575
         ]
       ],
-      "answer": 977090,
+      "answer": 410140,
       "common_factor": 575,
       "common_terms": [
         2,
@@ -8009,20 +8009,20 @@
       "K": "K0",
       "H": "H0",
       "S": "S0",
-      "remainder_sum": 1367,
+      "remainder_sum": 381,
       "naive_multiplications": 3,
       "grouped_multiplications": 2,
       "phase": "partial3",
       "discovery_difficulty": "unmeasured",
       "solution": {
         "grouped_terms": [
-          793,
-          574
+          227,
+          154
         ],
         "other_products": [
           191065
         ],
-        "grouped_product": 786025
+        "grouped_product": 219075
       },
       "status": "draft",
       "signs": [
@@ -8030,9 +8030,9 @@
         1,
         1
       ],
-      "remainder_digits": 4,
+      "remainder_digits": 3,
       "cancellation_from_digits": null,
-      "numeric_revision": "v0.2"
+      "numeric_revision": "v0.3"
     },
     {
       "id": "A4-N3T23-P22-L33-R1K0-H0S0-01",
@@ -8100,15 +8100,15 @@
           2631
         ],
         [
-          2803,
+          4538,
           3521
         ],
         [
-          8026,
+          5434,
           3521
         ]
       ],
-      "answer": 61039657,
+      "answer": 58022160,
       "common_factor": 3521,
       "common_terms": [
         2,
@@ -8125,20 +8125,20 @@
       "K": "K0",
       "H": "H0",
       "S": "S0",
-      "remainder_sum": 10829,
+      "remainder_sum": 9972,
       "naive_multiplications": 3,
       "grouped_multiplications": 2,
       "phase": "partial3",
       "discovery_difficulty": "unmeasured",
       "solution": {
         "grouped_terms": [
-          2803,
-          8026
+          4538,
+          5434
         ],
         "other_products": [
           22910748
         ],
-        "grouped_product": 38128909
+        "grouped_product": 35111412
       },
       "status": "draft",
       "signs": [
@@ -8146,9 +8146,9 @@
         1,
         1
       ],
-      "remainder_digits": 5,
+      "remainder_digits": 4,
       "cancellation_from_digits": null,
-      "numeric_revision": "v0.2"
+      "numeric_revision": "v0.3"
     },
     {
       "id": "A4-N3T23-P22-L44-R0K0-H0S0-02",
@@ -8217,14 +8217,14 @@
         ],
         [
           639,
-          695
+          361
         ],
         [
-          831,
+          151,
           639
         ]
       ],
-      "answer": 1661713,
+      "answer": 1013767,
       "common_factor": 639,
       "common_terms": [
         2,
@@ -8241,20 +8241,20 @@
       "K": "K0",
       "H": "H0",
       "S": "S0",
-      "remainder_sum": 1526,
+      "remainder_sum": 512,
       "naive_multiplications": 3,
       "grouped_multiplications": 2,
       "phase": "partial3",
       "discovery_difficulty": "unmeasured",
       "solution": {
         "grouped_terms": [
-          695,
-          831
+          361,
+          151
         ],
         "other_products": [
           686599
         ],
-        "grouped_product": 975114
+        "grouped_product": 327168
       },
       "status": "draft",
       "signs": [
@@ -8262,9 +8262,9 @@
         1,
         1
       ],
-      "remainder_digits": 4,
+      "remainder_digits": 3,
       "cancellation_from_digits": null,
-      "numeric_revision": "v0.2"
+      "numeric_revision": "v0.3"
     },
     {
       "id": "A4-N3T23-P12-L33-R0K0-H0S0-02",
@@ -8391,14 +8391,14 @@
         ],
         [
           2466,
-          7173
+          4445
         ],
         [
-          8694,
+          1537,
           2466
         ]
       ],
-      "answer": 54141670,
+      "answer": 29765260,
       "common_factor": 2466,
       "common_terms": [
         2,
@@ -8415,20 +8415,20 @@
       "K": "K0",
       "H": "H0",
       "S": "S0",
-      "remainder_sum": 15867,
+      "remainder_sum": 5982,
       "naive_multiplications": 3,
       "grouped_multiplications": 2,
       "phase": "partial3",
       "discovery_difficulty": "unmeasured",
       "solution": {
         "grouped_terms": [
-          7173,
-          8694
+          4445,
+          1537
         ],
         "other_products": [
           15013648
         ],
-        "grouped_product": 39128022
+        "grouped_product": 14751612
       },
       "status": "draft",
       "signs": [
@@ -8436,9 +8436,9 @@
         1,
         1
       ],
-      "remainder_digits": 5,
+      "remainder_digits": 4,
       "cancellation_from_digits": null,
-      "numeric_revision": "v0.2"
+      "numeric_revision": "v0.3"
     },
     {
       "id": "A4-N3T23-P12-L44-R0K0-H0S0-02",
@@ -8506,15 +8506,15 @@
           538
         ],
         [
-          321,
+          120,
           827
         ],
         [
           827,
-          746
+          287
         ]
       ],
-      "answer": 1222425,
+      "answer": 676605,
       "common_factor": 827,
       "common_terms": [
         2,
@@ -8531,20 +8531,20 @@
       "K": "K0",
       "H": "H0",
       "S": "S0",
-      "remainder_sum": 1067,
+      "remainder_sum": 407,
       "naive_multiplications": 3,
       "grouped_multiplications": 2,
       "phase": "partial3",
       "discovery_difficulty": "unmeasured",
       "solution": {
         "grouped_terms": [
-          321,
-          746
+          120,
+          287
         ],
         "other_products": [
           340016
         ],
-        "grouped_product": 882409
+        "grouped_product": 336589
       },
       "status": "draft",
       "signs": [
@@ -8552,9 +8552,9 @@
         1,
         1
       ],
-      "remainder_digits": 4,
+      "remainder_digits": 3,
       "cancellation_from_digits": null,
-      "numeric_revision": "v0.2"
+      "numeric_revision": "v0.3"
     },
     {
       "id": "A4-N3T23-P21-L33-R0K0-H0S0-02",
@@ -8680,15 +8680,15 @@
           7791
         ],
         [
-          5105,
+          1473,
           7223
         ],
         [
           7223,
-          6162
+          1003
         ]
       ],
-      "answer": 108985054,
+      "answer": 45487661,
       "common_factor": 7223,
       "common_terms": [
         2,
@@ -8705,20 +8705,20 @@
       "K": "K0",
       "H": "H0",
       "S": "S0",
-      "remainder_sum": 11267,
+      "remainder_sum": 2476,
       "naive_multiplications": 3,
       "grouped_multiplications": 2,
       "phase": "partial3",
       "discovery_difficulty": "unmeasured",
       "solution": {
         "grouped_terms": [
-          5105,
-          6162
+          1473,
+          1003
         ],
         "other_products": [
           27603513
         ],
-        "grouped_product": 81381541
+        "grouped_product": 17884148
       },
       "status": "draft",
       "signs": [
@@ -8726,9 +8726,9 @@
         1,
         1
       ],
-      "remainder_digits": 5,
+      "remainder_digits": 4,
       "cancellation_from_digits": null,
-      "numeric_revision": "v0.2"
+      "numeric_revision": "v0.3"
     },
     {
       "id": "A4-N3T23-P21-L44-R0K0-H0S0-02",
@@ -8793,18 +8793,18 @@
       "terms": [
         [
           762,
-          161
+          101
         ],
         [
           762,
-          906
+          103
         ],
         [
           762,
-          981
+          110
         ]
       ],
-      "answer": 1560576,
+      "answer": 239268,
       "common_factor": 762,
       "common_terms": [
         1,
@@ -8823,19 +8823,19 @@
       "K": "K0",
       "H": "H0",
       "S": "S0",
-      "remainder_sum": 2048,
+      "remainder_sum": 314,
       "naive_multiplications": 3,
       "grouped_multiplications": 1,
       "phase": "all3",
       "discovery_difficulty": "unmeasured",
       "solution": {
         "grouped_terms": [
-          161,
-          906,
-          981
+          101,
+          103,
+          110
         ],
         "other_products": [],
-        "grouped_product": 1560576
+        "grouped_product": 239268
       },
       "status": "draft",
       "signs": [
@@ -8843,27 +8843,27 @@
         1,
         1
       ],
-      "remainder_digits": 4,
+      "remainder_digits": 3,
       "cancellation_from_digits": null,
-      "numeric_revision": "v0.2"
+      "numeric_revision": "v0.3"
     },
     {
       "id": "A4-N3T123-P111-L33-R0K0-H0S0-02",
       "terms": [
         [
           234,
-          887
+          316
         ],
         [
           234,
-          961
+          153
         ],
         [
           234,
-          709
+          135
         ]
       ],
-      "answer": 598338,
+      "answer": 141336,
       "common_factor": 234,
       "common_terms": [
         1,
@@ -8882,19 +8882,19 @@
       "K": "K0",
       "H": "H0",
       "S": "S0",
-      "remainder_sum": 2557,
+      "remainder_sum": 604,
       "naive_multiplications": 3,
       "grouped_multiplications": 1,
       "phase": "all3",
       "discovery_difficulty": "unmeasured",
       "solution": {
         "grouped_terms": [
-          887,
-          961,
-          709
+          316,
+          153,
+          135
         ],
         "other_products": [],
-        "grouped_product": 598338
+        "grouped_product": 141336
       },
       "status": "draft",
       "signs": [
@@ -8902,9 +8902,9 @@
         1,
         1
       ],
-      "remainder_digits": 4,
+      "remainder_digits": 3,
       "cancellation_from_digits": null,
-      "numeric_revision": "v0.2"
+      "numeric_revision": "v0.3"
     },
     {
       "id": "A4-N3T123-P111-L33-R1K0-H0S0-01",
@@ -9029,18 +9029,18 @@
       "terms": [
         [
           8941,
-          1056
+          1712
         ],
         [
           8941,
-          9454
+          1062
         ],
         [
           8941,
-          5933
+          2094
         ]
       ],
-      "answer": 147016863,
+      "answer": 43524788,
       "common_factor": 8941,
       "common_terms": [
         1,
@@ -9059,19 +9059,19 @@
       "K": "K0",
       "H": "H0",
       "S": "S0",
-      "remainder_sum": 16443,
+      "remainder_sum": 4868,
       "naive_multiplications": 3,
       "grouped_multiplications": 1,
       "phase": "all3",
       "discovery_difficulty": "unmeasured",
       "solution": {
         "grouped_terms": [
-          1056,
-          9454,
-          5933
+          1712,
+          1062,
+          2094
         ],
         "other_products": [],
-        "grouped_product": 147016863
+        "grouped_product": 43524788
       },
       "status": "draft",
       "signs": [
@@ -9079,27 +9079,27 @@
         1,
         1
       ],
-      "remainder_digits": 5,
+      "remainder_digits": 4,
       "cancellation_from_digits": null,
-      "numeric_revision": "v0.2"
+      "numeric_revision": "v0.3"
     },
     {
       "id": "A4-N3T123-P111-L44-R0K0-H0S0-02",
       "terms": [
         [
           3556,
-          6078
+          3451
         ],
         [
           3556,
-          7656
+          3385
         ],
         [
           3556,
-          3203
+          1262
         ]
       ],
-      "answer": 60227972,
+      "answer": 28796488,
       "common_factor": 3556,
       "common_terms": [
         1,
@@ -9118,19 +9118,19 @@
       "K": "K0",
       "H": "H0",
       "S": "S0",
-      "remainder_sum": 16937,
+      "remainder_sum": 8098,
       "naive_multiplications": 3,
       "grouped_multiplications": 1,
       "phase": "all3",
       "discovery_difficulty": "unmeasured",
       "solution": {
         "grouped_terms": [
-          6078,
-          7656,
-          3203
+          3451,
+          3385,
+          1262
         ],
         "other_products": [],
-        "grouped_product": 60227972
+        "grouped_product": 28796488
       },
       "status": "draft",
       "signs": [
@@ -9138,9 +9138,9 @@
         1,
         1
       ],
-      "remainder_digits": 5,
+      "remainder_digits": 4,
       "cancellation_from_digits": null,
-      "numeric_revision": "v0.2"
+      "numeric_revision": "v0.3"
     },
     {
       "id": "A4-N3T123-P111-L44-R2K0-H0S0-01",
@@ -9206,18 +9206,18 @@
       "terms": [
         [
           933,
-          451
+          144
         ],
         [
           933,
-          843
+          107
         ],
         [
-          609,
+          120,
           933
         ]
       ],
-      "answer": 1775499,
+      "answer": 346143,
       "common_factor": 933,
       "common_terms": [
         1,
@@ -9236,19 +9236,19 @@
       "K": "K0",
       "H": "H0",
       "S": "S0",
-      "remainder_sum": 1903,
+      "remainder_sum": 371,
       "naive_multiplications": 3,
       "grouped_multiplications": 1,
       "phase": "all3",
       "discovery_difficulty": "unmeasured",
       "solution": {
         "grouped_terms": [
-          451,
-          843,
-          609
+          144,
+          107,
+          120
         ],
         "other_products": [],
-        "grouped_product": 1775499
+        "grouped_product": 346143
       },
       "status": "draft",
       "signs": [
@@ -9256,27 +9256,27 @@
         1,
         1
       ],
-      "remainder_digits": 4,
+      "remainder_digits": 3,
       "cancellation_from_digits": null,
-      "numeric_revision": "v0.2"
+      "numeric_revision": "v0.3"
     },
     {
       "id": "A4-N3T123-P112-L33-R0K0-H0S0-02",
       "terms": [
         [
           958,
-          523
+          357
         ],
         [
           958,
-          327
+          374
         ],
         [
-          714,
+          195,
           958
         ]
       ],
-      "answer": 1498312,
+      "answer": 887108,
       "common_factor": 958,
       "common_terms": [
         1,
@@ -9295,19 +9295,19 @@
       "K": "K0",
       "H": "H0",
       "S": "S0",
-      "remainder_sum": 1564,
+      "remainder_sum": 926,
       "naive_multiplications": 3,
       "grouped_multiplications": 1,
       "phase": "all3",
       "discovery_difficulty": "unmeasured",
       "solution": {
         "grouped_terms": [
-          523,
-          327,
-          714
+          357,
+          374,
+          195
         ],
         "other_products": [],
-        "grouped_product": 1498312
+        "grouped_product": 887108
       },
       "status": "draft",
       "signs": [
@@ -9315,9 +9315,9 @@
         1,
         1
       ],
-      "remainder_digits": 4,
+      "remainder_digits": 3,
       "cancellation_from_digits": null,
-      "numeric_revision": "v0.2"
+      "numeric_revision": "v0.3"
     },
     {
       "id": "A4-N3T123-P112-L33-R1K0-H0S0-01",
@@ -9501,18 +9501,18 @@
       "terms": [
         [
           3309,
-          7644
+          3073
         ],
         [
           3309,
-          1577
+          1165
         ],
         [
-          2940,
+          2011,
           3309
         ]
       ],
-      "answer": 40240749,
+      "answer": 20677941,
       "common_factor": 3309,
       "common_terms": [
         1,
@@ -9531,19 +9531,19 @@
       "K": "K0",
       "H": "H0",
       "S": "S0",
-      "remainder_sum": 12161,
+      "remainder_sum": 6249,
       "naive_multiplications": 3,
       "grouped_multiplications": 1,
       "phase": "all3",
       "discovery_difficulty": "unmeasured",
       "solution": {
         "grouped_terms": [
-          7644,
-          1577,
-          2940
+          3073,
+          1165,
+          2011
         ],
         "other_products": [],
-        "grouped_product": 40240749
+        "grouped_product": 20677941
       },
       "status": "draft",
       "signs": [
@@ -9551,9 +9551,9 @@
         1,
         1
       ],
-      "remainder_digits": 5,
+      "remainder_digits": 4,
       "cancellation_from_digits": null,
-      "numeric_revision": "v0.2"
+      "numeric_revision": "v0.3"
     },
     {
       "id": "A4-N3T123-P112-L44-R2K0-H0S0-01",
@@ -9619,18 +9619,18 @@
       "terms": [
         [
           676,
-          888
+          182
         ],
         [
-          399,
+          110,
           676
         ],
         [
           676,
-          796
+          121
         ]
       ],
-      "answer": 1408108,
+      "answer": 279188,
       "common_factor": 676,
       "common_terms": [
         1,
@@ -9649,19 +9649,19 @@
       "K": "K0",
       "H": "H0",
       "S": "S0",
-      "remainder_sum": 2083,
+      "remainder_sum": 413,
       "naive_multiplications": 3,
       "grouped_multiplications": 1,
       "phase": "all3",
       "discovery_difficulty": "unmeasured",
       "solution": {
         "grouped_terms": [
-          888,
-          399,
-          796
+          182,
+          110,
+          121
         ],
         "other_products": [],
-        "grouped_product": 1408108
+        "grouped_product": 279188
       },
       "status": "draft",
       "signs": [
@@ -9669,27 +9669,27 @@
         1,
         1
       ],
-      "remainder_digits": 4,
+      "remainder_digits": 3,
       "cancellation_from_digits": null,
-      "numeric_revision": "v0.2"
+      "numeric_revision": "v0.3"
     },
     {
       "id": "A4-N3T123-P121-L33-R0K0-H0S0-02",
       "terms": [
         [
           646,
-          403
+          299
         ],
         [
-          281,
+          411,
           646
         ],
         [
           646,
-          820
+          138
         ]
       ],
-      "answer": 971584,
+      "answer": 547808,
       "common_factor": 646,
       "common_terms": [
         1,
@@ -9708,19 +9708,19 @@
       "K": "K0",
       "H": "H0",
       "S": "S0",
-      "remainder_sum": 1504,
+      "remainder_sum": 848,
       "naive_multiplications": 3,
       "grouped_multiplications": 1,
       "phase": "all3",
       "discovery_difficulty": "unmeasured",
       "solution": {
         "grouped_terms": [
-          403,
-          281,
-          820
+          299,
+          411,
+          138
         ],
         "other_products": [],
-        "grouped_product": 971584
+        "grouped_product": 547808
       },
       "status": "draft",
       "signs": [
@@ -9728,9 +9728,9 @@
         1,
         1
       ],
-      "remainder_digits": 4,
+      "remainder_digits": 3,
       "cancellation_from_digits": null,
-      "numeric_revision": "v0.2"
+      "numeric_revision": "v0.3"
     },
     {
       "id": "A4-N3T123-P121-L33-R1K0-H0S0-01",
@@ -9855,18 +9855,18 @@
       "terms": [
         [
           5525,
-          4921
+          2416
         ],
         [
-          3406,
+          1035,
           5525
         ],
         [
           5525,
-          2907
+          1430
         ]
       ],
-      "answer": 62067850,
+      "answer": 26967525,
       "common_factor": 5525,
       "common_terms": [
         1,
@@ -9885,19 +9885,19 @@
       "K": "K0",
       "H": "H0",
       "S": "S0",
-      "remainder_sum": 11234,
+      "remainder_sum": 4881,
       "naive_multiplications": 3,
       "grouped_multiplications": 1,
       "phase": "all3",
       "discovery_difficulty": "unmeasured",
       "solution": {
         "grouped_terms": [
-          4921,
-          3406,
-          2907
+          2416,
+          1035,
+          1430
         ],
         "other_products": [],
-        "grouped_product": 62067850
+        "grouped_product": 26967525
       },
       "status": "draft",
       "signs": [
@@ -9905,27 +9905,27 @@
         1,
         1
       ],
-      "remainder_digits": 5,
+      "remainder_digits": 4,
       "cancellation_from_digits": null,
-      "numeric_revision": "v0.2"
+      "numeric_revision": "v0.3"
     },
     {
       "id": "A4-N3T123-P121-L44-R0K0-H0S0-02",
       "terms": [
         [
           2222,
-          3936
+          1233
         ],
         [
-          8229,
+          1111,
           2222
         ],
         [
           2222,
-          5536
+          1088
         ]
       ],
-      "answer": 39331622,
+      "answer": 7625904,
       "common_factor": 2222,
       "common_terms": [
         1,
@@ -9944,19 +9944,19 @@
       "K": "K0",
       "H": "H0",
       "S": "S0",
-      "remainder_sum": 17701,
+      "remainder_sum": 3432,
       "naive_multiplications": 3,
       "grouped_multiplications": 1,
       "phase": "all3",
       "discovery_difficulty": "unmeasured",
       "solution": {
         "grouped_terms": [
-          3936,
-          8229,
-          5536
+          1233,
+          1111,
+          1088
         ],
         "other_products": [],
-        "grouped_product": 39331622
+        "grouped_product": 7625904
       },
       "status": "draft",
       "signs": [
@@ -9964,9 +9964,9 @@
         1,
         1
       ],
-      "remainder_digits": 5,
+      "remainder_digits": 4,
       "cancellation_from_digits": null,
-      "numeric_revision": "v0.2"
+      "numeric_revision": "v0.3"
     },
     {
       "id": "A4-N3T123-P121-L44-R2K0-H0S0-01",
@@ -10032,18 +10032,18 @@
       "terms": [
         [
           611,
-          689
+          274
         ],
         [
-          540,
+          133,
           611
         ],
         [
-          305,
+          107,
           611
         ]
       ],
-      "answer": 937274,
+      "answer": 314054,
       "common_factor": 611,
       "common_terms": [
         1,
@@ -10062,19 +10062,19 @@
       "K": "K0",
       "H": "H0",
       "S": "S0",
-      "remainder_sum": 1534,
+      "remainder_sum": 514,
       "naive_multiplications": 3,
       "grouped_multiplications": 1,
       "phase": "all3",
       "discovery_difficulty": "unmeasured",
       "solution": {
         "grouped_terms": [
-          689,
-          540,
-          305
+          274,
+          133,
+          107
         ],
         "other_products": [],
-        "grouped_product": 937274
+        "grouped_product": 314054
       },
       "status": "draft",
       "signs": [
@@ -10082,27 +10082,27 @@
         1,
         1
       ],
-      "remainder_digits": 4,
+      "remainder_digits": 3,
       "cancellation_from_digits": null,
-      "numeric_revision": "v0.2"
+      "numeric_revision": "v0.3"
     },
     {
       "id": "A4-N3T123-P122-L33-R0K0-H0S0-02",
       "terms": [
         [
           199,
-          491
+          109
         ],
         [
-          969,
+          220,
           199
         ],
         [
-          821,
+          330,
           199
         ]
       ],
-      "answer": 453919,
+      "answer": 131141,
       "common_factor": 199,
       "common_terms": [
         1,
@@ -10121,19 +10121,19 @@
       "K": "K0",
       "H": "H0",
       "S": "S0",
-      "remainder_sum": 2281,
+      "remainder_sum": 659,
       "naive_multiplications": 3,
       "grouped_multiplications": 1,
       "phase": "all3",
       "discovery_difficulty": "unmeasured",
       "solution": {
         "grouped_terms": [
-          491,
-          969,
-          821
+          109,
+          220,
+          330
         ],
         "other_products": [],
-        "grouped_product": 453919
+        "grouped_product": 131141
       },
       "status": "draft",
       "signs": [
@@ -10141,9 +10141,9 @@
         1,
         1
       ],
-      "remainder_digits": 4,
+      "remainder_digits": 3,
       "cancellation_from_digits": null,
-      "numeric_revision": "v0.2"
+      "numeric_revision": "v0.3"
     },
     {
       "id": "A4-N3T123-P122-L33-R1K0-H0S0-01",
@@ -10268,18 +10268,18 @@
       "terms": [
         [
           8075,
-          8392
+          1383
         ],
         [
-          7404,
+          3100,
           8075
         ],
         [
-          8371,
+          1726,
           8075
         ]
       ],
-      "answer": 195148525,
+      "answer": 50137675,
       "common_factor": 8075,
       "common_terms": [
         1,
@@ -10298,19 +10298,19 @@
       "K": "K0",
       "H": "H0",
       "S": "S0",
-      "remainder_sum": 24167,
+      "remainder_sum": 6209,
       "naive_multiplications": 3,
       "grouped_multiplications": 1,
       "phase": "all3",
       "discovery_difficulty": "unmeasured",
       "solution": {
         "grouped_terms": [
-          8392,
-          7404,
-          8371
+          1383,
+          3100,
+          1726
         ],
         "other_products": [],
-        "grouped_product": 195148525
+        "grouped_product": 50137675
       },
       "status": "draft",
       "signs": [
@@ -10318,27 +10318,27 @@
         1,
         1
       ],
-      "remainder_digits": 5,
+      "remainder_digits": 4,
       "cancellation_from_digits": null,
-      "numeric_revision": "v0.2"
+      "numeric_revision": "v0.3"
     },
     {
       "id": "A4-N3T123-P122-L44-R0K0-H0S0-02",
       "terms": [
         [
           1058,
-          7627
+          3803
         ],
         [
-          3188,
+          1565,
           1058
         ],
         [
-          9797,
+          3495,
           1058
         ]
       ],
-      "answer": 21807496,
+      "answer": 9377054,
       "common_factor": 1058,
       "common_terms": [
         1,
@@ -10357,19 +10357,19 @@
       "K": "K0",
       "H": "H0",
       "S": "S0",
-      "remainder_sum": 20612,
+      "remainder_sum": 8863,
       "naive_multiplications": 3,
       "grouped_multiplications": 1,
       "phase": "all3",
       "discovery_difficulty": "unmeasured",
       "solution": {
         "grouped_terms": [
-          7627,
-          3188,
-          9797
+          3803,
+          1565,
+          3495
         ],
         "other_products": [],
-        "grouped_product": 21807496
+        "grouped_product": 9377054
       },
       "status": "draft",
       "signs": [
@@ -10377,9 +10377,9 @@
         1,
         1
       ],
-      "remainder_digits": 5,
+      "remainder_digits": 4,
       "cancellation_from_digits": null,
-      "numeric_revision": "v0.2"
+      "numeric_revision": "v0.3"
     },
     {
       "id": "A4-N3T123-P122-L44-R2K0-H0S0-01",
@@ -10444,19 +10444,19 @@
       "id": "A4-N3T123-P211-L33-R0K0-H0S0-01",
       "terms": [
         [
-          583,
+          476,
           801
         ],
         [
           801,
-          830
+          236
         ],
         [
           801,
-          486
+          163
         ]
       ],
-      "answer": 1521099,
+      "answer": 700875,
       "common_factor": 801,
       "common_terms": [
         1,
@@ -10475,19 +10475,19 @@
       "K": "K0",
       "H": "H0",
       "S": "S0",
-      "remainder_sum": 1899,
+      "remainder_sum": 875,
       "naive_multiplications": 3,
       "grouped_multiplications": 1,
       "phase": "all3",
       "discovery_difficulty": "unmeasured",
       "solution": {
         "grouped_terms": [
-          583,
-          830,
-          486
+          476,
+          236,
+          163
         ],
         "other_products": [],
-        "grouped_product": 1521099
+        "grouped_product": 700875
       },
       "status": "draft",
       "signs": [
@@ -10495,27 +10495,27 @@
         1,
         1
       ],
-      "remainder_digits": 4,
+      "remainder_digits": 3,
       "cancellation_from_digits": null,
-      "numeric_revision": "v0.2"
+      "numeric_revision": "v0.3"
     },
     {
       "id": "A4-N3T123-P211-L33-R0K0-H0S0-02",
       "terms": [
         [
-          350,
+          149,
           406
         ],
         [
           406,
-          149
+          200
         ],
         [
           406,
-          504
+          258
         ]
       ],
-      "answer": 407218,
+      "answer": 246442,
       "common_factor": 406,
       "common_terms": [
         1,
@@ -10534,19 +10534,19 @@
       "K": "K0",
       "H": "H0",
       "S": "S0",
-      "remainder_sum": 1003,
+      "remainder_sum": 607,
       "naive_multiplications": 3,
       "grouped_multiplications": 1,
       "phase": "all3",
       "discovery_difficulty": "unmeasured",
       "solution": {
         "grouped_terms": [
-          350,
           149,
-          504
+          200,
+          258
         ],
         "other_products": [],
-        "grouped_product": 407218
+        "grouped_product": 246442
       },
       "status": "draft",
       "signs": [
@@ -10554,9 +10554,9 @@
         1,
         1
       ],
-      "remainder_digits": 4,
+      "remainder_digits": 3,
       "cancellation_from_digits": null,
-      "numeric_revision": "v0.2"
+      "numeric_revision": "v0.3"
     },
     {
       "id": "A4-N3T123-P211-L33-R1K0-H0S0-01",
@@ -10680,19 +10680,19 @@
       "id": "A4-N3T123-P211-L44-R0K0-H0S0-01",
       "terms": [
         [
-          4736,
+          4462,
           7135
         ],
         [
           7135,
-          3319
+          2120
         ],
         [
           7135,
-          7716
+          2553
         ]
       ],
-      "answer": 112526085,
+      "answer": 65178225,
       "common_factor": 7135,
       "common_terms": [
         1,
@@ -10711,19 +10711,19 @@
       "K": "K0",
       "H": "H0",
       "S": "S0",
-      "remainder_sum": 15771,
+      "remainder_sum": 9135,
       "naive_multiplications": 3,
       "grouped_multiplications": 1,
       "phase": "all3",
       "discovery_difficulty": "unmeasured",
       "solution": {
         "grouped_terms": [
-          4736,
-          3319,
-          7716
+          4462,
+          2120,
+          2553
         ],
         "other_products": [],
-        "grouped_product": 112526085
+        "grouped_product": 65178225
       },
       "status": "draft",
       "signs": [
@@ -10731,27 +10731,27 @@
         1,
         1
       ],
-      "remainder_digits": 5,
+      "remainder_digits": 4,
       "cancellation_from_digits": null,
-      "numeric_revision": "v0.2"
+      "numeric_revision": "v0.3"
     },
     {
       "id": "A4-N3T123-P211-L44-R0K0-H0S0-02",
       "terms": [
         [
-          9163,
+          1715,
           5336
         ],
         [
           5336,
-          5718
+          3704
         ],
         [
           5336,
-          8182
+          1062
         ]
       ],
-      "answer": 123064168,
+      "answer": 34582616,
       "common_factor": 5336,
       "common_terms": [
         1,
@@ -10770,19 +10770,19 @@
       "K": "K0",
       "H": "H0",
       "S": "S0",
-      "remainder_sum": 23063,
+      "remainder_sum": 6481,
       "naive_multiplications": 3,
       "grouped_multiplications": 1,
       "phase": "all3",
       "discovery_difficulty": "unmeasured",
       "solution": {
         "grouped_terms": [
-          9163,
-          5718,
-          8182
+          1715,
+          3704,
+          1062
         ],
         "other_products": [],
-        "grouped_product": 123064168
+        "grouped_product": 34582616
       },
       "status": "draft",
       "signs": [
@@ -10790,9 +10790,9 @@
         1,
         1
       ],
-      "remainder_digits": 5,
+      "remainder_digits": 4,
       "cancellation_from_digits": null,
-      "numeric_revision": "v0.2"
+      "numeric_revision": "v0.3"
     },
     {
       "id": "A4-N3T123-P211-L44-R2K0-H0S0-01",
@@ -10857,19 +10857,19 @@
       "id": "A4-N3T123-P212-L33-R0K0-H0S0-01",
       "terms": [
         [
-          393,
+          176,
           534
         ],
         [
           534,
-          753
+          375
         ],
         [
-          539,
+          256,
           534
         ]
       ],
-      "answer": 899790,
+      "answer": 430938,
       "common_factor": 534,
       "common_terms": [
         1,
@@ -10888,19 +10888,19 @@
       "K": "K0",
       "H": "H0",
       "S": "S0",
-      "remainder_sum": 1685,
+      "remainder_sum": 807,
       "naive_multiplications": 3,
       "grouped_multiplications": 1,
       "phase": "all3",
       "discovery_difficulty": "unmeasured",
       "solution": {
         "grouped_terms": [
-          393,
-          753,
-          539
+          176,
+          375,
+          256
         ],
         "other_products": [],
-        "grouped_product": 899790
+        "grouped_product": 430938
       },
       "status": "draft",
       "signs": [
@@ -10908,27 +10908,27 @@
         1,
         1
       ],
-      "remainder_digits": 4,
+      "remainder_digits": 3,
       "cancellation_from_digits": null,
-      "numeric_revision": "v0.2"
+      "numeric_revision": "v0.3"
     },
     {
       "id": "A4-N3T123-P212-L33-R0K0-H0S0-02",
       "terms": [
         [
-          479,
+          137,
           567
         ],
         [
           567,
-          611
+          102
         ],
         [
-          628,
+          134,
           567
         ]
       ],
-      "answer": 974106,
+      "answer": 211491,
       "common_factor": 567,
       "common_terms": [
         1,
@@ -10947,19 +10947,19 @@
       "K": "K0",
       "H": "H0",
       "S": "S0",
-      "remainder_sum": 1718,
+      "remainder_sum": 373,
       "naive_multiplications": 3,
       "grouped_multiplications": 1,
       "phase": "all3",
       "discovery_difficulty": "unmeasured",
       "solution": {
         "grouped_terms": [
-          479,
-          611,
-          628
+          137,
+          102,
+          134
         ],
         "other_products": [],
-        "grouped_product": 974106
+        "grouped_product": 211491
       },
       "status": "draft",
       "signs": [
@@ -10967,9 +10967,9 @@
         1,
         1
       ],
-      "remainder_digits": 4,
+      "remainder_digits": 3,
       "cancellation_from_digits": null,
-      "numeric_revision": "v0.2"
+      "numeric_revision": "v0.3"
     },
     {
       "id": "A4-N3T123-P212-L33-R1K0-H0S0-01",
@@ -11093,19 +11093,19 @@
       "id": "A4-N3T123-P212-L44-R0K0-H0S0-01",
       "terms": [
         [
-          8052,
+          1011,
           4005
         ],
         [
           4005,
-          5718
+          1004
         ],
         [
-          9348,
+          1160,
           4005
         ]
       ],
-      "answer": 92587590,
+      "answer": 12715875,
       "common_factor": 4005,
       "common_terms": [
         1,
@@ -11124,19 +11124,19 @@
       "K": "K0",
       "H": "H0",
       "S": "S0",
-      "remainder_sum": 23118,
+      "remainder_sum": 3175,
       "naive_multiplications": 3,
       "grouped_multiplications": 1,
       "phase": "all3",
       "discovery_difficulty": "unmeasured",
       "solution": {
         "grouped_terms": [
-          8052,
-          5718,
-          9348
+          1011,
+          1004,
+          1160
         ],
         "other_products": [],
-        "grouped_product": 92587590
+        "grouped_product": 12715875
       },
       "status": "draft",
       "signs": [
@@ -11144,27 +11144,27 @@
         1,
         1
       ],
-      "remainder_digits": 5,
+      "remainder_digits": 4,
       "cancellation_from_digits": null,
-      "numeric_revision": "v0.2"
+      "numeric_revision": "v0.3"
     },
     {
       "id": "A4-N3T123-P212-L44-R0K0-H0S0-02",
       "terms": [
         [
-          6800,
+          1454,
           7395
         ],
         [
           7395,
-          1761
+          1642
         ],
         [
-          8511,
+          1528,
           7395
         ]
       ],
-      "answer": 126247440,
+      "answer": 34194480,
       "common_factor": 7395,
       "common_terms": [
         1,
@@ -11183,19 +11183,19 @@
       "K": "K0",
       "H": "H0",
       "S": "S0",
-      "remainder_sum": 17072,
+      "remainder_sum": 4624,
       "naive_multiplications": 3,
       "grouped_multiplications": 1,
       "phase": "all3",
       "discovery_difficulty": "unmeasured",
       "solution": {
         "grouped_terms": [
-          6800,
-          1761,
-          8511
+          1454,
+          1642,
+          1528
         ],
         "other_products": [],
-        "grouped_product": 126247440
+        "grouped_product": 34194480
       },
       "status": "draft",
       "signs": [
@@ -11203,9 +11203,9 @@
         1,
         1
       ],
-      "remainder_digits": 5,
+      "remainder_digits": 4,
       "cancellation_from_digits": null,
-      "numeric_revision": "v0.2"
+      "numeric_revision": "v0.3"
     },
     {
       "id": "A4-N3T123-P212-L44-R2K0-H0S0-01",
@@ -11270,19 +11270,19 @@
       "id": "A4-N3T123-P221-L33-R0K0-H0S0-01",
       "terms": [
         [
-          329,
+          301,
           306
         ],
         [
-          268,
+          110,
           306
         ],
         [
           306,
-          692
+          161
         ]
       ],
-      "answer": 394434,
+      "answer": 175032,
       "common_factor": 306,
       "common_terms": [
         1,
@@ -11301,19 +11301,19 @@
       "K": "K0",
       "H": "H0",
       "S": "S0",
-      "remainder_sum": 1289,
+      "remainder_sum": 572,
       "naive_multiplications": 3,
       "grouped_multiplications": 1,
       "phase": "all3",
       "discovery_difficulty": "unmeasured",
       "solution": {
         "grouped_terms": [
-          329,
-          268,
-          692
+          301,
+          110,
+          161
         ],
         "other_products": [],
-        "grouped_product": 394434
+        "grouped_product": 175032
       },
       "status": "draft",
       "signs": [
@@ -11321,27 +11321,27 @@
         1,
         1
       ],
-      "remainder_digits": 4,
+      "remainder_digits": 3,
       "cancellation_from_digits": null,
-      "numeric_revision": "v0.2"
+      "numeric_revision": "v0.3"
     },
     {
       "id": "A4-N3T123-P221-L33-R0K0-H0S0-02",
       "terms": [
         [
-          946,
+          497,
           499
         ],
         [
-          507,
+          113,
           499
         ],
         [
           499,
-          929
+          106
         ]
       ],
-      "answer": 1188618,
+      "answer": 357284,
       "common_factor": 499,
       "common_terms": [
         1,
@@ -11360,19 +11360,19 @@
       "K": "K0",
       "H": "H0",
       "S": "S0",
-      "remainder_sum": 2382,
+      "remainder_sum": 716,
       "naive_multiplications": 3,
       "grouped_multiplications": 1,
       "phase": "all3",
       "discovery_difficulty": "unmeasured",
       "solution": {
         "grouped_terms": [
-          946,
-          507,
-          929
+          497,
+          113,
+          106
         ],
         "other_products": [],
-        "grouped_product": 1188618
+        "grouped_product": 357284
       },
       "status": "draft",
       "signs": [
@@ -11380,9 +11380,9 @@
         1,
         1
       ],
-      "remainder_digits": 4,
+      "remainder_digits": 3,
       "cancellation_from_digits": null,
-      "numeric_revision": "v0.2"
+      "numeric_revision": "v0.3"
     },
     {
       "id": "A4-N3T123-P221-L33-R1K0-H0S0-01",
@@ -11506,19 +11506,19 @@
       "id": "A4-N3T123-P221-L44-R0K0-H0S0-01",
       "terms": [
         [
-          2874,
+          1752,
           8279
         ],
         [
-          7243,
+          1225,
           8279
         ],
         [
           8279,
-          7674
+          1388
         ]
       ],
-      "answer": 147291689,
+      "answer": 36137835,
       "common_factor": 8279,
       "common_terms": [
         1,
@@ -11537,19 +11537,19 @@
       "K": "K0",
       "H": "H0",
       "S": "S0",
-      "remainder_sum": 17791,
+      "remainder_sum": 4365,
       "naive_multiplications": 3,
       "grouped_multiplications": 1,
       "phase": "all3",
       "discovery_difficulty": "unmeasured",
       "solution": {
         "grouped_terms": [
-          2874,
-          7243,
-          7674
+          1752,
+          1225,
+          1388
         ],
         "other_products": [],
-        "grouped_product": 147291689
+        "grouped_product": 36137835
       },
       "status": "draft",
       "signs": [
@@ -11557,27 +11557,27 @@
         1,
         1
       ],
-      "remainder_digits": 5,
+      "remainder_digits": 4,
       "cancellation_from_digits": null,
-      "numeric_revision": "v0.2"
+      "numeric_revision": "v0.3"
     },
     {
       "id": "A4-N3T123-P221-L44-R0K0-H0S0-02",
       "terms": [
         [
-          4657,
+          4656,
           6368
         ],
         [
-          7411,
+          1294,
           6368
         ],
         [
           6368,
-          7323
+          1069
         ]
       ],
-      "answer": 123481888,
+      "answer": 44696992,
       "common_factor": 6368,
       "common_terms": [
         1,
@@ -11596,19 +11596,19 @@
       "K": "K0",
       "H": "H0",
       "S": "S0",
-      "remainder_sum": 19391,
+      "remainder_sum": 7019,
       "naive_multiplications": 3,
       "grouped_multiplications": 1,
       "phase": "all3",
       "discovery_difficulty": "unmeasured",
       "solution": {
         "grouped_terms": [
-          4657,
-          7411,
-          7323
+          4656,
+          1294,
+          1069
         ],
         "other_products": [],
-        "grouped_product": 123481888
+        "grouped_product": 44696992
       },
       "status": "draft",
       "signs": [
@@ -11616,9 +11616,9 @@
         1,
         1
       ],
-      "remainder_digits": 5,
+      "remainder_digits": 4,
       "cancellation_from_digits": null,
-      "numeric_revision": "v0.2"
+      "numeric_revision": "v0.3"
     },
     {
       "id": "A4-N3T123-P221-L44-R2K0-H0S0-01",
@@ -11683,19 +11683,19 @@
       "id": "A4-N3T123-P222-L33-R0K0-H0S0-01",
       "terms": [
         [
-          686,
+          213,
           385
         ],
         [
-          607,
+          345,
           385
         ],
         [
-          384,
+          108,
           385
         ]
       ],
-      "answer": 645645,
+      "answer": 256410,
       "common_factor": 385,
       "common_terms": [
         1,
@@ -11714,19 +11714,19 @@
       "K": "K0",
       "H": "H0",
       "S": "S0",
-      "remainder_sum": 1677,
+      "remainder_sum": 666,
       "naive_multiplications": 3,
       "grouped_multiplications": 1,
       "phase": "all3",
       "discovery_difficulty": "unmeasured",
       "solution": {
         "grouped_terms": [
-          686,
-          607,
-          384
+          213,
+          345,
+          108
         ],
         "other_products": [],
-        "grouped_product": 645645
+        "grouped_product": 256410
       },
       "status": "draft",
       "signs": [
@@ -11734,27 +11734,27 @@
         1,
         1
       ],
-      "remainder_digits": 4,
+      "remainder_digits": 3,
       "cancellation_from_digits": null,
-      "numeric_revision": "v0.2"
+      "numeric_revision": "v0.3"
     },
     {
       "id": "A4-N3T123-P222-L33-R0K0-H0S0-02",
       "terms": [
         [
-          619,
+          196,
           607
         ],
         [
-          890,
+          103,
           607
         ],
         [
-          554,
+          102,
           607
         ]
       ],
-      "answer": 1252241,
+      "answer": 243407,
       "common_factor": 607,
       "common_terms": [
         1,
@@ -11773,19 +11773,19 @@
       "K": "K0",
       "H": "H0",
       "S": "S0",
-      "remainder_sum": 2063,
+      "remainder_sum": 401,
       "naive_multiplications": 3,
       "grouped_multiplications": 1,
       "phase": "all3",
       "discovery_difficulty": "unmeasured",
       "solution": {
         "grouped_terms": [
-          619,
-          890,
-          554
+          196,
+          103,
+          102
         ],
         "other_products": [],
-        "grouped_product": 1252241
+        "grouped_product": 243407
       },
       "status": "draft",
       "signs": [
@@ -11793,9 +11793,9 @@
         1,
         1
       ],
-      "remainder_digits": 4,
+      "remainder_digits": 3,
       "cancellation_from_digits": null,
-      "numeric_revision": "v0.2"
+      "numeric_revision": "v0.3"
     },
     {
       "id": "A4-N3T123-P222-L33-R1K0-H0S0-01",
@@ -11919,19 +11919,19 @@
       "id": "A4-N3T123-P222-L44-R0K0-H0S0-01",
       "terms": [
         [
-          5114,
+          1706,
           3462
         ],
         [
-          4358,
+          1690,
           3462
         ],
         [
-          9520,
+          1608,
           3462
         ]
       ],
-      "answer": 65750304,
+      "answer": 17323848,
       "common_factor": 3462,
       "common_terms": [
         1,
@@ -11950,19 +11950,19 @@
       "K": "K0",
       "H": "H0",
       "S": "S0",
-      "remainder_sum": 18992,
+      "remainder_sum": 5004,
       "naive_multiplications": 3,
       "grouped_multiplications": 1,
       "phase": "all3",
       "discovery_difficulty": "unmeasured",
       "solution": {
         "grouped_terms": [
-          5114,
-          4358,
-          9520
+          1706,
+          1690,
+          1608
         ],
         "other_products": [],
-        "grouped_product": 65750304
+        "grouped_product": 17323848
       },
       "status": "draft",
       "signs": [
@@ -11970,27 +11970,27 @@
         1,
         1
       ],
-      "remainder_digits": 5,
+      "remainder_digits": 4,
       "cancellation_from_digits": null,
-      "numeric_revision": "v0.2"
+      "numeric_revision": "v0.3"
     },
     {
       "id": "A4-N3T123-P222-L44-R0K0-H0S0-02",
       "terms": [
         [
-          1607,
+          1076,
           6956
         ],
         [
-          7945,
+          1005,
           6956
         ],
         [
-          3324,
+          1474,
           6956
         ]
       ],
-      "answer": 89565456,
+      "answer": 24728580,
       "common_factor": 6956,
       "common_terms": [
         1,
@@ -12009,19 +12009,19 @@
       "K": "K0",
       "H": "H0",
       "S": "S0",
-      "remainder_sum": 12876,
+      "remainder_sum": 3555,
       "naive_multiplications": 3,
       "grouped_multiplications": 1,
       "phase": "all3",
       "discovery_difficulty": "unmeasured",
       "solution": {
         "grouped_terms": [
-          1607,
-          7945,
-          3324
+          1076,
+          1005,
+          1474
         ],
         "other_products": [],
-        "grouped_product": 89565456
+        "grouped_product": 24728580
       },
       "status": "draft",
       "signs": [
@@ -12029,9 +12029,9 @@
         1,
         1
       ],
-      "remainder_digits": 5,
+      "remainder_digits": 4,
       "cancellation_from_digits": null,
-      "numeric_revision": "v0.2"
+      "numeric_revision": "v0.3"
     },
     {
       "id": "A4-N3T123-P222-L44-R2K0-H0S0-01",
@@ -14171,11 +14171,2291 @@
       "remainder_digits": 2,
       "cancellation_from_digits": 4,
       "numeric_revision": "v0.2"
+    },
+    {
+      "id": "A4-N2T12-P11-L22-R0K0-H0S1-01",
+      "terms": [
+        [
+          51,
+          88
+        ],
+        [
+          51,
+          55
+        ]
+      ],
+      "signs": [
+        1,
+        -1
+      ],
+      "answer": 1683,
+      "common_factor": 51,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        1,
+        1
+      ],
+      "term_count": 2,
+      "shared_count": 2,
+      "L": "L22",
+      "R": "R0",
+      "K": "K0",
+      "H": "H0",
+      "S": "S1",
+      "remainder_sum": 33,
+      "naive_multiplications": 2,
+      "grouped_multiplications": 1,
+      "phase": "subtraction2",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping",
+        "sign"
+      ],
+      "solution": {
+        "grouped_terms": [
+          88,
+          55
+        ],
+        "other_products": [],
+        "grouped_product": 1683
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": 2,
+      "description": "2項の減算でも共通因子をくくり、掛け算2回を1回に減らす。残りの差の桁縮約も扱う。",
+      "status": "draft",
+      "numeric_revision": "v0.3"
+    },
+    {
+      "id": "A4-N2T12-P11-L22-R1K0-H0S1-01",
+      "terms": [
+        [
+          37,
+          69
+        ],
+        [
+          37,
+          19
+        ]
+      ],
+      "signs": [
+        1,
+        -1
+      ],
+      "answer": 1850,
+      "common_factor": 37,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        1,
+        1
+      ],
+      "term_count": 2,
+      "shared_count": 2,
+      "L": "L22",
+      "R": "R1",
+      "K": "K0",
+      "H": "H0",
+      "S": "S1",
+      "remainder_sum": 50,
+      "naive_multiplications": 2,
+      "grouped_multiplications": 1,
+      "phase": "subtraction2",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping",
+        "sign"
+      ],
+      "solution": {
+        "grouped_terms": [
+          69,
+          19
+        ],
+        "other_products": [],
+        "grouped_product": 1850
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": 2,
+      "description": "2項の減算でも共通因子をくくり、掛け算2回を1回に減らす。残りの差の桁縮約も扱う。",
+      "status": "draft",
+      "numeric_revision": "v0.3"
+    },
+    {
+      "id": "A4-N2T12-P22-L22-R0K0-H0S1-01",
+      "terms": [
+        [
+          92,
+          95
+        ],
+        [
+          24,
+          95
+        ]
+      ],
+      "signs": [
+        1,
+        -1
+      ],
+      "answer": 6460,
+      "common_factor": 95,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        2,
+        2
+      ],
+      "term_count": 2,
+      "shared_count": 2,
+      "L": "L22",
+      "R": "R0",
+      "K": "K0",
+      "H": "H0",
+      "S": "S1",
+      "remainder_sum": 68,
+      "naive_multiplications": 2,
+      "grouped_multiplications": 1,
+      "phase": "subtraction2",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping",
+        "sign"
+      ],
+      "solution": {
+        "grouped_terms": [
+          92,
+          24
+        ],
+        "other_products": [],
+        "grouped_product": 6460
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": 2,
+      "description": "2項の減算でも共通因子をくくり、掛け算2回を1回に減らす。残りの差の桁縮約も扱う。",
+      "status": "draft",
+      "numeric_revision": "v0.3"
+    },
+    {
+      "id": "A4-N2T12-P22-L22-R2K0-H0S1-01",
+      "terms": [
+        [
+          24,
+          54
+        ],
+        [
+          14,
+          54
+        ]
+      ],
+      "signs": [
+        1,
+        -1
+      ],
+      "answer": 540,
+      "common_factor": 54,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        2,
+        2
+      ],
+      "term_count": 2,
+      "shared_count": 2,
+      "L": "L22",
+      "R": "R2",
+      "K": "K0",
+      "H": "H0",
+      "S": "S1",
+      "remainder_sum": 10,
+      "naive_multiplications": 2,
+      "grouped_multiplications": 1,
+      "phase": "subtraction2",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping",
+        "sign"
+      ],
+      "solution": {
+        "grouped_terms": [
+          24,
+          14
+        ],
+        "other_products": [],
+        "grouped_product": 540
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": 2,
+      "description": "2項の減算でも共通因子をくくり、掛け算2回を1回に減らす。残りの差の桁縮約も扱う。",
+      "status": "draft",
+      "numeric_revision": "v0.3"
+    },
+    {
+      "id": "A4-N2T12-P12-L22-R0K0-H0S1-01",
+      "terms": [
+        [
+          69,
+          75
+        ],
+        [
+          39,
+          69
+        ]
+      ],
+      "signs": [
+        1,
+        -1
+      ],
+      "answer": 2484,
+      "common_factor": 69,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        1,
+        2
+      ],
+      "term_count": 2,
+      "shared_count": 2,
+      "L": "L22",
+      "R": "R0",
+      "K": "K0",
+      "H": "H0",
+      "S": "S1",
+      "remainder_sum": 36,
+      "naive_multiplications": 2,
+      "grouped_multiplications": 1,
+      "phase": "subtraction2",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping",
+        "sign"
+      ],
+      "solution": {
+        "grouped_terms": [
+          75,
+          39
+        ],
+        "other_products": [],
+        "grouped_product": 2484
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": 2,
+      "description": "2項の減算でも共通因子をくくり、掛け算2回を1回に減らす。残りの差の桁縮約も扱う。",
+      "status": "draft",
+      "numeric_revision": "v0.3"
+    },
+    {
+      "id": "A4-N2T12-P12-L22-R1K0-H0S1-01",
+      "terms": [
+        [
+          65,
+          90
+        ],
+        [
+          60,
+          65
+        ]
+      ],
+      "signs": [
+        1,
+        -1
+      ],
+      "answer": 1950,
+      "common_factor": 65,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        1,
+        2
+      ],
+      "term_count": 2,
+      "shared_count": 2,
+      "L": "L22",
+      "R": "R1",
+      "K": "K0",
+      "H": "H0",
+      "S": "S1",
+      "remainder_sum": 30,
+      "naive_multiplications": 2,
+      "grouped_multiplications": 1,
+      "phase": "subtraction2",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping",
+        "sign"
+      ],
+      "solution": {
+        "grouped_terms": [
+          90,
+          60
+        ],
+        "other_products": [],
+        "grouped_product": 1950
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": 2,
+      "description": "2項の減算でも共通因子をくくり、掛け算2回を1回に減らす。残りの差の桁縮約も扱う。",
+      "status": "draft",
+      "numeric_revision": "v0.3"
+    },
+    {
+      "id": "A4-N2T12-P21-L22-R0K0-H0S1-01",
+      "terms": [
+        [
+          89,
+          29
+        ],
+        [
+          29,
+          68
+        ]
+      ],
+      "signs": [
+        1,
+        -1
+      ],
+      "answer": 609,
+      "common_factor": 29,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        2,
+        1
+      ],
+      "term_count": 2,
+      "shared_count": 2,
+      "L": "L22",
+      "R": "R0",
+      "K": "K0",
+      "H": "H0",
+      "S": "S1",
+      "remainder_sum": 21,
+      "naive_multiplications": 2,
+      "grouped_multiplications": 1,
+      "phase": "subtraction2",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping",
+        "sign"
+      ],
+      "solution": {
+        "grouped_terms": [
+          89,
+          68
+        ],
+        "other_products": [],
+        "grouped_product": 609
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": 2,
+      "description": "2項の減算でも共通因子をくくり、掛け算2回を1回に減らす。残りの差の桁縮約も扱う。",
+      "status": "draft",
+      "numeric_revision": "v0.3"
+    },
+    {
+      "id": "A4-N2T12-P21-L22-R2K0-H0S1-01",
+      "terms": [
+        [
+          22,
+          77
+        ],
+        [
+          77,
+          12
+        ]
+      ],
+      "signs": [
+        1,
+        -1
+      ],
+      "answer": 770,
+      "common_factor": 77,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        2,
+        1
+      ],
+      "term_count": 2,
+      "shared_count": 2,
+      "L": "L22",
+      "R": "R2",
+      "K": "K0",
+      "H": "H0",
+      "S": "S1",
+      "remainder_sum": 10,
+      "naive_multiplications": 2,
+      "grouped_multiplications": 1,
+      "phase": "subtraction2",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping",
+        "sign"
+      ],
+      "solution": {
+        "grouped_terms": [
+          22,
+          12
+        ],
+        "other_products": [],
+        "grouped_product": 770
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": 2,
+      "description": "2項の減算でも共通因子をくくり、掛け算2回を1回に減らす。残りの差の桁縮約も扱う。",
+      "status": "draft",
+      "numeric_revision": "v0.3"
+    },
+    {
+      "id": "A4-N2T12-P11-L32-R0K0-H0S1-01",
+      "terms": [
+        [
+          876,
+          50
+        ],
+        [
+          876,
+          43
+        ]
+      ],
+      "signs": [
+        1,
+        -1
+      ],
+      "answer": 6132,
+      "common_factor": 876,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        1,
+        1
+      ],
+      "term_count": 2,
+      "shared_count": 2,
+      "L": "L32",
+      "R": "R0",
+      "K": "K0",
+      "H": "H0",
+      "S": "S1",
+      "remainder_sum": 7,
+      "naive_multiplications": 2,
+      "grouped_multiplications": 1,
+      "phase": "subtraction2",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping",
+        "sign"
+      ],
+      "solution": {
+        "grouped_terms": [
+          50,
+          43
+        ],
+        "other_products": [],
+        "grouped_product": 6132
+      },
+      "remainder_digits": 1,
+      "cancellation_from_digits": 2,
+      "description": "2項の減算でも共通因子をくくり、掛け算2回を1回に減らす。残りの差の桁縮約も扱う。",
+      "status": "draft",
+      "numeric_revision": "v0.3"
+    },
+    {
+      "id": "A4-N2T12-P11-L32-R1K0-H0S1-01",
+      "terms": [
+        [
+          194,
+          55
+        ],
+        [
+          194,
+          15
+        ]
+      ],
+      "signs": [
+        1,
+        -1
+      ],
+      "answer": 7760,
+      "common_factor": 194,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        1,
+        1
+      ],
+      "term_count": 2,
+      "shared_count": 2,
+      "L": "L32",
+      "R": "R1",
+      "K": "K0",
+      "H": "H0",
+      "S": "S1",
+      "remainder_sum": 40,
+      "naive_multiplications": 2,
+      "grouped_multiplications": 1,
+      "phase": "subtraction2",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping",
+        "sign"
+      ],
+      "solution": {
+        "grouped_terms": [
+          55,
+          15
+        ],
+        "other_products": [],
+        "grouped_product": 7760
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": 2,
+      "description": "2項の減算でも共通因子をくくり、掛け算2回を1回に減らす。残りの差の桁縮約も扱う。",
+      "status": "draft",
+      "numeric_revision": "v0.3"
+    },
+    {
+      "id": "A4-N2T12-P22-L32-R0K0-H0S1-01",
+      "terms": [
+        [
+          37,
+          561
+        ],
+        [
+          14,
+          561
+        ]
+      ],
+      "signs": [
+        1,
+        -1
+      ],
+      "answer": 12903,
+      "common_factor": 561,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        2,
+        2
+      ],
+      "term_count": 2,
+      "shared_count": 2,
+      "L": "L32",
+      "R": "R0",
+      "K": "K0",
+      "H": "H0",
+      "S": "S1",
+      "remainder_sum": 23,
+      "naive_multiplications": 2,
+      "grouped_multiplications": 1,
+      "phase": "subtraction2",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping",
+        "sign"
+      ],
+      "solution": {
+        "grouped_terms": [
+          37,
+          14
+        ],
+        "other_products": [],
+        "grouped_product": 12903
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": 2,
+      "description": "2項の減算でも共通因子をくくり、掛け算2回を1回に減らす。残りの差の桁縮約も扱う。",
+      "status": "draft",
+      "numeric_revision": "v0.3"
+    },
+    {
+      "id": "A4-N2T12-P22-L32-R2K0-H0S1-01",
+      "terms": [
+        [
+          34,
+          295
+        ],
+        [
+          24,
+          295
+        ]
+      ],
+      "signs": [
+        1,
+        -1
+      ],
+      "answer": 2950,
+      "common_factor": 295,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        2,
+        2
+      ],
+      "term_count": 2,
+      "shared_count": 2,
+      "L": "L32",
+      "R": "R2",
+      "K": "K0",
+      "H": "H0",
+      "S": "S1",
+      "remainder_sum": 10,
+      "naive_multiplications": 2,
+      "grouped_multiplications": 1,
+      "phase": "subtraction2",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping",
+        "sign"
+      ],
+      "solution": {
+        "grouped_terms": [
+          34,
+          24
+        ],
+        "other_products": [],
+        "grouped_product": 2950
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": 2,
+      "description": "2項の減算でも共通因子をくくり、掛け算2回を1回に減らす。残りの差の桁縮約も扱う。",
+      "status": "draft",
+      "numeric_revision": "v0.3"
+    },
+    {
+      "id": "A4-N2T12-P12-L32-R0K0-H0S1-01",
+      "terms": [
+        [
+          258,
+          52
+        ],
+        [
+          15,
+          258
+        ]
+      ],
+      "signs": [
+        1,
+        -1
+      ],
+      "answer": 9546,
+      "common_factor": 258,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        1,
+        2
+      ],
+      "term_count": 2,
+      "shared_count": 2,
+      "L": "L32",
+      "R": "R0",
+      "K": "K0",
+      "H": "H0",
+      "S": "S1",
+      "remainder_sum": 37,
+      "naive_multiplications": 2,
+      "grouped_multiplications": 1,
+      "phase": "subtraction2",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping",
+        "sign"
+      ],
+      "solution": {
+        "grouped_terms": [
+          52,
+          15
+        ],
+        "other_products": [],
+        "grouped_product": 9546
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": 2,
+      "description": "2項の減算でも共通因子をくくり、掛け算2回を1回に減らす。残りの差の桁縮約も扱う。",
+      "status": "draft",
+      "numeric_revision": "v0.3"
+    },
+    {
+      "id": "A4-N2T12-P12-L32-R1K0-H0S1-01",
+      "terms": [
+        [
+          939,
+          87
+        ],
+        [
+          37,
+          939
+        ]
+      ],
+      "signs": [
+        1,
+        -1
+      ],
+      "answer": 46950,
+      "common_factor": 939,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        1,
+        2
+      ],
+      "term_count": 2,
+      "shared_count": 2,
+      "L": "L32",
+      "R": "R1",
+      "K": "K0",
+      "H": "H0",
+      "S": "S1",
+      "remainder_sum": 50,
+      "naive_multiplications": 2,
+      "grouped_multiplications": 1,
+      "phase": "subtraction2",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping",
+        "sign"
+      ],
+      "solution": {
+        "grouped_terms": [
+          87,
+          37
+        ],
+        "other_products": [],
+        "grouped_product": 46950
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": 2,
+      "description": "2項の減算でも共通因子をくくり、掛け算2回を1回に減らす。残りの差の桁縮約も扱う。",
+      "status": "draft",
+      "numeric_revision": "v0.3"
+    },
+    {
+      "id": "A4-N2T12-P21-L32-R0K0-H0S1-01",
+      "terms": [
+        [
+          96,
+          422
+        ],
+        [
+          422,
+          50
+        ]
+      ],
+      "signs": [
+        1,
+        -1
+      ],
+      "answer": 19412,
+      "common_factor": 422,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        2,
+        1
+      ],
+      "term_count": 2,
+      "shared_count": 2,
+      "L": "L32",
+      "R": "R0",
+      "K": "K0",
+      "H": "H0",
+      "S": "S1",
+      "remainder_sum": 46,
+      "naive_multiplications": 2,
+      "grouped_multiplications": 1,
+      "phase": "subtraction2",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping",
+        "sign"
+      ],
+      "solution": {
+        "grouped_terms": [
+          96,
+          50
+        ],
+        "other_products": [],
+        "grouped_product": 19412
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": 2,
+      "description": "2項の減算でも共通因子をくくり、掛け算2回を1回に減らす。残りの差の桁縮約も扱う。",
+      "status": "draft",
+      "numeric_revision": "v0.3"
+    },
+    {
+      "id": "A4-N2T12-P21-L32-R2K0-H0S1-01",
+      "terms": [
+        [
+          37,
+          535
+        ],
+        [
+          535,
+          27
+        ]
+      ],
+      "signs": [
+        1,
+        -1
+      ],
+      "answer": 5350,
+      "common_factor": 535,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        2,
+        1
+      ],
+      "term_count": 2,
+      "shared_count": 2,
+      "L": "L32",
+      "R": "R2",
+      "K": "K0",
+      "H": "H0",
+      "S": "S1",
+      "remainder_sum": 10,
+      "naive_multiplications": 2,
+      "grouped_multiplications": 1,
+      "phase": "subtraction2",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping",
+        "sign"
+      ],
+      "solution": {
+        "grouped_terms": [
+          37,
+          27
+        ],
+        "other_products": [],
+        "grouped_product": 5350
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": 2,
+      "description": "2項の減算でも共通因子をくくり、掛け算2回を1回に減らす。残りの差の桁縮約も扱う。",
+      "status": "draft",
+      "numeric_revision": "v0.3"
+    },
+    {
+      "id": "A4-N2T12-P11-L33-R0K0-H0S1-01",
+      "terms": [
+        [
+          533,
+          302
+        ],
+        [
+          533,
+          259
+        ]
+      ],
+      "signs": [
+        1,
+        -1
+      ],
+      "answer": 22919,
+      "common_factor": 533,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        1,
+        1
+      ],
+      "term_count": 2,
+      "shared_count": 2,
+      "L": "L33",
+      "R": "R0",
+      "K": "K0",
+      "H": "H0",
+      "S": "S1",
+      "remainder_sum": 43,
+      "naive_multiplications": 2,
+      "grouped_multiplications": 1,
+      "phase": "subtraction2",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping",
+        "sign"
+      ],
+      "solution": {
+        "grouped_terms": [
+          302,
+          259
+        ],
+        "other_products": [],
+        "grouped_product": 22919
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": 3,
+      "description": "2項の減算でも共通因子をくくり、掛け算2回を1回に減らす。残りの差の桁縮約も扱う。",
+      "status": "draft",
+      "numeric_revision": "v0.3"
+    },
+    {
+      "id": "A4-N2T12-P11-L33-R1K0-H0S1-01",
+      "terms": [
+        [
+          484,
+          598
+        ],
+        [
+          484,
+          238
+        ]
+      ],
+      "signs": [
+        1,
+        -1
+      ],
+      "answer": 174240,
+      "common_factor": 484,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        1,
+        1
+      ],
+      "term_count": 2,
+      "shared_count": 2,
+      "L": "L33",
+      "R": "R1",
+      "K": "K0",
+      "H": "H0",
+      "S": "S1",
+      "remainder_sum": 360,
+      "naive_multiplications": 2,
+      "grouped_multiplications": 1,
+      "phase": "subtraction2",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping",
+        "sign"
+      ],
+      "solution": {
+        "grouped_terms": [
+          598,
+          238
+        ],
+        "other_products": [],
+        "grouped_product": 174240
+      },
+      "remainder_digits": 3,
+      "cancellation_from_digits": 3,
+      "description": "2項の減算でも共通因子をくくり、掛け算2回を1回に減らす。残りの差の桁縮約も扱う。",
+      "status": "draft",
+      "numeric_revision": "v0.3"
+    },
+    {
+      "id": "A4-N2T12-P22-L33-R0K0-H0S1-01",
+      "terms": [
+        [
+          900,
+          233
+        ],
+        [
+          721,
+          233
+        ]
+      ],
+      "signs": [
+        1,
+        -1
+      ],
+      "answer": 41707,
+      "common_factor": 233,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        2,
+        2
+      ],
+      "term_count": 2,
+      "shared_count": 2,
+      "L": "L33",
+      "R": "R0",
+      "K": "K0",
+      "H": "H0",
+      "S": "S1",
+      "remainder_sum": 179,
+      "naive_multiplications": 2,
+      "grouped_multiplications": 1,
+      "phase": "subtraction2",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping",
+        "sign"
+      ],
+      "solution": {
+        "grouped_terms": [
+          900,
+          721
+        ],
+        "other_products": [],
+        "grouped_product": 41707
+      },
+      "remainder_digits": 3,
+      "cancellation_from_digits": 3,
+      "description": "2項の減算でも共通因子をくくり、掛け算2回を1回に減らす。残りの差の桁縮約も扱う。",
+      "status": "draft",
+      "numeric_revision": "v0.3"
+    },
+    {
+      "id": "A4-N2T12-P22-L33-R2K0-H0S1-01",
+      "terms": [
+        [
+          354,
+          617
+        ],
+        [
+          254,
+          617
+        ]
+      ],
+      "signs": [
+        1,
+        -1
+      ],
+      "answer": 61700,
+      "common_factor": 617,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        2,
+        2
+      ],
+      "term_count": 2,
+      "shared_count": 2,
+      "L": "L33",
+      "R": "R2",
+      "K": "K0",
+      "H": "H0",
+      "S": "S1",
+      "remainder_sum": 100,
+      "naive_multiplications": 2,
+      "grouped_multiplications": 1,
+      "phase": "subtraction2",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping",
+        "sign"
+      ],
+      "solution": {
+        "grouped_terms": [
+          354,
+          254
+        ],
+        "other_products": [],
+        "grouped_product": 61700
+      },
+      "remainder_digits": 3,
+      "cancellation_from_digits": 3,
+      "description": "2項の減算でも共通因子をくくり、掛け算2回を1回に減らす。残りの差の桁縮約も扱う。",
+      "status": "draft",
+      "numeric_revision": "v0.3"
+    },
+    {
+      "id": "A4-N2T12-P12-L33-R0K0-H0S1-01",
+      "terms": [
+        [
+          511,
+          599
+        ],
+        [
+          551,
+          511
+        ]
+      ],
+      "signs": [
+        1,
+        -1
+      ],
+      "answer": 24528,
+      "common_factor": 511,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        1,
+        2
+      ],
+      "term_count": 2,
+      "shared_count": 2,
+      "L": "L33",
+      "R": "R0",
+      "K": "K0",
+      "H": "H0",
+      "S": "S1",
+      "remainder_sum": 48,
+      "naive_multiplications": 2,
+      "grouped_multiplications": 1,
+      "phase": "subtraction2",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping",
+        "sign"
+      ],
+      "solution": {
+        "grouped_terms": [
+          599,
+          551
+        ],
+        "other_products": [],
+        "grouped_product": 24528
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": 3,
+      "description": "2項の減算でも共通因子をくくり、掛け算2回を1回に減らす。残りの差の桁縮約も扱う。",
+      "status": "draft",
+      "numeric_revision": "v0.3"
+    },
+    {
+      "id": "A4-N2T12-P12-L33-R1K0-H0S1-01",
+      "terms": [
+        [
+          576,
+          427
+        ],
+        [
+          267,
+          576
+        ]
+      ],
+      "signs": [
+        1,
+        -1
+      ],
+      "answer": 92160,
+      "common_factor": 576,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        1,
+        2
+      ],
+      "term_count": 2,
+      "shared_count": 2,
+      "L": "L33",
+      "R": "R1",
+      "K": "K0",
+      "H": "H0",
+      "S": "S1",
+      "remainder_sum": 160,
+      "naive_multiplications": 2,
+      "grouped_multiplications": 1,
+      "phase": "subtraction2",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping",
+        "sign"
+      ],
+      "solution": {
+        "grouped_terms": [
+          427,
+          267
+        ],
+        "other_products": [],
+        "grouped_product": 92160
+      },
+      "remainder_digits": 3,
+      "cancellation_from_digits": 3,
+      "description": "2項の減算でも共通因子をくくり、掛け算2回を1回に減らす。残りの差の桁縮約も扱う。",
+      "status": "draft",
+      "numeric_revision": "v0.3"
+    },
+    {
+      "id": "A4-N2T12-P21-L33-R0K0-H0S1-01",
+      "terms": [
+        [
+          844,
+          426
+        ],
+        [
+          426,
+          599
+        ]
+      ],
+      "signs": [
+        1,
+        -1
+      ],
+      "answer": 104370,
+      "common_factor": 426,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        2,
+        1
+      ],
+      "term_count": 2,
+      "shared_count": 2,
+      "L": "L33",
+      "R": "R0",
+      "K": "K0",
+      "H": "H0",
+      "S": "S1",
+      "remainder_sum": 245,
+      "naive_multiplications": 2,
+      "grouped_multiplications": 1,
+      "phase": "subtraction2",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping",
+        "sign"
+      ],
+      "solution": {
+        "grouped_terms": [
+          844,
+          599
+        ],
+        "other_products": [],
+        "grouped_product": 104370
+      },
+      "remainder_digits": 3,
+      "cancellation_from_digits": 3,
+      "description": "2項の減算でも共通因子をくくり、掛け算2回を1回に減らす。残りの差の桁縮約も扱う。",
+      "status": "draft",
+      "numeric_revision": "v0.3"
+    },
+    {
+      "id": "A4-N2T12-P21-L33-R2K0-H0S1-01",
+      "terms": [
+        [
+          706,
+          819
+        ],
+        [
+          819,
+          606
+        ]
+      ],
+      "signs": [
+        1,
+        -1
+      ],
+      "answer": 81900,
+      "common_factor": 819,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        2,
+        1
+      ],
+      "term_count": 2,
+      "shared_count": 2,
+      "L": "L33",
+      "R": "R2",
+      "K": "K0",
+      "H": "H0",
+      "S": "S1",
+      "remainder_sum": 100,
+      "naive_multiplications": 2,
+      "grouped_multiplications": 1,
+      "phase": "subtraction2",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping",
+        "sign"
+      ],
+      "solution": {
+        "grouped_terms": [
+          706,
+          606
+        ],
+        "other_products": [],
+        "grouped_product": 81900
+      },
+      "remainder_digits": 3,
+      "cancellation_from_digits": 3,
+      "description": "2項の減算でも共通因子をくくり、掛け算2回を1回に減らす。残りの差の桁縮約も扱う。",
+      "status": "draft",
+      "numeric_revision": "v0.3"
+    },
+    {
+      "id": "A4-N2T12-P11-L43-R0K0-H0S1-01",
+      "terms": [
+        [
+          4549,
+          670
+        ],
+        [
+          4549,
+          593
+        ]
+      ],
+      "signs": [
+        1,
+        -1
+      ],
+      "answer": 350273,
+      "common_factor": 4549,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        1,
+        1
+      ],
+      "term_count": 2,
+      "shared_count": 2,
+      "L": "L43",
+      "R": "R0",
+      "K": "K0",
+      "H": "H0",
+      "S": "S1",
+      "remainder_sum": 77,
+      "naive_multiplications": 2,
+      "grouped_multiplications": 1,
+      "phase": "subtraction2",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping",
+        "sign"
+      ],
+      "solution": {
+        "grouped_terms": [
+          670,
+          593
+        ],
+        "other_products": [],
+        "grouped_product": 350273
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": 3,
+      "description": "2項の減算でも共通因子をくくり、掛け算2回を1回に減らす。残りの差の桁縮約も扱う。",
+      "status": "draft",
+      "numeric_revision": "v0.3"
+    },
+    {
+      "id": "A4-N2T12-P11-L43-R1K0-H0S1-01",
+      "terms": [
+        [
+          4953,
+          881
+        ],
+        [
+          4953,
+          621
+        ]
+      ],
+      "signs": [
+        1,
+        -1
+      ],
+      "answer": 1287780,
+      "common_factor": 4953,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        1,
+        1
+      ],
+      "term_count": 2,
+      "shared_count": 2,
+      "L": "L43",
+      "R": "R1",
+      "K": "K0",
+      "H": "H0",
+      "S": "S1",
+      "remainder_sum": 260,
+      "naive_multiplications": 2,
+      "grouped_multiplications": 1,
+      "phase": "subtraction2",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping",
+        "sign"
+      ],
+      "solution": {
+        "grouped_terms": [
+          881,
+          621
+        ],
+        "other_products": [],
+        "grouped_product": 1287780
+      },
+      "remainder_digits": 3,
+      "cancellation_from_digits": 3,
+      "description": "2項の減算でも共通因子をくくり、掛け算2回を1回に減らす。残りの差の桁縮約も扱う。",
+      "status": "draft",
+      "numeric_revision": "v0.3"
+    },
+    {
+      "id": "A4-N2T12-P22-L43-R0K0-H0S1-01",
+      "terms": [
+        [
+          714,
+          3544
+        ],
+        [
+          430,
+          3544
+        ]
+      ],
+      "signs": [
+        1,
+        -1
+      ],
+      "answer": 1006496,
+      "common_factor": 3544,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        2,
+        2
+      ],
+      "term_count": 2,
+      "shared_count": 2,
+      "L": "L43",
+      "R": "R0",
+      "K": "K0",
+      "H": "H0",
+      "S": "S1",
+      "remainder_sum": 284,
+      "naive_multiplications": 2,
+      "grouped_multiplications": 1,
+      "phase": "subtraction2",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping",
+        "sign"
+      ],
+      "solution": {
+        "grouped_terms": [
+          714,
+          430
+        ],
+        "other_products": [],
+        "grouped_product": 1006496
+      },
+      "remainder_digits": 3,
+      "cancellation_from_digits": 3,
+      "description": "2項の減算でも共通因子をくくり、掛け算2回を1回に減らす。残りの差の桁縮約も扱う。",
+      "status": "draft",
+      "numeric_revision": "v0.3"
+    },
+    {
+      "id": "A4-N2T12-P22-L43-R2K0-H0S1-01",
+      "terms": [
+        [
+          455,
+          5055
+        ],
+        [
+          355,
+          5055
+        ]
+      ],
+      "signs": [
+        1,
+        -1
+      ],
+      "answer": 505500,
+      "common_factor": 5055,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        2,
+        2
+      ],
+      "term_count": 2,
+      "shared_count": 2,
+      "L": "L43",
+      "R": "R2",
+      "K": "K0",
+      "H": "H0",
+      "S": "S1",
+      "remainder_sum": 100,
+      "naive_multiplications": 2,
+      "grouped_multiplications": 1,
+      "phase": "subtraction2",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping",
+        "sign"
+      ],
+      "solution": {
+        "grouped_terms": [
+          455,
+          355
+        ],
+        "other_products": [],
+        "grouped_product": 505500
+      },
+      "remainder_digits": 3,
+      "cancellation_from_digits": 3,
+      "description": "2項の減算でも共通因子をくくり、掛け算2回を1回に減らす。残りの差の桁縮約も扱う。",
+      "status": "draft",
+      "numeric_revision": "v0.3"
+    },
+    {
+      "id": "A4-N2T12-P12-L43-R0K0-H0S1-01",
+      "terms": [
+        [
+          1172,
+          296
+        ],
+        [
+          225,
+          1172
+        ]
+      ],
+      "signs": [
+        1,
+        -1
+      ],
+      "answer": 83212,
+      "common_factor": 1172,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        1,
+        2
+      ],
+      "term_count": 2,
+      "shared_count": 2,
+      "L": "L43",
+      "R": "R0",
+      "K": "K0",
+      "H": "H0",
+      "S": "S1",
+      "remainder_sum": 71,
+      "naive_multiplications": 2,
+      "grouped_multiplications": 1,
+      "phase": "subtraction2",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping",
+        "sign"
+      ],
+      "solution": {
+        "grouped_terms": [
+          296,
+          225
+        ],
+        "other_products": [],
+        "grouped_product": 83212
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": 3,
+      "description": "2項の減算でも共通因子をくくり、掛け算2回を1回に減らす。残りの差の桁縮約も扱う。",
+      "status": "draft",
+      "numeric_revision": "v0.3"
+    },
+    {
+      "id": "A4-N2T12-P12-L43-R1K0-H0S1-01",
+      "terms": [
+        [
+          3436,
+          407
+        ],
+        [
+          207,
+          3436
+        ]
+      ],
+      "signs": [
+        1,
+        -1
+      ],
+      "answer": 687200,
+      "common_factor": 3436,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        1,
+        2
+      ],
+      "term_count": 2,
+      "shared_count": 2,
+      "L": "L43",
+      "R": "R1",
+      "K": "K0",
+      "H": "H0",
+      "S": "S1",
+      "remainder_sum": 200,
+      "naive_multiplications": 2,
+      "grouped_multiplications": 1,
+      "phase": "subtraction2",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping",
+        "sign"
+      ],
+      "solution": {
+        "grouped_terms": [
+          407,
+          207
+        ],
+        "other_products": [],
+        "grouped_product": 687200
+      },
+      "remainder_digits": 3,
+      "cancellation_from_digits": 3,
+      "description": "2項の減算でも共通因子をくくり、掛け算2回を1回に減らす。残りの差の桁縮約も扱う。",
+      "status": "draft",
+      "numeric_revision": "v0.3"
+    },
+    {
+      "id": "A4-N2T12-P21-L43-R0K0-H0S1-01",
+      "terms": [
+        [
+          538,
+          9891
+        ],
+        [
+          9891,
+          152
+        ]
+      ],
+      "signs": [
+        1,
+        -1
+      ],
+      "answer": 3817926,
+      "common_factor": 9891,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        2,
+        1
+      ],
+      "term_count": 2,
+      "shared_count": 2,
+      "L": "L43",
+      "R": "R0",
+      "K": "K0",
+      "H": "H0",
+      "S": "S1",
+      "remainder_sum": 386,
+      "naive_multiplications": 2,
+      "grouped_multiplications": 1,
+      "phase": "subtraction2",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping",
+        "sign"
+      ],
+      "solution": {
+        "grouped_terms": [
+          538,
+          152
+        ],
+        "other_products": [],
+        "grouped_product": 3817926
+      },
+      "remainder_digits": 3,
+      "cancellation_from_digits": 3,
+      "description": "2項の減算でも共通因子をくくり、掛け算2回を1回に減らす。残りの差の桁縮約も扱う。",
+      "status": "draft",
+      "numeric_revision": "v0.3"
+    },
+    {
+      "id": "A4-N2T12-P21-L43-R2K0-H0S1-01",
+      "terms": [
+        [
+          719,
+          9541
+        ],
+        [
+          9541,
+          619
+        ]
+      ],
+      "signs": [
+        1,
+        -1
+      ],
+      "answer": 954100,
+      "common_factor": 9541,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        2,
+        1
+      ],
+      "term_count": 2,
+      "shared_count": 2,
+      "L": "L43",
+      "R": "R2",
+      "K": "K0",
+      "H": "H0",
+      "S": "S1",
+      "remainder_sum": 100,
+      "naive_multiplications": 2,
+      "grouped_multiplications": 1,
+      "phase": "subtraction2",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping",
+        "sign"
+      ],
+      "solution": {
+        "grouped_terms": [
+          719,
+          619
+        ],
+        "other_products": [],
+        "grouped_product": 954100
+      },
+      "remainder_digits": 3,
+      "cancellation_from_digits": 3,
+      "description": "2項の減算でも共通因子をくくり、掛け算2回を1回に減らす。残りの差の桁縮約も扱う。",
+      "status": "draft",
+      "numeric_revision": "v0.3"
+    },
+    {
+      "id": "A4-N2T12-P11-L44-R0K0-H0S1-01",
+      "terms": [
+        [
+          3761,
+          3207
+        ],
+        [
+          3761,
+          3048
+        ]
+      ],
+      "signs": [
+        1,
+        -1
+      ],
+      "answer": 597999,
+      "common_factor": 3761,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        1,
+        1
+      ],
+      "term_count": 2,
+      "shared_count": 2,
+      "L": "L44",
+      "R": "R0",
+      "K": "K0",
+      "H": "H0",
+      "S": "S1",
+      "remainder_sum": 159,
+      "naive_multiplications": 2,
+      "grouped_multiplications": 1,
+      "phase": "subtraction2",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping",
+        "sign"
+      ],
+      "solution": {
+        "grouped_terms": [
+          3207,
+          3048
+        ],
+        "other_products": [],
+        "grouped_product": 597999
+      },
+      "remainder_digits": 3,
+      "cancellation_from_digits": 4,
+      "description": "2項の減算でも共通因子をくくり、掛け算2回を1回に減らす。残りの差の桁縮約も扱う。",
+      "status": "draft",
+      "numeric_revision": "v0.3"
+    },
+    {
+      "id": "A4-N2T12-P11-L44-R1K0-H0S1-01",
+      "terms": [
+        [
+          9654,
+          4458
+        ],
+        [
+          9654,
+          1408
+        ]
+      ],
+      "signs": [
+        1,
+        -1
+      ],
+      "answer": 29444700,
+      "common_factor": 9654,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        1,
+        1
+      ],
+      "term_count": 2,
+      "shared_count": 2,
+      "L": "L44",
+      "R": "R1",
+      "K": "K0",
+      "H": "H0",
+      "S": "S1",
+      "remainder_sum": 3050,
+      "naive_multiplications": 2,
+      "grouped_multiplications": 1,
+      "phase": "subtraction2",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping",
+        "sign"
+      ],
+      "solution": {
+        "grouped_terms": [
+          4458,
+          1408
+        ],
+        "other_products": [],
+        "grouped_product": 29444700
+      },
+      "remainder_digits": 4,
+      "cancellation_from_digits": 4,
+      "description": "2項の減算でも共通因子をくくり、掛け算2回を1回に減らす。残りの差の桁縮約も扱う。",
+      "status": "draft",
+      "numeric_revision": "v0.3"
+    },
+    {
+      "id": "A4-N2T12-P22-L44-R0K0-H0S1-01",
+      "terms": [
+        [
+          6765,
+          5625
+        ],
+        [
+          3388,
+          5625
+        ]
+      ],
+      "signs": [
+        1,
+        -1
+      ],
+      "answer": 18995625,
+      "common_factor": 5625,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        2,
+        2
+      ],
+      "term_count": 2,
+      "shared_count": 2,
+      "L": "L44",
+      "R": "R0",
+      "K": "K0",
+      "H": "H0",
+      "S": "S1",
+      "remainder_sum": 3377,
+      "naive_multiplications": 2,
+      "grouped_multiplications": 1,
+      "phase": "subtraction2",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping",
+        "sign"
+      ],
+      "solution": {
+        "grouped_terms": [
+          6765,
+          3388
+        ],
+        "other_products": [],
+        "grouped_product": 18995625
+      },
+      "remainder_digits": 4,
+      "cancellation_from_digits": 4,
+      "description": "2項の減算でも共通因子をくくり、掛け算2回を1回に減らす。残りの差の桁縮約も扱う。",
+      "status": "draft",
+      "numeric_revision": "v0.3"
+    },
+    {
+      "id": "A4-N2T12-P22-L44-R2K0-H0S1-01",
+      "terms": [
+        [
+          4159,
+          1835
+        ],
+        [
+          3159,
+          1835
+        ]
+      ],
+      "signs": [
+        1,
+        -1
+      ],
+      "answer": 1835000,
+      "common_factor": 1835,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        2,
+        2
+      ],
+      "term_count": 2,
+      "shared_count": 2,
+      "L": "L44",
+      "R": "R2",
+      "K": "K0",
+      "H": "H0",
+      "S": "S1",
+      "remainder_sum": 1000,
+      "naive_multiplications": 2,
+      "grouped_multiplications": 1,
+      "phase": "subtraction2",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping",
+        "sign"
+      ],
+      "solution": {
+        "grouped_terms": [
+          4159,
+          3159
+        ],
+        "other_products": [],
+        "grouped_product": 1835000
+      },
+      "remainder_digits": 4,
+      "cancellation_from_digits": 4,
+      "description": "2項の減算でも共通因子をくくり、掛け算2回を1回に減らす。残りの差の桁縮約も扱う。",
+      "status": "draft",
+      "numeric_revision": "v0.3"
+    },
+    {
+      "id": "A4-N2T12-P12-L44-R0K0-H0S1-01",
+      "terms": [
+        [
+          3642,
+          5957
+        ],
+        [
+          5802,
+          3642
+        ]
+      ],
+      "signs": [
+        1,
+        -1
+      ],
+      "answer": 564510,
+      "common_factor": 3642,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        1,
+        2
+      ],
+      "term_count": 2,
+      "shared_count": 2,
+      "L": "L44",
+      "R": "R0",
+      "K": "K0",
+      "H": "H0",
+      "S": "S1",
+      "remainder_sum": 155,
+      "naive_multiplications": 2,
+      "grouped_multiplications": 1,
+      "phase": "subtraction2",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping",
+        "sign"
+      ],
+      "solution": {
+        "grouped_terms": [
+          5957,
+          5802
+        ],
+        "other_products": [],
+        "grouped_product": 564510
+      },
+      "remainder_digits": 3,
+      "cancellation_from_digits": 4,
+      "description": "2項の減算でも共通因子をくくり、掛け算2回を1回に減らす。残りの差の桁縮約も扱う。",
+      "status": "draft",
+      "numeric_revision": "v0.3"
+    },
+    {
+      "id": "A4-N2T12-P12-L44-R1K0-H0S1-01",
+      "terms": [
+        [
+          1693,
+          5189
+        ],
+        [
+          1269,
+          1693
+        ]
+      ],
+      "signs": [
+        1,
+        -1
+      ],
+      "answer": 6636560,
+      "common_factor": 1693,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        1,
+        2
+      ],
+      "term_count": 2,
+      "shared_count": 2,
+      "L": "L44",
+      "R": "R1",
+      "K": "K0",
+      "H": "H0",
+      "S": "S1",
+      "remainder_sum": 3920,
+      "naive_multiplications": 2,
+      "grouped_multiplications": 1,
+      "phase": "subtraction2",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping",
+        "sign"
+      ],
+      "solution": {
+        "grouped_terms": [
+          5189,
+          1269
+        ],
+        "other_products": [],
+        "grouped_product": 6636560
+      },
+      "remainder_digits": 4,
+      "cancellation_from_digits": 4,
+      "description": "2項の減算でも共通因子をくくり、掛け算2回を1回に減らす。残りの差の桁縮約も扱う。",
+      "status": "draft",
+      "numeric_revision": "v0.3"
+    },
+    {
+      "id": "A4-N2T12-P21-L44-R0K0-H0S1-01",
+      "terms": [
+        [
+          7515,
+          2946
+        ],
+        [
+          2946,
+          6016
+        ]
+      ],
+      "signs": [
+        1,
+        -1
+      ],
+      "answer": 4416054,
+      "common_factor": 2946,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        2,
+        1
+      ],
+      "term_count": 2,
+      "shared_count": 2,
+      "L": "L44",
+      "R": "R0",
+      "K": "K0",
+      "H": "H0",
+      "S": "S1",
+      "remainder_sum": 1499,
+      "naive_multiplications": 2,
+      "grouped_multiplications": 1,
+      "phase": "subtraction2",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping",
+        "sign"
+      ],
+      "solution": {
+        "grouped_terms": [
+          7515,
+          6016
+        ],
+        "other_products": [],
+        "grouped_product": 4416054
+      },
+      "remainder_digits": 4,
+      "cancellation_from_digits": 4,
+      "description": "2項の減算でも共通因子をくくり、掛け算2回を1回に減らす。残りの差の桁縮約も扱う。",
+      "status": "draft",
+      "numeric_revision": "v0.3"
+    },
+    {
+      "id": "A4-N2T12-P21-L44-R2K0-H0S1-01",
+      "terms": [
+        [
+          4234,
+          1881
+        ],
+        [
+          1881,
+          3234
+        ]
+      ],
+      "signs": [
+        1,
+        -1
+      ],
+      "answer": 1881000,
+      "common_factor": 1881,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        2,
+        1
+      ],
+      "term_count": 2,
+      "shared_count": 2,
+      "L": "L44",
+      "R": "R2",
+      "K": "K0",
+      "H": "H0",
+      "S": "S1",
+      "remainder_sum": 1000,
+      "naive_multiplications": 2,
+      "grouped_multiplications": 1,
+      "phase": "subtraction2",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping",
+        "sign"
+      ],
+      "solution": {
+        "grouped_terms": [
+          4234,
+          3234
+        ],
+        "other_products": [],
+        "grouped_product": 1881000
+      },
+      "remainder_digits": 4,
+      "cancellation_from_digits": 4,
+      "description": "2項の減算でも共通因子をくくり、掛け算2回を1回に減らす。残りの差の桁縮約も扱う。",
+      "status": "draft",
+      "numeric_revision": "v0.3"
     }
   ],
   "validation": {
-    "count": 252,
-    "unique_ids": 252,
-    "unique_expressions": 252
+    "count": 292,
+    "unique_ids": 292,
+    "unique_expressions": 292
   }
 }
