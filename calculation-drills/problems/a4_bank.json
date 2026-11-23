@@ -1,8 +1,8 @@
 {
-  "schema_version": "a4-bank-0.3",
+  "schema_version": "a4-bank-0.4",
   "updated": "2026-11-23",
   "status": "draft",
-  "description": "A4: N2の減算S1を40問追加。S1は末項を引く（N2/N3共通）、S2は3項の第2項を引く。加算で残る因子の和が元の桁を超える場合は1の位を0にする。",
+  "description": "L22で共通因子の見かけの違いが2倍になるH1A/B/Cを96問追加。N2、N3の2項共通と3項共通。H0データと試作プリントは維持。",
   "problems": [
     {
       "id": "A4-N2T12-P11-L22-R0K0-H0S0-01",
@@ -16451,11 +16451,7723 @@
       "description": "2項の減算でも共通因子をくくり、掛け算2回を1回に減らす。残りの差の桁縮約も扱う。",
       "status": "draft",
       "numeric_revision": "v0.3"
+    },
+    {
+      "id": "A4-N2T12-P11-L22-R0K0-H1AS0-01",
+      "terms": [
+        [
+          88,
+          16
+        ],
+        [
+          44,
+          21
+        ]
+      ],
+      "signs": [
+        1,
+        1
+      ],
+      "answer": 2332,
+      "common_factor": 44,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        1,
+        1
+      ],
+      "term_count": 2,
+      "shared_count": 2,
+      "L": "L22",
+      "R": "R0",
+      "K": "K0",
+      "H": "H1A",
+      "S": "S0",
+      "remainder_sum": 53,
+      "hidden_ratio": 2,
+      "doubled_target_index": 1,
+      "doubled_term_index": 1,
+      "visible_shared_factors": [
+        88,
+        44
+      ],
+      "naive_multiplications": 2,
+      "grouped_multiplications": 2,
+      "large_multiplications_before": 2,
+      "large_multiplications_after": 1,
+      "small_doublings_after": 1,
+      "phase": "hidden2",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          32,
+          21
+        ],
+        "raw_grouped_terms": [
+          16,
+          21
+        ],
+        "factor_multipliers": [
+          2,
+          1
+        ],
+        "other_products": [],
+        "grouped_product": 2332
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": null,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N2T12-P11-L22-R2K0-H1AS0-01",
+      "terms": [
+        [
+          36,
+          11
+        ],
+        [
+          18,
+          78
+        ]
+      ],
+      "signs": [
+        1,
+        1
+      ],
+      "answer": 1800,
+      "common_factor": 18,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        1,
+        1
+      ],
+      "term_count": 2,
+      "shared_count": 2,
+      "L": "L22",
+      "R": "R2",
+      "K": "K0",
+      "H": "H1A",
+      "S": "S0",
+      "remainder_sum": 100,
+      "hidden_ratio": 2,
+      "doubled_target_index": 1,
+      "doubled_term_index": 1,
+      "visible_shared_factors": [
+        36,
+        18
+      ],
+      "naive_multiplications": 2,
+      "grouped_multiplications": 2,
+      "large_multiplications_before": 2,
+      "large_multiplications_after": 1,
+      "small_doublings_after": 1,
+      "phase": "hidden2",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          22,
+          78
+        ],
+        "raw_grouped_terms": [
+          11,
+          78
+        ],
+        "factor_multipliers": [
+          2,
+          1
+        ],
+        "other_products": [],
+        "grouped_product": 1800
+      },
+      "remainder_digits": 3,
+      "cancellation_from_digits": null,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N2T12-P11-L22-R0K0-H1AS1-01",
+      "terms": [
+        [
+          76,
+          18
+        ],
+        [
+          38,
+          19
+        ]
+      ],
+      "signs": [
+        1,
+        -1
+      ],
+      "answer": 646,
+      "common_factor": 38,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        1,
+        1
+      ],
+      "term_count": 2,
+      "shared_count": 2,
+      "L": "L22",
+      "R": "R0",
+      "K": "K0",
+      "H": "H1A",
+      "S": "S1",
+      "remainder_sum": 17,
+      "hidden_ratio": 2,
+      "doubled_target_index": 1,
+      "doubled_term_index": 1,
+      "visible_shared_factors": [
+        76,
+        38
+      ],
+      "naive_multiplications": 2,
+      "grouped_multiplications": 2,
+      "large_multiplications_before": 2,
+      "large_multiplications_after": 1,
+      "small_doublings_after": 1,
+      "phase": "hidden2",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          36,
+          19
+        ],
+        "raw_grouped_terms": [
+          18,
+          19
+        ],
+        "factor_multipliers": [
+          2,
+          1
+        ],
+        "other_products": [],
+        "grouped_product": 646
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": 2,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N2T12-P11-L22-R1K0-H1AS1-01",
+      "terms": [
+        [
+          58,
+          49
+        ],
+        [
+          29,
+          38
+        ]
+      ],
+      "signs": [
+        1,
+        -1
+      ],
+      "answer": 1740,
+      "common_factor": 29,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        1,
+        1
+      ],
+      "term_count": 2,
+      "shared_count": 2,
+      "L": "L22",
+      "R": "R1",
+      "K": "K0",
+      "H": "H1A",
+      "S": "S1",
+      "remainder_sum": 60,
+      "hidden_ratio": 2,
+      "doubled_target_index": 1,
+      "doubled_term_index": 1,
+      "visible_shared_factors": [
+        58,
+        29
+      ],
+      "naive_multiplications": 2,
+      "grouped_multiplications": 2,
+      "large_multiplications_before": 2,
+      "large_multiplications_after": 1,
+      "small_doublings_after": 1,
+      "phase": "hidden2",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          98,
+          38
+        ],
+        "raw_grouped_terms": [
+          49,
+          38
+        ],
+        "factor_multipliers": [
+          2,
+          1
+        ],
+        "other_products": [],
+        "grouped_product": 1740
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": 2,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N2T12-P11-L22-R0K0-H1BS0-01",
+      "terms": [
+        [
+          19,
+          25
+        ],
+        [
+          38,
+          33
+        ]
+      ],
+      "signs": [
+        1,
+        1
+      ],
+      "answer": 1729,
+      "common_factor": 19,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        1,
+        1
+      ],
+      "term_count": 2,
+      "shared_count": 2,
+      "L": "L22",
+      "R": "R0",
+      "K": "K0",
+      "H": "H1B",
+      "S": "S0",
+      "remainder_sum": 91,
+      "hidden_ratio": 2,
+      "doubled_target_index": 2,
+      "doubled_term_index": 2,
+      "visible_shared_factors": [
+        19,
+        38
+      ],
+      "naive_multiplications": 2,
+      "grouped_multiplications": 2,
+      "large_multiplications_before": 2,
+      "large_multiplications_after": 1,
+      "small_doublings_after": 1,
+      "phase": "hidden2",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          25,
+          66
+        ],
+        "raw_grouped_terms": [
+          25,
+          33
+        ],
+        "factor_multipliers": [
+          1,
+          2
+        ],
+        "other_products": [],
+        "grouped_product": 1729
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": null,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N2T12-P11-L22-R2K0-H1BS0-01",
+      "terms": [
+        [
+          36,
+          38
+        ],
+        [
+          72,
+          31
+        ]
+      ],
+      "signs": [
+        1,
+        1
+      ],
+      "answer": 3600,
+      "common_factor": 36,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        1,
+        1
+      ],
+      "term_count": 2,
+      "shared_count": 2,
+      "L": "L22",
+      "R": "R2",
+      "K": "K0",
+      "H": "H1B",
+      "S": "S0",
+      "remainder_sum": 100,
+      "hidden_ratio": 2,
+      "doubled_target_index": 2,
+      "doubled_term_index": 2,
+      "visible_shared_factors": [
+        36,
+        72
+      ],
+      "naive_multiplications": 2,
+      "grouped_multiplications": 2,
+      "large_multiplications_before": 2,
+      "large_multiplications_after": 1,
+      "small_doublings_after": 1,
+      "phase": "hidden2",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          38,
+          62
+        ],
+        "raw_grouped_terms": [
+          38,
+          31
+        ],
+        "factor_multipliers": [
+          1,
+          2
+        ],
+        "other_products": [],
+        "grouped_product": 3600
+      },
+      "remainder_digits": 3,
+      "cancellation_from_digits": null,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N2T12-P11-L22-R0K0-H1BS1-01",
+      "terms": [
+        [
+          33,
+          57
+        ],
+        [
+          66,
+          13
+        ]
+      ],
+      "signs": [
+        1,
+        -1
+      ],
+      "answer": 1023,
+      "common_factor": 33,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        1,
+        1
+      ],
+      "term_count": 2,
+      "shared_count": 2,
+      "L": "L22",
+      "R": "R0",
+      "K": "K0",
+      "H": "H1B",
+      "S": "S1",
+      "remainder_sum": 31,
+      "hidden_ratio": 2,
+      "doubled_target_index": 2,
+      "doubled_term_index": 2,
+      "visible_shared_factors": [
+        33,
+        66
+      ],
+      "naive_multiplications": 2,
+      "grouped_multiplications": 2,
+      "large_multiplications_before": 2,
+      "large_multiplications_after": 1,
+      "small_doublings_after": 1,
+      "phase": "hidden2",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          57,
+          26
+        ],
+        "raw_grouped_terms": [
+          57,
+          13
+        ],
+        "factor_multipliers": [
+          1,
+          2
+        ],
+        "other_products": [],
+        "grouped_product": 1023
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": 2,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N2T12-P11-L22-R1K0-H1BS1-01",
+      "terms": [
+        [
+          49,
+          52
+        ],
+        [
+          98,
+          16
+        ]
+      ],
+      "signs": [
+        1,
+        -1
+      ],
+      "answer": 980,
+      "common_factor": 49,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        1,
+        1
+      ],
+      "term_count": 2,
+      "shared_count": 2,
+      "L": "L22",
+      "R": "R1",
+      "K": "K0",
+      "H": "H1B",
+      "S": "S1",
+      "remainder_sum": 20,
+      "hidden_ratio": 2,
+      "doubled_target_index": 2,
+      "doubled_term_index": 2,
+      "visible_shared_factors": [
+        49,
+        98
+      ],
+      "naive_multiplications": 2,
+      "grouped_multiplications": 2,
+      "large_multiplications_before": 2,
+      "large_multiplications_after": 1,
+      "small_doublings_after": 1,
+      "phase": "hidden2",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          52,
+          32
+        ],
+        "raw_grouped_terms": [
+          52,
+          16
+        ],
+        "factor_multipliers": [
+          1,
+          2
+        ],
+        "other_products": [],
+        "grouped_product": 980
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": 2,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N2T12-P22-L22-R0K0-H1AS0-01",
+      "terms": [
+        [
+          19,
+          28
+        ],
+        [
+          43,
+          14
+        ]
+      ],
+      "signs": [
+        1,
+        1
+      ],
+      "answer": 1134,
+      "common_factor": 14,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        2,
+        2
+      ],
+      "term_count": 2,
+      "shared_count": 2,
+      "L": "L22",
+      "R": "R0",
+      "K": "K0",
+      "H": "H1A",
+      "S": "S0",
+      "remainder_sum": 81,
+      "hidden_ratio": 2,
+      "doubled_target_index": 1,
+      "doubled_term_index": 1,
+      "visible_shared_factors": [
+        28,
+        14
+      ],
+      "naive_multiplications": 2,
+      "grouped_multiplications": 2,
+      "large_multiplications_before": 2,
+      "large_multiplications_after": 1,
+      "small_doublings_after": 1,
+      "phase": "hidden2",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          38,
+          43
+        ],
+        "raw_grouped_terms": [
+          19,
+          43
+        ],
+        "factor_multipliers": [
+          2,
+          1
+        ],
+        "other_products": [],
+        "grouped_product": 1134
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": null,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N2T12-P22-L22-R1K0-H1AS0-01",
+      "terms": [
+        [
+          17,
+          78
+        ],
+        [
+          56,
+          39
+        ]
+      ],
+      "signs": [
+        1,
+        1
+      ],
+      "answer": 3510,
+      "common_factor": 39,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        2,
+        2
+      ],
+      "term_count": 2,
+      "shared_count": 2,
+      "L": "L22",
+      "R": "R1",
+      "K": "K0",
+      "H": "H1A",
+      "S": "S0",
+      "remainder_sum": 90,
+      "hidden_ratio": 2,
+      "doubled_target_index": 1,
+      "doubled_term_index": 1,
+      "visible_shared_factors": [
+        78,
+        39
+      ],
+      "naive_multiplications": 2,
+      "grouped_multiplications": 2,
+      "large_multiplications_before": 2,
+      "large_multiplications_after": 1,
+      "small_doublings_after": 1,
+      "phase": "hidden2",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          34,
+          56
+        ],
+        "raw_grouped_terms": [
+          17,
+          56
+        ],
+        "factor_multipliers": [
+          2,
+          1
+        ],
+        "other_products": [],
+        "grouped_product": 3510
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": null,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N2T12-P22-L22-R0K0-H1AS1-01",
+      "terms": [
+        [
+          44,
+          48
+        ],
+        [
+          45,
+          24
+        ]
+      ],
+      "signs": [
+        1,
+        -1
+      ],
+      "answer": 1032,
+      "common_factor": 24,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        2,
+        2
+      ],
+      "term_count": 2,
+      "shared_count": 2,
+      "L": "L22",
+      "R": "R0",
+      "K": "K0",
+      "H": "H1A",
+      "S": "S1",
+      "remainder_sum": 43,
+      "hidden_ratio": 2,
+      "doubled_target_index": 1,
+      "doubled_term_index": 1,
+      "visible_shared_factors": [
+        48,
+        24
+      ],
+      "naive_multiplications": 2,
+      "grouped_multiplications": 2,
+      "large_multiplications_before": 2,
+      "large_multiplications_after": 1,
+      "small_doublings_after": 1,
+      "phase": "hidden2",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          88,
+          45
+        ],
+        "raw_grouped_terms": [
+          44,
+          45
+        ],
+        "factor_multipliers": [
+          2,
+          1
+        ],
+        "other_products": [],
+        "grouped_product": 1032
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": 2,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N2T12-P22-L22-R1K0-H1AS1-01",
+      "terms": [
+        [
+          27,
+          68
+        ],
+        [
+          14,
+          34
+        ]
+      ],
+      "signs": [
+        1,
+        -1
+      ],
+      "answer": 1360,
+      "common_factor": 34,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        2,
+        2
+      ],
+      "term_count": 2,
+      "shared_count": 2,
+      "L": "L22",
+      "R": "R1",
+      "K": "K0",
+      "H": "H1A",
+      "S": "S1",
+      "remainder_sum": 40,
+      "hidden_ratio": 2,
+      "doubled_target_index": 1,
+      "doubled_term_index": 1,
+      "visible_shared_factors": [
+        68,
+        34
+      ],
+      "naive_multiplications": 2,
+      "grouped_multiplications": 2,
+      "large_multiplications_before": 2,
+      "large_multiplications_after": 1,
+      "small_doublings_after": 1,
+      "phase": "hidden2",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          54,
+          14
+        ],
+        "raw_grouped_terms": [
+          27,
+          14
+        ],
+        "factor_multipliers": [
+          2,
+          1
+        ],
+        "other_products": [],
+        "grouped_product": 1360
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": 2,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N2T12-P22-L22-R0K0-H1BS0-01",
+      "terms": [
+        [
+          29,
+          22
+        ],
+        [
+          18,
+          44
+        ]
+      ],
+      "signs": [
+        1,
+        1
+      ],
+      "answer": 1430,
+      "common_factor": 22,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        2,
+        2
+      ],
+      "term_count": 2,
+      "shared_count": 2,
+      "L": "L22",
+      "R": "R0",
+      "K": "K0",
+      "H": "H1B",
+      "S": "S0",
+      "remainder_sum": 65,
+      "hidden_ratio": 2,
+      "doubled_target_index": 2,
+      "doubled_term_index": 2,
+      "visible_shared_factors": [
+        22,
+        44
+      ],
+      "naive_multiplications": 2,
+      "grouped_multiplications": 2,
+      "large_multiplications_before": 2,
+      "large_multiplications_after": 1,
+      "small_doublings_after": 1,
+      "phase": "hidden2",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          29,
+          36
+        ],
+        "raw_grouped_terms": [
+          29,
+          18
+        ],
+        "factor_multipliers": [
+          1,
+          2
+        ],
+        "other_products": [],
+        "grouped_product": 1430
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": null,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N2T12-P22-L22-R1K0-H1BS0-01",
+      "terms": [
+        [
+          46,
+          28
+        ],
+        [
+          47,
+          56
+        ]
+      ],
+      "signs": [
+        1,
+        1
+      ],
+      "answer": 3920,
+      "common_factor": 28,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        2,
+        2
+      ],
+      "term_count": 2,
+      "shared_count": 2,
+      "L": "L22",
+      "R": "R1",
+      "K": "K0",
+      "H": "H1B",
+      "S": "S0",
+      "remainder_sum": 140,
+      "hidden_ratio": 2,
+      "doubled_target_index": 2,
+      "doubled_term_index": 2,
+      "visible_shared_factors": [
+        28,
+        56
+      ],
+      "naive_multiplications": 2,
+      "grouped_multiplications": 2,
+      "large_multiplications_before": 2,
+      "large_multiplications_after": 1,
+      "small_doublings_after": 1,
+      "phase": "hidden2",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          46,
+          94
+        ],
+        "raw_grouped_terms": [
+          46,
+          47
+        ],
+        "factor_multipliers": [
+          1,
+          2
+        ],
+        "other_products": [],
+        "grouped_product": 3920
+      },
+      "remainder_digits": 3,
+      "cancellation_from_digits": null,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N2T12-P22-L22-R0K0-H1BS1-01",
+      "terms": [
+        [
+          55,
+          47
+        ],
+        [
+          18,
+          94
+        ]
+      ],
+      "signs": [
+        1,
+        -1
+      ],
+      "answer": 893,
+      "common_factor": 47,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        2,
+        2
+      ],
+      "term_count": 2,
+      "shared_count": 2,
+      "L": "L22",
+      "R": "R0",
+      "K": "K0",
+      "H": "H1B",
+      "S": "S1",
+      "remainder_sum": 19,
+      "hidden_ratio": 2,
+      "doubled_target_index": 2,
+      "doubled_term_index": 2,
+      "visible_shared_factors": [
+        47,
+        94
+      ],
+      "naive_multiplications": 2,
+      "grouped_multiplications": 2,
+      "large_multiplications_before": 2,
+      "large_multiplications_after": 1,
+      "small_doublings_after": 1,
+      "phase": "hidden2",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          55,
+          36
+        ],
+        "raw_grouped_terms": [
+          55,
+          18
+        ],
+        "factor_multipliers": [
+          1,
+          2
+        ],
+        "other_products": [],
+        "grouped_product": 893
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": 2,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N2T12-P22-L22-R1K0-H1BS1-01",
+      "terms": [
+        [
+          88,
+          43
+        ],
+        [
+          24,
+          86
+        ]
+      ],
+      "signs": [
+        1,
+        -1
+      ],
+      "answer": 1720,
+      "common_factor": 43,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        2,
+        2
+      ],
+      "term_count": 2,
+      "shared_count": 2,
+      "L": "L22",
+      "R": "R1",
+      "K": "K0",
+      "H": "H1B",
+      "S": "S1",
+      "remainder_sum": 40,
+      "hidden_ratio": 2,
+      "doubled_target_index": 2,
+      "doubled_term_index": 2,
+      "visible_shared_factors": [
+        43,
+        86
+      ],
+      "naive_multiplications": 2,
+      "grouped_multiplications": 2,
+      "large_multiplications_before": 2,
+      "large_multiplications_after": 1,
+      "small_doublings_after": 1,
+      "phase": "hidden2",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          88,
+          48
+        ],
+        "raw_grouped_terms": [
+          88,
+          24
+        ],
+        "factor_multipliers": [
+          1,
+          2
+        ],
+        "other_products": [],
+        "grouped_product": 1720
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": 2,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N2T12-P12-L22-R0K0-H1AS0-01",
+      "terms": [
+        [
+          26,
+          24
+        ],
+        [
+          17,
+          13
+        ]
+      ],
+      "signs": [
+        1,
+        1
+      ],
+      "answer": 845,
+      "common_factor": 13,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        1,
+        2
+      ],
+      "term_count": 2,
+      "shared_count": 2,
+      "L": "L22",
+      "R": "R0",
+      "K": "K0",
+      "H": "H1A",
+      "S": "S0",
+      "remainder_sum": 65,
+      "hidden_ratio": 2,
+      "doubled_target_index": 1,
+      "doubled_term_index": 1,
+      "visible_shared_factors": [
+        26,
+        13
+      ],
+      "naive_multiplications": 2,
+      "grouped_multiplications": 2,
+      "large_multiplications_before": 2,
+      "large_multiplications_after": 1,
+      "small_doublings_after": 1,
+      "phase": "hidden2",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          48,
+          17
+        ],
+        "raw_grouped_terms": [
+          24,
+          17
+        ],
+        "factor_multipliers": [
+          2,
+          1
+        ],
+        "other_products": [],
+        "grouped_product": 845
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": null,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N2T12-P12-L22-R1K0-H1AS0-01",
+      "terms": [
+        [
+          82,
+          18
+        ],
+        [
+          54,
+          41
+        ]
+      ],
+      "signs": [
+        1,
+        1
+      ],
+      "answer": 3690,
+      "common_factor": 41,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        1,
+        2
+      ],
+      "term_count": 2,
+      "shared_count": 2,
+      "L": "L22",
+      "R": "R1",
+      "K": "K0",
+      "H": "H1A",
+      "S": "S0",
+      "remainder_sum": 90,
+      "hidden_ratio": 2,
+      "doubled_target_index": 1,
+      "doubled_term_index": 1,
+      "visible_shared_factors": [
+        82,
+        41
+      ],
+      "naive_multiplications": 2,
+      "grouped_multiplications": 2,
+      "large_multiplications_before": 2,
+      "large_multiplications_after": 1,
+      "small_doublings_after": 1,
+      "phase": "hidden2",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          36,
+          54
+        ],
+        "raw_grouped_terms": [
+          18,
+          54
+        ],
+        "factor_multipliers": [
+          2,
+          1
+        ],
+        "other_products": [],
+        "grouped_product": 3690
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": null,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N2T12-P12-L22-R0K0-H1AS1-01",
+      "terms": [
+        [
+          52,
+          37
+        ],
+        [
+          29,
+          26
+        ]
+      ],
+      "signs": [
+        1,
+        -1
+      ],
+      "answer": 1170,
+      "common_factor": 26,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        1,
+        2
+      ],
+      "term_count": 2,
+      "shared_count": 2,
+      "L": "L22",
+      "R": "R0",
+      "K": "K0",
+      "H": "H1A",
+      "S": "S1",
+      "remainder_sum": 45,
+      "hidden_ratio": 2,
+      "doubled_target_index": 1,
+      "doubled_term_index": 1,
+      "visible_shared_factors": [
+        52,
+        26
+      ],
+      "naive_multiplications": 2,
+      "grouped_multiplications": 2,
+      "large_multiplications_before": 2,
+      "large_multiplications_after": 1,
+      "small_doublings_after": 1,
+      "phase": "hidden2",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          74,
+          29
+        ],
+        "raw_grouped_terms": [
+          37,
+          29
+        ],
+        "factor_multipliers": [
+          2,
+          1
+        ],
+        "other_products": [],
+        "grouped_product": 1170
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": 2,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N2T12-P12-L22-R1K0-H1AS1-01",
+      "terms": [
+        [
+          84,
+          43
+        ],
+        [
+          36,
+          42
+        ]
+      ],
+      "signs": [
+        1,
+        -1
+      ],
+      "answer": 2100,
+      "common_factor": 42,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        1,
+        2
+      ],
+      "term_count": 2,
+      "shared_count": 2,
+      "L": "L22",
+      "R": "R1",
+      "K": "K0",
+      "H": "H1A",
+      "S": "S1",
+      "remainder_sum": 50,
+      "hidden_ratio": 2,
+      "doubled_target_index": 1,
+      "doubled_term_index": 1,
+      "visible_shared_factors": [
+        84,
+        42
+      ],
+      "naive_multiplications": 2,
+      "grouped_multiplications": 2,
+      "large_multiplications_before": 2,
+      "large_multiplications_after": 1,
+      "small_doublings_after": 1,
+      "phase": "hidden2",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          86,
+          36
+        ],
+        "raw_grouped_terms": [
+          43,
+          36
+        ],
+        "factor_multipliers": [
+          2,
+          1
+        ],
+        "other_products": [],
+        "grouped_product": 2100
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": 2,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N2T12-P12-L22-R0K0-H1BS0-01",
+      "terms": [
+        [
+          48,
+          71
+        ],
+        [
+          11,
+          96
+        ]
+      ],
+      "signs": [
+        1,
+        1
+      ],
+      "answer": 4464,
+      "common_factor": 48,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        1,
+        2
+      ],
+      "term_count": 2,
+      "shared_count": 2,
+      "L": "L22",
+      "R": "R0",
+      "K": "K0",
+      "H": "H1B",
+      "S": "S0",
+      "remainder_sum": 93,
+      "hidden_ratio": 2,
+      "doubled_target_index": 2,
+      "doubled_term_index": 2,
+      "visible_shared_factors": [
+        48,
+        96
+      ],
+      "naive_multiplications": 2,
+      "grouped_multiplications": 2,
+      "large_multiplications_before": 2,
+      "large_multiplications_after": 1,
+      "small_doublings_after": 1,
+      "phase": "hidden2",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          71,
+          22
+        ],
+        "raw_grouped_terms": [
+          71,
+          11
+        ],
+        "factor_multipliers": [
+          1,
+          2
+        ],
+        "other_products": [],
+        "grouped_product": 4464
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": null,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N2T12-P12-L22-R1K0-H1BS0-01",
+      "terms": [
+        [
+          46,
+          62
+        ],
+        [
+          39,
+          92
+        ]
+      ],
+      "signs": [
+        1,
+        1
+      ],
+      "answer": 6440,
+      "common_factor": 46,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        1,
+        2
+      ],
+      "term_count": 2,
+      "shared_count": 2,
+      "L": "L22",
+      "R": "R1",
+      "K": "K0",
+      "H": "H1B",
+      "S": "S0",
+      "remainder_sum": 140,
+      "hidden_ratio": 2,
+      "doubled_target_index": 2,
+      "doubled_term_index": 2,
+      "visible_shared_factors": [
+        46,
+        92
+      ],
+      "naive_multiplications": 2,
+      "grouped_multiplications": 2,
+      "large_multiplications_before": 2,
+      "large_multiplications_after": 1,
+      "small_doublings_after": 1,
+      "phase": "hidden2",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          62,
+          78
+        ],
+        "raw_grouped_terms": [
+          62,
+          39
+        ],
+        "factor_multipliers": [
+          1,
+          2
+        ],
+        "other_products": [],
+        "grouped_product": 6440
+      },
+      "remainder_digits": 3,
+      "cancellation_from_digits": null,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N2T12-P12-L22-R0K0-H1BS1-01",
+      "terms": [
+        [
+          27,
+          49
+        ],
+        [
+          23,
+          54
+        ]
+      ],
+      "signs": [
+        1,
+        -1
+      ],
+      "answer": 81,
+      "common_factor": 27,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        1,
+        2
+      ],
+      "term_count": 2,
+      "shared_count": 2,
+      "L": "L22",
+      "R": "R0",
+      "K": "K0",
+      "H": "H1B",
+      "S": "S1",
+      "remainder_sum": 3,
+      "hidden_ratio": 2,
+      "doubled_target_index": 2,
+      "doubled_term_index": 2,
+      "visible_shared_factors": [
+        27,
+        54
+      ],
+      "naive_multiplications": 2,
+      "grouped_multiplications": 2,
+      "large_multiplications_before": 2,
+      "large_multiplications_after": 1,
+      "small_doublings_after": 1,
+      "phase": "hidden2",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          49,
+          46
+        ],
+        "raw_grouped_terms": [
+          49,
+          23
+        ],
+        "factor_multipliers": [
+          1,
+          2
+        ],
+        "other_products": [],
+        "grouped_product": 81
+      },
+      "remainder_digits": 1,
+      "cancellation_from_digits": 2,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N2T12-P12-L22-R1K0-H1BS1-01",
+      "terms": [
+        [
+          37,
+          82
+        ],
+        [
+          26,
+          74
+        ]
+      ],
+      "signs": [
+        1,
+        -1
+      ],
+      "answer": 1110,
+      "common_factor": 37,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        1,
+        2
+      ],
+      "term_count": 2,
+      "shared_count": 2,
+      "L": "L22",
+      "R": "R1",
+      "K": "K0",
+      "H": "H1B",
+      "S": "S1",
+      "remainder_sum": 30,
+      "hidden_ratio": 2,
+      "doubled_target_index": 2,
+      "doubled_term_index": 2,
+      "visible_shared_factors": [
+        37,
+        74
+      ],
+      "naive_multiplications": 2,
+      "grouped_multiplications": 2,
+      "large_multiplications_before": 2,
+      "large_multiplications_after": 1,
+      "small_doublings_after": 1,
+      "phase": "hidden2",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          82,
+          52
+        ],
+        "raw_grouped_terms": [
+          82,
+          26
+        ],
+        "factor_multipliers": [
+          1,
+          2
+        ],
+        "other_products": [],
+        "grouped_product": 1110
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": 2,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N2T12-P21-L22-R0K0-H1AS0-01",
+      "terms": [
+        [
+          19,
+          34
+        ],
+        [
+          17,
+          27
+        ]
+      ],
+      "signs": [
+        1,
+        1
+      ],
+      "answer": 1105,
+      "common_factor": 17,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        2,
+        1
+      ],
+      "term_count": 2,
+      "shared_count": 2,
+      "L": "L22",
+      "R": "R0",
+      "K": "K0",
+      "H": "H1A",
+      "S": "S0",
+      "remainder_sum": 65,
+      "hidden_ratio": 2,
+      "doubled_target_index": 1,
+      "doubled_term_index": 1,
+      "visible_shared_factors": [
+        34,
+        17
+      ],
+      "naive_multiplications": 2,
+      "grouped_multiplications": 2,
+      "large_multiplications_before": 2,
+      "large_multiplications_after": 1,
+      "small_doublings_after": 1,
+      "phase": "hidden2",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          38,
+          27
+        ],
+        "raw_grouped_terms": [
+          19,
+          27
+        ],
+        "factor_multipliers": [
+          2,
+          1
+        ],
+        "other_products": [],
+        "grouped_product": 1105
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": null,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N2T12-P21-L22-R1K0-H1AS0-01",
+      "terms": [
+        [
+          27,
+          22
+        ],
+        [
+          11,
+          16
+        ]
+      ],
+      "signs": [
+        1,
+        1
+      ],
+      "answer": 770,
+      "common_factor": 11,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        2,
+        1
+      ],
+      "term_count": 2,
+      "shared_count": 2,
+      "L": "L22",
+      "R": "R1",
+      "K": "K0",
+      "H": "H1A",
+      "S": "S0",
+      "remainder_sum": 70,
+      "hidden_ratio": 2,
+      "doubled_target_index": 1,
+      "doubled_term_index": 1,
+      "visible_shared_factors": [
+        22,
+        11
+      ],
+      "naive_multiplications": 2,
+      "grouped_multiplications": 2,
+      "large_multiplications_before": 2,
+      "large_multiplications_after": 1,
+      "small_doublings_after": 1,
+      "phase": "hidden2",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          54,
+          16
+        ],
+        "raw_grouped_terms": [
+          27,
+          16
+        ],
+        "factor_multipliers": [
+          2,
+          1
+        ],
+        "other_products": [],
+        "grouped_product": 770
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": null,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N2T12-P21-L22-R0K0-H1AS1-01",
+      "terms": [
+        [
+          11,
+          24
+        ],
+        [
+          12,
+          19
+        ]
+      ],
+      "signs": [
+        1,
+        -1
+      ],
+      "answer": 36,
+      "common_factor": 12,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        2,
+        1
+      ],
+      "term_count": 2,
+      "shared_count": 2,
+      "L": "L22",
+      "R": "R0",
+      "K": "K0",
+      "H": "H1A",
+      "S": "S1",
+      "remainder_sum": 3,
+      "hidden_ratio": 2,
+      "doubled_target_index": 1,
+      "doubled_term_index": 1,
+      "visible_shared_factors": [
+        24,
+        12
+      ],
+      "naive_multiplications": 2,
+      "grouped_multiplications": 2,
+      "large_multiplications_before": 2,
+      "large_multiplications_after": 1,
+      "small_doublings_after": 1,
+      "phase": "hidden2",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          22,
+          19
+        ],
+        "raw_grouped_terms": [
+          11,
+          19
+        ],
+        "factor_multipliers": [
+          2,
+          1
+        ],
+        "other_products": [],
+        "grouped_product": 36
+      },
+      "remainder_digits": 1,
+      "cancellation_from_digits": 2,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N2T12-P21-L22-R1K0-H1AS1-01",
+      "terms": [
+        [
+          17,
+          62
+        ],
+        [
+          31,
+          14
+        ]
+      ],
+      "signs": [
+        1,
+        -1
+      ],
+      "answer": 620,
+      "common_factor": 31,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        2,
+        1
+      ],
+      "term_count": 2,
+      "shared_count": 2,
+      "L": "L22",
+      "R": "R1",
+      "K": "K0",
+      "H": "H1A",
+      "S": "S1",
+      "remainder_sum": 20,
+      "hidden_ratio": 2,
+      "doubled_target_index": 1,
+      "doubled_term_index": 1,
+      "visible_shared_factors": [
+        62,
+        31
+      ],
+      "naive_multiplications": 2,
+      "grouped_multiplications": 2,
+      "large_multiplications_before": 2,
+      "large_multiplications_after": 1,
+      "small_doublings_after": 1,
+      "phase": "hidden2",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          34,
+          14
+        ],
+        "raw_grouped_terms": [
+          17,
+          14
+        ],
+        "factor_multipliers": [
+          2,
+          1
+        ],
+        "other_products": [],
+        "grouped_product": 620
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": 2,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N2T12-P21-L22-R0K0-H1BS0-01",
+      "terms": [
+        [
+          75,
+          21
+        ],
+        [
+          42,
+          11
+        ]
+      ],
+      "signs": [
+        1,
+        1
+      ],
+      "answer": 2037,
+      "common_factor": 21,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        2,
+        1
+      ],
+      "term_count": 2,
+      "shared_count": 2,
+      "L": "L22",
+      "R": "R0",
+      "K": "K0",
+      "H": "H1B",
+      "S": "S0",
+      "remainder_sum": 97,
+      "hidden_ratio": 2,
+      "doubled_target_index": 2,
+      "doubled_term_index": 2,
+      "visible_shared_factors": [
+        21,
+        42
+      ],
+      "naive_multiplications": 2,
+      "grouped_multiplications": 2,
+      "large_multiplications_before": 2,
+      "large_multiplications_after": 1,
+      "small_doublings_after": 1,
+      "phase": "hidden2",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          75,
+          22
+        ],
+        "raw_grouped_terms": [
+          75,
+          11
+        ],
+        "factor_multipliers": [
+          1,
+          2
+        ],
+        "other_products": [],
+        "grouped_product": 2037
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": null,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N2T12-P21-L22-R1K0-H1BS0-01",
+      "terms": [
+        [
+          48,
+          23
+        ],
+        [
+          46,
+          11
+        ]
+      ],
+      "signs": [
+        1,
+        1
+      ],
+      "answer": 1610,
+      "common_factor": 23,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        2,
+        1
+      ],
+      "term_count": 2,
+      "shared_count": 2,
+      "L": "L22",
+      "R": "R1",
+      "K": "K0",
+      "H": "H1B",
+      "S": "S0",
+      "remainder_sum": 70,
+      "hidden_ratio": 2,
+      "doubled_target_index": 2,
+      "doubled_term_index": 2,
+      "visible_shared_factors": [
+        23,
+        46
+      ],
+      "naive_multiplications": 2,
+      "grouped_multiplications": 2,
+      "large_multiplications_before": 2,
+      "large_multiplications_after": 1,
+      "small_doublings_after": 1,
+      "phase": "hidden2",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          48,
+          22
+        ],
+        "raw_grouped_terms": [
+          48,
+          11
+        ],
+        "factor_multipliers": [
+          1,
+          2
+        ],
+        "other_products": [],
+        "grouped_product": 1610
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": null,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N2T12-P21-L22-R0K0-H1BS1-01",
+      "terms": [
+        [
+          63,
+          42
+        ],
+        [
+          84,
+          17
+        ]
+      ],
+      "signs": [
+        1,
+        -1
+      ],
+      "answer": 1218,
+      "common_factor": 42,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        2,
+        1
+      ],
+      "term_count": 2,
+      "shared_count": 2,
+      "L": "L22",
+      "R": "R0",
+      "K": "K0",
+      "H": "H1B",
+      "S": "S1",
+      "remainder_sum": 29,
+      "hidden_ratio": 2,
+      "doubled_target_index": 2,
+      "doubled_term_index": 2,
+      "visible_shared_factors": [
+        42,
+        84
+      ],
+      "naive_multiplications": 2,
+      "grouped_multiplications": 2,
+      "large_multiplications_before": 2,
+      "large_multiplications_after": 1,
+      "small_doublings_after": 1,
+      "phase": "hidden2",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          63,
+          34
+        ],
+        "raw_grouped_terms": [
+          63,
+          17
+        ],
+        "factor_multipliers": [
+          1,
+          2
+        ],
+        "other_products": [],
+        "grouped_product": 1218
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": 2,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N2T12-P21-L22-R1K0-H1BS1-01",
+      "terms": [
+        [
+          84,
+          43
+        ],
+        [
+          86,
+          12
+        ]
+      ],
+      "signs": [
+        1,
+        -1
+      ],
+      "answer": 2580,
+      "common_factor": 43,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        2,
+        1
+      ],
+      "term_count": 2,
+      "shared_count": 2,
+      "L": "L22",
+      "R": "R1",
+      "K": "K0",
+      "H": "H1B",
+      "S": "S1",
+      "remainder_sum": 60,
+      "hidden_ratio": 2,
+      "doubled_target_index": 2,
+      "doubled_term_index": 2,
+      "visible_shared_factors": [
+        43,
+        86
+      ],
+      "naive_multiplications": 2,
+      "grouped_multiplications": 2,
+      "large_multiplications_before": 2,
+      "large_multiplications_after": 1,
+      "small_doublings_after": 1,
+      "phase": "hidden2",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          84,
+          24
+        ],
+        "raw_grouped_terms": [
+          84,
+          12
+        ],
+        "factor_multipliers": [
+          1,
+          2
+        ],
+        "other_products": [],
+        "grouped_product": 2580
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": 2,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N3T12-P11-L22-R0K0-H1AS0-01",
+      "terms": [
+        [
+          52,
+          27
+        ],
+        [
+          26,
+          37
+        ],
+        [
+          79,
+          75
+        ]
+      ],
+      "signs": [
+        1,
+        1,
+        1
+      ],
+      "answer": 8291,
+      "common_factor": 26,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        1,
+        1
+      ],
+      "term_count": 3,
+      "shared_count": 2,
+      "L": "L22",
+      "R": "R0",
+      "K": "K0",
+      "H": "H1A",
+      "S": "S0",
+      "remainder_sum": 91,
+      "hidden_ratio": 2,
+      "doubled_target_index": 1,
+      "doubled_term_index": 1,
+      "visible_shared_factors": [
+        52,
+        26
+      ],
+      "naive_multiplications": 3,
+      "grouped_multiplications": 3,
+      "large_multiplications_before": 3,
+      "large_multiplications_after": 2,
+      "small_doublings_after": 1,
+      "phase": "hidden3_partial",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          54,
+          37
+        ],
+        "raw_grouped_terms": [
+          27,
+          37
+        ],
+        "factor_multipliers": [
+          2,
+          1
+        ],
+        "other_products": [
+          5925
+        ],
+        "grouped_product": 2366
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": null,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N3T12-P11-L22-R0K0-H1BS0-01",
+      "terms": [
+        [
+          24,
+          53
+        ],
+        [
+          48,
+          19
+        ],
+        [
+          74,
+          13
+        ]
+      ],
+      "signs": [
+        1,
+        1,
+        1
+      ],
+      "answer": 3146,
+      "common_factor": 24,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        1,
+        1
+      ],
+      "term_count": 3,
+      "shared_count": 2,
+      "L": "L22",
+      "R": "R0",
+      "K": "K0",
+      "H": "H1B",
+      "S": "S0",
+      "remainder_sum": 91,
+      "hidden_ratio": 2,
+      "doubled_target_index": 2,
+      "doubled_term_index": 2,
+      "visible_shared_factors": [
+        24,
+        48
+      ],
+      "naive_multiplications": 3,
+      "grouped_multiplications": 3,
+      "large_multiplications_before": 3,
+      "large_multiplications_after": 2,
+      "small_doublings_after": 1,
+      "phase": "hidden3_partial",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          53,
+          38
+        ],
+        "raw_grouped_terms": [
+          53,
+          19
+        ],
+        "factor_multipliers": [
+          1,
+          2
+        ],
+        "other_products": [
+          962
+        ],
+        "grouped_product": 2184
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": null,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N3T12-P22-L22-R1K0-H1AS0-01",
+      "terms": [
+        [
+          29,
+          78
+        ],
+        [
+          92,
+          39
+        ],
+        [
+          84,
+          81
+        ]
+      ],
+      "signs": [
+        1,
+        1,
+        1
+      ],
+      "answer": 12654,
+      "common_factor": 39,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        2,
+        2
+      ],
+      "term_count": 3,
+      "shared_count": 2,
+      "L": "L22",
+      "R": "R1",
+      "K": "K0",
+      "H": "H1A",
+      "S": "S0",
+      "remainder_sum": 150,
+      "hidden_ratio": 2,
+      "doubled_target_index": 1,
+      "doubled_term_index": 1,
+      "visible_shared_factors": [
+        78,
+        39
+      ],
+      "naive_multiplications": 3,
+      "grouped_multiplications": 3,
+      "large_multiplications_before": 3,
+      "large_multiplications_after": 2,
+      "small_doublings_after": 1,
+      "phase": "hidden3_partial",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          58,
+          92
+        ],
+        "raw_grouped_terms": [
+          29,
+          92
+        ],
+        "factor_multipliers": [
+          2,
+          1
+        ],
+        "other_products": [
+          6804
+        ],
+        "grouped_product": 5850
+      },
+      "remainder_digits": 3,
+      "cancellation_from_digits": null,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N3T12-P22-L22-R1K0-H1BS0-01",
+      "terms": [
+        [
+          32,
+          21
+        ],
+        [
+          44,
+          42
+        ],
+        [
+          64,
+          29
+        ]
+      ],
+      "signs": [
+        1,
+        1,
+        1
+      ],
+      "answer": 4376,
+      "common_factor": 21,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        2,
+        2
+      ],
+      "term_count": 3,
+      "shared_count": 2,
+      "L": "L22",
+      "R": "R1",
+      "K": "K0",
+      "H": "H1B",
+      "S": "S0",
+      "remainder_sum": 120,
+      "hidden_ratio": 2,
+      "doubled_target_index": 2,
+      "doubled_term_index": 2,
+      "visible_shared_factors": [
+        21,
+        42
+      ],
+      "naive_multiplications": 3,
+      "grouped_multiplications": 3,
+      "large_multiplications_before": 3,
+      "large_multiplications_after": 2,
+      "small_doublings_after": 1,
+      "phase": "hidden3_partial",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          32,
+          88
+        ],
+        "raw_grouped_terms": [
+          32,
+          44
+        ],
+        "factor_multipliers": [
+          1,
+          2
+        ],
+        "other_products": [
+          1856
+        ],
+        "grouped_product": 2520
+      },
+      "remainder_digits": 3,
+      "cancellation_from_digits": null,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N3T12-P12-L22-R0K0-H1AS0-01",
+      "terms": [
+        [
+          46,
+          15
+        ],
+        [
+          37,
+          23
+        ],
+        [
+          39,
+          88
+        ]
+      ],
+      "signs": [
+        1,
+        1,
+        1
+      ],
+      "answer": 4973,
+      "common_factor": 23,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        1,
+        2
+      ],
+      "term_count": 3,
+      "shared_count": 2,
+      "L": "L22",
+      "R": "R0",
+      "K": "K0",
+      "H": "H1A",
+      "S": "S0",
+      "remainder_sum": 67,
+      "hidden_ratio": 2,
+      "doubled_target_index": 1,
+      "doubled_term_index": 1,
+      "visible_shared_factors": [
+        46,
+        23
+      ],
+      "naive_multiplications": 3,
+      "grouped_multiplications": 3,
+      "large_multiplications_before": 3,
+      "large_multiplications_after": 2,
+      "small_doublings_after": 1,
+      "phase": "hidden3_partial",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          30,
+          37
+        ],
+        "raw_grouped_terms": [
+          15,
+          37
+        ],
+        "factor_multipliers": [
+          2,
+          1
+        ],
+        "other_products": [
+          3432
+        ],
+        "grouped_product": 1541
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": null,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N3T12-P12-L22-R0K0-H1BS0-01",
+      "terms": [
+        [
+          49,
+          23
+        ],
+        [
+          18,
+          98
+        ],
+        [
+          68,
+          58
+        ]
+      ],
+      "signs": [
+        1,
+        1,
+        1
+      ],
+      "answer": 6835,
+      "common_factor": 49,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        1,
+        2
+      ],
+      "term_count": 3,
+      "shared_count": 2,
+      "L": "L22",
+      "R": "R0",
+      "K": "K0",
+      "H": "H1B",
+      "S": "S0",
+      "remainder_sum": 59,
+      "hidden_ratio": 2,
+      "doubled_target_index": 2,
+      "doubled_term_index": 2,
+      "visible_shared_factors": [
+        49,
+        98
+      ],
+      "naive_multiplications": 3,
+      "grouped_multiplications": 3,
+      "large_multiplications_before": 3,
+      "large_multiplications_after": 2,
+      "small_doublings_after": 1,
+      "phase": "hidden3_partial",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          23,
+          36
+        ],
+        "raw_grouped_terms": [
+          23,
+          18
+        ],
+        "factor_multipliers": [
+          1,
+          2
+        ],
+        "other_products": [
+          3944
+        ],
+        "grouped_product": 2891
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": null,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N3T12-P21-L22-R0K0-H1AS0-01",
+      "terms": [
+        [
+          26,
+          28
+        ],
+        [
+          14,
+          47
+        ],
+        [
+          76,
+          54
+        ]
+      ],
+      "signs": [
+        1,
+        1,
+        1
+      ],
+      "answer": 5490,
+      "common_factor": 14,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        2,
+        1
+      ],
+      "term_count": 3,
+      "shared_count": 2,
+      "L": "L22",
+      "R": "R0",
+      "K": "K0",
+      "H": "H1A",
+      "S": "S0",
+      "remainder_sum": 99,
+      "hidden_ratio": 2,
+      "doubled_target_index": 1,
+      "doubled_term_index": 1,
+      "visible_shared_factors": [
+        28,
+        14
+      ],
+      "naive_multiplications": 3,
+      "grouped_multiplications": 3,
+      "large_multiplications_before": 3,
+      "large_multiplications_after": 2,
+      "small_doublings_after": 1,
+      "phase": "hidden3_partial",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          52,
+          47
+        ],
+        "raw_grouped_terms": [
+          26,
+          47
+        ],
+        "factor_multipliers": [
+          2,
+          1
+        ],
+        "other_products": [
+          4104
+        ],
+        "grouped_product": 1386
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": null,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N3T12-P21-L22-R0K0-H1BS0-01",
+      "terms": [
+        [
+          37,
+          48
+        ],
+        [
+          96,
+          28
+        ],
+        [
+          44,
+          63
+        ]
+      ],
+      "signs": [
+        1,
+        1,
+        1
+      ],
+      "answer": 7236,
+      "common_factor": 48,
+      "common_terms": [
+        1,
+        2
+      ],
+      "shared_positions": [
+        2,
+        1
+      ],
+      "term_count": 3,
+      "shared_count": 2,
+      "L": "L22",
+      "R": "R0",
+      "K": "K0",
+      "H": "H1B",
+      "S": "S0",
+      "remainder_sum": 93,
+      "hidden_ratio": 2,
+      "doubled_target_index": 2,
+      "doubled_term_index": 2,
+      "visible_shared_factors": [
+        48,
+        96
+      ],
+      "naive_multiplications": 3,
+      "grouped_multiplications": 3,
+      "large_multiplications_before": 3,
+      "large_multiplications_after": 2,
+      "small_doublings_after": 1,
+      "phase": "hidden3_partial",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          37,
+          56
+        ],
+        "raw_grouped_terms": [
+          37,
+          28
+        ],
+        "factor_multipliers": [
+          1,
+          2
+        ],
+        "other_products": [
+          2772
+        ],
+        "grouped_product": 4464
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": null,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N3T13-P11-L22-R0K0-H1AS0-01",
+      "terms": [
+        [
+          54,
+          29
+        ],
+        [
+          28,
+          11
+        ],
+        [
+          27,
+          21
+        ]
+      ],
+      "signs": [
+        1,
+        1,
+        1
+      ],
+      "answer": 2441,
+      "common_factor": 27,
+      "common_terms": [
+        1,
+        3
+      ],
+      "shared_positions": [
+        1,
+        1
+      ],
+      "term_count": 3,
+      "shared_count": 2,
+      "L": "L22",
+      "R": "R0",
+      "K": "K0",
+      "H": "H1A",
+      "S": "S0",
+      "remainder_sum": 79,
+      "hidden_ratio": 2,
+      "doubled_target_index": 1,
+      "doubled_term_index": 1,
+      "visible_shared_factors": [
+        54,
+        27
+      ],
+      "naive_multiplications": 3,
+      "grouped_multiplications": 3,
+      "large_multiplications_before": 3,
+      "large_multiplications_after": 2,
+      "small_doublings_after": 1,
+      "phase": "hidden3_partial",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          58,
+          21
+        ],
+        "raw_grouped_terms": [
+          29,
+          21
+        ],
+        "factor_multipliers": [
+          2,
+          1
+        ],
+        "other_products": [
+          308
+        ],
+        "grouped_product": 2133
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": null,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N3T13-P11-L22-R0K0-H1BS0-01",
+      "terms": [
+        [
+          22,
+          31
+        ],
+        [
+          85,
+          55
+        ],
+        [
+          44,
+          25
+        ]
+      ],
+      "signs": [
+        1,
+        1,
+        1
+      ],
+      "answer": 6457,
+      "common_factor": 22,
+      "common_terms": [
+        1,
+        3
+      ],
+      "shared_positions": [
+        1,
+        1
+      ],
+      "term_count": 3,
+      "shared_count": 2,
+      "L": "L22",
+      "R": "R0",
+      "K": "K0",
+      "H": "H1B",
+      "S": "S0",
+      "remainder_sum": 81,
+      "hidden_ratio": 2,
+      "doubled_target_index": 2,
+      "doubled_term_index": 3,
+      "visible_shared_factors": [
+        22,
+        44
+      ],
+      "naive_multiplications": 3,
+      "grouped_multiplications": 3,
+      "large_multiplications_before": 3,
+      "large_multiplications_after": 2,
+      "small_doublings_after": 1,
+      "phase": "hidden3_partial",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          31,
+          50
+        ],
+        "raw_grouped_terms": [
+          31,
+          25
+        ],
+        "factor_multipliers": [
+          1,
+          2
+        ],
+        "other_products": [
+          4675
+        ],
+        "grouped_product": 1782
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": null,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N3T13-P22-L22-R1K0-H1AS0-01",
+      "terms": [
+        [
+          26,
+          56
+        ],
+        [
+          98,
+          61
+        ],
+        [
+          58,
+          28
+        ]
+      ],
+      "signs": [
+        1,
+        1,
+        1
+      ],
+      "answer": 9058,
+      "common_factor": 28,
+      "common_terms": [
+        1,
+        3
+      ],
+      "shared_positions": [
+        2,
+        2
+      ],
+      "term_count": 3,
+      "shared_count": 2,
+      "L": "L22",
+      "R": "R1",
+      "K": "K0",
+      "H": "H1A",
+      "S": "S0",
+      "remainder_sum": 110,
+      "hidden_ratio": 2,
+      "doubled_target_index": 1,
+      "doubled_term_index": 1,
+      "visible_shared_factors": [
+        56,
+        28
+      ],
+      "naive_multiplications": 3,
+      "grouped_multiplications": 3,
+      "large_multiplications_before": 3,
+      "large_multiplications_after": 2,
+      "small_doublings_after": 1,
+      "phase": "hidden3_partial",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          52,
+          58
+        ],
+        "raw_grouped_terms": [
+          26,
+          58
+        ],
+        "factor_multipliers": [
+          2,
+          1
+        ],
+        "other_products": [
+          5978
+        ],
+        "grouped_product": 3080
+      },
+      "remainder_digits": 3,
+      "cancellation_from_digits": null,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N3T13-P22-L22-R1K0-H1BS0-01",
+      "terms": [
+        [
+          36,
+          41
+        ],
+        [
+          75,
+          48
+        ],
+        [
+          37,
+          82
+        ]
+      ],
+      "signs": [
+        1,
+        1,
+        1
+      ],
+      "answer": 8110,
+      "common_factor": 41,
+      "common_terms": [
+        1,
+        3
+      ],
+      "shared_positions": [
+        2,
+        2
+      ],
+      "term_count": 3,
+      "shared_count": 2,
+      "L": "L22",
+      "R": "R1",
+      "K": "K0",
+      "H": "H1B",
+      "S": "S0",
+      "remainder_sum": 110,
+      "hidden_ratio": 2,
+      "doubled_target_index": 2,
+      "doubled_term_index": 3,
+      "visible_shared_factors": [
+        41,
+        82
+      ],
+      "naive_multiplications": 3,
+      "grouped_multiplications": 3,
+      "large_multiplications_before": 3,
+      "large_multiplications_after": 2,
+      "small_doublings_after": 1,
+      "phase": "hidden3_partial",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          36,
+          74
+        ],
+        "raw_grouped_terms": [
+          36,
+          37
+        ],
+        "factor_multipliers": [
+          1,
+          2
+        ],
+        "other_products": [
+          3600
+        ],
+        "grouped_product": 4510
+      },
+      "remainder_digits": 3,
+      "cancellation_from_digits": null,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N3T13-P12-L22-R0K0-H1AS0-01",
+      "terms": [
+        [
+          38,
+          12
+        ],
+        [
+          17,
+          67
+        ],
+        [
+          43,
+          19
+        ]
+      ],
+      "signs": [
+        1,
+        1,
+        1
+      ],
+      "answer": 2412,
+      "common_factor": 19,
+      "common_terms": [
+        1,
+        3
+      ],
+      "shared_positions": [
+        1,
+        2
+      ],
+      "term_count": 3,
+      "shared_count": 2,
+      "L": "L22",
+      "R": "R0",
+      "K": "K0",
+      "H": "H1A",
+      "S": "S0",
+      "remainder_sum": 67,
+      "hidden_ratio": 2,
+      "doubled_target_index": 1,
+      "doubled_term_index": 1,
+      "visible_shared_factors": [
+        38,
+        19
+      ],
+      "naive_multiplications": 3,
+      "grouped_multiplications": 3,
+      "large_multiplications_before": 3,
+      "large_multiplications_after": 2,
+      "small_doublings_after": 1,
+      "phase": "hidden3_partial",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          24,
+          43
+        ],
+        "raw_grouped_terms": [
+          12,
+          43
+        ],
+        "factor_multipliers": [
+          2,
+          1
+        ],
+        "other_products": [
+          1139
+        ],
+        "grouped_product": 1273
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": null,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N3T13-P12-L22-R0K0-H1BS0-01",
+      "terms": [
+        [
+          11,
+          21
+        ],
+        [
+          56,
+          27
+        ],
+        [
+          38,
+          22
+        ]
+      ],
+      "signs": [
+        1,
+        1,
+        1
+      ],
+      "answer": 2579,
+      "common_factor": 11,
+      "common_terms": [
+        1,
+        3
+      ],
+      "shared_positions": [
+        1,
+        2
+      ],
+      "term_count": 3,
+      "shared_count": 2,
+      "L": "L22",
+      "R": "R0",
+      "K": "K0",
+      "H": "H1B",
+      "S": "S0",
+      "remainder_sum": 97,
+      "hidden_ratio": 2,
+      "doubled_target_index": 2,
+      "doubled_term_index": 3,
+      "visible_shared_factors": [
+        11,
+        22
+      ],
+      "naive_multiplications": 3,
+      "grouped_multiplications": 3,
+      "large_multiplications_before": 3,
+      "large_multiplications_after": 2,
+      "small_doublings_after": 1,
+      "phase": "hidden3_partial",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          21,
+          76
+        ],
+        "raw_grouped_terms": [
+          21,
+          38
+        ],
+        "factor_multipliers": [
+          1,
+          2
+        ],
+        "other_products": [
+          1512
+        ],
+        "grouped_product": 1067
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": null,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N3T13-P21-L22-R0K0-H1AS0-01",
+      "terms": [
+        [
+          31,
+          36
+        ],
+        [
+          93,
+          19
+        ],
+        [
+          18,
+          13
+        ]
+      ],
+      "signs": [
+        1,
+        1,
+        1
+      ],
+      "answer": 3117,
+      "common_factor": 18,
+      "common_terms": [
+        1,
+        3
+      ],
+      "shared_positions": [
+        2,
+        1
+      ],
+      "term_count": 3,
+      "shared_count": 2,
+      "L": "L22",
+      "R": "R0",
+      "K": "K0",
+      "H": "H1A",
+      "S": "S0",
+      "remainder_sum": 75,
+      "hidden_ratio": 2,
+      "doubled_target_index": 1,
+      "doubled_term_index": 1,
+      "visible_shared_factors": [
+        36,
+        18
+      ],
+      "naive_multiplications": 3,
+      "grouped_multiplications": 3,
+      "large_multiplications_before": 3,
+      "large_multiplications_after": 2,
+      "small_doublings_after": 1,
+      "phase": "hidden3_partial",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          62,
+          13
+        ],
+        "raw_grouped_terms": [
+          31,
+          13
+        ],
+        "factor_multipliers": [
+          2,
+          1
+        ],
+        "other_products": [
+          1767
+        ],
+        "grouped_product": 1350
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": null,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N3T13-P21-L22-R0K0-H1BS0-01",
+      "terms": [
+        [
+          39,
+          44
+        ],
+        [
+          48,
+          76
+        ],
+        [
+          88,
+          28
+        ]
+      ],
+      "signs": [
+        1,
+        1,
+        1
+      ],
+      "answer": 7828,
+      "common_factor": 44,
+      "common_terms": [
+        1,
+        3
+      ],
+      "shared_positions": [
+        2,
+        1
+      ],
+      "term_count": 3,
+      "shared_count": 2,
+      "L": "L22",
+      "R": "R0",
+      "K": "K0",
+      "H": "H1B",
+      "S": "S0",
+      "remainder_sum": 95,
+      "hidden_ratio": 2,
+      "doubled_target_index": 2,
+      "doubled_term_index": 3,
+      "visible_shared_factors": [
+        44,
+        88
+      ],
+      "naive_multiplications": 3,
+      "grouped_multiplications": 3,
+      "large_multiplications_before": 3,
+      "large_multiplications_after": 2,
+      "small_doublings_after": 1,
+      "phase": "hidden3_partial",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          39,
+          56
+        ],
+        "raw_grouped_terms": [
+          39,
+          28
+        ],
+        "factor_multipliers": [
+          1,
+          2
+        ],
+        "other_products": [
+          3648
+        ],
+        "grouped_product": 4180
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": null,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N3T23-P11-L22-R0K0-H1AS0-01",
+      "terms": [
+        [
+          69,
+          17
+        ],
+        [
+          92,
+          19
+        ],
+        [
+          46,
+          59
+        ]
+      ],
+      "signs": [
+        1,
+        1,
+        1
+      ],
+      "answer": 5635,
+      "common_factor": 46,
+      "common_terms": [
+        2,
+        3
+      ],
+      "shared_positions": [
+        1,
+        1
+      ],
+      "term_count": 3,
+      "shared_count": 2,
+      "L": "L22",
+      "R": "R0",
+      "K": "K0",
+      "H": "H1A",
+      "S": "S0",
+      "remainder_sum": 97,
+      "hidden_ratio": 2,
+      "doubled_target_index": 1,
+      "doubled_term_index": 2,
+      "visible_shared_factors": [
+        92,
+        46
+      ],
+      "naive_multiplications": 3,
+      "grouped_multiplications": 3,
+      "large_multiplications_before": 3,
+      "large_multiplications_after": 2,
+      "small_doublings_after": 1,
+      "phase": "hidden3_partial",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          38,
+          59
+        ],
+        "raw_grouped_terms": [
+          19,
+          59
+        ],
+        "factor_multipliers": [
+          2,
+          1
+        ],
+        "other_products": [
+          1173
+        ],
+        "grouped_product": 4462
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": null,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N3T23-P11-L22-R0K0-H1BS0-01",
+      "terms": [
+        [
+          81,
+          69
+        ],
+        [
+          38,
+          11
+        ],
+        [
+          76,
+          17
+        ]
+      ],
+      "signs": [
+        1,
+        1,
+        1
+      ],
+      "answer": 7299,
+      "common_factor": 38,
+      "common_terms": [
+        2,
+        3
+      ],
+      "shared_positions": [
+        1,
+        1
+      ],
+      "term_count": 3,
+      "shared_count": 2,
+      "L": "L22",
+      "R": "R0",
+      "K": "K0",
+      "H": "H1B",
+      "S": "S0",
+      "remainder_sum": 45,
+      "hidden_ratio": 2,
+      "doubled_target_index": 2,
+      "doubled_term_index": 3,
+      "visible_shared_factors": [
+        38,
+        76
+      ],
+      "naive_multiplications": 3,
+      "grouped_multiplications": 3,
+      "large_multiplications_before": 3,
+      "large_multiplications_after": 2,
+      "small_doublings_after": 1,
+      "phase": "hidden3_partial",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          11,
+          34
+        ],
+        "raw_grouped_terms": [
+          11,
+          17
+        ],
+        "factor_multipliers": [
+          1,
+          2
+        ],
+        "other_products": [
+          5589
+        ],
+        "grouped_product": 1710
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": null,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N3T23-P22-L22-R1K0-H1AS0-01",
+      "terms": [
+        [
+          62,
+          17
+        ],
+        [
+          43,
+          58
+        ],
+        [
+          24,
+          29
+        ]
+      ],
+      "signs": [
+        1,
+        1,
+        1
+      ],
+      "answer": 4244,
+      "common_factor": 29,
+      "common_terms": [
+        2,
+        3
+      ],
+      "shared_positions": [
+        2,
+        2
+      ],
+      "term_count": 3,
+      "shared_count": 2,
+      "L": "L22",
+      "R": "R1",
+      "K": "K0",
+      "H": "H1A",
+      "S": "S0",
+      "remainder_sum": 110,
+      "hidden_ratio": 2,
+      "doubled_target_index": 1,
+      "doubled_term_index": 2,
+      "visible_shared_factors": [
+        58,
+        29
+      ],
+      "naive_multiplications": 3,
+      "grouped_multiplications": 3,
+      "large_multiplications_before": 3,
+      "large_multiplications_after": 2,
+      "small_doublings_after": 1,
+      "phase": "hidden3_partial",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          86,
+          24
+        ],
+        "raw_grouped_terms": [
+          43,
+          24
+        ],
+        "factor_multipliers": [
+          2,
+          1
+        ],
+        "other_products": [
+          1054
+        ],
+        "grouped_product": 3190
+      },
+      "remainder_digits": 3,
+      "cancellation_from_digits": null,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N3T23-P22-L22-R1K0-H1BS0-01",
+      "terms": [
+        [
+          35,
+          19
+        ],
+        [
+          32,
+          34
+        ],
+        [
+          39,
+          68
+        ]
+      ],
+      "signs": [
+        1,
+        1,
+        1
+      ],
+      "answer": 4405,
+      "common_factor": 34,
+      "common_terms": [
+        2,
+        3
+      ],
+      "shared_positions": [
+        2,
+        2
+      ],
+      "term_count": 3,
+      "shared_count": 2,
+      "L": "L22",
+      "R": "R1",
+      "K": "K0",
+      "H": "H1B",
+      "S": "S0",
+      "remainder_sum": 110,
+      "hidden_ratio": 2,
+      "doubled_target_index": 2,
+      "doubled_term_index": 3,
+      "visible_shared_factors": [
+        34,
+        68
+      ],
+      "naive_multiplications": 3,
+      "grouped_multiplications": 3,
+      "large_multiplications_before": 3,
+      "large_multiplications_after": 2,
+      "small_doublings_after": 1,
+      "phase": "hidden3_partial",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          32,
+          78
+        ],
+        "raw_grouped_terms": [
+          32,
+          39
+        ],
+        "factor_multipliers": [
+          1,
+          2
+        ],
+        "other_products": [
+          665
+        ],
+        "grouped_product": 3740
+      },
+      "remainder_digits": 3,
+      "cancellation_from_digits": null,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N3T23-P12-L22-R0K0-H1AS0-01",
+      "terms": [
+        [
+          26,
+          61
+        ],
+        [
+          74,
+          35
+        ],
+        [
+          19,
+          37
+        ]
+      ],
+      "signs": [
+        1,
+        1,
+        1
+      ],
+      "answer": 4879,
+      "common_factor": 37,
+      "common_terms": [
+        2,
+        3
+      ],
+      "shared_positions": [
+        1,
+        2
+      ],
+      "term_count": 3,
+      "shared_count": 2,
+      "L": "L22",
+      "R": "R0",
+      "K": "K0",
+      "H": "H1A",
+      "S": "S0",
+      "remainder_sum": 89,
+      "hidden_ratio": 2,
+      "doubled_target_index": 1,
+      "doubled_term_index": 2,
+      "visible_shared_factors": [
+        74,
+        37
+      ],
+      "naive_multiplications": 3,
+      "grouped_multiplications": 3,
+      "large_multiplications_before": 3,
+      "large_multiplications_after": 2,
+      "small_doublings_after": 1,
+      "phase": "hidden3_partial",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          70,
+          19
+        ],
+        "raw_grouped_terms": [
+          35,
+          19
+        ],
+        "factor_multipliers": [
+          2,
+          1
+        ],
+        "other_products": [
+          1586
+        ],
+        "grouped_product": 3293
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": null,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N3T23-P12-L22-R0K0-H1BS0-01",
+      "terms": [
+        [
+          64,
+          53
+        ],
+        [
+          36,
+          29
+        ],
+        [
+          23,
+          72
+        ]
+      ],
+      "signs": [
+        1,
+        1,
+        1
+      ],
+      "answer": 6092,
+      "common_factor": 36,
+      "common_terms": [
+        2,
+        3
+      ],
+      "shared_positions": [
+        1,
+        2
+      ],
+      "term_count": 3,
+      "shared_count": 2,
+      "L": "L22",
+      "R": "R0",
+      "K": "K0",
+      "H": "H1B",
+      "S": "S0",
+      "remainder_sum": 75,
+      "hidden_ratio": 2,
+      "doubled_target_index": 2,
+      "doubled_term_index": 3,
+      "visible_shared_factors": [
+        36,
+        72
+      ],
+      "naive_multiplications": 3,
+      "grouped_multiplications": 3,
+      "large_multiplications_before": 3,
+      "large_multiplications_after": 2,
+      "small_doublings_after": 1,
+      "phase": "hidden3_partial",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          29,
+          46
+        ],
+        "raw_grouped_terms": [
+          29,
+          23
+        ],
+        "factor_multipliers": [
+          1,
+          2
+        ],
+        "other_products": [
+          3392
+        ],
+        "grouped_product": 2700
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": null,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N3T23-P21-L22-R0K0-H1AS0-01",
+      "terms": [
+        [
+          19,
+          63
+        ],
+        [
+          34,
+          66
+        ],
+        [
+          33,
+          29
+        ]
+      ],
+      "signs": [
+        1,
+        1,
+        1
+      ],
+      "answer": 4398,
+      "common_factor": 33,
+      "common_terms": [
+        2,
+        3
+      ],
+      "shared_positions": [
+        2,
+        1
+      ],
+      "term_count": 3,
+      "shared_count": 2,
+      "L": "L22",
+      "R": "R0",
+      "K": "K0",
+      "H": "H1A",
+      "S": "S0",
+      "remainder_sum": 97,
+      "hidden_ratio": 2,
+      "doubled_target_index": 1,
+      "doubled_term_index": 2,
+      "visible_shared_factors": [
+        66,
+        33
+      ],
+      "naive_multiplications": 3,
+      "grouped_multiplications": 3,
+      "large_multiplications_before": 3,
+      "large_multiplications_after": 2,
+      "small_doublings_after": 1,
+      "phase": "hidden3_partial",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          68,
+          29
+        ],
+        "raw_grouped_terms": [
+          34,
+          29
+        ],
+        "factor_multipliers": [
+          2,
+          1
+        ],
+        "other_products": [
+          1197
+        ],
+        "grouped_product": 3201
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": null,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N3T23-P21-L22-R0K0-H1BS0-01",
+      "terms": [
+        [
+          89,
+          37
+        ],
+        [
+          13,
+          31
+        ],
+        [
+          62,
+          43
+        ]
+      ],
+      "signs": [
+        1,
+        1,
+        1
+      ],
+      "answer": 6362,
+      "common_factor": 31,
+      "common_terms": [
+        2,
+        3
+      ],
+      "shared_positions": [
+        2,
+        1
+      ],
+      "term_count": 3,
+      "shared_count": 2,
+      "L": "L22",
+      "R": "R0",
+      "K": "K0",
+      "H": "H1B",
+      "S": "S0",
+      "remainder_sum": 99,
+      "hidden_ratio": 2,
+      "doubled_target_index": 2,
+      "doubled_term_index": 3,
+      "visible_shared_factors": [
+        31,
+        62
+      ],
+      "naive_multiplications": 3,
+      "grouped_multiplications": 3,
+      "large_multiplications_before": 3,
+      "large_multiplications_after": 2,
+      "small_doublings_after": 1,
+      "phase": "hidden3_partial",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          13,
+          86
+        ],
+        "raw_grouped_terms": [
+          13,
+          43
+        ],
+        "factor_multipliers": [
+          1,
+          2
+        ],
+        "other_products": [
+          3293
+        ],
+        "grouped_product": 3069
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": null,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N3T123-P111-L22-R0K0-H1AS0-01",
+      "terms": [
+        [
+          94,
+          16
+        ],
+        [
+          47,
+          15
+        ],
+        [
+          47,
+          34
+        ]
+      ],
+      "signs": [
+        1,
+        1,
+        1
+      ],
+      "answer": 3807,
+      "common_factor": 47,
+      "common_terms": [
+        1,
+        2,
+        3
+      ],
+      "shared_positions": [
+        1,
+        1,
+        1
+      ],
+      "term_count": 3,
+      "shared_count": 3,
+      "L": "L22",
+      "R": "R0",
+      "K": "K0",
+      "H": "H1A",
+      "S": "S0",
+      "remainder_sum": 81,
+      "hidden_ratio": 2,
+      "doubled_target_index": 1,
+      "doubled_term_index": 1,
+      "visible_shared_factors": [
+        94,
+        47,
+        47
+      ],
+      "naive_multiplications": 3,
+      "grouped_multiplications": 2,
+      "large_multiplications_before": 3,
+      "large_multiplications_after": 1,
+      "small_doublings_after": 1,
+      "phase": "hidden3_all",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          32,
+          15,
+          34
+        ],
+        "raw_grouped_terms": [
+          16,
+          15,
+          34
+        ],
+        "factor_multipliers": [
+          2,
+          1,
+          1
+        ],
+        "other_products": [],
+        "grouped_product": 3807
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": null,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N3T123-P111-L22-R0K0-H1BS0-01",
+      "terms": [
+        [
+          13,
+          27
+        ],
+        [
+          26,
+          12
+        ],
+        [
+          13,
+          38
+        ]
+      ],
+      "signs": [
+        1,
+        1,
+        1
+      ],
+      "answer": 1157,
+      "common_factor": 13,
+      "common_terms": [
+        1,
+        2,
+        3
+      ],
+      "shared_positions": [
+        1,
+        1,
+        1
+      ],
+      "term_count": 3,
+      "shared_count": 3,
+      "L": "L22",
+      "R": "R0",
+      "K": "K0",
+      "H": "H1B",
+      "S": "S0",
+      "remainder_sum": 89,
+      "hidden_ratio": 2,
+      "doubled_target_index": 2,
+      "doubled_term_index": 2,
+      "visible_shared_factors": [
+        13,
+        26,
+        13
+      ],
+      "naive_multiplications": 3,
+      "grouped_multiplications": 2,
+      "large_multiplications_before": 3,
+      "large_multiplications_after": 1,
+      "small_doublings_after": 1,
+      "phase": "hidden3_all",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          27,
+          24,
+          38
+        ],
+        "raw_grouped_terms": [
+          27,
+          12,
+          38
+        ],
+        "factor_multipliers": [
+          1,
+          2,
+          1
+        ],
+        "other_products": [],
+        "grouped_product": 1157
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": null,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N3T123-P111-L22-R1K0-H1CS0-01",
+      "terms": [
+        [
+          17,
+          62
+        ],
+        [
+          17,
+          32
+        ],
+        [
+          34,
+          48
+        ]
+      ],
+      "signs": [
+        1,
+        1,
+        1
+      ],
+      "answer": 3230,
+      "common_factor": 17,
+      "common_terms": [
+        1,
+        2,
+        3
+      ],
+      "shared_positions": [
+        1,
+        1,
+        1
+      ],
+      "term_count": 3,
+      "shared_count": 3,
+      "L": "L22",
+      "R": "R1",
+      "K": "K0",
+      "H": "H1C",
+      "S": "S0",
+      "remainder_sum": 190,
+      "hidden_ratio": 2,
+      "doubled_target_index": 3,
+      "doubled_term_index": 3,
+      "visible_shared_factors": [
+        17,
+        17,
+        34
+      ],
+      "naive_multiplications": 3,
+      "grouped_multiplications": 2,
+      "large_multiplications_before": 3,
+      "large_multiplications_after": 1,
+      "small_doublings_after": 1,
+      "phase": "hidden3_all",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          62,
+          32,
+          96
+        ],
+        "raw_grouped_terms": [
+          62,
+          32,
+          48
+        ],
+        "factor_multipliers": [
+          1,
+          1,
+          2
+        ],
+        "other_products": [],
+        "grouped_product": 3230
+      },
+      "remainder_digits": 3,
+      "cancellation_from_digits": null,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N3T123-P112-L22-R0K0-H1AS0-01",
+      "terms": [
+        [
+          24,
+          19
+        ],
+        [
+          12,
+          28
+        ],
+        [
+          27,
+          12
+        ]
+      ],
+      "signs": [
+        1,
+        1,
+        1
+      ],
+      "answer": 1116,
+      "common_factor": 12,
+      "common_terms": [
+        1,
+        2,
+        3
+      ],
+      "shared_positions": [
+        1,
+        1,
+        2
+      ],
+      "term_count": 3,
+      "shared_count": 3,
+      "L": "L22",
+      "R": "R0",
+      "K": "K0",
+      "H": "H1A",
+      "S": "S0",
+      "remainder_sum": 93,
+      "hidden_ratio": 2,
+      "doubled_target_index": 1,
+      "doubled_term_index": 1,
+      "visible_shared_factors": [
+        24,
+        12,
+        12
+      ],
+      "naive_multiplications": 3,
+      "grouped_multiplications": 2,
+      "large_multiplications_before": 3,
+      "large_multiplications_after": 1,
+      "small_doublings_after": 1,
+      "phase": "hidden3_all",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          38,
+          28,
+          27
+        ],
+        "raw_grouped_terms": [
+          19,
+          28,
+          27
+        ],
+        "factor_multipliers": [
+          2,
+          1,
+          1
+        ],
+        "other_products": [],
+        "grouped_product": 1116
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": null,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N3T123-P112-L22-R0K0-H1BS0-01",
+      "terms": [
+        [
+          17,
+          12
+        ],
+        [
+          34,
+          33
+        ],
+        [
+          11,
+          17
+        ]
+      ],
+      "signs": [
+        1,
+        1,
+        1
+      ],
+      "answer": 1513,
+      "common_factor": 17,
+      "common_terms": [
+        1,
+        2,
+        3
+      ],
+      "shared_positions": [
+        1,
+        1,
+        2
+      ],
+      "term_count": 3,
+      "shared_count": 3,
+      "L": "L22",
+      "R": "R0",
+      "K": "K0",
+      "H": "H1B",
+      "S": "S0",
+      "remainder_sum": 89,
+      "hidden_ratio": 2,
+      "doubled_target_index": 2,
+      "doubled_term_index": 2,
+      "visible_shared_factors": [
+        17,
+        34,
+        17
+      ],
+      "naive_multiplications": 3,
+      "grouped_multiplications": 2,
+      "large_multiplications_before": 3,
+      "large_multiplications_after": 1,
+      "small_doublings_after": 1,
+      "phase": "hidden3_all",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          12,
+          66,
+          11
+        ],
+        "raw_grouped_terms": [
+          12,
+          33,
+          11
+        ],
+        "factor_multipliers": [
+          1,
+          2,
+          1
+        ],
+        "other_products": [],
+        "grouped_product": 1513
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": null,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N3T123-P112-L22-R1K0-H1CS0-01",
+      "terms": [
+        [
+          41,
+          45
+        ],
+        [
+          41,
+          61
+        ],
+        [
+          27,
+          82
+        ]
+      ],
+      "signs": [
+        1,
+        1,
+        1
+      ],
+      "answer": 6560,
+      "common_factor": 41,
+      "common_terms": [
+        1,
+        2,
+        3
+      ],
+      "shared_positions": [
+        1,
+        1,
+        2
+      ],
+      "term_count": 3,
+      "shared_count": 3,
+      "L": "L22",
+      "R": "R1",
+      "K": "K0",
+      "H": "H1C",
+      "S": "S0",
+      "remainder_sum": 160,
+      "hidden_ratio": 2,
+      "doubled_target_index": 3,
+      "doubled_term_index": 3,
+      "visible_shared_factors": [
+        41,
+        41,
+        82
+      ],
+      "naive_multiplications": 3,
+      "grouped_multiplications": 2,
+      "large_multiplications_before": 3,
+      "large_multiplications_after": 1,
+      "small_doublings_after": 1,
+      "phase": "hidden3_all",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          45,
+          61,
+          54
+        ],
+        "raw_grouped_terms": [
+          45,
+          61,
+          27
+        ],
+        "factor_multipliers": [
+          1,
+          1,
+          2
+        ],
+        "other_products": [],
+        "grouped_product": 6560
+      },
+      "remainder_digits": 3,
+      "cancellation_from_digits": null,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N3T123-P121-L22-R0K0-H1AS0-01",
+      "terms": [
+        [
+          36,
+          16
+        ],
+        [
+          21,
+          18
+        ],
+        [
+          18,
+          24
+        ]
+      ],
+      "signs": [
+        1,
+        1,
+        1
+      ],
+      "answer": 1386,
+      "common_factor": 18,
+      "common_terms": [
+        1,
+        2,
+        3
+      ],
+      "shared_positions": [
+        1,
+        2,
+        1
+      ],
+      "term_count": 3,
+      "shared_count": 3,
+      "L": "L22",
+      "R": "R0",
+      "K": "K0",
+      "H": "H1A",
+      "S": "S0",
+      "remainder_sum": 77,
+      "hidden_ratio": 2,
+      "doubled_target_index": 1,
+      "doubled_term_index": 1,
+      "visible_shared_factors": [
+        36,
+        18,
+        18
+      ],
+      "naive_multiplications": 3,
+      "grouped_multiplications": 2,
+      "large_multiplications_before": 3,
+      "large_multiplications_after": 1,
+      "small_doublings_after": 1,
+      "phase": "hidden3_all",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          32,
+          21,
+          24
+        ],
+        "raw_grouped_terms": [
+          16,
+          21,
+          24
+        ],
+        "factor_multipliers": [
+          2,
+          1,
+          1
+        ],
+        "other_products": [],
+        "grouped_product": 1386
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": null,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N3T123-P121-L22-R0K0-H1BS0-01",
+      "terms": [
+        [
+          12,
+          49
+        ],
+        [
+          18,
+          24
+        ],
+        [
+          12,
+          11
+        ]
+      ],
+      "signs": [
+        1,
+        1,
+        1
+      ],
+      "answer": 1152,
+      "common_factor": 12,
+      "common_terms": [
+        1,
+        2,
+        3
+      ],
+      "shared_positions": [
+        1,
+        2,
+        1
+      ],
+      "term_count": 3,
+      "shared_count": 3,
+      "L": "L22",
+      "R": "R0",
+      "K": "K0",
+      "H": "H1B",
+      "S": "S0",
+      "remainder_sum": 96,
+      "hidden_ratio": 2,
+      "doubled_target_index": 2,
+      "doubled_term_index": 2,
+      "visible_shared_factors": [
+        12,
+        24,
+        12
+      ],
+      "naive_multiplications": 3,
+      "grouped_multiplications": 2,
+      "large_multiplications_before": 3,
+      "large_multiplications_after": 1,
+      "small_doublings_after": 1,
+      "phase": "hidden3_all",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          49,
+          36,
+          11
+        ],
+        "raw_grouped_terms": [
+          49,
+          18,
+          11
+        ],
+        "factor_multipliers": [
+          1,
+          2,
+          1
+        ],
+        "other_products": [],
+        "grouped_product": 1152
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": null,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N3T123-P121-L22-R1K0-H1CS0-01",
+      "terms": [
+        [
+          22,
+          21
+        ],
+        [
+          77,
+          22
+        ],
+        [
+          44,
+          31
+        ]
+      ],
+      "signs": [
+        1,
+        1,
+        1
+      ],
+      "answer": 3520,
+      "common_factor": 22,
+      "common_terms": [
+        1,
+        2,
+        3
+      ],
+      "shared_positions": [
+        1,
+        2,
+        1
+      ],
+      "term_count": 3,
+      "shared_count": 3,
+      "L": "L22",
+      "R": "R1",
+      "K": "K0",
+      "H": "H1C",
+      "S": "S0",
+      "remainder_sum": 160,
+      "hidden_ratio": 2,
+      "doubled_target_index": 3,
+      "doubled_term_index": 3,
+      "visible_shared_factors": [
+        22,
+        22,
+        44
+      ],
+      "naive_multiplications": 3,
+      "grouped_multiplications": 2,
+      "large_multiplications_before": 3,
+      "large_multiplications_after": 1,
+      "small_doublings_after": 1,
+      "phase": "hidden3_all",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          21,
+          77,
+          62
+        ],
+        "raw_grouped_terms": [
+          21,
+          77,
+          31
+        ],
+        "factor_multipliers": [
+          1,
+          1,
+          2
+        ],
+        "other_products": [],
+        "grouped_product": 3520
+      },
+      "remainder_digits": 3,
+      "cancellation_from_digits": null,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N3T123-P122-L22-R0K0-H1AS0-01",
+      "terms": [
+        [
+          96,
+          13
+        ],
+        [
+          12,
+          48
+        ],
+        [
+          41,
+          48
+        ]
+      ],
+      "signs": [
+        1,
+        1,
+        1
+      ],
+      "answer": 3792,
+      "common_factor": 48,
+      "common_terms": [
+        1,
+        2,
+        3
+      ],
+      "shared_positions": [
+        1,
+        2,
+        2
+      ],
+      "term_count": 3,
+      "shared_count": 3,
+      "L": "L22",
+      "R": "R0",
+      "K": "K0",
+      "H": "H1A",
+      "S": "S0",
+      "remainder_sum": 79,
+      "hidden_ratio": 2,
+      "doubled_target_index": 1,
+      "doubled_term_index": 1,
+      "visible_shared_factors": [
+        96,
+        48,
+        48
+      ],
+      "naive_multiplications": 3,
+      "grouped_multiplications": 2,
+      "large_multiplications_before": 3,
+      "large_multiplications_after": 1,
+      "small_doublings_after": 1,
+      "phase": "hidden3_all",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          26,
+          12,
+          41
+        ],
+        "raw_grouped_terms": [
+          13,
+          12,
+          41
+        ],
+        "factor_multipliers": [
+          2,
+          1,
+          1
+        ],
+        "other_products": [],
+        "grouped_product": 3792
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": null,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N3T123-P122-L22-R0K0-H1BS0-01",
+      "terms": [
+        [
+          36,
+          28
+        ],
+        [
+          24,
+          72
+        ],
+        [
+          19,
+          36
+        ]
+      ],
+      "signs": [
+        1,
+        1,
+        1
+      ],
+      "answer": 3420,
+      "common_factor": 36,
+      "common_terms": [
+        1,
+        2,
+        3
+      ],
+      "shared_positions": [
+        1,
+        2,
+        2
+      ],
+      "term_count": 3,
+      "shared_count": 3,
+      "L": "L22",
+      "R": "R0",
+      "K": "K0",
+      "H": "H1B",
+      "S": "S0",
+      "remainder_sum": 95,
+      "hidden_ratio": 2,
+      "doubled_target_index": 2,
+      "doubled_term_index": 2,
+      "visible_shared_factors": [
+        36,
+        72,
+        36
+      ],
+      "naive_multiplications": 3,
+      "grouped_multiplications": 2,
+      "large_multiplications_before": 3,
+      "large_multiplications_after": 1,
+      "small_doublings_after": 1,
+      "phase": "hidden3_all",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          28,
+          48,
+          19
+        ],
+        "raw_grouped_terms": [
+          28,
+          24,
+          19
+        ],
+        "factor_multipliers": [
+          1,
+          2,
+          1
+        ],
+        "other_products": [],
+        "grouped_product": 3420
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": null,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N3T123-P122-L22-R1K0-H1CS0-01",
+      "terms": [
+        [
+          19,
+          71
+        ],
+        [
+          75,
+          19
+        ],
+        [
+          17,
+          38
+        ]
+      ],
+      "signs": [
+        1,
+        1,
+        1
+      ],
+      "answer": 3420,
+      "common_factor": 19,
+      "common_terms": [
+        1,
+        2,
+        3
+      ],
+      "shared_positions": [
+        1,
+        2,
+        2
+      ],
+      "term_count": 3,
+      "shared_count": 3,
+      "L": "L22",
+      "R": "R1",
+      "K": "K0",
+      "H": "H1C",
+      "S": "S0",
+      "remainder_sum": 180,
+      "hidden_ratio": 2,
+      "doubled_target_index": 3,
+      "doubled_term_index": 3,
+      "visible_shared_factors": [
+        19,
+        19,
+        38
+      ],
+      "naive_multiplications": 3,
+      "grouped_multiplications": 2,
+      "large_multiplications_before": 3,
+      "large_multiplications_after": 1,
+      "small_doublings_after": 1,
+      "phase": "hidden3_all",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          71,
+          75,
+          34
+        ],
+        "raw_grouped_terms": [
+          71,
+          75,
+          17
+        ],
+        "factor_multipliers": [
+          1,
+          1,
+          2
+        ],
+        "other_products": [],
+        "grouped_product": 3420
+      },
+      "remainder_digits": 3,
+      "cancellation_from_digits": null,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N3T123-P211-L22-R0K0-H1AS0-01",
+      "terms": [
+        [
+          34,
+          84
+        ],
+        [
+          42,
+          17
+        ],
+        [
+          42,
+          14
+        ]
+      ],
+      "signs": [
+        1,
+        1,
+        1
+      ],
+      "answer": 4158,
+      "common_factor": 42,
+      "common_terms": [
+        1,
+        2,
+        3
+      ],
+      "shared_positions": [
+        2,
+        1,
+        1
+      ],
+      "term_count": 3,
+      "shared_count": 3,
+      "L": "L22",
+      "R": "R0",
+      "K": "K0",
+      "H": "H1A",
+      "S": "S0",
+      "remainder_sum": 99,
+      "hidden_ratio": 2,
+      "doubled_target_index": 1,
+      "doubled_term_index": 1,
+      "visible_shared_factors": [
+        84,
+        42,
+        42
+      ],
+      "naive_multiplications": 3,
+      "grouped_multiplications": 2,
+      "large_multiplications_before": 3,
+      "large_multiplications_after": 1,
+      "small_doublings_after": 1,
+      "phase": "hidden3_all",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          68,
+          17,
+          14
+        ],
+        "raw_grouped_terms": [
+          34,
+          17,
+          14
+        ],
+        "factor_multipliers": [
+          2,
+          1,
+          1
+        ],
+        "other_products": [],
+        "grouped_product": 4158
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": null,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N3T123-P211-L22-R0K0-H1BS0-01",
+      "terms": [
+        [
+          47,
+          38
+        ],
+        [
+          76,
+          14
+        ],
+        [
+          38,
+          24
+        ]
+      ],
+      "signs": [
+        1,
+        1,
+        1
+      ],
+      "answer": 3762,
+      "common_factor": 38,
+      "common_terms": [
+        1,
+        2,
+        3
+      ],
+      "shared_positions": [
+        2,
+        1,
+        1
+      ],
+      "term_count": 3,
+      "shared_count": 3,
+      "L": "L22",
+      "R": "R0",
+      "K": "K0",
+      "H": "H1B",
+      "S": "S0",
+      "remainder_sum": 99,
+      "hidden_ratio": 2,
+      "doubled_target_index": 2,
+      "doubled_term_index": 2,
+      "visible_shared_factors": [
+        38,
+        76,
+        38
+      ],
+      "naive_multiplications": 3,
+      "grouped_multiplications": 2,
+      "large_multiplications_before": 3,
+      "large_multiplications_after": 1,
+      "small_doublings_after": 1,
+      "phase": "hidden3_all",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          47,
+          28,
+          24
+        ],
+        "raw_grouped_terms": [
+          47,
+          14,
+          24
+        ],
+        "factor_multipliers": [
+          1,
+          2,
+          1
+        ],
+        "other_products": [],
+        "grouped_product": 3762
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": null,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N3T123-P211-L22-R1K0-H1CS0-01",
+      "terms": [
+        [
+          76,
+          49
+        ],
+        [
+          49,
+          28
+        ],
+        [
+          98,
+          33
+        ]
+      ],
+      "signs": [
+        1,
+        1,
+        1
+      ],
+      "answer": 8330,
+      "common_factor": 49,
+      "common_terms": [
+        1,
+        2,
+        3
+      ],
+      "shared_positions": [
+        2,
+        1,
+        1
+      ],
+      "term_count": 3,
+      "shared_count": 3,
+      "L": "L22",
+      "R": "R1",
+      "K": "K0",
+      "H": "H1C",
+      "S": "S0",
+      "remainder_sum": 170,
+      "hidden_ratio": 2,
+      "doubled_target_index": 3,
+      "doubled_term_index": 3,
+      "visible_shared_factors": [
+        49,
+        49,
+        98
+      ],
+      "naive_multiplications": 3,
+      "grouped_multiplications": 2,
+      "large_multiplications_before": 3,
+      "large_multiplications_after": 1,
+      "small_doublings_after": 1,
+      "phase": "hidden3_all",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          76,
+          28,
+          66
+        ],
+        "raw_grouped_terms": [
+          76,
+          28,
+          33
+        ],
+        "factor_multipliers": [
+          1,
+          1,
+          2
+        ],
+        "other_products": [],
+        "grouped_product": 8330
+      },
+      "remainder_digits": 3,
+      "cancellation_from_digits": null,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N3T123-P212-L22-R0K0-H1AS0-01",
+      "terms": [
+        [
+          15,
+          62
+        ],
+        [
+          31,
+          16
+        ],
+        [
+          47,
+          31
+        ]
+      ],
+      "signs": [
+        1,
+        1,
+        1
+      ],
+      "answer": 2883,
+      "common_factor": 31,
+      "common_terms": [
+        1,
+        2,
+        3
+      ],
+      "shared_positions": [
+        2,
+        1,
+        2
+      ],
+      "term_count": 3,
+      "shared_count": 3,
+      "L": "L22",
+      "R": "R0",
+      "K": "K0",
+      "H": "H1A",
+      "S": "S0",
+      "remainder_sum": 93,
+      "hidden_ratio": 2,
+      "doubled_target_index": 1,
+      "doubled_term_index": 1,
+      "visible_shared_factors": [
+        62,
+        31,
+        31
+      ],
+      "naive_multiplications": 3,
+      "grouped_multiplications": 2,
+      "large_multiplications_before": 3,
+      "large_multiplications_after": 1,
+      "small_doublings_after": 1,
+      "phase": "hidden3_all",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          30,
+          16,
+          47
+        ],
+        "raw_grouped_terms": [
+          15,
+          16,
+          47
+        ],
+        "factor_multipliers": [
+          2,
+          1,
+          1
+        ],
+        "other_products": [],
+        "grouped_product": 2883
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": null,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N3T123-P212-L22-R0K0-H1BS0-01",
+      "terms": [
+        [
+          14,
+          28
+        ],
+        [
+          56,
+          22
+        ],
+        [
+          41,
+          28
+        ]
+      ],
+      "signs": [
+        1,
+        1,
+        1
+      ],
+      "answer": 2772,
+      "common_factor": 28,
+      "common_terms": [
+        1,
+        2,
+        3
+      ],
+      "shared_positions": [
+        2,
+        1,
+        2
+      ],
+      "term_count": 3,
+      "shared_count": 3,
+      "L": "L22",
+      "R": "R0",
+      "K": "K0",
+      "H": "H1B",
+      "S": "S0",
+      "remainder_sum": 99,
+      "hidden_ratio": 2,
+      "doubled_target_index": 2,
+      "doubled_term_index": 2,
+      "visible_shared_factors": [
+        28,
+        56,
+        28
+      ],
+      "naive_multiplications": 3,
+      "grouped_multiplications": 2,
+      "large_multiplications_before": 3,
+      "large_multiplications_after": 1,
+      "small_doublings_after": 1,
+      "phase": "hidden3_all",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          14,
+          44,
+          41
+        ],
+        "raw_grouped_terms": [
+          14,
+          22,
+          41
+        ],
+        "factor_multipliers": [
+          1,
+          2,
+          1
+        ],
+        "other_products": [],
+        "grouped_product": 2772
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": null,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N3T123-P212-L22-R1K0-H1CS0-01",
+      "terms": [
+        [
+          22,
+          47
+        ],
+        [
+          47,
+          88
+        ],
+        [
+          15,
+          94
+        ]
+      ],
+      "signs": [
+        1,
+        1,
+        1
+      ],
+      "answer": 6580,
+      "common_factor": 47,
+      "common_terms": [
+        1,
+        2,
+        3
+      ],
+      "shared_positions": [
+        2,
+        1,
+        2
+      ],
+      "term_count": 3,
+      "shared_count": 3,
+      "L": "L22",
+      "R": "R1",
+      "K": "K0",
+      "H": "H1C",
+      "S": "S0",
+      "remainder_sum": 140,
+      "hidden_ratio": 2,
+      "doubled_target_index": 3,
+      "doubled_term_index": 3,
+      "visible_shared_factors": [
+        47,
+        47,
+        94
+      ],
+      "naive_multiplications": 3,
+      "grouped_multiplications": 2,
+      "large_multiplications_before": 3,
+      "large_multiplications_after": 1,
+      "small_doublings_after": 1,
+      "phase": "hidden3_all",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          22,
+          88,
+          30
+        ],
+        "raw_grouped_terms": [
+          22,
+          88,
+          15
+        ],
+        "factor_multipliers": [
+          1,
+          1,
+          2
+        ],
+        "other_products": [],
+        "grouped_product": 6580
+      },
+      "remainder_digits": 3,
+      "cancellation_from_digits": null,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N3T123-P221-L22-R0K0-H1AS0-01",
+      "terms": [
+        [
+          16,
+          68
+        ],
+        [
+          17,
+          34
+        ],
+        [
+          34,
+          12
+        ]
+      ],
+      "signs": [
+        1,
+        1,
+        1
+      ],
+      "answer": 2074,
+      "common_factor": 34,
+      "common_terms": [
+        1,
+        2,
+        3
+      ],
+      "shared_positions": [
+        2,
+        2,
+        1
+      ],
+      "term_count": 3,
+      "shared_count": 3,
+      "L": "L22",
+      "R": "R0",
+      "K": "K0",
+      "H": "H1A",
+      "S": "S0",
+      "remainder_sum": 61,
+      "hidden_ratio": 2,
+      "doubled_target_index": 1,
+      "doubled_term_index": 1,
+      "visible_shared_factors": [
+        68,
+        34,
+        34
+      ],
+      "naive_multiplications": 3,
+      "grouped_multiplications": 2,
+      "large_multiplications_before": 3,
+      "large_multiplications_after": 1,
+      "small_doublings_after": 1,
+      "phase": "hidden3_all",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          32,
+          17,
+          12
+        ],
+        "raw_grouped_terms": [
+          16,
+          17,
+          12
+        ],
+        "factor_multipliers": [
+          2,
+          1,
+          1
+        ],
+        "other_products": [],
+        "grouped_product": 2074
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": null,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N3T123-P221-L22-R0K0-H1BS0-01",
+      "terms": [
+        [
+          39,
+          43
+        ],
+        [
+          13,
+          86
+        ],
+        [
+          43,
+          11
+        ]
+      ],
+      "signs": [
+        1,
+        1,
+        1
+      ],
+      "answer": 3268,
+      "common_factor": 43,
+      "common_terms": [
+        1,
+        2,
+        3
+      ],
+      "shared_positions": [
+        2,
+        2,
+        1
+      ],
+      "term_count": 3,
+      "shared_count": 3,
+      "L": "L22",
+      "R": "R0",
+      "K": "K0",
+      "H": "H1B",
+      "S": "S0",
+      "remainder_sum": 76,
+      "hidden_ratio": 2,
+      "doubled_target_index": 2,
+      "doubled_term_index": 2,
+      "visible_shared_factors": [
+        43,
+        86,
+        43
+      ],
+      "naive_multiplications": 3,
+      "grouped_multiplications": 2,
+      "large_multiplications_before": 3,
+      "large_multiplications_after": 1,
+      "small_doublings_after": 1,
+      "phase": "hidden3_all",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          39,
+          26,
+          11
+        ],
+        "raw_grouped_terms": [
+          39,
+          13,
+          11
+        ],
+        "factor_multipliers": [
+          1,
+          2,
+          1
+        ],
+        "other_products": [],
+        "grouped_product": 3268
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": null,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N3T123-P221-L22-R1K0-H1CS0-01",
+      "terms": [
+        [
+          18,
+          46
+        ],
+        [
+          88,
+          46
+        ],
+        [
+          92,
+          22
+        ]
+      ],
+      "signs": [
+        1,
+        1,
+        1
+      ],
+      "answer": 6900,
+      "common_factor": 46,
+      "common_terms": [
+        1,
+        2,
+        3
+      ],
+      "shared_positions": [
+        2,
+        2,
+        1
+      ],
+      "term_count": 3,
+      "shared_count": 3,
+      "L": "L22",
+      "R": "R1",
+      "K": "K0",
+      "H": "H1C",
+      "S": "S0",
+      "remainder_sum": 150,
+      "hidden_ratio": 2,
+      "doubled_target_index": 3,
+      "doubled_term_index": 3,
+      "visible_shared_factors": [
+        46,
+        46,
+        92
+      ],
+      "naive_multiplications": 3,
+      "grouped_multiplications": 2,
+      "large_multiplications_before": 3,
+      "large_multiplications_after": 1,
+      "small_doublings_after": 1,
+      "phase": "hidden3_all",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          18,
+          88,
+          44
+        ],
+        "raw_grouped_terms": [
+          18,
+          88,
+          22
+        ],
+        "factor_multipliers": [
+          1,
+          1,
+          2
+        ],
+        "other_products": [],
+        "grouped_product": 6900
+      },
+      "remainder_digits": 3,
+      "cancellation_from_digits": null,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N3T123-P222-L22-R0K0-H1AS0-01",
+      "terms": [
+        [
+          12,
+          58
+        ],
+        [
+          13,
+          29
+        ],
+        [
+          38,
+          29
+        ]
+      ],
+      "signs": [
+        1,
+        1,
+        1
+      ],
+      "answer": 2175,
+      "common_factor": 29,
+      "common_terms": [
+        1,
+        2,
+        3
+      ],
+      "shared_positions": [
+        2,
+        2,
+        2
+      ],
+      "term_count": 3,
+      "shared_count": 3,
+      "L": "L22",
+      "R": "R0",
+      "K": "K0",
+      "H": "H1A",
+      "S": "S0",
+      "remainder_sum": 75,
+      "hidden_ratio": 2,
+      "doubled_target_index": 1,
+      "doubled_term_index": 1,
+      "visible_shared_factors": [
+        58,
+        29,
+        29
+      ],
+      "naive_multiplications": 3,
+      "grouped_multiplications": 2,
+      "large_multiplications_before": 3,
+      "large_multiplications_after": 1,
+      "small_doublings_after": 1,
+      "phase": "hidden3_all",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          24,
+          13,
+          38
+        ],
+        "raw_grouped_terms": [
+          12,
+          13,
+          38
+        ],
+        "factor_multipliers": [
+          2,
+          1,
+          1
+        ],
+        "other_products": [],
+        "grouped_product": 2175
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": null,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N3T123-P222-L22-R0K0-H1BS0-01",
+      "terms": [
+        [
+          48,
+          44
+        ],
+        [
+          17,
+          88
+        ],
+        [
+          11,
+          44
+        ]
+      ],
+      "signs": [
+        1,
+        1,
+        1
+      ],
+      "answer": 4092,
+      "common_factor": 44,
+      "common_terms": [
+        1,
+        2,
+        3
+      ],
+      "shared_positions": [
+        2,
+        2,
+        2
+      ],
+      "term_count": 3,
+      "shared_count": 3,
+      "L": "L22",
+      "R": "R0",
+      "K": "K0",
+      "H": "H1B",
+      "S": "S0",
+      "remainder_sum": 93,
+      "hidden_ratio": 2,
+      "doubled_target_index": 2,
+      "doubled_term_index": 2,
+      "visible_shared_factors": [
+        44,
+        88,
+        44
+      ],
+      "naive_multiplications": 3,
+      "grouped_multiplications": 2,
+      "large_multiplications_before": 3,
+      "large_multiplications_after": 1,
+      "small_doublings_after": 1,
+      "phase": "hidden3_all",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          48,
+          34,
+          11
+        ],
+        "raw_grouped_terms": [
+          48,
+          17,
+          11
+        ],
+        "factor_multipliers": [
+          1,
+          2,
+          1
+        ],
+        "other_products": [],
+        "grouped_product": 4092
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": null,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N3T123-P222-L22-R1K0-H1CS0-01",
+      "terms": [
+        [
+          47,
+          24
+        ],
+        [
+          31,
+          24
+        ],
+        [
+          26,
+          48
+        ]
+      ],
+      "signs": [
+        1,
+        1,
+        1
+      ],
+      "answer": 3120,
+      "common_factor": 24,
+      "common_terms": [
+        1,
+        2,
+        3
+      ],
+      "shared_positions": [
+        2,
+        2,
+        2
+      ],
+      "term_count": 3,
+      "shared_count": 3,
+      "L": "L22",
+      "R": "R1",
+      "K": "K0",
+      "H": "H1C",
+      "S": "S0",
+      "remainder_sum": 130,
+      "hidden_ratio": 2,
+      "doubled_target_index": 3,
+      "doubled_term_index": 3,
+      "visible_shared_factors": [
+        24,
+        24,
+        48
+      ],
+      "naive_multiplications": 3,
+      "grouped_multiplications": 2,
+      "large_multiplications_before": 3,
+      "large_multiplications_after": 1,
+      "small_doublings_after": 1,
+      "phase": "hidden3_all",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          47,
+          31,
+          52
+        ],
+        "raw_grouped_terms": [
+          47,
+          31,
+          26
+        ],
+        "factor_multipliers": [
+          1,
+          1,
+          2
+        ],
+        "other_products": [],
+        "grouped_product": 3120
+      },
+      "remainder_digits": 3,
+      "cancellation_from_digits": null,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N3T123-P111-L22-R1K0-H1AS1-01",
+      "terms": [
+        [
+          42,
+          46
+        ],
+        [
+          21,
+          75
+        ],
+        [
+          21,
+          37
+        ]
+      ],
+      "signs": [
+        1,
+        1,
+        -1
+      ],
+      "answer": 2730,
+      "common_factor": 21,
+      "common_terms": [
+        1,
+        2,
+        3
+      ],
+      "shared_positions": [
+        1,
+        1,
+        1
+      ],
+      "term_count": 3,
+      "shared_count": 3,
+      "L": "L22",
+      "R": "R1",
+      "K": "K0",
+      "H": "H1A",
+      "S": "S1",
+      "remainder_sum": 130,
+      "hidden_ratio": 2,
+      "doubled_target_index": 1,
+      "doubled_term_index": 1,
+      "visible_shared_factors": [
+        42,
+        21,
+        21
+      ],
+      "naive_multiplications": 3,
+      "grouped_multiplications": 2,
+      "large_multiplications_before": 3,
+      "large_multiplications_after": 1,
+      "small_doublings_after": 1,
+      "phase": "hidden3_all",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          92,
+          75,
+          37
+        ],
+        "raw_grouped_terms": [
+          46,
+          75,
+          37
+        ],
+        "factor_multipliers": [
+          2,
+          1,
+          1
+        ],
+        "other_products": [],
+        "grouped_product": 2730
+      },
+      "remainder_digits": 3,
+      "cancellation_from_digits": 2,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N3T123-P111-L22-R1K0-H1BS2-01",
+      "terms": [
+        [
+          33,
+          46
+        ],
+        [
+          66,
+          25
+        ],
+        [
+          33,
+          34
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        1
+      ],
+      "answer": 990,
+      "common_factor": 33,
+      "common_terms": [
+        1,
+        2,
+        3
+      ],
+      "shared_positions": [
+        1,
+        1,
+        1
+      ],
+      "term_count": 3,
+      "shared_count": 3,
+      "L": "L22",
+      "R": "R1",
+      "K": "K0",
+      "H": "H1B",
+      "S": "S2",
+      "remainder_sum": 30,
+      "hidden_ratio": 2,
+      "doubled_target_index": 2,
+      "doubled_term_index": 2,
+      "visible_shared_factors": [
+        33,
+        66,
+        33
+      ],
+      "naive_multiplications": 3,
+      "grouped_multiplications": 2,
+      "large_multiplications_before": 3,
+      "large_multiplications_after": 1,
+      "small_doublings_after": 1,
+      "phase": "hidden3_all",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          46,
+          50,
+          34
+        ],
+        "raw_grouped_terms": [
+          46,
+          25,
+          34
+        ],
+        "factor_multipliers": [
+          1,
+          2,
+          1
+        ],
+        "other_products": [],
+        "grouped_product": 990
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": 2,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N3T123-P112-L22-R0K0-H1BS1-01",
+      "terms": [
+        [
+          11,
+          47
+        ],
+        [
+          22,
+          14
+        ],
+        [
+          17,
+          11
+        ]
+      ],
+      "signs": [
+        1,
+        1,
+        -1
+      ],
+      "answer": 638,
+      "common_factor": 11,
+      "common_terms": [
+        1,
+        2,
+        3
+      ],
+      "shared_positions": [
+        1,
+        1,
+        2
+      ],
+      "term_count": 3,
+      "shared_count": 3,
+      "L": "L22",
+      "R": "R0",
+      "K": "K0",
+      "H": "H1B",
+      "S": "S1",
+      "remainder_sum": 58,
+      "hidden_ratio": 2,
+      "doubled_target_index": 2,
+      "doubled_term_index": 2,
+      "visible_shared_factors": [
+        11,
+        22,
+        11
+      ],
+      "naive_multiplications": 3,
+      "grouped_multiplications": 2,
+      "large_multiplications_before": 3,
+      "large_multiplications_after": 1,
+      "small_doublings_after": 1,
+      "phase": "hidden3_all",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          47,
+          28,
+          17
+        ],
+        "raw_grouped_terms": [
+          47,
+          14,
+          17
+        ],
+        "factor_multipliers": [
+          1,
+          2,
+          1
+        ],
+        "other_products": [],
+        "grouped_product": 638
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": 2,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N3T123-P112-L22-R0K0-H1CS2-01",
+      "terms": [
+        [
+          14,
+          53
+        ],
+        [
+          14,
+          69
+        ],
+        [
+          29,
+          28
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        1
+      ],
+      "answer": 588,
+      "common_factor": 14,
+      "common_terms": [
+        1,
+        2,
+        3
+      ],
+      "shared_positions": [
+        1,
+        1,
+        2
+      ],
+      "term_count": 3,
+      "shared_count": 3,
+      "L": "L22",
+      "R": "R0",
+      "K": "K0",
+      "H": "H1C",
+      "S": "S2",
+      "remainder_sum": 42,
+      "hidden_ratio": 2,
+      "doubled_target_index": 3,
+      "doubled_term_index": 3,
+      "visible_shared_factors": [
+        14,
+        14,
+        28
+      ],
+      "naive_multiplications": 3,
+      "grouped_multiplications": 2,
+      "large_multiplications_before": 3,
+      "large_multiplications_after": 1,
+      "small_doublings_after": 1,
+      "phase": "hidden3_all",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          53,
+          69,
+          58
+        ],
+        "raw_grouped_terms": [
+          53,
+          69,
+          29
+        ],
+        "factor_multipliers": [
+          1,
+          1,
+          2
+        ],
+        "other_products": [],
+        "grouped_product": 588
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": 2,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N3T123-P121-L22-R0K0-H1CS1-01",
+      "terms": [
+        [
+          37,
+          49
+        ],
+        [
+          36,
+          37
+        ],
+        [
+          74,
+          18
+        ]
+      ],
+      "signs": [
+        1,
+        1,
+        -1
+      ],
+      "answer": 1813,
+      "common_factor": 37,
+      "common_terms": [
+        1,
+        2,
+        3
+      ],
+      "shared_positions": [
+        1,
+        2,
+        1
+      ],
+      "term_count": 3,
+      "shared_count": 3,
+      "L": "L22",
+      "R": "R0",
+      "K": "K0",
+      "H": "H1C",
+      "S": "S1",
+      "remainder_sum": 49,
+      "hidden_ratio": 2,
+      "doubled_target_index": 3,
+      "doubled_term_index": 3,
+      "visible_shared_factors": [
+        37,
+        37,
+        74
+      ],
+      "naive_multiplications": 3,
+      "grouped_multiplications": 2,
+      "large_multiplications_before": 3,
+      "large_multiplications_after": 1,
+      "small_doublings_after": 1,
+      "phase": "hidden3_all",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          49,
+          36,
+          36
+        ],
+        "raw_grouped_terms": [
+          49,
+          36,
+          18
+        ],
+        "factor_multipliers": [
+          1,
+          1,
+          2
+        ],
+        "other_products": [],
+        "grouped_product": 1813
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": 2,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N3T123-P121-L22-R0K0-H1AS2-01",
+      "terms": [
+        [
+          54,
+          36
+        ],
+        [
+          94,
+          27
+        ],
+        [
+          27,
+          55
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        1
+      ],
+      "answer": 891,
+      "common_factor": 27,
+      "common_terms": [
+        1,
+        2,
+        3
+      ],
+      "shared_positions": [
+        1,
+        2,
+        1
+      ],
+      "term_count": 3,
+      "shared_count": 3,
+      "L": "L22",
+      "R": "R0",
+      "K": "K0",
+      "H": "H1A",
+      "S": "S2",
+      "remainder_sum": 33,
+      "hidden_ratio": 2,
+      "doubled_target_index": 1,
+      "doubled_term_index": 1,
+      "visible_shared_factors": [
+        54,
+        27,
+        27
+      ],
+      "naive_multiplications": 3,
+      "grouped_multiplications": 2,
+      "large_multiplications_before": 3,
+      "large_multiplications_after": 1,
+      "small_doublings_after": 1,
+      "phase": "hidden3_all",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          72,
+          94,
+          55
+        ],
+        "raw_grouped_terms": [
+          36,
+          94,
+          55
+        ],
+        "factor_multipliers": [
+          2,
+          1,
+          1
+        ],
+        "other_products": [],
+        "grouped_product": 891
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": 2,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N3T123-P122-L22-R0K0-H1AS1-01",
+      "terms": [
+        [
+          78,
+          12
+        ],
+        [
+          33,
+          39
+        ],
+        [
+          19,
+          39
+        ]
+      ],
+      "signs": [
+        1,
+        1,
+        -1
+      ],
+      "answer": 1482,
+      "common_factor": 39,
+      "common_terms": [
+        1,
+        2,
+        3
+      ],
+      "shared_positions": [
+        1,
+        2,
+        2
+      ],
+      "term_count": 3,
+      "shared_count": 3,
+      "L": "L22",
+      "R": "R0",
+      "K": "K0",
+      "H": "H1A",
+      "S": "S1",
+      "remainder_sum": 38,
+      "hidden_ratio": 2,
+      "doubled_target_index": 1,
+      "doubled_term_index": 1,
+      "visible_shared_factors": [
+        78,
+        39,
+        39
+      ],
+      "naive_multiplications": 3,
+      "grouped_multiplications": 2,
+      "large_multiplications_before": 3,
+      "large_multiplications_after": 1,
+      "small_doublings_after": 1,
+      "phase": "hidden3_all",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          24,
+          33,
+          19
+        ],
+        "raw_grouped_terms": [
+          12,
+          33,
+          19
+        ],
+        "factor_multipliers": [
+          2,
+          1,
+          1
+        ],
+        "other_products": [],
+        "grouped_product": 1482
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": 2,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N3T123-P122-L22-R0K0-H1BS2-01",
+      "terms": [
+        [
+          26,
+          22
+        ],
+        [
+          47,
+          52
+        ],
+        [
+          99,
+          26
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        1
+      ],
+      "answer": 702,
+      "common_factor": 26,
+      "common_terms": [
+        1,
+        2,
+        3
+      ],
+      "shared_positions": [
+        1,
+        2,
+        2
+      ],
+      "term_count": 3,
+      "shared_count": 3,
+      "L": "L22",
+      "R": "R0",
+      "K": "K0",
+      "H": "H1B",
+      "S": "S2",
+      "remainder_sum": 27,
+      "hidden_ratio": 2,
+      "doubled_target_index": 2,
+      "doubled_term_index": 2,
+      "visible_shared_factors": [
+        26,
+        52,
+        26
+      ],
+      "naive_multiplications": 3,
+      "grouped_multiplications": 2,
+      "large_multiplications_before": 3,
+      "large_multiplications_after": 1,
+      "small_doublings_after": 1,
+      "phase": "hidden3_all",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          22,
+          94,
+          99
+        ],
+        "raw_grouped_terms": [
+          22,
+          47,
+          99
+        ],
+        "factor_multipliers": [
+          1,
+          2,
+          1
+        ],
+        "other_products": [],
+        "grouped_product": 702
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": 2,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N3T123-P211-L22-R1K0-H1BS1-01",
+      "terms": [
+        [
+          82,
+          13
+        ],
+        [
+          26,
+          36
+        ],
+        [
+          13,
+          24
+        ]
+      ],
+      "signs": [
+        1,
+        1,
+        -1
+      ],
+      "answer": 1690,
+      "common_factor": 13,
+      "common_terms": [
+        1,
+        2,
+        3
+      ],
+      "shared_positions": [
+        2,
+        1,
+        1
+      ],
+      "term_count": 3,
+      "shared_count": 3,
+      "L": "L22",
+      "R": "R1",
+      "K": "K0",
+      "H": "H1B",
+      "S": "S1",
+      "remainder_sum": 130,
+      "hidden_ratio": 2,
+      "doubled_target_index": 2,
+      "doubled_term_index": 2,
+      "visible_shared_factors": [
+        13,
+        26,
+        13
+      ],
+      "naive_multiplications": 3,
+      "grouped_multiplications": 2,
+      "large_multiplications_before": 3,
+      "large_multiplications_after": 1,
+      "small_doublings_after": 1,
+      "phase": "hidden3_all",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          82,
+          72,
+          24
+        ],
+        "raw_grouped_terms": [
+          82,
+          36,
+          24
+        ],
+        "factor_multipliers": [
+          1,
+          2,
+          1
+        ],
+        "other_products": [],
+        "grouped_product": 1690
+      },
+      "remainder_digits": 3,
+      "cancellation_from_digits": 2,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N3T123-P211-L22-R1K0-H1CS2-01",
+      "terms": [
+        [
+          86,
+          23
+        ],
+        [
+          23,
+          16
+        ],
+        [
+          46,
+          25
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        1
+      ],
+      "answer": 2760,
+      "common_factor": 23,
+      "common_terms": [
+        1,
+        2,
+        3
+      ],
+      "shared_positions": [
+        2,
+        1,
+        1
+      ],
+      "term_count": 3,
+      "shared_count": 3,
+      "L": "L22",
+      "R": "R1",
+      "K": "K0",
+      "H": "H1C",
+      "S": "S2",
+      "remainder_sum": 120,
+      "hidden_ratio": 2,
+      "doubled_target_index": 3,
+      "doubled_term_index": 3,
+      "visible_shared_factors": [
+        23,
+        23,
+        46
+      ],
+      "naive_multiplications": 3,
+      "grouped_multiplications": 2,
+      "large_multiplications_before": 3,
+      "large_multiplications_after": 1,
+      "small_doublings_after": 1,
+      "phase": "hidden3_all",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          86,
+          16,
+          50
+        ],
+        "raw_grouped_terms": [
+          86,
+          16,
+          25
+        ],
+        "factor_multipliers": [
+          1,
+          1,
+          2
+        ],
+        "other_products": [],
+        "grouped_product": 2760
+      },
+      "remainder_digits": 3,
+      "cancellation_from_digits": 2,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N3T123-P212-L22-R0K0-H1CS1-01",
+      "terms": [
+        [
+          75,
+          22
+        ],
+        [
+          22,
+          26
+        ],
+        [
+          24,
+          44
+        ]
+      ],
+      "signs": [
+        1,
+        1,
+        -1
+      ],
+      "answer": 1166,
+      "common_factor": 22,
+      "common_terms": [
+        1,
+        2,
+        3
+      ],
+      "shared_positions": [
+        2,
+        1,
+        2
+      ],
+      "term_count": 3,
+      "shared_count": 3,
+      "L": "L22",
+      "R": "R0",
+      "K": "K0",
+      "H": "H1C",
+      "S": "S1",
+      "remainder_sum": 53,
+      "hidden_ratio": 2,
+      "doubled_target_index": 3,
+      "doubled_term_index": 3,
+      "visible_shared_factors": [
+        22,
+        22,
+        44
+      ],
+      "naive_multiplications": 3,
+      "grouped_multiplications": 2,
+      "large_multiplications_before": 3,
+      "large_multiplications_after": 1,
+      "small_doublings_after": 1,
+      "phase": "hidden3_all",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          75,
+          26,
+          48
+        ],
+        "raw_grouped_terms": [
+          75,
+          26,
+          24
+        ],
+        "factor_multipliers": [
+          1,
+          1,
+          2
+        ],
+        "other_products": [],
+        "grouped_product": 1166
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": 2,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N3T123-P212-L22-R0K0-H1AS2-01",
+      "terms": [
+        [
+          32,
+          98
+        ],
+        [
+          49,
+          92
+        ],
+        [
+          65,
+          49
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        1
+      ],
+      "answer": 1813,
+      "common_factor": 49,
+      "common_terms": [
+        1,
+        2,
+        3
+      ],
+      "shared_positions": [
+        2,
+        1,
+        2
+      ],
+      "term_count": 3,
+      "shared_count": 3,
+      "L": "L22",
+      "R": "R0",
+      "K": "K0",
+      "H": "H1A",
+      "S": "S2",
+      "remainder_sum": 37,
+      "hidden_ratio": 2,
+      "doubled_target_index": 1,
+      "doubled_term_index": 1,
+      "visible_shared_factors": [
+        98,
+        49,
+        49
+      ],
+      "naive_multiplications": 3,
+      "grouped_multiplications": 2,
+      "large_multiplications_before": 3,
+      "large_multiplications_after": 1,
+      "small_doublings_after": 1,
+      "phase": "hidden3_all",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          64,
+          92,
+          65
+        ],
+        "raw_grouped_terms": [
+          32,
+          92,
+          65
+        ],
+        "factor_multipliers": [
+          2,
+          1,
+          1
+        ],
+        "other_products": [],
+        "grouped_product": 1813
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": 2,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N3T123-P221-L22-R0K0-H1AS1-01",
+      "terms": [
+        [
+          49,
+          66
+        ],
+        [
+          37,
+          33
+        ],
+        [
+          33,
+          92
+        ]
+      ],
+      "signs": [
+        1,
+        1,
+        -1
+      ],
+      "answer": 1419,
+      "common_factor": 33,
+      "common_terms": [
+        1,
+        2,
+        3
+      ],
+      "shared_positions": [
+        2,
+        2,
+        1
+      ],
+      "term_count": 3,
+      "shared_count": 3,
+      "L": "L22",
+      "R": "R0",
+      "K": "K0",
+      "H": "H1A",
+      "S": "S1",
+      "remainder_sum": 43,
+      "hidden_ratio": 2,
+      "doubled_target_index": 1,
+      "doubled_term_index": 1,
+      "visible_shared_factors": [
+        66,
+        33,
+        33
+      ],
+      "naive_multiplications": 3,
+      "grouped_multiplications": 2,
+      "large_multiplications_before": 3,
+      "large_multiplications_after": 1,
+      "small_doublings_after": 1,
+      "phase": "hidden3_all",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          98,
+          37,
+          92
+        ],
+        "raw_grouped_terms": [
+          49,
+          37,
+          92
+        ],
+        "factor_multipliers": [
+          2,
+          1,
+          1
+        ],
+        "other_products": [],
+        "grouped_product": 1419
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": 2,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N3T123-P221-L22-R0K0-H1BS2-01",
+      "terms": [
+        [
+          25,
+          14
+        ],
+        [
+          13,
+          28
+        ],
+        [
+          14,
+          62
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        1
+      ],
+      "answer": 854,
+      "common_factor": 14,
+      "common_terms": [
+        1,
+        2,
+        3
+      ],
+      "shared_positions": [
+        2,
+        2,
+        1
+      ],
+      "term_count": 3,
+      "shared_count": 3,
+      "L": "L22",
+      "R": "R0",
+      "K": "K0",
+      "H": "H1B",
+      "S": "S2",
+      "remainder_sum": 61,
+      "hidden_ratio": 2,
+      "doubled_target_index": 2,
+      "doubled_term_index": 2,
+      "visible_shared_factors": [
+        14,
+        28,
+        14
+      ],
+      "naive_multiplications": 3,
+      "grouped_multiplications": 2,
+      "large_multiplications_before": 3,
+      "large_multiplications_after": 1,
+      "small_doublings_after": 1,
+      "phase": "hidden3_all",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          25,
+          26,
+          62
+        ],
+        "raw_grouped_terms": [
+          25,
+          13,
+          62
+        ],
+        "factor_multipliers": [
+          1,
+          2,
+          1
+        ],
+        "other_products": [],
+        "grouped_product": 854
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": 2,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N3T123-P222-L22-R0K0-H1BS1-01",
+      "terms": [
+        [
+          59,
+          43
+        ],
+        [
+          32,
+          86
+        ],
+        [
+          62,
+          43
+        ]
+      ],
+      "signs": [
+        1,
+        1,
+        -1
+      ],
+      "answer": 2623,
+      "common_factor": 43,
+      "common_terms": [
+        1,
+        2,
+        3
+      ],
+      "shared_positions": [
+        2,
+        2,
+        2
+      ],
+      "term_count": 3,
+      "shared_count": 3,
+      "L": "L22",
+      "R": "R0",
+      "K": "K0",
+      "H": "H1B",
+      "S": "S1",
+      "remainder_sum": 61,
+      "hidden_ratio": 2,
+      "doubled_target_index": 2,
+      "doubled_term_index": 2,
+      "visible_shared_factors": [
+        43,
+        86,
+        43
+      ],
+      "naive_multiplications": 3,
+      "grouped_multiplications": 2,
+      "large_multiplications_before": 3,
+      "large_multiplications_after": 1,
+      "small_doublings_after": 1,
+      "phase": "hidden3_all",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          59,
+          64,
+          62
+        ],
+        "raw_grouped_terms": [
+          59,
+          32,
+          62
+        ],
+        "factor_multipliers": [
+          1,
+          2,
+          1
+        ],
+        "other_products": [],
+        "grouped_product": 2623
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": 2,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
+    },
+    {
+      "id": "A4-N3T123-P222-L22-R0K0-H1CS2-01",
+      "terms": [
+        [
+          25,
+          12
+        ],
+        [
+          55,
+          12
+        ],
+        [
+          36,
+          24
+        ]
+      ],
+      "signs": [
+        1,
+        -1,
+        1
+      ],
+      "answer": 504,
+      "common_factor": 12,
+      "common_terms": [
+        1,
+        2,
+        3
+      ],
+      "shared_positions": [
+        2,
+        2,
+        2
+      ],
+      "term_count": 3,
+      "shared_count": 3,
+      "L": "L22",
+      "R": "R0",
+      "K": "K0",
+      "H": "H1C",
+      "S": "S2",
+      "remainder_sum": 42,
+      "hidden_ratio": 2,
+      "doubled_target_index": 3,
+      "doubled_term_index": 3,
+      "visible_shared_factors": [
+        12,
+        12,
+        24
+      ],
+      "naive_multiplications": 3,
+      "grouped_multiplications": 2,
+      "large_multiplications_before": 3,
+      "large_multiplications_after": 1,
+      "small_doublings_after": 1,
+      "phase": "hidden3_all",
+      "discovery_difficulty": "unmeasured",
+      "checking": [
+        "estimate",
+        "alternative_grouping"
+      ],
+      "solution": {
+        "grouped_terms": [
+          25,
+          55,
+          72
+        ],
+        "raw_grouped_terms": [
+          25,
+          55,
+          36
+        ],
+        "factor_multipliers": [
+          1,
+          1,
+          2
+        ],
+        "other_products": [],
+        "grouped_product": 504
+      },
+      "remainder_digits": 2,
+      "cancellation_from_digits": 2,
+      "description": "2倍の数に隠れた共通因子。H1A/B/Cは対象項の何番目が2倍か。",
+      "status": "draft",
+      "numeric_revision": "v0.4"
     }
   ],
   "validation": {
-    "count": 292,
-    "unique_ids": 292,
-    "unique_expressions": 292
+    "count": 388,
+    "unique_ids": 388,
+    "unique_expressions": 388
   }
 }
