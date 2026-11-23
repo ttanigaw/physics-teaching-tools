@@ -1,6 +1,6 @@
 import {readFileSync,writeFileSync} from "node:fs";
 function listEval(b){
- const phaseLabels={recognition:"2項・くくりの発見",reward:"2項・和のボーナス",bonus:"A4×A2の複合",subtraction2:"2項・差をくくる",partial3:"3項のうち2項",all3:"3項すべて・加算",all3_signed:"3項すべて・減算"};
+ const phaseLabels={recognition:"2項・くくりの発見",reward:"2項・和のボーナス",bonus:"A4×A2の複合",subtraction2:"2項・差をくくる",partial3:"3項のうち2項",all3:"3項すべて・加算",all3_signed:"3項すべて・減算",hidden2:"H1・2項（2倍の共通因子）",hidden3_partial:"H1・3項中の2項",hidden3_all:"H1・3項すべて"};
  const lines=[
  "# A4 全問題一覧","",
  `> 問題バンク全${b.problems.length}問（draft）。正本は [a4_bank.json](a4_bank.json)。一般問題は数値を多様化し、20・25・125は意図的に反復しています。`,"",
@@ -15,12 +15,14 @@ function listEval(b){
  "| `L32` | 共通因子と残りの因子の桁数 | 先の`3`＝共通因子3桁、後の`2`＝対象項の残りの因子が各2桁。`L33`、`L44`など |",
  "| `R0` | くくった後の和・差の性質 | `R0`＝10の倍数ではない通常の数、`R1`＝10の倍数（10の累乗以外）、`R2`＝10、100、1000など10の累乗 |",
  "| `K0` | 他の計算技能との複合 | `K0`＝A4が中心、`K1`＝A4でくくった後にA2的な工夫も有効（例：25×40） |",
- "| `H0` | 共通因子の見え方 | `H0`＝元の積に直接現れる。`H1`＝分解すると現れる（将来の拡張） |",
+ "| `H0` / `H1A` / `H1B` / `H1C` | 共通因子の見え方 | `H0`＝直接一致。`H1A/B/C`＝対象項の1/2/3番目に、共通因子の**2倍**の数が現れる。`H1A`は第1対象項が2倍 |",
  "| `S0` | 項と項の間の符号 | `S0`＝すべて加算、`S1`＝**最後の項を減算**（N2なら＋−、N3なら＋＋−）、`S2`＝3項で第2項を減算（＋−＋） |",
  "| `-01` | 同じ詳細分類の数値違い | 末尾2桁の連番。配置や技能が異なれば別の分類IDにする |","",
  "**加算の桁数に関する作問規則**：共通因子をくくった括弧内の正の数の和について、例えば2桁＋2桁は2桁に収めるか、3桁なら**1の位が0**になる数にする。同様に3桁＋3桁では、3桁以内か、4桁になる場合は1の位が0になるようにする。4桁の残り因子や3項の和にも同じ原則を適用する。これは出題時の数値選択方針であり、独立したID軸ではありません。","",
  "**具体例（加算）**：`A4-N2T12-P11-L32-R0K0-H0S0-01` は `163×47＋163×29`。2項とも共通因子163が積の左側にあり、3桁×2桁の計算を、R0の和 `47＋29＝76` にまとめる問題です。","",
  "**具体例（減算）**：`A4-N2T12-P11-L22-R0K0-H0S1-01` は `51×88−51×55`。共通因子をくくると `51×(88−55)＝51×33` になります。","",
+ "**H1の例**：`A4-N2T12-P11-L22-R0K0-H1AS0-01` は `88×16＋44×21`。第1対象項の88が共通因子44の2倍なので、`44×(2×16＋21)＝44×53`。`H1B`なら第2対象項が2倍で、`N3T13-H1B`では第3項（対象項の2番目）が2倍です。","",
+ "**H1のL22の定義**：共通因子`a`と2倍した`2a`はともに2桁、対象項の残りの因子もすべて2桁とする。くくった後の`2×b`も2桁に収める。N3の対象外項の2因子も2桁。2倍の位置はHコードに、比率`2`と元の残りの因子は問題データに記録します。","",
  "この仮IDは**数学的な構造**を表します。実測の発見難度、出題順、学習者の回答・自己点検結果などは別のメタデータで管理します。","",
  "[A4詳細設計](../design/A4_COMMON_FACTOR.md)",""
  ];
@@ -31,9 +33,10 @@ function listEval(b){
    const fmt=(ts,signs)=>ts.map((t,i)=>(i>0?(signs[i]===-1?" − ":" + "):"")+t.join(" × ")).join("");
    const rs=p.common_terms.map((v,i)=>p.signs[v-1]);
    const residual=p.solution.grouped_terms.map(v=>[v]);
+   const bracket=p.H.startsWith("H1")?p.solution.raw_grouped_terms.map((v,i)=>(i>0?(rs[i]===-1?" − ":" + "):"")+(p.solution.factor_multipliers[i]===2?"2 × ":"")+v).join(""):fmt(residual,rs);
    const rest=p.terms.map((t,i)=>({t,i})).filter(x=>!p.common_terms.includes(x.i+1));
    const ext=rest.map(x=>` ${p.signs[x.i]===-1?"−":"+"} ${x.t.join(" × ")}`).join("");
-   lines.push(`| \`${p.id}\` | ${fmt(p.terms,p.signs)} | ${p.common_factor} | ${p.common_factor} × (${fmt(residual,rs)})${ext} | ${p.answer} |`);
+   lines.push(`| \`${p.id}\` | ${fmt(p.terms,p.signs)} | ${p.common_factor} | ${p.common_factor} × (${bracket})${ext} | ${p.answer} |`);
   }lines.push("");
  }
  return lines.join("\n")+"\n";
