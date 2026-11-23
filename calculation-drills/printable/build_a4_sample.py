@@ -30,21 +30,39 @@ def load(path):
             pages[int(n)]={"title":title,"prompt":prompt,"goal":goal,"items":[]}
             continue
         fields=raw.split("\t")
-        if len(fields)!=7:raise ValueError("Bad v2 row: "+raw)
-        pg,pid,term_data,ans,a,target,sign_data=fields
+        if len(fields)!=8:raise ValueError("Bad v3 row: "+raw)
+        pg,pid,term_data,ans,a,target,sign_data,mult_data=fields
         terms=[tuple(map(int,x.split(","))) for x in term_data.split(";")]
         target=[int(x) for x in target.split(",")]
         signs=[int(v) for v in sign_data.split(",")]
+        multipliers=[int(v) for v in mult_data.split(",")]
         ans,a=int(ans),int(a)
         if len(signs)!=len(terms) or signs[0]!=1 or any(s not in (1,-1) for s in signs):
             raise ValueError("Bad signs: "+pid)
         if ans!=sum(s*x*y for s,(x,y) in zip(signs,terms)):raise ValueError("Bad answer: "+pid)
-        if any(a not in terms[i-1] for i in target):raise ValueError("Bad common factor: "+pid)
-        pages[int(pg)]["items"].append({"id":pid,"terms":terms,"signs":signs,"answer":ans,"a":a,"target":target})
+        if len(multipliers)!=len(target) or any(v not in (1,2) for v in multipliers):
+            raise ValueError("Invalid H0/H1 multiplier metadata: "+pid)
+        if any(a*m not in terms[i-1] for i,m in zip(target,multipliers)):
+            raise ValueError("Visible a/2a does not match the multiplication terms: "+pid)
+        bracket_terms=[]
+        for term_no,m in zip(target,multipliers):
+            x,y=terms[term_no-1]
+            bracket_terms.append((y if x==a*m else x)*m)
+        bracket_sum=sum(signs[i-1]*v for i,v in zip(target,bracket_terms))
+        outside=sum(signs[i-1]*x*y for i,(x,y) in enumerate(terms,1) if i not in target)
+        if ans!=a*bracket_sum+outside:
+            raise ValueError("Grouping and direct arithmetic disagree: "+pid)
+        pages[int(pg)]["items"].append({"id":pid,"terms":terms,"signs":signs,"answer":ans,"a":a,"target":target,"multipliers":multipliers})
     ordered=[pages[i] for i in sorted(pages)]
     if len(ordered)!=10 or any(len(s["items"])!=8 for s in ordered):raise ValueError("Need 10×8")
     ids=[p["id"] for s in ordered for p in s["items"]]
     if len(set(ids))!=len(ids):raise ValueError("Repeated ID")
+    for i,s in enumerate(ordered):
+        h1=[j for j,p in enumerate(s["items"]) if 2 in p["multipliers"]]
+        if i<3 and h1 or i>=3 and (not 1<=len(h1)<=2 or min(h1)<6):
+            raise ValueError("H1 must appear only in the last two positions of sheets 4-10")
+    if sum(2 in item["multipliers"] for s in ordered for item in s["items"])!=9:
+        raise ValueError("The current plan has 9 H1 exercises")
     for s in ordered[:5]:
         if sum(item["signs"]==[1,-1] for item in s["items"])!=3:
             raise ValueError("First five worksheets require 3 S1 out of 8")
@@ -67,31 +85,38 @@ def head(c,label,sub,page,total,student=False):
         t(c,W-199,H-46,"氏名：",10,SUB)
         c.setStrokeColor(BORDER);c.line(W-153,H-49,W-M,H-49)
     c.setStrokeColor(BORDER);c.line(M,H-88,W-M,H-88)
-    t(c,M,25,"A4 計算ドリル / 試作 v0.4",8,SUB)
+    t(c,M,25,"A4 計算ドリル / 試作 v0.5",8,SUB)
     t(c,W-M-81,25,f"{page}/{total} ページ",8,SUB)
 
 def formula(p):
     return "".join(("" if i==0 else (" − " if p["signs"][i]<0 else " + "))+f"{x} × {y}" for i,(x,y) in enumerate(p["terms"]))
 
-def grouped(p):
-    a=p["a"]
-    target=p["target"]
-    tokens=[]
-    for j,i in enumerate(target):
+def bracket_tokens(p):
+    """Return (signed display parts, evaluated signed sum) using visible 2a when H1."""
+    result=[]
+    total=0
+    for j,(i,m) in enumerate(zip(p["target"],p["multipliers"])):
         x,y=p["terms"][i-1]
-        v=y if x==a else x
-        sg=p["signs"][i-1]
-        tokens.append(("" if j==0 else (" − " if sg<0 else " + "))+str(v))
-    result=f"{a} × ("+"".join(tokens)+")"
-    for i,term in enumerate(p["terms"],1):
-        if i not in target:
-            result+=(" − " if p["signs"][i-1]<0 else " + ")+f"{term[0]} × {term[1]}"
+        raw=y if x==p["a"]*m else x
+        sign=p["signs"][i-1]
+        token=(" − " if j and sign<0 else " + " if j else "")
+        token+=("2 × " if m==2 else "")+str(raw)
+        result.append(token)
+        total+=sign*m*raw
+    return "".join(result),total
+
+def grouped(p):
+    expression,_=bracket_tokens(p)
+    result=f'{p["a"]} × ('+expression+")"
+    for i,(x,y) in enumerate(p["terms"],1):
+        if i not in p["target"]:
+            result+=(" − " if p["signs"][i-1]<0 else " + ")+f"{x} × {y}"
     return result
 
 def answer_detail(p):
     a=p["a"]
+    _,remainder=bracket_tokens(p)
     rest=p["target"]
-    remainder=sum(p["signs"][i-1]*(p["terms"][i-1][1] if p["terms"][i-1][0]==a else p["terms"][i-1][0]) for i in rest)
     others=[p["signs"][i-1]*x*y for i,(x,y) in enumerate(p["terms"],1) if i not in rest]
     part=f"= {a:,} × {remainder:,}"
     for v in others:
@@ -143,15 +168,15 @@ def teacher(pages,out):
         "L33/L44は桁数をそろえ、数字を探して共通因子を発見する練習。",
         "1～5ページ：2項。全ページでS0=5問、S1=3問を混合。",
         "初回から共通因子の探索は加減算に共通だと体験。減算だけの専用紙は設けない。",
-        "1～3ページ：発見・配置・大きな数。4ページ：R1/R2。5ページ：A2複合。",
-        "6～7ページ：3項中2項に共通因子。乗算3回→2回。",
-        "8ページ：3項すべてをまとめる。S0=5問とS1=3問の混合。",
-        "9ページ：S0/S1/S2の混合。差で桁が縮む場合も体験。",
-        "10ページ：2項・3項、加算・減算の混合と自己点検。",
+        "1～3ページ：H0のみ。4～5ページの後半にはH1を各1問混ぜる。",
+        "6～7ページ：3項中2項を対象。最後の1問はL22のH1。",
+        "8ページ：3項全部に共通因子。最後の2問はH1。",
+        "9ページ：加減算混合、8問目にH1。差による桁縮約も。",
+        "10ページ：自己点検、最後の2問はH1。",
         "学生用では分類コードと解法の種明かしを出さない。",
         "必要なら段階的ヒント。別の効率的解法を認める。",
         "全80問が必修ではない。目的に合うページを選んで配布。",
-        "問題バンク292問のうち一部を使った未検証の試作教材。",
+        "問題バンク388問からH0=71問、H1=9問を選んだ未検証の試作。",
     ]
     y=H-125
     for note in notes:fit(c,M,y,"・"+note,W-2*M,9.5,8);y-=39
@@ -161,7 +186,7 @@ def teacher(pages,out):
         t(c,M,y,f'{i}. {section["title"]}（8問）',11)
         fit(c,M+17,y-23,section["goal"],W-2*M-20,9.2,8,SUB)
         y-=52
-    fit(c,M,y-8,"計80問（S1は24問）。学習効果は未検証。",W-2*M,9,8,ACCENT)
+    fit(c,M,y-8,"計80問（H1は9問、S1は24問）。学習効果は未検証。",W-2*M,9,8,ACCENT)
     c.showPage();c.save()
 
 def main():
